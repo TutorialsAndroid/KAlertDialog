@@ -15,7 +15,7 @@ update this library with some changes.**
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/device-2019-03-23-132617.png)
 
 ## Setup
-The simplest way to use AlertDialog is to add the library as aar dependency to your build.
+The simplest way to use AlertDialog is to add the library as dependency to your build.
 
 ## Gradle
 
