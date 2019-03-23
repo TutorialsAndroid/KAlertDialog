@@ -2,7 +2,7 @@ package com.kinda.alert;
 
 import android.content.Context;
 
-import com.pnikosis.materialishprogress.ProgressWheel;
+import com.kinda.progressx.ProgressWheel;
 
 public class ProgressHelper {
     private ProgressWheel mProgressWheel;

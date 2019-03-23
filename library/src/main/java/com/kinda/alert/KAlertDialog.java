@@ -16,9 +16,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.pnikosis.materialishprogress.ProgressWheel;
-
+import com.kinda.progressx.ProgressWheel;
 import java.util.List;
 import java.util.Objects;
 
