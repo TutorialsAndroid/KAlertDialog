@@ -116,7 +116,7 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                 new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
                         .setTitleText("Sweet!")
                         .setContentText("Here's a custom image.")
-                        .setCustomImage(R.drawable.custom_img)
+                        .setCustomImage(R.drawable.ic_launcher)
                         .show();
                 break;
             case R.id.progress_dialog:

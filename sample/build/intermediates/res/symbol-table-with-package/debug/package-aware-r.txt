@@ -71,10 +71,7 @@ attr backgroundSplit
 attr backgroundStacked
 attr backgroundTint
 attr backgroundTintMode
-attr barColor
 attr barLength
-attr barSpinCycleTime
-attr barWidth
 attr borderlessButtonStyle
 attr buttonBarButtonStyle
 attr buttonBarNegativeButtonStyle
@@ -90,7 +87,6 @@ attr buttonTint
 attr buttonTintMode
 attr checkboxStyle
 attr checkedTextViewStyle
-attr circleRadius
 attr closeIcon
 attr closeItemLayout
 attr collapseContentDescription
@@ -135,7 +131,6 @@ attr editTextColor
 attr editTextStyle
 attr elevation
 attr expandActivityOverflowButtonDrawable
-attr fillRadius
 attr firstBaselineToTopHeight
 attr font
 attr fontFamily
@@ -187,6 +182,16 @@ attr listPreferredItemPaddingLeft
 attr listPreferredItemPaddingRight
 attr logo
 attr logoDescription
+attr matProg_barColor
+attr matProg_barSpinCycleTime
+attr matProg_barWidth
+attr matProg_circleRadius
+attr matProg_fillRadius
+attr matProg_linearProgress
+attr matProg_progressIndeterminate
+attr matProg_rimColor
+attr matProg_rimWidth
+attr matProg_spinSpeed
 attr maxButtonHeight
 attr measureWithLargestChild
 attr multiChoiceItemLayout
@@ -210,15 +215,12 @@ attr popupWindowStyle
 attr preserveIconSpacing
 attr progressBarPadding
 attr progressBarStyle
-attr progressIndeterminate
 attr queryBackground
 attr queryHint
 attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
-attr rimColor
-attr rimWidth
 attr rollType
 attr searchHintIcon
 attr searchIcon
@@ -232,7 +234,6 @@ attr showText
 attr showTitle
 attr singleChoiceItemLayout
 attr spinBars
-attr spinSpeed
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
@@ -611,7 +612,6 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable blue_button_background
-drawable custom_img
 drawable dialog_background
 drawable error_center_x
 drawable error_circle
@@ -842,8 +842,6 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-mipmap ic_launcher
-mipmap ic_launcher_round
 string LOADING
 string a_basic_message
 string a_message_with_a_custom_icon
@@ -891,6 +889,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string default_progressbar
 string dialog_cancel
 string dialog_default_title
 string dialog_ok
@@ -1279,7 +1278,7 @@ styleable MenuItem android_icon android_enabled android_id android_checked andro
 styleable MenuView android_windowAnimationStyle android_itemTextAppearance android_horizontalDivider android_verticalDivider android_headerBackground android_itemBackground android_itemIconDisabledAlpha preserveIconSpacing subMenuArrow
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
-styleable ProgressWheel barColor barSpinCycleTime barWidth circleRadius fillRadius progressIndeterminate rimColor rimWidth spinSpeed
+styleable ProgressWheel matProg_barColor matProg_barSpinCycleTime matProg_barWidth matProg_circleRadius matProg_fillRadius matProg_linearProgress matProg_progressIndeterminate matProg_rimColor matProg_rimWidth matProg_spinSpeed
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable Rotate3dAnimation fromDeg pivotX pivotY rollType toDeg
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
