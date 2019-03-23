@@ -1,0 +1,3 @@
+ -keep class com.kinda.alert.Rotate3dAnimation {
+    public <init>(...);
+ }

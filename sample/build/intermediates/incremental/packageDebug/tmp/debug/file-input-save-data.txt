@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sat Mar 23 13:33:20 IST 2019
+0.baseType=DIRECTORY
+0.base=E\:\\GithubProjects\\alert\\sample\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+0.path=classes.dex
+0.set=DEX
+count=1
