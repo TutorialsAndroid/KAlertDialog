@@ -22,7 +22,6 @@ show material progress
     pDialog.setCancelable(false);
     pDialog.show();
 
-![image](https://github.com/pedant/sweet-alert-dialog/raw/master/play_progress.gif)
 
 You can customize progress bar dynamically with materialish-progress methods via **KAlertDialog.getProgressHelper()**:
 - resetCount()
@@ -45,7 +44,7 @@ You can customize progress bar dynamically with materialish-progress methods via
 - getSpinSpeed()
 - setSpinSpeed(float spinSpeed)
 
-thanks to the project [materialish-progress](https://github.com/pnikosis/materialish-progress) and [@croccio](https://github.com/croccio) participation.
+
 
 more usages about progress, please see the sample.
 
