@@ -1,4 +1,4 @@
-Alert Dialog ![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)
+Alert Dialog ![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle)
 ===================
 AlertDialog for Android, a beautiful and material alert dialog to use in your android app.
 
