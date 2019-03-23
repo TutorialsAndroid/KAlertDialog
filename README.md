@@ -10,13 +10,7 @@ The simplest way to use AlertDialog is to add the library as aar dependency to y
 
 **Gradle**
 
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        compile 'cn.pedant.sweetalert:library:1.3'
-    }
+    
 
 ## Usage
 
