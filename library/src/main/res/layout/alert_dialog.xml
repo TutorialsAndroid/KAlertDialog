@@ -110,7 +110,7 @@
         android:orientation="vertical"
         android:visibility="gone">
 
-        <com.pnikosis.materialishprogress.ProgressWheel
+        <com.kinda.progressx.ProgressWheel
             android:id="@+id/progressWheel"
             android:layout_width="80dp"
             android:layout_height="80dp"
