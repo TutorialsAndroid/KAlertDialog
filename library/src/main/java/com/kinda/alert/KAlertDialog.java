@@ -347,11 +347,11 @@ public class KAlertDialog extends Dialog implements View.OnClickListener {
     /**
      * The real Dialog.dismiss() will be invoked async-ly after the animation finishes.
      */
-    private void dismissWithAnimation() {
+    public void dismissWithAnimation() {
         dismissWithAnimation(false);
     }
 
-    private void dismissWithAnimation(boolean fromCancel) {
+    public void dismissWithAnimation(boolean fromCancel) {
         mCloseFromCancel = fromCancel;
         mConfirmButton.startAnimation(mOverlayOutAnim);
         mDialogView.startAnimation(mModalOutAnim);
