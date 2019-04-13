@@ -1,7 +1,9 @@
 package com.kinda.alert;
 
 
+import android.annotation.TargetApi;
 import android.app.Dialog;
+import com.kinda.progressx.ProgressWheel;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -16,7 +18,6 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.kinda.progressx.ProgressWheel;
 import java.util.List;
 import java.util.Objects;
 
@@ -152,7 +153,7 @@ public class KAlertDialog extends Dialog implements View.OnClickListener {
         mWarningFrame = findViewById(R.id.warning_frame);
         mConfirmButton = findViewById(R.id.confirm_button);
         mCancelButton = findViewById(R.id.cancel_button);
-        mProgressHelper.setProgressWheel((ProgressWheel)findViewById(R.id.progressWheel));
+        mProgressHelper.setProgressWheel((ProgressWheel) findViewById(R.id.progressWheel));
         mConfirmButton.setOnClickListener(this);
         mCancelButton.setOnClickListener(this);
 
