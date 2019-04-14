@@ -4,30 +4,32 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.util.Xml;
 import android.view.animation.*;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
-
 import java.io.IOException;
 
 class AnimationLoader {
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     static Animation loadAnimation(Context context, int id)
             throws Resources.NotFoundException {
 
         try (XmlResourceParser parser = context.getResources().getAnimation(id)) {
             return createAnimationFromXml(context, parser);
         } catch (XmlPullParserException ex) {
-            throw new Resources.NotFoundException("Can't load animation resource ID #0x" +
-                    Integer.toHexString(id), ex);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                throw new Resources.NotFoundException("Can't load animation resource ID #0x" +
+                        Integer.toHexString(id), ex);
+            }
         } catch (IOException ex) {
-            throw new Resources.NotFoundException("Can't load animation resource ID #0x" +
-                    Integer.toHexString(id), ex);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                throw new Resources.NotFoundException("Can't load animation resource ID #0x" +
+                        Integer.toHexString(id), ex);
+            }
         }
+        return null;
     }
 
     private static Animation createAnimationFromXml(Context c, XmlPullParser parser)

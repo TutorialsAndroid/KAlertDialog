@@ -150,12 +150,12 @@
             style="@style/dialog_blue_button"
             android:background="@drawable/gray_button_background"
             android:layout_marginRight="10dp"
-            android:visibility="gone"
             android:text="@string/dialog_cancel"
+            android:visibility="gone"
             android:layout_marginEnd="10dp" />
 
         <Button
-            android:id="@+id/confirm_button"
+            android:id="@+id/custom_confirm_button"
             style="@style/dialog_blue_button"
             android:text="@string/dialog_ok" />
     </LinearLayout>

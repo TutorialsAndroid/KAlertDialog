@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kinda.alert"
     android:targetSandboxVersion="2"
-    android:versionCode="5"
-    android:versionName="4.1" >
+    android:versionCode="7"
+    android:versionName="14.4.19" >
 
     <uses-sdk
-        android:minSdkVersion="15"
+        android:minSdkVersion="21"
         android:targetSdkVersion="28" />
 
     <application
@@ -14,7 +14,6 @@
         android:debuggable="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:testOnly="true"
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
             android:name="com.kinda.alert.sample.SampleActivity"
@@ -25,11 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <provider
-            android:name="com.android.tools.ir.server.InstantRunContentProvider"
-            android:authorities="com.kinda.alert.com.android.tools.ir.server.InstantRunContentProvider"
-            android:multiprocess="true" />
     </application>
 
 </manifest>

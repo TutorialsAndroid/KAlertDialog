@@ -348,6 +348,8 @@ color bright_foreground_material_light
 color button_material_dark
 color button_material_light
 color button_text_color
+color colorAccent
+color colorPrimary
 color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
@@ -611,7 +613,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
-drawable blue_button_background
+drawable button_background
 drawable dialog_background
 drawable error_center_x
 drawable error_circle
@@ -683,12 +685,12 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
-id confirm_button
 id content
 id contentPanel
 id content_text
 id custom
 id customPanel
+id custom_confirm_button
 id custom_image
 id custom_img_test
 id decor_content_parent

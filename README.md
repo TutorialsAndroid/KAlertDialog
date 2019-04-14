@@ -1,4 +1,4 @@
-Alert Dialog ![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588)
+Alert Dialog ![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588)
 ===================
 AlertDialog for Android, a beautiful and material alert dialog to use in your android app.
 
@@ -31,7 +31,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v4.1'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v14.4.19'
 	}
 
 ## Usage
@@ -115,7 +115,7 @@ Bind the listener to confirm button：
         .setTitleText("Are you sure?")
         .setContentText("Won't be able to recover this file!")
         .setConfirmText("Yes,delete it!")
-        .setConfirmClickListener(new KAlertDialog.OnSweetClickListener() {
+        .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
             @Override
             public void onClick(KAlertDialog sDialog) {
                 sDialog.dismissWithAnimation();
@@ -131,7 +131,7 @@ Show the cancel button and bind listener to it：
         .setCancelText("No,cancel plx!")
         .setConfirmText("Yes,delete it!")
         .showCancelButton(true)
-        .setCancelClickListener(new KAlertDialog.OnSweetClickListener() {
+        .setCancelClickListener(new KAlertDialog.KAlertClickListener() {
             @Override
             public void onClick(KAlertDialog sDialog) {
                 sDialog.cancel();
@@ -139,13 +139,41 @@ Show the cancel button and bind listener to it：
         })
         .show();
 
+Customizing the alert dialog
+
+    .confirmButtonColor(R.color.colorPrimary) // you can change the color of confirm button
+    .cancelButtonColor(R.color.colorAccent) // you can change the color of cancel button
+
+And if you want to change the button corners with color create a drawable file
+
+        <?xml version="1.0" encoding="utf-8"?>
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:state_pressed="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="#FF5474" />
+                    <corners android:radius="6dp"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#FF1744" />
+                    <corners android:radius="6dp"/>
+                </shape>
+            </item>
+        </selector>
+
+And then call this method when you create drawable
+
+      .confirmButtonColor(R.drawable.button_background) // you can change border and color of button
+
+
 **Change** the dialog style upon confirming：
 
     new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
         .setTitleText("Are you sure?")
         .setContentText("Won't be able to recover this file!")
         .setConfirmText("Yes,delete it!")
-        .setConfirmClickListener(new KAlertDialog.OnSweetClickListener() {
+        .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
             @Override
             public void onClick(KAlertDialog sDialog) {
                 sDialog

@@ -610,7 +610,7 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f080051
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f080052
 int drawable abc_textfield_search_material 0x7f080053
 int drawable abc_vector_test 0x7f080054
-int drawable blue_button_background 0x7f080055
+int drawable button_background 0x7f080055
 int drawable dialog_background 0x7f080056
 int drawable error_center_x 0x7f080057
 int drawable error_circle 0x7f080058
@@ -662,12 +662,12 @@ int id buttonPanel 0x7f0b0019
 int id cancel_button 0x7f0b001a
 int id checkbox 0x7f0b001b
 int id chronometer 0x7f0b001c
-int id confirm_button 0x7f0b001d
-int id content 0x7f0b001e
-int id contentPanel 0x7f0b001f
-int id content_text 0x7f0b0020
-int id custom 0x7f0b0021
-int id customPanel 0x7f0b0022
+int id content 0x7f0b001d
+int id contentPanel 0x7f0b001e
+int id content_text 0x7f0b001f
+int id custom 0x7f0b0020
+int id customPanel 0x7f0b0021
+int id custom_confirm_button 0x7f0b0022
 int id custom_image 0x7f0b0023
 int id decor_content_parent 0x7f0b0024
 int id default_activity_button 0x7f0b0025

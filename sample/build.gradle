@@ -5,10 +5,10 @@ android {
     
 	defaultConfig {
 		applicationId "com.kinda.alert"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 28
-		versionCode 5
-        versionName "4.1"
+		versionCode 7
+        versionName "14.4.19"
     }
 
     lintOptions {
@@ -16,10 +16,15 @@ android {
     }
 
     buildTypes {
+
         release {
-            proguardFile 'proguard-android.txt'
             minifyEnabled false
-            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            debuggable true
         }
     }
 }

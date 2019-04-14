@@ -611,7 +611,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
-drawable blue_button_background
+drawable button_background
 drawable dialog_background
 drawable error_center_x
 drawable error_circle
@@ -663,12 +663,12 @@ id buttonPanel
 id cancel_button
 id checkbox
 id chronometer
-id confirm_button
 id content
 id contentPanel
 id content_text
 id custom
 id customPanel
+id custom_confirm_button
 id custom_image
 id decor_content_parent
 id default_activity_button

@@ -15,6 +15,7 @@ public class SampleActivity extends Activity implements View.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_activity);
+
         findViewById(R.id.basic_test).setOnClickListener(this);
         findViewById(R.id.under_text_test).setOnClickListener(this);
         findViewById(R.id.error_text_test).setOnClickListener(this);
@@ -51,13 +52,14 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                         .setTitleText("Good job!")
                         .setContentText("You clicked the button!")
                         .show();
+
                 break;
             case R.id.warning_confirm_test:
                 new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
                         .setTitleText("Are you sure?")
                         .setContentText("Won't be able to recover this file!")
                         .setConfirmText("Yes,delete it!")
-                        .setConfirmClickListener(new KAlertDialog.OnSweetClickListener() {
+                        .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
                         @Override
                         public void onClick(KAlertDialog sDialog) {
                             // reuse previous dialog instance
@@ -77,7 +79,7 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                         .setCancelText("No,cancel plx!")
                         .setConfirmText("Yes,delete it!")
                         .showCancelButton(true)
-                        .setCancelClickListener(new KAlertDialog.OnSweetClickListener() {
+                        .setCancelClickListener(new KAlertDialog.KAlertClickListener() {
                             @Override
                             public void onClick(KAlertDialog sDialog) {
                                 // reuse previous dialog instance, keep widget user state, reset them if you need
@@ -98,7 +100,7 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                                         .show();*/
                             }
                         })
-                        .setConfirmClickListener(new KAlertDialog.OnSweetClickListener() {
+                        .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
                             @Override
                             public void onClick(KAlertDialog sDialog) {
                                 sDialog.setTitleText("Deleted!")
