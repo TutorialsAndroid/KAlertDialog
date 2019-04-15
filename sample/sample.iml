@@ -159,7 +159,5 @@
     <orderEntry type="library" name="Gradle: com.android.support:customview:28.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:swiperefreshlayout:28.0.0@aar" level="project" />
     <orderEntry type="module" module-name="library" />
-    <orderEntry type="module" module-name="library" />
-    <orderEntry type="module" module-name="library" />
   </component>
 </module>

@@ -103,8 +103,8 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                         .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
                             @Override
                             public void onClick(KAlertDialog sDialog) {
-                                sDialog.setTitleText("Deleted!")
-                                        .setContentText("Your imaginary file has been deleted!")
+                                sDialog //.setTitleText("Deleted!")
+                                  //      .setContentText("Your imaginary file has been deleted!")
                                         .setConfirmText("OK")
                                         .showCancelButton(false)
                                         .setCancelClickListener(null)

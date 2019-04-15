@@ -34,6 +34,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private String mContentText;
     private boolean mShowCancel;
     private boolean mShowContent;
+    private boolean mShowTitleText;
     private String mCancelText;
     private String mConfirmText;
     private int mAlertType;
@@ -245,9 +246,24 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public KAlertDialog setTitleText (String text) {
         mTitleText = text;
         if (mTitleTextView != null && mTitleText != null) {
+            showTitleText();
             mTitleTextView.setText(mTitleText);
         }
         return this;
+    }
+
+
+    public boolean isShowTitleText () {
+        return mShowTitleText;
+    }
+    /**
+     * Weather to show title text or not
+     */
+    private void showTitleText() {
+        mShowTitleText = true;
+        if (mTitleTextView != null) {
+            mTitleTextView.setVisibility(View.VISIBLE);
+        }
     }
 
     /**
