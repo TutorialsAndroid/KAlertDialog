@@ -168,7 +168,11 @@ And if you want to change the button corners with color create a drawable file
 And then call this method when you create drawable
 
       .confirmButtonColor(R.drawable.button_background) // you can change border and color of button
+      
+And if you want to hide Title Text and Content Text of alert dialog
 
+	.setTitleText("Are you sure?") //just don't write this line if you want to hide title text
+	.setContentText("Won't be able to recover this file!") // don't write this line if you want to hide content text
 
 **Change** the dialog style upon confirming：
 
