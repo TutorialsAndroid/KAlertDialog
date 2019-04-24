@@ -2,6 +2,8 @@ Alert Dialog ![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style
 ===================
 AlertDialog for Android, a beautiful and material alert dialog to use in your android app.
 
+![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/WPLink.jpg)
+
 **Library available at JitPack.io**
 
 [![](https://jitpack.io/v/TutorialsAndroid/KAlertDialog.svg)](https://jitpack.io/#TutorialsAndroid/KAlertDialog)
