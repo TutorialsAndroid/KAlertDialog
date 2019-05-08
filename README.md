@@ -6,11 +6,6 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 [![](https://jitpack.io/v/TutorialsAndroid/KAlertDialog.svg)](https://jitpack.io/#TutorialsAndroid/KAlertDialog)
 
-## Important
-
-**Note this library was made in the making for `Kinda` app this library was copied from `sweet-alert-dialog` repository on github we made this library because we want to use own library on `Kinda` app.So this library is in development we will monthly
-update this library with some changes.**
-
 ## ScreenShot
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/device-2019-03-23-132617.png)
 
