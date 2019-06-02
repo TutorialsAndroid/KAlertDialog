@@ -3,6 +3,9 @@ package com.kinda.alert;
 import android.content.Context;
 import com.kinda.progressx.ProgressWheel;
 
+/**
+ * @author akshay sunil masram
+ */
 public class ProgressHelper {
 
     private ProgressWheel mProgressWheel;
@@ -72,51 +75,30 @@ public class ProgressHelper {
         }
     }
 
-    /**
-     * resets the progress wheel
-     */
     public void resetCount() {
         if (mProgressWheel != null) {
             mProgressWheel.resetCount();
         }
     }
 
-    /**
-     * weather progress wheel isSpinning or not
-     * @return mToSpin
-     */
     public boolean isSpinning() {
         return mToSpin;
     }
 
-    /**
-     * starts the spin of progress wheel
-     */
     public void spin() {
         mToSpin = true;
         updatePropsIfNeed();
     }
 
-    /**
-     * Stops the spinning of progress wheel
-     */
     public void stopSpinning() {
         mToSpin = false;
         updatePropsIfNeed();
     }
 
-    /**
-     * gets the progress value.
-     * @return mProgressWheel
-     */
     public float getProgress() {
         return mProgressVal;
     }
 
-    /**
-     * Sets the progress value in float
-     * @param progress values in float
-     */
     public void setProgress(float progress) {
         mIsInstantProgress = false;
         mProgressVal = progress;
@@ -133,9 +115,6 @@ public class ProgressHelper {
         return mCircleRadius;
     }
 
-    /**
-     * @param circleRadius units using pixel
-     * **/
     public void setCircleRadius(int circleRadius) {
         mCircleRadius = circleRadius;
         updatePropsIfNeed();

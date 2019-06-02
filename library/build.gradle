@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 8
-        versionName "15.4.19"
+        versionCode 9
+        versionName "1.0.19"
     }
 
     lintOptions {
@@ -20,7 +20,10 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+	
+    //ANDROID SUPPORT LIBRARIES
     implementation 'com.android.support:appcompat-v7:28.0.0'
 
+    //KINDA PROGRESSX LIBRARY
     implementation 'com.github.TutorialsAndroid:progressx:v2.0'
 }

@@ -1,4 +1,4 @@
-com.kinda.alert
+com.kinda.alert.main
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -618,10 +618,6 @@ drawable dialog_background
 drawable error_center_x
 drawable error_circle
 drawable gray_button_background
-drawable ic_launcher
-drawable ic_launcher_background
-drawable ic_launcher_foreground
-drawable logo_big
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -844,6 +840,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+mipmap ic_launcher
 string LOADING
 string a_basic_message
 string a_message_with_a_custom_icon

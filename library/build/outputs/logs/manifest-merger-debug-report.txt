@@ -1,28 +1,28 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-5:12
+ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
+INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
+INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
+INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
+INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
+INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
+INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
 	package
 		ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:11-36
 		INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml
 		INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml
-		ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-5:12
+		ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
 		INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-5:12
+		ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
 	android:versionCode
 		INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml
-		ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-5:12
+		ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
 		INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml
 application
-ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:3:5-19
+ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:2:5-19
 uses-sdk
 INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml

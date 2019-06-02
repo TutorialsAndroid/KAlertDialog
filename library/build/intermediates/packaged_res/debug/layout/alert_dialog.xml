@@ -64,7 +64,6 @@
             android:id="@+id/mask_left"
             android:layout_width="21dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="-3dp"
             android:layout_gravity="start"
             android:background="@android:color/white"
             android:layout_marginStart="-3dp" />
@@ -150,7 +149,6 @@
             android:id="@+id/cancel_button"
             style="@style/dialog_blue_button"
             android:background="@drawable/gray_button_background"
-            android:layout_marginRight="10dp"
             android:text="@string/dialog_cancel"
             android:visibility="gone"
             android:layout_marginEnd="10dp" />

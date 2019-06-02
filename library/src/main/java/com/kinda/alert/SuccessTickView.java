@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 
+/**
+ * @author akshay sunil masram
+ */
 public class SuccessTickView extends View {
     private float mDensity = -1;
     private Paint mPaint;
@@ -47,7 +50,6 @@ public class SuccessTickView extends View {
         super.draw(canvas);
         int totalW = getWidth();
         int totalH = getHeight();
-        // rotate canvas first
         canvas.rotate(45, totalW >> 1, totalH >> 1);
 
         totalW /= 1.2;
@@ -85,7 +87,6 @@ public class SuccessTickView extends View {
     }
 
     public void startTickAnim () {
-        // hide tick
         mLeftRectWidth = 0;
         mRightRectWidth = 0;
         invalidate();
@@ -93,20 +94,20 @@ public class SuccessTickView extends View {
             @Override
             protected void applyTransformation(float interpolatedTime, Transformation t) {
                 super.applyTransformation(interpolatedTime, t);
-                if (0.54 < interpolatedTime && 0.7 >= interpolatedTime) {  // grow left and right rect to right
+                if (0.54 < interpolatedTime && 0.7 >= interpolatedTime) {
                     mLeftRectGrowMode = true;
                     mLeftRectWidth = mMaxLeftRectWidth * ((interpolatedTime - 0.54f) / 0.16f);
                     if (0.65 < interpolatedTime) {
                         mRightRectWidth = MAX_RIGHT_RECT_W * ((interpolatedTime - 0.65f) / 0.19f);
                     }
                     invalidate();
-                } else if (0.7 < interpolatedTime && 0.84 >= interpolatedTime) { // shorten left rect from right, still grow right rect
+                } else if (0.7 < interpolatedTime && 0.84 >= interpolatedTime) {
                     mLeftRectGrowMode = false;
                     mLeftRectWidth = mMaxLeftRectWidth * (1 - ((interpolatedTime - 0.7f) / 0.14f));
                     mLeftRectWidth = mLeftRectWidth < MIN_LEFT_RECT_W ? MIN_LEFT_RECT_W : mLeftRectWidth;
                     mRightRectWidth = MAX_RIGHT_RECT_W * ((interpolatedTime - 0.65f) / 0.19f);
                     invalidate();
-                } else if (0.84 < interpolatedTime && 1 >= interpolatedTime) { // restore left rect width, shorten right rect to const
+                } else if (0.84 < interpolatedTime && 1 >= interpolatedTime) {
                     mLeftRectGrowMode = false;
                     mLeftRectWidth = MIN_LEFT_RECT_W + (CONST_LEFT_RECT_W - MIN_LEFT_RECT_W) * ((interpolatedTime - 0.84f) / 0.16f);
                     mRightRectWidth = CONST_RIGHT_RECT_W + (MAX_RIGHT_RECT_W - CONST_RIGHT_RECT_W) * (1 - ((interpolatedTime - 0.84f) / 0.16f));

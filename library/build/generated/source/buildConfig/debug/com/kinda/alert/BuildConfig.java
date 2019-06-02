@@ -8,6 +8,6 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.kinda.alert";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 8;
-  public static final String VERSION_NAME = "15.4.19";
+  public static final int VERSION_CODE = 9;
+  public static final String VERSION_NAME = "1.0.19";
 }

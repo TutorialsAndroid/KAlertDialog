@@ -22,8 +22,8 @@
     <dimen name="alert_width">290dp</dimen>
     <dimen name="common_circle_width">3dp</dimen>
     <dimen name="progress_circle_radius">34dp</dimen>
-    <string name="LOADING">Loading...</string>
-    <string name="app_name">SweetAlertDialog</string>
+    <string name="LOADING">Loading…</string>
+    <string name="app_name">KAlertDialog</string>
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_default_title">Here\'s a message!</string>
     <string name="dialog_ok">OK</string>

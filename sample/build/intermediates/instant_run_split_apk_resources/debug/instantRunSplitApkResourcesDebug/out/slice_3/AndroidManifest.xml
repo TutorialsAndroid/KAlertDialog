@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.kinda.alert"
-      android:versionCode="7"
-      android:versionName="14.4.19"
+      package="com.kinda.alert.main"
+      android:versionCode="9"
+      android:versionName="1.0.19"
       split="lib_slice_3_apk">
 </manifest>

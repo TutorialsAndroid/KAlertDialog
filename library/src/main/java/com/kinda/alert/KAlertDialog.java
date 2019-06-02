@@ -1,7 +1,6 @@
 package com.kinda.alert;
 
 import android.app.AlertDialog;
-
 import com.kinda.progressx.ProgressWheel;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -15,48 +14,35 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.Objects;
 
+/**
+ * @author akshay sunil masram
+ */
 public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
-    private View mDialogView;
-    private final AnimationSet mModalInAnim;
-    private final AnimationSet mModalOutAnim;
-    private final Animation mOverlayOutAnim;
-    private final Animation mErrorInAnim;
-    private final AnimationSet mErrorXInAnim;
-    private final AnimationSet mSuccessLayoutAnimSet;
-    private final Animation mSuccessBowAnim;
-    private TextView mTitleTextView;
-    private TextView mContentTextView;
-    private String mTitleText;
-    private String mContentText;
-    private boolean mShowCancel;
-    private boolean mShowContent;
-    private boolean mShowTitleText;
-    private String mCancelText;
-    private String mConfirmText;
-    private int mAlertType;
-    private FrameLayout mErrorFrame;
-    private FrameLayout mSuccessFrame;
-    private FrameLayout mProgressFrame;
-    private SuccessTickView mSuccessTick;
-    private ImageView mErrorX;
-    private View mSuccessLeftMask;
-    private View mSuccessRightMask;
+    private final AnimationSet mModalInAnim,mModalOutAnim,mErrorXInAnim,mSuccessLayoutAnimSet;
+    private final Animation mOverlayOutAnim,mErrorInAnim,mSuccessBowAnim;
+
+    private TextView mTitleTextView,mContentTextView;
+    private ImageView mErrorX,mCustomImage;
     private Drawable mCustomImgDrawable;
-    private ImageView mCustomImage;
-    private Button mConfirmButton;
-    private Button mCancelButton;
+    private Button mConfirmButton,mCancelButton;
+    private Drawable mColor,mCancelColor;
+    private View mDialogView,mSuccessLeftMask,mSuccessRightMask;
+
+    private String mTitleText,mContentText,mCancelText,mConfirmText;
+
+    private boolean mShowCancel,mShowContent,mShowTitleText,mCloseFromCancel;
+
+    private FrameLayout mErrorFrame,mSuccessFrame,mProgressFrame,mWarningFrame;
+    private SuccessTickView mSuccessTick;
+
     private final ProgressHelper mProgressHelper;
-    private FrameLayout mWarningFrame;
     private KAlertClickListener mCancelClickListener;
     private KAlertClickListener mConfirmClickListener;
-    private boolean mCloseFromCancel;
-    private Drawable mColor;
-    private Drawable mCancelColor;
 
+    private int mAlertType;
     private static final int NORMAL_TYPE = 0;
     public static final int ERROR_TYPE = 1;
     public static final int SUCCESS_TYPE = 2;
@@ -89,9 +75,10 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mSuccessRightMask = mSuccessFrame.findViewById(R.id.mask_right);
         mCustomImage = findViewById(R.id.custom_image);
         mWarningFrame = findViewById(R.id.warning_frame);
+        mProgressHelper.setProgressWheel((ProgressWheel) findViewById(R.id.progressWheel));
+
         mConfirmButton = findViewById(R.id.custom_confirm_button);
         mCancelButton = findViewById(R.id.cancel_button);
-        mProgressHelper.setProgressWheel((ProgressWheel) findViewById(R.id.progressWheel));
         mConfirmButton.setOnClickListener(this);
         mCancelButton.setOnClickListener(this);
 
@@ -112,17 +99,13 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mAlertType = alertType;
         mErrorInAnim = AnimationLoader.loadAnimation(getContext(), R.anim.error_frame_in);
         mErrorXInAnim = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.error_x_in);
-        // 2.3.x system don't support alpha-animation on layer-list drawable
-        // remove it from animation set
         mSuccessBowAnim = AnimationLoader.loadAnimation(getContext(), R.anim.success_bow_roate);
         mSuccessLayoutAnimSet = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.success_mask_layout);
         mModalInAnim = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.modal_in);
         mModalOutAnim = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.modal_out);
         Objects.requireNonNull(mModalOutAnim).setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
+            public void onAnimationStart(Animation animation) { }
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -140,11 +123,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
+            public void onAnimationRepeat(Animation animation) { }
         });
-        // dialog overlay fade out
         mOverlayOutAnim = new Animation() {
             @Override
             protected void applyTransformation(float interpolatedTime, Transformation t) {
@@ -184,10 +164,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     private void changeAlertType(int alertType, boolean fromCreate) {
         mAlertType = alertType;
-        // call after created views
         if (mDialogView != null) {
             if (!fromCreate) {
-                // restore all of views state before switching alert type
                 restore();
             }
             switch (mAlertType) {
@@ -197,13 +175,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                     break;
                 case SUCCESS_TYPE:
                     mSuccessFrame.setVisibility(View.VISIBLE);
-                    // initial rotate layout of success mask
                     mSuccessLeftMask.startAnimation(mSuccessLayoutAnimSet.getAnimations().get(0));
                     mSuccessRightMask.startAnimation(mSuccessLayoutAnimSet.getAnimations().get(1));
                     setConfirmButtonColor(mColor);
                     break;
                 case WARNING_TYPE:
-                   // mConfirmButton.setBackgroundResource(R.drawable.red_button_background);
                     mWarningFrame.setVisibility(View.VISIBLE);
                     setConfirmButtonColor(mColor);
                     break;
@@ -223,24 +199,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
-    /**
-     * Method to get the type of alert dialog
-     */
-    public int getAlertType() {
-        return mAlertType;
-    }
-
     public void changeAlertType(int alertType) {
         changeAlertType(alertType, false);
-    }
-
-
-    /**
-     * sets the title for alert dialog
-     * @return mTitleText
-     */
-    public String getTitleText () {
-        return mTitleText;
     }
 
     public KAlertDialog setTitleText (String text) {
@@ -252,13 +212,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-
-    public boolean isShowTitleText () {
-        return mShowTitleText;
-    }
-    /**
-     * Weather to show title text or not
-     */
     private void showTitleText() {
         mShowTitleText = true;
         if (mTitleTextView != null) {
@@ -266,12 +219,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
-    /**
-     * By this method developers can put own image
-     * in alert dialog
-     * @param resourceId location of the image
-     * @return this
-     */
     public KAlertDialog setCustomImage (int resourceId) {
         return setCustomImage(getContext().getResources().getDrawable(resourceId));
     }
@@ -285,14 +232,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    /**
-     * Gets the content text of alert dialog
-     * @return mContextText
-     */
-    public String getContentText () {
-        return mContentText;
-    }
-
     public KAlertDialog setContentText (String text) {
         mContentText = text;
         if (mContentTextView != null && mContentText != null) {
@@ -302,20 +241,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    /**
-     * Weather to show cancel button or not
-     * @return mShowCancel
-     */
-    public boolean isShowCancelButton () {
-        return mShowCancel;
-    }
-
-    /**
-     * Shows the cancel button
-     * @param isShow weather cancel button should
-     *  visible or not
-     * @return this
-     */
     public KAlertDialog showCancelButton (boolean isShow) {
         mShowCancel = isShow;
         if (mCancelButton != null) {
@@ -324,18 +249,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    /**
-     * Weather to show content text
-     * or not in alert dialog
-     * @return mShowContent
-     */
-    public boolean isShowContentText () {
-        return mShowContent;
-    }
-
-    /**
-     * Weather to show content text or not
-     */
     private void showContentText() {
         mShowContent = true;
         if (mContentTextView != null) {
@@ -343,11 +256,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
-    /**
-     * Sets the cancel button text in alert dialog
-     * @param text manually input cancel button text
-     * @return this
-     */
     public KAlertDialog setCancelText (String text) {
         mCancelText = text;
         if (mCancelButton != null && mCancelText != null) {
@@ -357,16 +265,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    public String getCancelText () {
-        return mCancelText;
-    }
-
-
-    /**
-     * Sets the confirm button text
-     * @param text manually input confirm button text
-     * @return this
-     */
     public KAlertDialog setConfirmText (String text) {
         mConfirmText = text;
         if (mConfirmButton != null && mConfirmText != null) {
@@ -375,27 +273,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    public String getConfirmText () {
-        return mConfirmText;
-    }
-
-    /**
-     * On cancel button click listener
-     * @param listener click listener which task should be
-     * performed on cancel button click listener
-     * @return this
-     */
     public KAlertDialog setCancelClickListener (KAlertClickListener listener) {
         mCancelClickListener = listener;
         return this;
     }
 
-    /**
-     * On confirm button click listener
-     * @param listener click listener which task should be
-     * performed on confirm button click listener
-     * @return this
-     */
     public KAlertDialog setConfirmClickListener (KAlertClickListener listener) {
         mConfirmClickListener = listener;
         return this;
@@ -406,17 +288,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         playAnimation();
     }
 
-    /**
-     * The real Dialog.cancel() will be invoked async-ly after the animation finishes.
-     */
     @Override
     public void cancel() {
         dismissWithAnimation(true);
     }
 
-    /**
-     * The real Dialog.dismiss() will be invoked async-ly after the animation finishes.
-     */
     public void dismissWithAnimation() {
         dismissWithAnimation(false);
     }
@@ -427,17 +303,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mDialogView.startAnimation(mModalOutAnim);
     }
 
-    /**
-     * sets the color for confirm button
-     * @param color developers can manually change the confirm
-     * button colors or they can create a drawable and customize
-     * the confirm button colors and rounded corners.
-     * @return setConfirmButtonColor
-     */
-    public KAlertDialog confirmButtonColor (int color) {
-        return setConfirmButtonColor(getContext().getResources().getDrawable(color));
-    }
-
     private KAlertDialog setConfirmButtonColor(Drawable background) {
         mColor = background;
         if (mConfirmButton != null && mColor !=null) {
@@ -446,23 +311,52 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    /**
-     * sets the color for cancel button
-     * @param color developers can manually change the cancel
-     * button colors or they can create a drawable and customize
-     * the camcel button colors and rounded corners.
-     * @return setCancelButtonColor
-     */
-    public KAlertDialog cancelButtonColor (int color) {
-        return setCancelButtonColor(getContext().getResources().getDrawable(color));
-    }
-
     private KAlertDialog setCancelButtonColor(Drawable background) {
         mCancelColor = background;
         if (mCancelButton != null && mCancelColor !=null) {
             mCancelButton.setBackground(mCancelColor);
         }
         return this;
+    }
+
+    public int getAlertType() {
+        return mAlertType;
+    }
+
+    public String getTitleText () {
+        return mTitleText;
+    }
+
+    public boolean isShowTitleText () {
+        return mShowTitleText;
+    }
+
+    public String getContentText () {
+        return mContentText;
+    }
+
+    public boolean isShowCancelButton () {
+        return mShowCancel;
+    }
+
+    public boolean isShowContentText () {
+        return mShowContent;
+    }
+
+    public String getCancelText () {
+        return mCancelText;
+    }
+
+    public String getConfirmText () {
+        return mConfirmText;
+    }
+
+    public KAlertDialog confirmButtonColor (int color) {
+        return setConfirmButtonColor(getContext().getResources().getDrawable(color));
+    }
+
+    public KAlertDialog cancelButtonColor (int color) {
+        return setCancelButtonColor(getContext().getResources().getDrawable(color));
     }
 
     @Override
