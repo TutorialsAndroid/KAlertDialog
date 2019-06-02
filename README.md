@@ -1,4 +1,4 @@
-Alert Dialog ![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588)
+Alert Dialog ![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588) [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 ===================
 AlertDialog for Android, a beautiful and material alert dialog to use in your android app.
 
@@ -6,16 +6,11 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 [![](https://jitpack.io/v/TutorialsAndroid/KAlertDialog.svg)](https://jitpack.io/#TutorialsAndroid/KAlertDialog)
 
-## Important
-
-**Note this library was made in the making for `Kinda` app this library was copied from `sweet-alert-dialog` repository on github we made this library because we want to use own library on `Kinda` app.So this library is in development we will monthly
-update this library with some changes.**
-
 ## ScreenShot
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/device-2019-03-23-132617.png)
 
 ## Note
-New version of library `4.4.19` require![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)New version of this library doesn't support Old Android version.
+New version of library `15.4.19` require![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)New version of this library doesn't support Old Android version.
 
 ## Setup
 The simplest way to use AlertDialog is to add the library as dependency to your build.
@@ -34,7 +29,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v14.4.19'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v15.4.19'
 	}
 
 ## Usage
@@ -168,7 +163,11 @@ And if you want to change the button corners with color create a drawable file
 And then call this method when you create drawable
 
       .confirmButtonColor(R.drawable.button_background) // you can change border and color of button
+      
+And if you want to hide Title Text and Content Text of alert dialog
 
+	.setTitleText("Are you sure?") //just don't write this line if you want to hide title text
+	.setContentText("Won't be able to recover this file!") // don't write this line if you want to hide content text
 
 **Change** the dialog style upon confirming：
 
