@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-	compileSdkVersion 28
+	compileSdkVersion 29
     
 	defaultConfig {
 		applicationId "com.kinda.alert.main"
         minSdkVersion 21
-        targetSdkVersion 28
-		versionCode 9
-        versionName "1.0.19"
+        targetSdkVersion 29
+		versionCode 10
+        versionName "2.0.19"
     }
 
     lintOptions {
@@ -33,7 +33,7 @@ dependencies {
 	implementation fileTree(include: ['*.jar'], dir: 'libs')
     
 	//ANDROID SUPPORT LIBRARIES
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
 	
     //library
     implementation project(':library')
