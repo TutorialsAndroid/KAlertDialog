@@ -2,6 +2,8 @@ Alert Dialog ![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style
 ===================
 AlertDialog for Android, a beautiful and material alert dialog to use in your android app.
 
+`Older verion of this library has been removed please use new version of this library.`
+
 **Library available at JitPack.io**
 
 [![](https://jitpack.io/v/TutorialsAndroid/KAlertDialog.svg)](https://jitpack.io/#TutorialsAndroid/KAlertDialog)
@@ -10,7 +12,7 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/device-2019-03-23-132617.png)
 
 ## Note
-New version of library `15.4.19` require![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)New version of this library doesn't support Old Android version.
+New version of library `1.0.19` require![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)New version of this library doesn't support Old Android version.
 
 ## Setup
 The simplest way to use AlertDialog is to add the library as dependency to your build.
@@ -29,7 +31,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v15.4.19'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v1.0.19'
 	}
 
 ## Usage
