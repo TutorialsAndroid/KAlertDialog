@@ -11,9 +11,6 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 ## ScreenShot
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/device-2019-03-23-132617.png)
 
-## Note
-New version of library `1.0.19` require![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)New version of this library doesn't support Old Android version.
-
 ## Setup
 The simplest way to use AlertDialog is to add the library as dependency to your build.
 
