@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kinda.alert.main.test">
+    package="com.developer.kinda.alert.test">
 
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.kinda.alert.main"
+                     android:targetPackage="com.developer.kinda.alert"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for com.kinda.alert.main"/>
+                     android:label="Tests for com.developer.kinda.alert"/>
 </manifest>

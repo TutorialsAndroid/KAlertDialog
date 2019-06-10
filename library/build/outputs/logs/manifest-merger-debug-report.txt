@@ -8,7 +8,7 @@ INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3
 INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
 INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:1-3:12
 	package
-		ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:11-36
+		ADDED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml:1:11-40
 		INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml
 		INJECTED from E:\GithubProjects\alert\library\src\main\AndroidManifest.xml
 	android:versionName

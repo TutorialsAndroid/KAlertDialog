@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kinda.alert.main"
+    package="com.developer.kinda.alert"
     android:targetSandboxVersion="2"
-    android:versionCode="10"
-    android:versionName="2.0.19" >
+    android:versionCode="11"
+    android:versionName="3.0.19" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -17,7 +17,7 @@
         android:testOnly="true"
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
-            android:name="com.kinda.alert.main.SampleActivity"
+            android:name="com.developer.kinda.alert.SampleActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
-            android:authorities="com.kinda.alert.main.com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.developer.kinda.alert.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />
     </application>
 
