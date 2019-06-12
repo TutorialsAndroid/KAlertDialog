@@ -1,4 +1,4 @@
-com.developer.kinda
+com.developer.kalert
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -362,6 +362,7 @@ color gray_btn_bg_color
 color gray_btn_bg_pressed_color
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color kalert_dialog_bg_color
 color material_blue_grey_80
 color material_blue_grey_800
 color material_blue_grey_90
@@ -398,7 +399,6 @@ color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
 color success_stroke_color
-color sweet_dialog_bg_color
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark

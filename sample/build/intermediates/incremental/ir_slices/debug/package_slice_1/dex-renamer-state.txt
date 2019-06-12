@@ -1,4 +1,0 @@
-#Mon Jun 10 14:42:13 IST 2019
-base.0=E\:\\GithubProjects\\alert\\sample\\build\\intermediates\\transforms\\dexMerger\\debug\\1
-path.0=classes.dex
-renamed.0=classes.dex

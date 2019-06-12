@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\GithubProjects\\alert\\sample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
+            "outputFile": "E:\\GithubProjects\\kindaLibraries\\alert\\sample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
             "map": [
                 {
                     "source": "C:\\Users\\aksha\\.gradle\\caches\\transforms-2\\files-2.1\\feee37356650b0af44d415fa0ab7b3c0\\res\\values-ca\\values-ca.xml",
