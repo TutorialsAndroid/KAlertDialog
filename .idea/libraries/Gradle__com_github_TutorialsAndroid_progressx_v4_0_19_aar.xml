@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.TutorialsAndroid:progressx:v4.0.19@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e12af4887e288091041da80f0ce6f450/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e12af4887e288091041da80f0ce6f450/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.TutorialsAndroid/progressx/v4.0.19/ab21938dc86a6cfa9e8bdabf561558317223a6f0/progressx-v4.0.19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

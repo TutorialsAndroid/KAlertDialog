@@ -1,7 +1,6 @@
 package com.developer.kalert;
 
 import android.app.AlertDialog;
-import com.kinda.progressx.ProgressWheel;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -14,6 +13,9 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.developer.progressx.ProgressWheel;
+
 import java.util.Objects;
 
 /**

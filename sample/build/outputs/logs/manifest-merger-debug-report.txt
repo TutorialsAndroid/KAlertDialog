@@ -31,7 +31,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\aksha\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\2eee9bde72e1485991bd3382e4469752\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\e99077b4502702205c91ed9295854f32\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\64c3fce2747633f406f0e3a4ec949c25\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.TutorialsAndroid:progressx:v2.0.19] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\1e00697833a154353aaf3842c1d2443c\AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.TutorialsAndroid:progressx:v4.0.19] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\e12af4887e288091041da80f0ce6f450\AndroidManifest.xml:2:1-13:12
 INJECTED from E:\GithubProjects\kindaLibraries\alert\sample\src\main\AndroidManifest.xml:2:1-19:12
 INJECTED from E:\GithubProjects\kindaLibraries\alert\sample\src\main\AndroidManifest.xml:2:1-19:12
 INJECTED from E:\GithubProjects\kindaLibraries\alert\sample\src\main\AndroidManifest.xml:2:1-19:12
@@ -59,8 +59,8 @@ MERGED from [androidx.core:core:1.0.1] C:\Users\aksha\.gradle\caches\transforms-
 MERGED from [androidx.core:core:1.0.1] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\feee37356650b0af44d415fa0ab7b3c0\AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\bf4c340aeec8146cea78fee455c9167a\AndroidManifest.xml:22:5-23:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\bf4c340aeec8146cea78fee455c9167a\AndroidManifest.xml:22:5-23:19
-MERGED from [com.github.TutorialsAndroid:progressx:v2.0.19] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\1e00697833a154353aaf3842c1d2443c\AndroidManifest.xml:11:5-20
-MERGED from [com.github.TutorialsAndroid:progressx:v2.0.19] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\1e00697833a154353aaf3842c1d2443c\AndroidManifest.xml:11:5-20
+MERGED from [com.github.TutorialsAndroid:progressx:v4.0.19] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\e12af4887e288091041da80f0ce6f450\AndroidManifest.xml:11:5-20
+MERGED from [com.github.TutorialsAndroid:progressx:v4.0.19] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\e12af4887e288091041da80f0ce6f450\AndroidManifest.xml:11:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\feee37356650b0af44d415fa0ab7b3c0\AndroidManifest.xml:22:18-86
 	android:label
@@ -145,8 +145,8 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\aksha\.gradle\cache
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\e99077b4502702205c91ed9295854f32\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\64c3fce2747633f406f0e3a4ec949c25\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\64c3fce2747633f406f0e3a4ec949c25\AndroidManifest.xml:20:5-44
-MERGED from [com.github.TutorialsAndroid:progressx:v2.0.19] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\1e00697833a154353aaf3842c1d2443c\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.TutorialsAndroid:progressx:v2.0.19] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\1e00697833a154353aaf3842c1d2443c\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.TutorialsAndroid:progressx:v4.0.19] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\e12af4887e288091041da80f0ce6f450\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.TutorialsAndroid:progressx:v4.0.19] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\e12af4887e288091041da80f0ce6f450\AndroidManifest.xml:7:5-9:41
 INJECTED from E:\GithubProjects\kindaLibraries\alert\sample\src\main\AndroidManifest.xml
 INJECTED from E:\GithubProjects\kindaLibraries\alert\sample\src\main\AndroidManifest.xml
 	android:targetSdkVersion

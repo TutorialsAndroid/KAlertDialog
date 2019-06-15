@@ -1,7 +1,8 @@
 package com.developer.kalert;
 
 import android.content.Context;
-import com.kinda.progressx.ProgressWheel;
+
+import com.developer.progressx.ProgressWheel;
 
 /**
  * @author akshay sunil masram
