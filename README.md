@@ -10,6 +10,8 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 [![](https://jitpack.io/v/TutorialsAndroid/KAlertDialog.svg)](https://jitpack.io/#TutorialsAndroid/KAlertDialog)
 
+`Latest version of this library is migrated to androidx`
+
 ## ScreenShot
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/device-2019-03-23-132617.png)
 
