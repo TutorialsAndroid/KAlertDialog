@@ -12,6 +12,9 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 `Latest version of this library is migrated to androidx`
 
+## Download My Kinda App. A new way to debate on the topic
+[![](https://github.com/TutorialsAndroid/Spoti/blob/master/art/google-play-badge.png)](https://bit.ly/kindadownload)
+
 ## ScreenShot
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/device-2019-03-23-132617.png)
 
