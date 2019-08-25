@@ -139,6 +139,23 @@
         android:textColor="#797979"
         android:visibility="gone" />
 
+    <FrameLayout
+        android:id="@+id/edit_text_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <requestFocus />
+        </EditText>
+
+    </FrameLayout>
+
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"

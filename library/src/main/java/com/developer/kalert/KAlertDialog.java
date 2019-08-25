@@ -1,6 +1,6 @@
 package com.developer.kalert;
 
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.Transformation;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,76 +22,35 @@ import java.util.Objects;
 /**
  * @author akshay sunil masram
  */
-public class KAlertDialog extends AlertDialog implements View.OnClickListener {
+public class KAlertDialog extends Dialog implements View.OnClickListener {
 
-    private final AnimationSet mModalInAnim,mModalOutAnim,mErrorXInAnim,mSuccessLayoutAnimSet;
-    private final Animation mOverlayOutAnim,mErrorInAnim,mSuccessBowAnim;
-
-    private TextView mTitleTextView,mContentTextView;
-    private ImageView mErrorX,mCustomImage;
-    private Drawable mCustomImgDrawable;
-    private Button mConfirmButton,mCancelButton;
-    private Drawable mColor,mCancelColor;
-    private View mDialogView,mSuccessLeftMask,mSuccessRightMask;
-
-    private String mTitleText,mContentText,mCancelText,mConfirmText;
-
-    private boolean mShowCancel,mShowContent,mShowTitleText,mCloseFromCancel;
-
-    private FrameLayout mErrorFrame,mSuccessFrame,mProgressFrame,mWarningFrame;
-    private SuccessTickView mSuccessTick;
-
-    private final ProgressHelper mProgressHelper;
-    private KAlertClickListener mCancelClickListener;
-    private KAlertClickListener mConfirmClickListener;
-
-    private int mAlertType;
-    private static final int NORMAL_TYPE = 0;
     public static final int ERROR_TYPE = 1;
     public static final int SUCCESS_TYPE = 2;
     public static final int WARNING_TYPE = 3;
     public static final int CUSTOM_IMAGE_TYPE = 4;
     public static final int PROGRESS_TYPE = 5;
-
-    public interface KAlertClickListener {
-        void onClick(KAlertDialog kAlertDialog);
-    }
+    public static final int EDIT_TEXT_TYPE = 6;
+    private static final int NORMAL_TYPE = 0;
+    private final AnimationSet mModalInAnim, mModalOutAnim, mErrorXInAnim, mSuccessLayoutAnimSet;
+    private final Animation mOverlayOutAnim, mErrorInAnim, mSuccessBowAnim;
+    private final ProgressHelper mProgressHelper;
+    private EditText mEditText;
+    private TextView mTitleTextView, mContentTextView;
+    private ImageView mErrorX, mCustomImage;
+    private Drawable mCustomImgDrawable;
+    private Button mConfirmButton, mCancelButton;
+    private Drawable mColor, mCancelColor;
+    private View mDialogView, mSuccessLeftMask, mSuccessRightMask;
+    private String mTitleText, mContentText, mCancelText, mConfirmText;
+    private boolean mShowCancel, mShowContent, mShowTitleText, mCloseFromCancel;
+    private FrameLayout mErrorFrame, mSuccessFrame, mProgressFrame, mWarningFrame, mEditTextFrame;
+    private SuccessTickView mSuccessTick;
+    private KAlertClickListener mCancelClickListener;
+    private KAlertClickListener mConfirmClickListener;
+    private int mAlertType;
 
     public KAlertDialog(Context context) {
         this(context, NORMAL_TYPE);
-    }
-
-    protected void onCreate(Bundle savedInstanceState) {
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.alert_dialog);
-
-        mDialogView = Objects.requireNonNull(getWindow()).getDecorView().findViewById(android.R.id.content);
-        mTitleTextView = findViewById(R.id.title_text);
-        mContentTextView = findViewById(R.id.content_text);
-        mErrorFrame = findViewById(R.id.error_frame);
-        mErrorX = mErrorFrame.findViewById(R.id.error_x);
-        mSuccessFrame = findViewById(R.id.success_frame);
-        mProgressFrame = findViewById(R.id.progress_dialog);
-        mSuccessTick = mSuccessFrame.findViewById(R.id.success_tick);
-        mSuccessLeftMask = mSuccessFrame.findViewById(R.id.mask_left);
-        mSuccessRightMask = mSuccessFrame.findViewById(R.id.mask_right);
-        mCustomImage = findViewById(R.id.custom_image);
-        mWarningFrame = findViewById(R.id.warning_frame);
-        mProgressHelper.setProgressWheel((ProgressWheel) findViewById(R.id.progressWheel));
-
-        mConfirmButton = findViewById(R.id.custom_confirm_button);
-        mCancelButton = findViewById(R.id.cancel_button);
-        mConfirmButton.setOnClickListener(this);
-        mCancelButton.setOnClickListener(this);
-
-        setTitleText(mTitleText);
-        setContentText(mContentText);
-        setCancelText(mCancelText);
-        setConfirmText(mConfirmText);
-        setConfirmButtonColor(mColor);
-        setCancelButtonColor(mCancelColor);
-        changeAlertType(mAlertType, true);
     }
 
     public KAlertDialog(Context context, int alertType) {
@@ -107,7 +67,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mModalOutAnim = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.modal_out);
         Objects.requireNonNull(mModalOutAnim).setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) { }
+            public void onAnimationStart(Animation animation) {
+            }
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -125,7 +86,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation) { }
+            public void onAnimationRepeat(Animation animation) {
+            }
         });
         mOverlayOutAnim = new Animation() {
             @Override
@@ -138,12 +100,48 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mOverlayOutAnim.setDuration(120);
     }
 
-    private void restore () {
+    protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.alert_dialog);
+
+        mDialogView = Objects.requireNonNull(getWindow()).getDecorView().findViewById(android.R.id.content);
+        mEditText = findViewById(R.id.edit_text);
+        mTitleTextView = findViewById(R.id.title_text);
+        mContentTextView = findViewById(R.id.content_text);
+        mErrorFrame = findViewById(R.id.error_frame);
+        mErrorX = mErrorFrame.findViewById(R.id.error_x);
+        mSuccessFrame = findViewById(R.id.success_frame);
+        mProgressFrame = findViewById(R.id.progress_dialog);
+        mSuccessTick = mSuccessFrame.findViewById(R.id.success_tick);
+        mSuccessLeftMask = mSuccessFrame.findViewById(R.id.mask_left);
+        mSuccessRightMask = mSuccessFrame.findViewById(R.id.mask_right);
+        mCustomImage = findViewById(R.id.custom_image);
+        mWarningFrame = findViewById(R.id.warning_frame);
+        mEditTextFrame = findViewById(R.id.edit_text_frame);
+        mProgressHelper.setProgressWheel((ProgressWheel) findViewById(R.id.progressWheel));
+
+        mConfirmButton = findViewById(R.id.custom_confirm_button);
+        mCancelButton = findViewById(R.id.cancel_button);
+        mConfirmButton.setOnClickListener(this);
+        mCancelButton.setOnClickListener(this);
+
+        setTitleText(mTitleText);
+        setContentText(mContentText);
+        setCancelText(mCancelText);
+        setConfirmText(mConfirmText);
+        setConfirmButtonColor(mColor);
+        setCancelButtonColor(mCancelColor);
+        changeAlertType(mAlertType, true);
+    }
+
+    private void restore() {
         mCustomImage.setVisibility(View.GONE);
         mErrorFrame.setVisibility(View.GONE);
         mSuccessFrame.setVisibility(View.GONE);
         mWarningFrame.setVisibility(View.GONE);
         mProgressFrame.setVisibility(View.GONE);
+        mEditTextFrame.setVisibility(View.GONE);
         mConfirmButton.setVisibility(View.VISIBLE);
 
         mConfirmButton.setBackgroundResource(R.drawable.button_background);
@@ -154,7 +152,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mSuccessRightMask.clearAnimation();
     }
 
-    private void playAnimation () {
+    private void playAnimation() {
         if (mAlertType == ERROR_TYPE) {
             mErrorFrame.startAnimation(mErrorInAnim);
             mErrorX.startAnimation(mErrorXInAnim);
@@ -194,6 +192,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                     mConfirmButton.setVisibility(View.GONE);
                     setConfirmButtonColor(mColor);
                     break;
+                case EDIT_TEXT_TYPE:
+                    mEditText.requestFocus();
+                    mEditTextFrame.setVisibility(View.VISIBLE);
+                    setConfirmButtonColor(mColor);
+                    break;
             }
             if (!fromCreate) {
                 playAnimation();
@@ -205,15 +208,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         changeAlertType(alertType, false);
     }
 
-    public KAlertDialog setTitleText (String text) {
-        mTitleText = text;
-        if (mTitleTextView != null && mTitleText != null) {
-            showTitleText();
-            mTitleTextView.setText(mTitleText);
-        }
-        return this;
-    }
-
     private void showTitleText() {
         mShowTitleText = true;
         if (mTitleTextView != null) {
@@ -221,7 +215,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
-    public KAlertDialog setCustomImage (int resourceId) {
+    public KAlertDialog setCustomImage(int resourceId) {
         return setCustomImage(getContext().getResources().getDrawable(resourceId));
     }
 
@@ -234,16 +228,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    public KAlertDialog setContentText (String text) {
-        mContentText = text;
-        if (mContentTextView != null && mContentText != null) {
-            showContentText();
-            mContentTextView.setText(mContentText);
-        }
-        return this;
-    }
-
-    public KAlertDialog showCancelButton (boolean isShow) {
+    public KAlertDialog showCancelButton(boolean isShow) {
         mShowCancel = isShow;
         if (mCancelButton != null) {
             mCancelButton.setVisibility(mShowCancel ? View.VISIBLE : View.GONE);
@@ -258,29 +243,12 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
-    public KAlertDialog setCancelText (String text) {
-        mCancelText = text;
-        if (mCancelButton != null && mCancelText != null) {
-            showCancelButton(true);
-            mCancelButton.setText(mCancelText);
-        }
-        return this;
-    }
-
-    public KAlertDialog setConfirmText (String text) {
-        mConfirmText = text;
-        if (mConfirmButton != null && mConfirmText != null) {
-            mConfirmButton.setText(mConfirmText);
-        }
-        return this;
-    }
-
-    public KAlertDialog setCancelClickListener (KAlertClickListener listener) {
+    public KAlertDialog setCancelClickListener(KAlertClickListener listener) {
         mCancelClickListener = listener;
         return this;
     }
 
-    public KAlertDialog setConfirmClickListener (KAlertClickListener listener) {
+    public KAlertDialog setConfirmClickListener(KAlertClickListener listener) {
         mConfirmClickListener = listener;
         return this;
     }
@@ -307,7 +275,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     private KAlertDialog setConfirmButtonColor(Drawable background) {
         mColor = background;
-        if (mConfirmButton != null && mColor !=null) {
+        if (mConfirmButton != null && mColor != null) {
             mConfirmButton.setBackground(mColor);
         }
         return this;
@@ -315,7 +283,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     private KAlertDialog setCancelButtonColor(Drawable background) {
         mCancelColor = background;
-        if (mCancelButton != null && mCancelColor !=null) {
+        if (mCancelButton != null && mCancelColor != null) {
             mCancelButton.setBackground(mCancelColor);
         }
         return this;
@@ -325,39 +293,82 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return mAlertType;
     }
 
-    public String getTitleText () {
+    public String getTitleText() {
         return mTitleText;
     }
 
-    public boolean isShowTitleText () {
+    public KAlertDialog setTitleText(String text) {
+        mTitleText = text;
+        if (mTitleTextView != null && mTitleText != null) {
+            showTitleText();
+            mTitleTextView.setText(mTitleText);
+        }
+        return this;
+    }
+
+    public boolean isShowTitleText() {
         return mShowTitleText;
     }
 
-    public String getContentText () {
+    public String getContentText() {
         return mContentText;
     }
 
-    public boolean isShowCancelButton () {
+    public KAlertDialog setContentText(String text) {
+        mContentText = text;
+        if (mContentTextView != null && mContentText != null) {
+            showContentText();
+            mContentTextView.setText(mContentText);
+        }
+        return this;
+    }
+
+    public boolean isShowCancelButton() {
         return mShowCancel;
     }
 
-    public boolean isShowContentText () {
+    public boolean isShowContentText() {
         return mShowContent;
     }
 
-    public String getCancelText () {
+    public String getCancelText() {
         return mCancelText;
     }
 
-    public String getConfirmText () {
+    public KAlertDialog setCancelText(String text) {
+        mCancelText = text;
+        if (mCancelButton != null && mCancelText != null) {
+            showCancelButton(true);
+            mCancelButton.setText(mCancelText);
+        }
+        return this;
+    }
+
+    public String getConfirmText() {
         return mConfirmText;
     }
 
-    public KAlertDialog confirmButtonColor (int color) {
+    public KAlertDialog setConfirmText(String text) {
+        mConfirmText = text;
+        if (mConfirmButton != null && mConfirmText != null) {
+            mConfirmButton.setText(mConfirmText);
+        }
+        return this;
+    }
+
+    public String getInputText() {
+        return mEditText.getText().toString();
+    }
+
+    public void setInputText(String text) {
+        mEditText.setText(text);
+    }
+
+    public KAlertDialog confirmButtonColor(int color) {
         return setConfirmButtonColor(getContext().getResources().getDrawable(color));
     }
 
-    public KAlertDialog cancelButtonColor (int color) {
+    public KAlertDialog cancelButtonColor(int color) {
         return setCancelButtonColor(getContext().getResources().getDrawable(color));
     }
 
@@ -378,7 +389,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
-    public ProgressHelper getProgressHelper () {
+    public ProgressHelper getProgressHelper() {
         return mProgressHelper;
+    }
+
+    public interface KAlertClickListener {
+        void onClick(KAlertDialog kAlertDialog);
     }
 }

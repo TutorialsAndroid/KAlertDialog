@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.widget.Toast;
+
 import com.developer.kalert.KAlertDialog;
 
 public class SampleActivity extends Activity implements View.OnClickListener {
@@ -23,6 +25,7 @@ public class SampleActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.warning_cancel_test).setOnClickListener(this);
         findViewById(R.id.custom_img_test).setOnClickListener(this);
         findViewById(R.id.progress_dialog).setOnClickListener(this);
+        findViewById(R.id.edit_text_test).setOnClickListener(this);
     }
 
     @Override
@@ -57,16 +60,11 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                         .setTitleText("Are you sure?")
                         .setContentText("Won't be able to recover this file!")
                         .setConfirmText("Yes,delete it!")
-                        .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
-                        @Override
-                        public void onClick(KAlertDialog sDialog) {
-                            sDialog.setTitleText("Deleted!")
-                                    .setContentText("Your imaginary file has been deleted!")
-                                    .setConfirmText("OK")
-                                    .setConfirmClickListener(null)
-                                    .changeAlertType(KAlertDialog.SUCCESS_TYPE);
-                        }
-                        })
+                        .setConfirmClickListener(sDialog -> sDialog.setTitleText("Deleted!")
+                                .setContentText("Your imaginary file has been deleted!")
+                                .setConfirmText("OK")
+                                .setConfirmClickListener(null)
+                                .changeAlertType(KAlertDialog.SUCCESS_TYPE))
                         .show();
                 break;
             case R.id.warning_cancel_test:
@@ -76,28 +74,19 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                         .setCancelText("No,cancel plx!")
                         .setConfirmText("Yes,delete it!")
                         .showCancelButton(true)
-                        .setCancelClickListener(new KAlertDialog.KAlertClickListener() {
-                            @Override
-                            public void onClick(KAlertDialog sDialog) {
-                                sDialog.setTitleText("Cancelled!")
-                                        .setContentText("Your imaginary file is safe :)")
-                                        .setConfirmText("OK")
-                                        .showCancelButton(false)
-                                        .setCancelClickListener(null)
-                                        .setConfirmClickListener(null)
-                                        .changeAlertType(KAlertDialog.ERROR_TYPE);
-                            }
-                        })
-                        .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
-                            @Override
-                            public void onClick(KAlertDialog sDialog) { sDialog
-                                        .setConfirmText("OK")
-                                        .showCancelButton(false)
-                                        .setCancelClickListener(null)
-                                        .setConfirmClickListener(null)
-                                        .changeAlertType(KAlertDialog.SUCCESS_TYPE);
-                            }
-                        })
+                        .setCancelClickListener(sDialog -> sDialog.setTitleText("Cancelled!")
+                                .setContentText("Your imaginary file is safe :)")
+                                .setConfirmText("OK")
+                                .showCancelButton(false)
+                                .setCancelClickListener(null)
+                                .setConfirmClickListener(null)
+                                .changeAlertType(KAlertDialog.ERROR_TYPE))
+                        .setConfirmClickListener(sDialog -> sDialog
+                                .setConfirmText("OK")
+                                .showCancelButton(false)
+                                .setCancelClickListener(null)
+                                .setConfirmClickListener(null)
+                                .changeAlertType(KAlertDialog.SUCCESS_TYPE))
                         .show();
                 break;
             case R.id.custom_img_test:
@@ -105,6 +94,19 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                         .setTitleText("KAlertDialog")
                         .setContentText("Here's a custom image.")
                         .setCustomImage(R.mipmap.ic_launcher)
+                        .show();
+                break;
+            case R.id.edit_text_test:
+                KAlertDialog kAlertDialogInput = new KAlertDialog(this, KAlertDialog.EDIT_TEXT_TYPE);
+                kAlertDialogInput.setTitleText("Dialog with edit text")
+                        .setContentText("Enter your text")
+                        .setCancelText("Cancel")
+                        .setCancelClickListener(null)
+                        .setConfirmClickListener(sDialogConfirm -> {
+                            //requestPayout();
+                            sDialogConfirm.dismissWithAnimation();
+                            Toast.makeText(getApplicationContext(), "Input value : " + kAlertDialogInput.getInputText(), Toast.LENGTH_LONG).show();
+                        })
                         .show();
                 break;
             case R.id.progress_dialog:
@@ -115,7 +117,7 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                 new CountDownTimer(800 * 7, 800) {
                     public void onTick(long millisUntilFinished) {
                         i++;
-                        switch (i){
+                        switch (i) {
                             case 0:
                                 pDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.blue_btn_bg_color));
                                 break;
