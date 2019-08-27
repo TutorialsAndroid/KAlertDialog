@@ -15,8 +15,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.developer.progressx.ProgressWheel;
-
 import java.util.Objects;
 
 /**
@@ -29,7 +27,7 @@ public class KAlertDialog extends Dialog implements View.OnClickListener {
     public static final int WARNING_TYPE = 3;
     public static final int CUSTOM_IMAGE_TYPE = 4;
     public static final int PROGRESS_TYPE = 5;
-    public static final int EDIT_TEXT_TYPE = 6;
+    public static final int INPUT_TYPE = 6;
     private static final int NORMAL_TYPE = 0;
     private final AnimationSet mModalInAnim, mModalOutAnim, mErrorXInAnim, mSuccessLayoutAnimSet;
     private final Animation mOverlayOutAnim, mErrorInAnim, mSuccessBowAnim;
@@ -73,14 +71,11 @@ public class KAlertDialog extends Dialog implements View.OnClickListener {
             @Override
             public void onAnimationEnd(Animation animation) {
                 mDialogView.setVisibility(View.GONE);
-                mDialogView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (mCloseFromCancel) {
-                            KAlertDialog.super.cancel();
-                        } else {
-                            KAlertDialog.super.dismiss();
-                        }
+                mDialogView.post(() -> {
+                    if (mCloseFromCancel) {
+                        KAlertDialog.super.cancel();
+                    } else {
+                        KAlertDialog.super.dismiss();
                     }
                 });
             }
@@ -98,6 +93,8 @@ public class KAlertDialog extends Dialog implements View.OnClickListener {
             }
         };
         mOverlayOutAnim.setDuration(120);
+
+        Objects.requireNonNull(this.getWindow()).setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,7 +107,7 @@ public class KAlertDialog extends Dialog implements View.OnClickListener {
         mTitleTextView = findViewById(R.id.title_text);
         mContentTextView = findViewById(R.id.content_text);
         mErrorFrame = findViewById(R.id.error_frame);
-        mErrorX = mErrorFrame.findViewById(R.id.error_x);
+        mErrorX = Objects.requireNonNull(mErrorFrame).findViewById(R.id.error_x);
         mSuccessFrame = findViewById(R.id.success_frame);
         mProgressFrame = findViewById(R.id.progress_dialog);
         mSuccessTick = mSuccessFrame.findViewById(R.id.success_tick);
@@ -119,7 +116,7 @@ public class KAlertDialog extends Dialog implements View.OnClickListener {
         mCustomImage = findViewById(R.id.custom_image);
         mWarningFrame = findViewById(R.id.warning_frame);
         mEditTextFrame = findViewById(R.id.edit_text_frame);
-        mProgressHelper.setProgressWheel((ProgressWheel) findViewById(R.id.progressWheel));
+        mProgressHelper.setProgressWheel(findViewById(R.id.progressWheel));
 
         mConfirmButton = findViewById(R.id.custom_confirm_button);
         mCancelButton = findViewById(R.id.cancel_button);
@@ -192,7 +189,7 @@ public class KAlertDialog extends Dialog implements View.OnClickListener {
                     mConfirmButton.setVisibility(View.GONE);
                     setConfirmButtonColor(mColor);
                     break;
-                case EDIT_TEXT_TYPE:
+                case INPUT_TYPE:
                     mEditText.requestFocus();
                     mEditTextFrame.setVisibility(View.VISIBLE);
                     setConfirmButtonColor(mColor);
@@ -323,6 +320,14 @@ public class KAlertDialog extends Dialog implements View.OnClickListener {
         return this;
     }
 
+    public String getInputText() {
+        return mEditText.getText().toString();
+    }
+
+    public void setInputText(String text) {
+        mEditText.setText(text);
+    }
+
     public boolean isShowCancelButton() {
         return mShowCancel;
     }
@@ -354,14 +359,6 @@ public class KAlertDialog extends Dialog implements View.OnClickListener {
             mConfirmButton.setText(mConfirmText);
         }
         return this;
-    }
-
-    public String getInputText() {
-        return mEditText.getText().toString();
-    }
-
-    public void setInputText(String text) {
-        mEditText.setText(text);
     }
 
     public KAlertDialog confirmButtonColor(int color) {
