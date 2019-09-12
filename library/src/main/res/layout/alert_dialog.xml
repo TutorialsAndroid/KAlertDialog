@@ -7,7 +7,7 @@
     android:gravity="center"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/dialog_background"
+    android:background="?attr/alertDialogDark"
     android:padding="10dp">
 
     <ImageView
@@ -53,30 +53,17 @@
             android:background="@drawable/success_bow" />
 
         <View
-            android:id="@+id/mask_right"
-            android:layout_width="35dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="-13dp"
-            android:layout_gravity="end"
-            android:background="@android:color/white" />
-
-        <View
-            android:id="@+id/mask_left"
-            android:layout_width="21dp"
-            android:layout_height="60dp"
-            android:layout_gravity="start"
-            android:background="@android:color/white"
-            android:layout_marginStart="-3dp" />
-
-        <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/success_circle" />
 
-        <com.developer.kalert.SuccessTickView
-            android:id="@+id/success_tick"
+        <ImageView
+            android:id="@+id/success_x"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_success_tick"
+            android:scaleType="center" />
 
     </FrameLayout>
 
@@ -122,7 +109,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="19sp"
-        android:textColor="#575757"
         android:layout_marginTop="10dp"
         android:singleLine="true"
         android:visibility="gone"
@@ -136,7 +122,6 @@
         android:textSize="14sp"
         android:textAlignment="center"
         android:gravity="center"
-        android:textColor="#797979"
         android:visibility="gone" />
 
     <LinearLayout

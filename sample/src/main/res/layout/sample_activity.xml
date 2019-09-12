@@ -70,4 +70,14 @@
         style="@style/dialog_blue_button"
         android:text="@string/a_message_with_a_custom_icon"/>
 
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_img_test"
+        android:layout_centerInParent="true"
+        android:text="Dark Theme"
+        android:textColor="#D50000" />
+
 </RelativeLayout>

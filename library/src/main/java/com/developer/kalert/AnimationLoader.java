@@ -21,12 +21,7 @@ class AnimationLoader {
 
         try (XmlResourceParser parser = context.getResources().getAnimation(id)) {
             return createAnimationFromXml(context, parser);
-        } catch (XmlPullParserException ex) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                throw new Resources.NotFoundException("Can't load animation resource ID #0x" +
-                        Integer.toHexString(id), ex);
-            }
-        } catch (IOException ex) {
+        } catch (XmlPullParserException | IOException ex) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 throw new Resources.NotFoundException("Can't load animation resource ID #0x" +
                         Integer.toHexString(id), ex);

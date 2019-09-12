@@ -4,9 +4,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.widget.CheckBox;
+
+import androidx.core.content.ContextCompat;
 import com.developer.kalert.KAlertDialog;
 
-public class SampleActivity extends Activity implements View.OnClickListener {
+public class SampleActivity extends Activity implements View.OnClickListener{
 
     private int i = -1;
 
@@ -23,6 +26,7 @@ public class SampleActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.warning_cancel_test).setOnClickListener(this);
         findViewById(R.id.custom_img_test).setOnClickListener(this);
         findViewById(R.id.progress_dialog).setOnClickListener(this);
+        findViewById(R.id.checkbox1).setOnClickListener(this);
     }
 
     @Override
@@ -117,25 +121,29 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                         i++;
                         switch (i){
                             case 0:
-                                pDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.blue_btn_bg_color));
+                                pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
+                                        (SampleActivity.this,R.color.blue_btn_bg_color));
                                 break;
                             case 1:
-                                pDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.material_deep_teal_50));
+                                pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
+                                        (SampleActivity.this,R.color.material_deep_teal_50));
                                 break;
                             case 2:
-                                pDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.success_stroke_color));
+                            case 6:
+                                pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
+                                        (SampleActivity.this,R.color.success_stroke_color));
                                 break;
                             case 3:
-                                pDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.material_deep_teal_20));
+                                pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
+                                        (SampleActivity.this,R.color.material_deep_teal_20));
                                 break;
                             case 4:
-                                pDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.material_blue_grey_80));
+                                pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
+                                        (SampleActivity.this,R.color.material_blue_grey_80));
                                 break;
                             case 5:
-                                pDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.warning_stroke_color));
-                                break;
-                            case 6:
-                                pDialog.getProgressHelper().setBarColor(getResources().getColor(R.color.success_stroke_color));
+                                pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
+                                        (SampleActivity.this,R.color.warning_stroke_color));
                                 break;
                         }
                     }
@@ -147,6 +155,13 @@ public class SampleActivity extends Activity implements View.OnClickListener {
                                 .changeAlertType(KAlertDialog.SUCCESS_TYPE);
                     }
                 }.start();
+                break;
+            case R.id.checkbox1:
+                if (((CheckBox) v).isChecked()) {
+                    KAlertDialog.DARK_STYLE = true;
+                } else {
+                    KAlertDialog.DARK_STYLE = false;
+                }
                 break;
         }
     }

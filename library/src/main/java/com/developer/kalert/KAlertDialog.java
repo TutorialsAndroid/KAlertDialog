@@ -13,9 +13,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.developer.progressx.ProgressWheel;
-
 import java.util.Objects;
 
 /**
@@ -23,22 +21,22 @@ import java.util.Objects;
  */
 public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
-    private final AnimationSet mModalInAnim,mModalOutAnim,mErrorXInAnim,mSuccessLayoutAnimSet;
-    private final Animation mOverlayOutAnim,mErrorInAnim,mSuccessBowAnim;
+    private final AnimationSet mModalInAnim,mModalOutAnim,mErrorXInAnim;//,mSuccessLayoutAnimSet;
+    private final Animation mOverlayOutAnim, mImageAnim;//,mSuccessBowAnim;
 
     private TextView mTitleTextView,mContentTextView;
-    private ImageView mErrorX,mCustomImage;
+    private ImageView mErrorX,mSuccessTick,mCustomImage;
     private Drawable mCustomImgDrawable;
     private Button mConfirmButton,mCancelButton;
     private Drawable mColor,mCancelColor;
-    private View mDialogView,mSuccessLeftMask,mSuccessRightMask;
+    private View mDialogView;//,mSuccessLeftMask,mSuccessRightMask;
 
     private String mTitleText,mContentText,mCancelText,mConfirmText;
 
     private boolean mShowCancel,mShowContent,mShowTitleText,mCloseFromCancel;
 
     private FrameLayout mErrorFrame,mSuccessFrame,mProgressFrame,mWarningFrame;
-    private SuccessTickView mSuccessTick;
+    //private SuccessTickView mSuccessTick;
 
     private final ProgressHelper mProgressHelper;
     private KAlertClickListener mCancelClickListener;
@@ -52,6 +50,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public static final int CUSTOM_IMAGE_TYPE = 4;
     public static final int PROGRESS_TYPE = 5;
 
+    public static boolean DARK_STYLE = false;
+
     public interface KAlertClickListener {
         void onClick(KAlertDialog kAlertDialog);
     }
@@ -61,7 +61,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.alert_dialog);
 
@@ -72,9 +71,9 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mErrorX = mErrorFrame.findViewById(R.id.error_x);
         mSuccessFrame = findViewById(R.id.success_frame);
         mProgressFrame = findViewById(R.id.progress_dialog);
-        mSuccessTick = mSuccessFrame.findViewById(R.id.success_tick);
-        mSuccessLeftMask = mSuccessFrame.findViewById(R.id.mask_left);
-        mSuccessRightMask = mSuccessFrame.findViewById(R.id.mask_right);
+        mSuccessTick = mSuccessFrame.findViewById(R.id.success_x);
+        //mSuccessLeftMask = mSuccessFrame.findViewById(R.id.mask_left);
+        //mSuccessRightMask = mSuccessFrame.findViewById(R.id.mask_right);
         mCustomImage = findViewById(R.id.custom_image);
         mWarningFrame = findViewById(R.id.warning_frame);
         mProgressHelper.setProgressWheel((ProgressWheel) findViewById(R.id.progressWheel));
@@ -94,15 +93,16 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
     public KAlertDialog(Context context, int alertType) {
-        super(context, R.style.alert_dialog);
+        super(context, DARK_STYLE ?  R.style.alert_dialog_dark : R.style.alert_dialog_light);
+
         setCancelable(true);
         setCanceledOnTouchOutside(false);
         mProgressHelper = new ProgressHelper(context);
         mAlertType = alertType;
-        mErrorInAnim = AnimationLoader.loadAnimation(getContext(), R.anim.error_frame_in);
+        mImageAnim = AnimationLoader.loadAnimation(getContext(), R.anim.error_frame_in);
         mErrorXInAnim = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.error_x_in);
-        mSuccessBowAnim = AnimationLoader.loadAnimation(getContext(), R.anim.success_bow_roate);
-        mSuccessLayoutAnimSet = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.success_mask_layout);
+        //mSuccessBowAnim = AnimationLoader.loadAnimation(getContext(), R.anim.success_bow_roate);
+        //mSuccessLayoutAnimSet = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.success_mask_layout);
         mModalInAnim = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.modal_in);
         mModalOutAnim = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.modal_out);
         Objects.requireNonNull(mModalOutAnim).setAnimationListener(new Animation.AnimationListener() {
@@ -150,17 +150,17 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mErrorFrame.clearAnimation();
         mErrorX.clearAnimation();
         mSuccessTick.clearAnimation();
-        mSuccessLeftMask.clearAnimation();
-        mSuccessRightMask.clearAnimation();
+        //mSuccessLeftMask.clearAnimation();
+        //mSuccessRightMask.clearAnimation();
     }
 
     private void playAnimation () {
         if (mAlertType == ERROR_TYPE) {
-            mErrorFrame.startAnimation(mErrorInAnim);
+            mErrorFrame.startAnimation(mImageAnim);
             mErrorX.startAnimation(mErrorXInAnim);
         } else if (mAlertType == SUCCESS_TYPE) {
-            mSuccessTick.startTickAnim();
-            mSuccessRightMask.startAnimation(mSuccessBowAnim);
+            mSuccessTick.startAnimation(mImageAnim);
+            mSuccessFrame.startAnimation(mImageAnim);
         }
     }
 
@@ -177,8 +177,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                     break;
                 case SUCCESS_TYPE:
                     mSuccessFrame.setVisibility(View.VISIBLE);
-                    mSuccessLeftMask.startAnimation(mSuccessLayoutAnimSet.getAnimations().get(0));
-                    mSuccessRightMask.startAnimation(mSuccessLayoutAnimSet.getAnimations().get(1));
+                    //mSuccessLeftMask.startAnimation(mSuccessLayoutAnimSet.getAnimations().get(0));
+                    //mSuccessRightMask.startAnimation(mSuccessLayoutAnimSet.getAnimations().get(1));
                     setConfirmButtonColor(mColor);
                     break;
                 case WARNING_TYPE:

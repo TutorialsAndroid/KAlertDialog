@@ -11,4 +11,8 @@
         <attr name="pivotX" format="fraction"/>
         <attr name="pivotY" format="fraction" />
     </declare-styleable>
+
+    <attr name="alertDialogDark" format="reference"/>
+    <attr name="alertDialogTextColor" format="color|reference"/>
+    <attr name="alertDialogContentTextColor" format="color|reference"/>
 </resources>
