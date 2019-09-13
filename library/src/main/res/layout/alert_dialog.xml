@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/loading"
     android:layout_width="@dimen/alert_width"
     android:layout_height="wrap_content"
@@ -112,6 +113,7 @@
         android:layout_marginTop="10dp"
         android:singleLine="true"
         android:visibility="gone"
+        android:textColor="?attr/alertDialogTextColor"
         android:text="@string/dialog_default_title" />
 
     <TextView
@@ -120,9 +122,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"
+        android:textColor="?attr/alertDialogContentTextColor"
         android:textAlignment="center"
         android:gravity="center"
         android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/custom_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:text="message \n message \n message"
+        tools:visibility="visible">
+
+        <!---->
+    </FrameLayout>
 
     <LinearLayout
         android:layout_marginTop="10dp"

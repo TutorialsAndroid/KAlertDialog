@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.CheckBox;
-
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import com.developer.kalert.KAlertDialog;
 
@@ -15,6 +15,9 @@ public class SampleActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+        //setTheme(R.style.Theme_AppCompat);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_activity);
 
@@ -34,18 +37,23 @@ public class SampleActivity extends Activity implements View.OnClickListener{
         switch (v.getId()) {
             case R.id.basic_test:
                 KAlertDialog sd = new KAlertDialog(this);
+                sd.setTitleText("Title");
+                sd.setContentText("Content");
                 sd.setCancelable(true);
                 sd.setCanceledOnTouchOutside(true);
                 sd.show();
                 break;
             case R.id.under_text_test:
                 new KAlertDialog(this)
+                        .setTitleText("Title Text")
                         .setContentText("It's pretty, isn't it?")
+                        //.setContentTextSize(50)
                         .show();
+
                 break;
             case R.id.error_text_test:
                 new KAlertDialog(this, KAlertDialog.ERROR_TYPE)
-                        .setTitleText("Oops...")
+                        .setTitleText("Opps.")
                         .setContentText("Something went wrong!")
                         .show();
                 break;
@@ -61,16 +69,11 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                         .setTitleText("Are you sure?")
                         .setContentText("Won't be able to recover this file!")
                         .setConfirmText("Yes,delete it!")
-                        .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
-                        @Override
-                        public void onClick(KAlertDialog sDialog) {
-                            sDialog.setTitleText("Deleted!")
-                                    .setContentText("Your imaginary file has been deleted!")
-                                    .setConfirmText("OK")
-                                    .setConfirmClickListener(null)
-                                    .changeAlertType(KAlertDialog.SUCCESS_TYPE);
-                        }
-                        })
+                        .setConfirmClickListener(sDialog -> sDialog.setTitleText("Deleted!")
+                                .setContentText("Your imaginary file has been deleted!")
+                                .setConfirmText("OK")
+                                .setConfirmClickListener(null)
+                                .changeAlertType(KAlertDialog.SUCCESS_TYPE))
                         .show();
                 break;
             case R.id.warning_cancel_test:
@@ -80,28 +83,19 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                         .setCancelText("No,cancel plx!")
                         .setConfirmText("Yes,delete it!")
                         .showCancelButton(true)
-                        .setCancelClickListener(new KAlertDialog.KAlertClickListener() {
-                            @Override
-                            public void onClick(KAlertDialog sDialog) {
-                                sDialog.setTitleText("Cancelled!")
-                                        .setContentText("Your imaginary file is safe :)")
+                        .setCancelClickListener(sDialog -> sDialog.setTitleText("Cancelled!")
+                                .setContentText("Your imaginary file is safe :)")
+                                .setConfirmText("OK")
+                                .showCancelButton(false)
+                                .setCancelClickListener(null)
+                                .setConfirmClickListener(null)
+                                .changeAlertType(KAlertDialog.ERROR_TYPE))
+                        .setConfirmClickListener(sDialog -> sDialog
                                         .setConfirmText("OK")
                                         .showCancelButton(false)
                                         .setCancelClickListener(null)
                                         .setConfirmClickListener(null)
-                                        .changeAlertType(KAlertDialog.ERROR_TYPE);
-                            }
-                        })
-                        .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
-                            @Override
-                            public void onClick(KAlertDialog sDialog) { sDialog
-                                        .setConfirmText("OK")
-                                        .showCancelButton(false)
-                                        .setCancelClickListener(null)
-                                        .setConfirmClickListener(null)
-                                        .changeAlertType(KAlertDialog.SUCCESS_TYPE);
-                            }
-                        })
+                                        .changeAlertType(KAlertDialog.SUCCESS_TYPE))
                         .show();
                 break;
             case R.id.custom_img_test:
@@ -157,11 +151,7 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                 }.start();
                 break;
             case R.id.checkbox1:
-                if (((CheckBox) v).isChecked()) {
-                    KAlertDialog.DARK_STYLE = true;
-                } else {
-                    KAlertDialog.DARK_STYLE = false;
-                }
+                KAlertDialog.DARK_STYLE = ((CheckBox) v).isChecked();
                 break;
         }
     }

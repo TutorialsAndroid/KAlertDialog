@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.developer.kalert.alert"
-4    android:versionCode="14"
-5    android:versionName="6.0.19" >
+4    android:versionCode="15"
+5    android:versionName="7.0.19" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"

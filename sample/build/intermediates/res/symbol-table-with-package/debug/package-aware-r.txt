@@ -757,6 +757,7 @@ id customPanel
 id custom_confirm_button
 id custom_image
 id custom_img_test
+id custom_view_container
 id decor_content_parent
 id default_activity_button
 id dialog_button
@@ -906,6 +907,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout alert_dialog
 layout custom_dialog
+layout customedittext
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

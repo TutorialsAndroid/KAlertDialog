@@ -3,34 +3,34 @@
 3    package="com.developer.kalert.test" >
 4
 5    <uses-sdk
-5-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:5:5-74
+5-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:5:5-74
 6        android:minSdkVersion="21"
-6-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:5:15-41
+6-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:5:15-41
 7        android:targetSdkVersion="29" />
-7-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:5:42-71
+7-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:5:42-71
 8
 9    <instrumentation
-9-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:11:5-15:75
+9-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:11:5-15:75
 10        android:name="android.test.InstrumentationTestRunner"
-10-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:11:22-75
+10-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:11:22-75
 11        android:functionalTest="false"
-11-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:14:22-52
+11-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:14:22-52
 12        android:handleProfiling="false"
-12-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:13:22-53
+12-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:13:22-53
 13        android:label="Tests for com.developer.kalert.test"
-13-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:15:22-73
+13-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:15:22-73
 14        android:targetPackage="com.developer.kalert.test" />
-14-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:12:22-71
+14-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:12:22-71
 15
 16    <application
-16-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:7:5-9:19
+16-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:7:5-9:19
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 17-->[androidx.core:core:1.1.0] C:\Users\aksha\.gradle\caches\transforms-2\files-2.1\b04c292e351507e6e196409ce02a63d0\core-1.1.0\AndroidManifest.xml:24:18-86
 18        android:debuggable="true" >
-18-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:7:18-43
+18-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:7:18-43
 19        <uses-library android:name="android.test.runner" />
-19-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:8:9-60
-19-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8890553324215898755.xml:8:23-57
+19-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:8:9-60
+19-->E:\GithubProjects\kindaLibraries\alert\library\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger4144201245951068425.xml:8:23-57
 20    </application>
 21
 22</manifest>
