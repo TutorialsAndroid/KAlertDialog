@@ -12,9 +12,6 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 `Latest version of this library is migrated to androidx`
 
-## Download My Kinda App. A new way to debate on the topic
-[![](https://github.com/TutorialsAndroid/Spoti/blob/master/art/google-play-badge.png)](https://bit.ly/kindadownload)
-
 ## ScreenShot
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/device-2019-03-23-132617.png)
 
@@ -35,7 +32,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v6.0.19'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v7.0.19'
 	}
 
 ## Usage
@@ -147,6 +144,24 @@ Customizing the alert dialog
 
     .confirmButtonColor(R.color.colorPrimary) // you can change the color of confirm button
     .cancelButtonColor(R.color.colorAccent) // you can change the color of cancel button
+    .setContentTextSize(50) // you can change the content text size
+    
+    //This is how you can set dark theme to alert dialog box
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+        //sets the theme for app
+        SharedPreferences sharedPreferences = this
+                .getSharedPreferences("theme", Context.MODE_PRIVATE);
+        final boolean dark = sharedPreferences.getBoolean("dark", false);
+        setTheme(dark ? R.style.AppThemeDark : R.style.AppTheme);
+
+        DARK_STYLE = dark; //this will apply dark theme to KAlertDialog Box
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main_ui);
+    }
+  
 
 And if you want to change the button corners with color create a drawable file
 
