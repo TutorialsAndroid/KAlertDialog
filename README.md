@@ -145,6 +145,7 @@ Customizing the alert dialog
     .confirmButtonColor(R.color.colorPrimary) // you can change the color of confirm button
     .cancelButtonColor(R.color.colorAccent) // you can change the color of cancel button
     .setContentTextSize(50) // you can change the content text size
+    .setTitleText("<h2>Title</h2><br><p>Description here</p>") //you can use html in title text
     
     //This is how you can set dark theme to alert dialog box
     @Override
