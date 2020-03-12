@@ -6,6 +6,10 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 `Older verion of this library has been removed please use new version of this library.`
 
+## Contributors
+
+[NassB (Nassim B.)](https://github.com/NassB)
+
 **Library available at JitPack.io**
 
 [![](https://jitpack.io/v/TutorialsAndroid/KAlertDialog.svg)](https://jitpack.io/#TutorialsAndroid/KAlertDialog)
