@@ -128,7 +128,7 @@
         android:visibility="gone" />
 
     <FrameLayout
-<<<<<<< HEAD
+
         android:id="@+id/custom_view_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -138,21 +138,12 @@
         tools:text="message \n message \n message"
         tools:visibility="visible">
 
-        <!---->
-=======
-        android:id="@+id/edit_text_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:visibility="gone">
-
         <EditText
             android:id="@+id/edit_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </EditText>
 
->>>>>>> 357968d342f7ba2ebb7cde76a39e44438efdff44
     </FrameLayout>
 
     <LinearLayout

@@ -4,14 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
-<<<<<<< HEAD
 import android.widget.CheckBox;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-=======
 import android.widget.Toast;
 
->>>>>>> 357968d342f7ba2ebb7cde76a39e44438efdff44
 import com.developer.kalert.KAlertDialog;
 
 public class SampleActivity extends Activity implements View.OnClickListener{
@@ -34,11 +31,9 @@ public class SampleActivity extends Activity implements View.OnClickListener{
         findViewById(R.id.warning_cancel_test).setOnClickListener(this);
         findViewById(R.id.custom_img_test).setOnClickListener(this);
         findViewById(R.id.progress_dialog).setOnClickListener(this);
-<<<<<<< HEAD
+
         findViewById(R.id.checkbox1).setOnClickListener(this);
-=======
-        findViewById(R.id.edit_text_test).setOnClickListener(this);
->>>>>>> 357968d342f7ba2ebb7cde76a39e44438efdff44
+     //findViewById(R.id.edit_text_test).setOnClickListener(this);
     }
 
     @Override
@@ -100,19 +95,13 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                                 .setConfirmClickListener(null)
                                 .changeAlertType(KAlertDialog.ERROR_TYPE))
                         .setConfirmClickListener(sDialog -> sDialog
-<<<<<<< HEAD
+
                                         .setConfirmText("OK")
                                         .showCancelButton(false)
                                         .setCancelClickListener(null)
                                         .setConfirmClickListener(null)
                                         .changeAlertType(KAlertDialog.SUCCESS_TYPE))
-=======
-                                .setConfirmText("OK")
-                                .showCancelButton(false)
-                                .setCancelClickListener(null)
-                                .setConfirmClickListener(null)
-                                .changeAlertType(KAlertDialog.SUCCESS_TYPE))
->>>>>>> 357968d342f7ba2ebb7cde76a39e44438efdff44
+
                         .show();
                 break;
             case R.id.custom_img_test:
@@ -120,19 +109,6 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                         .setTitleText("KAlertDialog")
                         .setContentText("Here's a custom image.")
                         .setCustomImage(R.mipmap.ic_launcher)
-                        .show();
-                break;
-            case R.id.edit_text_test:
-                KAlertDialog kAlertDialogInput = new KAlertDialog(this, KAlertDialog.EDIT_TEXT_TYPE);
-                kAlertDialogInput.setTitleText("Dialog with edit text")
-                        .setContentText("Enter your text")
-                        .setCancelText("Cancel")
-                        .setCancelClickListener(null)
-                        .setConfirmClickListener(sDialogConfirm -> {
-                            //requestPayout();
-                            sDialogConfirm.dismissWithAnimation();
-                            Toast.makeText(getApplicationContext(), "Input value : " + kAlertDialogInput.getInputText(), Toast.LENGTH_LONG).show();
-                        })
                         .show();
                 break;
             case R.id.progress_dialog:
