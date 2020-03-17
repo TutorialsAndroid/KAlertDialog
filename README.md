@@ -6,6 +6,10 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 `Older verion of this library has been removed please use new version of this library.`
 
+## Hire-Us
+
+<p align="center">Are you having trouble in your android projects then let us help you with it just Email Us. We love our users, so feel free to visit https://asm.life
+
 ## Download Our New App
 
 [Cocktail Friendship App](https://play.google.com/store/apps/details?id=developer.cocktail)
