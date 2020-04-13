@@ -8,7 +8,7 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 ## Hire-Me
 
-<p align="center">Are you having trouble in your android projects then let me help you with it just Email Us. We love our users, so feel free to visit https://asm.life
+<p align="center">Are you having trouble in your android projects then let me help you with it just Email me. We love our users, so feel free to visit https://asm.life
 
 ## Contributors
 
