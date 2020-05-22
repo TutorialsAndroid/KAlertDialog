@@ -1,0 +1,4 @@
+#Tue Jun 11 14:26:09 IST 2019
+base.0=E\:\\GithubProjects\\kindaLibraries\\alert\\sample\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex

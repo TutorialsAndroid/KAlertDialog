@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KALertDialog</string>
+    <string name="show_material_progress">Show Material Progress</string>
+    <string name="a_basic_message">A Basic Message</string>
+    <string name="a_title_with_a_text_under">A title with a text under</string>
+    <string name="show_error_message">show error message</string>
+    <string name="a_success_message">A success message</string>
+    <string name="a_warning_message_with_a_listener_bind_to_the_confirm_button">A warning message, with a listener bind to the Confirm-button…</string>
+    <string name="a_warning_message_with_listeners_bind_to_cancel_and_confirm_button">A warning message, with listeners bind to Cancel and Confirm button…</string>
+    <string name="a_message_with_a_custom_icon">A message with a custom icon</string>
+</resources>

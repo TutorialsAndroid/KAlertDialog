@@ -1,0 +1,10 @@
+#Fri Sep 13 14:23:34 IST 2019
+path.2=classes_0.dex
+path.1=classes.dex
+path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.2=E\:\\GithubProjects\\kindaLibraries\\alert\\sample\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_0.dex
+base.1=E\:\\GithubProjects\\kindaLibraries\\alert\\sample\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.0=E\:\\GithubProjects\\kindaLibraries\\alert\\sample\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex

@@ -1,0 +1,3 @@
+ -keep class com.developer.kalert.Rotate3dAnimation {
+    public <init>(...);
+ }

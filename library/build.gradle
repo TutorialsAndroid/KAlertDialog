@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.TutorialsAndroid'
+
+android {
+	compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 16
+        versionName "9.0.19"
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+	
+    //ANDROID SUPPORT LIBRARIES
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
+    //KINDA PROGRESSX LIBRARY
+    implementation 'com.github.TutorialsAndroid:progressx:v4.0.19'
+}

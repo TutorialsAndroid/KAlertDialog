@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <Button
+        android:id="@+id/progress_dialog"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        style="@style/dialog_blue_button"
+        android:text="@string/show_material_progress"/>
+
+    <Button
+        android:id="@+id/basic_test"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/progress_dialog"
+        android:layout_margin="10dp"
+        style="@style/dialog_blue_button"
+        android:text="@string/a_basic_message"/>
+
+    <Button
+        android:id="@+id/under_text_test"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/basic_test"
+        android:layout_margin="10dp"
+        style="@style/dialog_blue_button"
+        android:text="@string/a_title_with_a_text_under"/>
+
+    <Button
+        android:id="@+id/error_text_test"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/under_text_test"
+        android:layout_margin="10dp"
+        style="@style/dialog_blue_button"
+        android:text="@string/show_error_message"/>
+
+    <Button
+        android:id="@+id/success_text_test"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/error_text_test"
+        android:layout_margin="10dp"
+        style="@style/dialog_blue_button"
+        android:text="@string/a_success_message"/>
+
+    <Button
+        android:id="@+id/warning_confirm_test"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/success_text_test"
+        android:layout_margin="10dp"
+        style="@style/dialog_blue_button"
+        android:text="@string/a_warning_message_with_a_listener_bind_to_the_confirm_button"/>
+
+    <Button
+        android:id="@+id/warning_cancel_test"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/warning_confirm_test"
+        android:layout_margin="10dp"
+        style="@style/dialog_blue_button"
+        android:text="@string/a_warning_message_with_listeners_bind_to_cancel_and_confirm_button"/>
+
+    <Button
+        android:id="@+id/custom_img_test"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/warning_cancel_test"
+        android:layout_margin="10dp"
+        style="@style/dialog_blue_button"
+        android:text="@string/a_message_with_a_custom_icon"/>
+
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_img_test"
+        android:layout_centerInParent="true"
+        android:text="Dark Theme"
+        android:textColor="#D50000" />
+
+</RelativeLayout>
