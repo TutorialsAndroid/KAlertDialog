@@ -5,10 +5,10 @@ android {
     
 	defaultConfig {
 		applicationId "com.developer.kalert.alert"
-        minSdkVersion 21
+        minSdkVersion 15
         targetSdkVersion 29
-		versionCode 17
-        versionName "10.0.19"
+		versionCode 18
+        versionName "11.0.19"
     }
 
     lintOptions {

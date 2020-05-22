@@ -1,10 +1,4 @@
-#Fri May 22 18:16:48 IST 2020
-path.2=classes_0.dex
-path.1=classes.dex
+#Fri May 22 18:55:40 IST 2020
+base.0=D\:\\Projects\\KAlertDialog-master\\sample\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
-renamed.2=classes3.dex
-renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=D\:\\Projects\\KAlertDialog-master\\sample\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\out\\classes_0.dex
-base.1=D\:\\Projects\\KAlertDialog-master\\sample\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
-base.0=D\:\\Projects\\KAlertDialog-master\\sample\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex

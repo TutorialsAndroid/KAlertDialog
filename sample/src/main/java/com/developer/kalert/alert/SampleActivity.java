@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.CheckBox;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import android.widget.Toast;
 
 import com.developer.kalert.KAlertDialog;
 
@@ -52,7 +50,6 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                         .setTitleText("Title Text")
                         .setContentText("It's pretty, isn't it?")
                         .setConfirmText("Ok")
-                        //.setContentTextSize(50)
                         .show();
 
                 break;

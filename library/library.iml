@@ -112,6 +112,6 @@
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata:2.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.arch.core:core-runtime:2.0.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.github.TutorialsAndroid:progressx:v4.0.19@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.TutorialsAndroid:progressx:v5.0.19@aar" level="project" />
   </component>
 </module>

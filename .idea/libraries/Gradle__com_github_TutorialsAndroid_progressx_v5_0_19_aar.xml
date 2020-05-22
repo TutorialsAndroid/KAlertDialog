@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.TutorialsAndroid:progressx:v5.0.19@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2529dd0f95140904e2e3e1cc92b68d54/jetified-progressx-v5.0.19/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2529dd0f95140904e2e3e1cc92b68d54/jetified-progressx-v5.0.19/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.TutorialsAndroid/progressx/v5.0.19/d43691f239737fd569d23cc43e3e1a65605df555/progressx-v5.0.19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
