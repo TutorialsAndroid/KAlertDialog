@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\GithubProjects\\kindaLibraries\\alert\\sample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "D:\\Projects\\KAlertDialog-master\\sample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\aksha\\.gradle\\caches\\transforms-2\\files-2.1\\aa13922a02d4ed4c6b7f47b273b607ae\\appcompat-1.1.0\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-2\\files-2.1\\84cd812e8c7a99c0c19abad8621b5b90\\appcompat-1.1.0\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

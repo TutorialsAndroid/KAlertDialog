@@ -18,7 +18,7 @@ public class SampleActivity extends Activity implements View.OnClickListener{
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        //setTheme(R.style.Theme_AppCompat);
+        setTheme(R.style.Theme_AppCompat);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_activity);
@@ -51,6 +51,7 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                 new KAlertDialog(this)
                         .setTitleText("Title Text")
                         .setContentText("It's pretty, isn't it?")
+                        .setConfirmText("Ok")
                         //.setContentTextSize(50)
                         .show();
 
@@ -59,12 +60,14 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                 new KAlertDialog(this, KAlertDialog.ERROR_TYPE)
                         .setTitleText("Opps.")
                         .setContentText("Something went wrong!")
+                        .setConfirmText("Ok")
                         .show();
                 break;
             case R.id.success_text_test:
                 new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE)
                         .setTitleText("Good job!")
                         .setContentText("You clicked the button!")
+                        .setConfirmText("Ok")
                         .show();
 
                 break;

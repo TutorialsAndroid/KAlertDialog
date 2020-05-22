@@ -118,6 +118,16 @@ A message with a custom icon：
         .setCustomImage(R.drawable.custom_img)
         .show();
 
+To Hide Cancel And Confirm Button：
+
+    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
+        .setTitleText("Sweet!")
+        .setContentText("Here's a custom image.")
+        .setCustomImage(R.drawable.custom_img)
+        .setConfirmText("OK") //Do not call this if you don't want to show confirm button
+        .setCancelText("CANCEL")//Do not call this if you don't want to show cancel button
+        .show();
+
 Bind the listener to confirm button：
 
     new KAlertDialog(this, KAlertDialog.WARNING_TYPE)

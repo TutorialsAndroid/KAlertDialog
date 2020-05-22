@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -23,7 +24,7 @@ import androidx.appcompat.app.AlertDialog;
 import java.util.Objects;
 
 /**
- * @author akshay sunil masram
+ * @author TutorialsAndroid , tkdco
  */
 public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
@@ -41,7 +42,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     private String mTitleText, mContentText, mCancelText, mConfirmText;
 
-    private boolean mShowCancel, mShowContent, mShowTitleText, mCloseFromCancel;
+    private boolean mShowCancel, mShowContent, mShowTitleText, mCloseFromCancel, mShowConfirm;
     private int contentTextSize = 0;
 
     private FrameLayout mErrorFrame, mSuccessFrame, mProgressFrame, mWarningFrame;
@@ -294,6 +295,15 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             return this;
         }
 
+    public KAlertDialog showConfirmButton ( boolean isShow){
+
+        mShowConfirm = isShow;
+        if (mConfirmButton != null) {
+            mConfirmButton.setVisibility(mShowConfirm ? View.VISIBLE : View.GONE);
+        }
+        return this;
+    }
+
         private void showContentText () {
             mShowContent = true;
             if (mContentTextView != null) {
@@ -379,6 +389,10 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             return mShowCancel;
         }
 
+        public boolean isShowConfirmButton () {
+            return mShowConfirm;
+        }
+
         public boolean isShowContentText () {
             return mShowContent;
         }
@@ -403,6 +417,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         public KAlertDialog setConfirmText (String text){
             mConfirmText = text;
             if (mConfirmButton != null && mConfirmText != null) {
+                showConfirmButton(true);
                 mConfirmButton.setText(mConfirmText);
             }
             return this;

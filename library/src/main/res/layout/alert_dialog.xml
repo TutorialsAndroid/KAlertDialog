@@ -163,6 +163,7 @@
         <Button
             android:id="@+id/custom_confirm_button"
             style="@style/dialog_blue_button"
+            android:visibility="gone"
             android:text="@string/dialog_ok" />
     </LinearLayout>
 </LinearLayout>

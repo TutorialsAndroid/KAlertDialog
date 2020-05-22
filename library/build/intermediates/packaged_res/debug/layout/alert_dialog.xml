@@ -128,6 +128,7 @@
         android:visibility="gone" />
 
     <FrameLayout
+
         android:id="@+id/custom_view_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -137,7 +138,12 @@
         tools:text="message \n message \n message"
         tools:visibility="visible">
 
-        <!---->
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </EditText>
+
     </FrameLayout>
 
     <LinearLayout
@@ -157,6 +163,7 @@
         <Button
             android:id="@+id/custom_confirm_button"
             style="@style/dialog_blue_button"
+            android:visibility="gone"
             android:text="@string/dialog_ok" />
     </LinearLayout>
 </LinearLayout>

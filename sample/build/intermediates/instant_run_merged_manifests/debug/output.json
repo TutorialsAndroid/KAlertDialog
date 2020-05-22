@@ -1,1 +1,0 @@
-[{"outputType":{"type":"INSTANT_RUN_MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":13,"versionName":"5.0.19","enabled":true,"outputFile":"sample-debug.apk","fullName":"debug","baseName":"debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.developer.kalert.alert","split":"","minSdkVersion":"21"}}]
