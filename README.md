@@ -10,6 +10,11 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 <p align="center">Are you having trouble in your android projects then let me help you with it just Email me. I love my users, so feel free to visit http://asm.life
 
+## And Don't Forget To Follow Me On Instagram
+
+<p align="center">Follow me on instagram to stay up-to-date https://instagram.com/akshaysunilmasram 
+    
+
 ## Contributors
 
 [NassB (Nassim B.)](https://github.com/NassB)
