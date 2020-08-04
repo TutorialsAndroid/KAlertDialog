@@ -34,5 +34,5 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
 
     //TUTORIALS ANDROID LIBRARIES
-    implementation 'com.github.TutorialsAndroid:progressx:v5.0.19'
+    implementation 'com.github.TutorialsAndroid:progressx:v6.0.19'
 }
