@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.developer.kalert.alert"
-    android:versionCode="18"
-    android:versionName="11.0.19" >
+    android:versionCode="19"
+    android:versionName="12.0.19" >
 
     <uses-sdk
-        android:minSdkVersion="15"
+        android:minSdkVersion="19"
         android:targetSdkVersion="29" />
 
     <application

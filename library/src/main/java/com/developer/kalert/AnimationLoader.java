@@ -11,9 +11,6 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 
-/**
- * @author akshay sunil masram
- */
 class AnimationLoader {
 
     static Animation loadAnimation(Context context, int id)

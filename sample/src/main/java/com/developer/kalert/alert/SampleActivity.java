@@ -31,7 +31,6 @@ public class SampleActivity extends Activity implements View.OnClickListener{
         findViewById(R.id.progress_dialog).setOnClickListener(this);
 
         findViewById(R.id.checkbox1).setOnClickListener(this);
-     //findViewById(R.id.edit_text_test).setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +40,7 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                 KAlertDialog sd = new KAlertDialog(this);
                 sd.setTitleText("Title");
                 sd.setContentText("Content");
+                sd.setConfirmText("Ok");
                 sd.setCancelable(true);
                 sd.setCanceledOnTouchOutside(true);
                 sd.show();
@@ -108,7 +108,8 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                 new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
                         .setTitleText("KAlertDialog")
                         .setContentText("Here's a custom image.")
-                        .setCustomImage(R.mipmap.ic_launcher)
+                        .setCustomImage(R.mipmap.ic_launcher,SampleActivity.this)
+                        .setConfirmText("OK")
                         .show();
                 break;
             case R.id.progress_dialog:

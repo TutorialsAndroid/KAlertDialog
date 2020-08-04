@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Projects\\KAlertDialog-master\\sample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-eu\\values-eu.xml",
+            "outputFile": "D:\\Projects\\AndroidLibraries\\KAlertDialog-master\\sample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-eu\\values-eu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-2\\files-2.1\\84cd812e8c7a99c0c19abad8621b5b90\\appcompat-1.1.0\\res\\values-eu\\values-eu.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-2\\files-2.1\\e04e617f30a871c507d163331b100d66\\appcompat-1.1.0\\res\\values-eu\\values-eu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-2\\files-2.1\\852d4a5e7c416d9545d6d288413ff474\\core-1.1.0\\res\\values-eu\\values-eu.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-2\\files-2.1\\5e0a6259dbe125c6eb12a42b06ee549e\\core-1.1.0\\res\\values-eu\\values-eu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

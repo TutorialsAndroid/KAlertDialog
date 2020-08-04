@@ -1,5 +1,6 @@
 package com.developer.kalert;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -9,9 +10,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 
-/**
- * @author akshay sunil masram
- */
 public class SuccessTickView extends View {
 
     private float mDensity = -1;
@@ -36,9 +34,10 @@ public class SuccessTickView extends View {
         init();
     }
 
+    @SuppressLint("ResourceAsColor")
     private void init () {
         mPaint = new Paint();
-        mPaint.setColor(getResources().getColor(R.color.success_stroke_color));
+        mPaint.setColor(R.color.success_stroke_color);
         leftRectWidth = CONST_LEFT_RECT_W;
         rightRectWidth = CONST_RIGHT_RECT_W;
         mLeftRectGrowMode = false;
@@ -59,14 +58,12 @@ public class SuccessTickView extends View {
         if (mLeftRectGrowMode) {
             leftRect.left = 0;
             leftRect.right = leftRect.left + leftRectWidth;
-            leftRect.top = (totalH + CONST_RIGHT_RECT_W) / 2;
-            leftRect.bottom = leftRect.top + CONST_RECT_WEIGHT;
         } else {
             leftRect.right = (totalW + CONST_LEFT_RECT_W) / 2 + CONST_RECT_WEIGHT - 1;
             leftRect.left = leftRect.right - leftRectWidth;
-            leftRect.top = (totalH + CONST_RIGHT_RECT_W) / 2;
-            leftRect.bottom = leftRect.top + CONST_RECT_WEIGHT;
         }
+        leftRect.top = (totalH + CONST_RIGHT_RECT_W) / 2;
+        leftRect.bottom = leftRect.top + CONST_RECT_WEIGHT;
 
         canvas.drawRoundRect(leftRect, CONST_RADIUS, CONST_RADIUS, mPaint);
 
@@ -103,7 +100,7 @@ public class SuccessTickView extends View {
                 } else if (0.7 < interpolatedTime && 0.84 >= interpolatedTime) {
                     mLeftRectGrowMode = false;
                     leftRectWidth = maxLeftRectWidth * (1 - ((interpolatedTime - 0.7f) / 0.14f));
-                    leftRectWidth = leftRectWidth < MIN_LEFT_RECT_W ? MIN_LEFT_RECT_W : leftRectWidth;
+                    leftRectWidth = Math.max(leftRectWidth, MIN_LEFT_RECT_W);
                     rightRectWidth = MAX_RIGHT_RECT_W * ((interpolatedTime - 0.65f) / 0.19f);
                     invalidate();
                 } else if (0.84 < interpolatedTime && 1 >= interpolatedTime) {

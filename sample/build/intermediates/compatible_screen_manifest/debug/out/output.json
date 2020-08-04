@@ -1,1 +1,6 @@
-[]
+{
+  "version": 1,
+  "applicationId": "com.developer.kalert.alert",
+  "variantType": "BASE_APK",
+  "elements": []
+}

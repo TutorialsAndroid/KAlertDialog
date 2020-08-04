@@ -1,12 +1,10 @@
 package com.developer.kalert;
 
 import android.content.Context;
-
+import android.os.Build;
 import com.developer.progressx.ProgressWheel;
 
-/**
- * @author akshay sunil masram
- */
+@SuppressWarnings("unused")
 public class ProgressHelper {
 
     private ProgressWheel progressWheel;
@@ -18,7 +16,11 @@ public class ProgressHelper {
         spin = true;
         spinSpeed = 0.75f;
         barWidth = ctx.getResources().getDimensionPixelSize(R.dimen.common_circle_width) + 1;
-        barColor = ctx.getResources().getColor(R.color.success_stroke_color);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            barColor = ctx.getResources().getColor(R.color.success_stroke_color,ctx.getTheme());
+        }else {
+            barColor = ctx.getResources().getColor(R.color.success_stroke_color);
+        }
         rimWidth = 0;
         rimColor = 0x00000000;
         progress = false;

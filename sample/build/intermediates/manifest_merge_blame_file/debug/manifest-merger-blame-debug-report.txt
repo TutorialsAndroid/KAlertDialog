@@ -1,42 +1,42 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.developer.kalert.alert"
-4    android:versionCode="18"
-5    android:versionName="11.0.19" >
+4    android:versionCode="19"
+5    android:versionName="12.0.19" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="15"
-8-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml
+8        android:minSdkVersion="19"
+8-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml
+9-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:6:5-18:19
+11-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:6:5-18:19
 12        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-12-->[androidx.core:core:1.1.0] C:\Users\tkdco\.gradle\caches\transforms-2\files-2.1\852d4a5e7c416d9545d6d288413ff474\core-1.1.0\AndroidManifest.xml:24:18-86
+12-->[androidx.core:core:1.1.0] C:\Users\tkdco\.gradle\caches\transforms-2\files-2.1\5e0a6259dbe125c6eb12a42b06ee549e\core-1.1.0\AndroidManifest.xml:24:18-86
 13        android:debuggable="true"
 14        android:icon="@mipmap/ic_launcher"
-14-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:8:9-43
+14-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:8:9-43
 15        android:label="@string/app_name"
-15-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:7:9-41
+15-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:7:9-41
 16        android:testOnly="true"
 17        android:theme="@android:style/Theme.NoTitleBar" >
-17-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:9:9-56
+17-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:9:9-56
 18        <activity
-18-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:11:9-17:20
+18-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:11:9-17:20
 19            android:name="com.developer.kalert.alert.SampleActivity"
-19-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:11:19-49
+19-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:11:19-49
 20            android:label="@string/app_name" >
-20-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:12:19-51
+20-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:12:19-51
 21            <intent-filter>
-21-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:13:13-16:29
+21-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:13:13-16:29
 22                <action android:name="android.intent.action.MAIN" />
-22-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:14:17-68
-22-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:14:25-66
+22-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:14:17-68
+22-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:14:25-66
 23
 24                <category android:name="android.intent.category.LAUNCHER" />
-24-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:15:17-76
-24-->D:\Projects\KAlertDialog-master\sample\src\main\AndroidManifest.xml:15:27-74
+24-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:15:17-76
+24-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:15:27-74
 25            </intent-filter>
 26        </activity>
 27    </application>
