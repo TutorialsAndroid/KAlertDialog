@@ -11,8 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="59b27e88-1fc9-49fb-84d5-281a821c7c76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library/library.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/sample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/developer/kalert/KAlertDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/developer/kalert/KAlertDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/src/main/java/com/developer/kalert/alert/SampleActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/java/com/developer/kalert/alert/SampleActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596551546816</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="FIXED ISSUE OF PRIVATE ACCESS IN CUSTOM IMAGE">
+      <created>1596807323990</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596807323990</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,17 +236,18 @@
     <MESSAGE value="UPDATED README" />
     <MESSAGE value="ADDED SUPPORT FOR OLDER VERSIONS ANDROID AND ADDED ABILITY TO HIDE CONFIRM BUTTON" />
     <MESSAGE value="UPDATED GRADLE VERSION AND FIXED DEPRECATION ISSUE" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATED GRADLE VERSION AND FIXED DEPRECATION ISSUE" />
+    <MESSAGE value="FIXED ISSUE OF PRIVATE ACCESS IN CUSTOM IMAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIXED ISSUE OF PRIVATE ACCESS IN CUSTOM IMAGE" />
   </component>
   <component name="WindowStateProjectService">
     <state x="379" y="173" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1596547137607">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="379" y="173" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1596547137607" />
-    <state x="95" y="0" key="CommitChangelistDialog2" timestamp="1596551545700">
+    <state x="95" y="0" key="CommitChangelistDialog2" timestamp="1596807317865">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="95" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1596551545700" />
+    <state x="95" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1596807317865" />
     <state width="1236" height="268" key="GridCell.Tab.0.bottom" timestamp="1596546625235">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -256,10 +264,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1236" height="268" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1596546625235" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1596551548385">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1596807328101">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1596551548385" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1596807328101" />
     <state x="93" y="93" width="1095" height="495" maximized="true" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1596545714217">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

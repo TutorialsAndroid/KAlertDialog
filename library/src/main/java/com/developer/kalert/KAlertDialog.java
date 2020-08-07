@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 
 import android.text.Html;
+import android.text.util.Linkify;
 import android.util.TypedValue;
 
 import android.view.View;
@@ -44,6 +45,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     private boolean mShowCancel, mShowContent, mShowTitleText, mCloseFromCancel, mShowConfirm;
     private int contentTextSize = 0;
+    private int titleTextSize = 0;
 
     private FrameLayout mErrorFrame, mSuccessFrame, mProgressFrame, mWarningFrame;
 
@@ -195,7 +197,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                     setConfirmButtonColor(mColor);
                     break;
                 case CUSTOM_IMAGE_TYPE:
-                    setCustomImage(mCustomImgDrawable);
+                    setCustomImage1(mCustomImgDrawable);
                     setConfirmButtonColor(mColor);
                     break;
                 case PROGRESS_TYPE:
@@ -223,6 +225,9 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mTitleText = text;
         if (mTitleTextView != null && mTitleText != null) {
             showTitleText();
+            if (titleTextSize != 0) {
+                mTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, spToPx(titleTextSize, getContext()));
+            }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 mTitleTextView.setText(Html.fromHtml(mTitleText,1));
             }else {
@@ -236,18 +241,19 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mShowTitleText = true;
         if (mTitleTextView != null) {
             mTitleTextView.setVisibility(View.VISIBLE);
+            mContentTextView.setAutoLinkMask(Linkify.ALL);
         }
     }
 
     public KAlertDialog setCustomImage(int resourceId, Context context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            return setCustomImage(getContext().getResources().getDrawable(resourceId,context.getTheme()));
+            return setCustomImage1(getContext().getResources().getDrawable(resourceId,context.getTheme()));
        } else {
-            return setCustomImage(getContext().getResources().getDrawable(resourceId));
+            return setCustomImage1(getContext().getResources().getDrawable(resourceId));
         }
     }
 
-    public KAlertDialog setCustomImage(Drawable drawable) {
+    private KAlertDialog setCustomImage1(Drawable drawable) {
         mCustomImgDrawable = drawable;
         if (mCustomImage != null && mCustomImgDrawable != null) {
             mCustomImage.setVisibility(View.VISIBLE);
@@ -264,7 +270,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                 mContentTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, spToPx(contentTextSize, getContext()));
             }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                mContentTextView.setText(Html.fromHtml(mContentText,1));
+                mContentTextView.setText(Html.fromHtml(mContentText,0));
             }else {
                 mContentTextView.setText(Html.fromHtml(mContentText));
             }
@@ -293,6 +299,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mShowContent = true;
         if (mContentTextView != null) {
             mContentTextView.setVisibility(View.VISIBLE);
+            mContentTextView.setAutoLinkMask(Linkify.ALL);
         }
     }
 
@@ -422,6 +429,15 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }else {
             return setCancelButtonColor(getContext().getResources().getDrawable(color));
         }
+    }
+
+    public KAlertDialog setTitleTextSize(int value){
+        this.titleTextSize = value;
+        return this;
+    }
+
+    public int getTitleTextSize() {
+        return titleTextSize;
     }
 
     public KAlertDialog setContentTextSize ( int value){

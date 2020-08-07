@@ -48,7 +48,7 @@ public class SampleActivity extends Activity implements View.OnClickListener{
             case R.id.under_text_test:
                 new KAlertDialog(this)
                         .setTitleText("Title Text")
-                        .setContentText("It's pretty, isn't it?")
+                        .setContentText("Hello")
                         .setConfirmText("Ok")
                         .show();
 
