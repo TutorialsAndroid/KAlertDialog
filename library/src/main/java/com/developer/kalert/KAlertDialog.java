@@ -247,7 +247,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
-    private KAlertDialog setCustomImage(Drawable drawable) {
+    public KAlertDialog setCustomImage(Drawable drawable) {
         mCustomImgDrawable = drawable;
         if (mCustomImage != null && mCustomImgDrawable != null) {
             mCustomImage.setVisibility(View.VISIBLE);
