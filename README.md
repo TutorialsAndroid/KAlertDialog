@@ -6,9 +6,6 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 `Older verion of this library has been removed please use new version of this library.`
 
-## Hire-Me
-
-<p align="center">Are you having trouble in your android projects then let me help you with it just Email me. I love my users, so feel free to visit http://asm.life
 
 ## And Don't Forget To Follow Me On Instagram
 

@@ -55,6 +55,7 @@ id custom_confirm_button
 id custom_image
 id custom_view_container
 id edit_text
+id edit_text_topic_name
 id error_frame
 id error_x
 id loading
@@ -68,6 +69,7 @@ id x
 id y
 id z
 layout alert_dialog
+layout edit
 string LOADING
 string app_name
 string dialog_cancel

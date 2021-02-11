@@ -745,6 +745,7 @@ int id default_activity_button 0x0
 int id dialog_button 0x0
 int id edit_query 0x0
 int id edit_text 0x0
+int id edit_text_topic_name 0x0
 int id error_frame 0x0
 int id error_x 0x0
 int id expand_activities_button 0x0
@@ -873,6 +874,7 @@ int layout abc_select_dialog_material 0x0
 int layout abc_tooltip 0x0
 int layout alert_dialog 0x0
 int layout custom_dialog 0x0
+int layout edit 0x0
 int layout notification_action 0x0
 int layout notification_action_tombstone 0x0
 int layout notification_template_custom_big 0x0

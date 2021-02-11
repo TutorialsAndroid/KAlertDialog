@@ -10,27 +10,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59b27e88-1fc9-49fb-84d5-281a821c7c76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/KAlertDialog$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/KAlertDialog$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/KAlertDialog$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/KAlertDialog$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/KAlertDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/KAlertDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/ProgressHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/ProgressHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library/library.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/developer/kalert/KAlertDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/developer/kalert/KAlertDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/javac/debug/classes/com/developer/kalert/alert/SampleActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/javac/debug/classes/com/developer/kalert/alert/SampleActivity$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/build/intermediates/javac/debug/classes/com/developer/kalert/alert/SampleActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/javac/debug/classes/com/developer/kalert/alert/SampleActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/com/developer/kalert/alert/SampleActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/com/developer/kalert/alert/SampleActivity$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/com/developer/kalert/alert/SampleActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/com/developer/kalert/alert/SampleActivity.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/build/outputs/apk/debug/sample-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/outputs/apk/debug/sample-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/sample.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_30" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -48,8 +62,8 @@
       <list>
         <option value="valueResourceFile" />
         <option value="resourceFile" />
-        <option value="layoutResourceFile_vertical" />
         <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -82,6 +96,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="two.files.diff.last.used.file" value="D:/sweetalert-master/library/src/main/java/cn/pedant/SweetAlert/SweetAlertDialog.java" />
   </component>
   <component name="RunManager">
@@ -218,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596809333664</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="UPDATED README.md">
+      <created>1596809724306</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1596809724306</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,37 +278,42 @@
     <MESSAGE value="UPDATED GRADLE VERSION AND FIXED DEPRECATION ISSUE" />
     <MESSAGE value="FIXED ISSUE OF PRIVATE ACCESS IN CUSTOM IMAGE" />
     <MESSAGE value="ADDED SETTING OF TITLE TEXT SIZE AND NOW LINKS ARE CLICKABLE" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADDED SETTING OF TITLE TEXT SIZE AND NOW LINKS ARE CLICKABLE" />
+    <MESSAGE value="UPDATED README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATED README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="379" y="173" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1596547137607">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="379" y="173" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1596547137607" />
-    <state x="95" y="0" key="CommitChangelistDialog2" timestamp="1596809332164">
+    <state x="221" y="95" key="AndroidCreateResourceFileDialog" timestamp="1600680810924">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="95" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1596809332164" />
-    <state width="1236" height="268" key="GridCell.Tab.0.bottom" timestamp="1596546625235">
+    <state x="221" y="95" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1600680810924" />
+    <state x="95" y="0" key="CommitChangelistDialog2" timestamp="1596809722240">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="268" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1596546625235" />
-    <state width="1236" height="268" key="GridCell.Tab.0.center" timestamp="1596546625234">
+    <state x="95" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1596809722240" />
+    <state width="1236" height="268" key="GridCell.Tab.0.bottom" timestamp="1600682021649">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="268" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1596546625234" />
-    <state width="1236" height="268" key="GridCell.Tab.0.left" timestamp="1596546625233">
+    <state width="1236" height="268" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600682021649" />
+    <state width="1236" height="268" key="GridCell.Tab.0.center" timestamp="1600682021649">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="268" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1596546625233" />
-    <state width="1236" height="268" key="GridCell.Tab.0.right" timestamp="1596546625235">
+    <state width="1236" height="268" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600682021649" />
+    <state width="1236" height="268" key="GridCell.Tab.0.left" timestamp="1600682021648">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="268" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1596546625235" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1596809336067">
+    <state width="1236" height="268" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600682021648" />
+    <state width="1236" height="268" key="GridCell.Tab.0.right" timestamp="1600682021649">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1596809336067" />
+    <state width="1236" height="268" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600682021649" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1596809725691">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1596809725691" />
     <state x="93" y="93" width="1095" height="495" maximized="true" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1596545714217">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

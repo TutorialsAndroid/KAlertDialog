@@ -245,6 +245,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
+
+
     public KAlertDialog setCustomImage(int resourceId, Context context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             return setCustomImage1(getContext().getResources().getDrawable(resourceId,context.getTheme()));
@@ -411,6 +413,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         if (mConfirmButton != null && mConfirmText != null) {
             showConfirmButton(true);
             mConfirmButton.setText(mConfirmText);
+
         }
         return this;
     }

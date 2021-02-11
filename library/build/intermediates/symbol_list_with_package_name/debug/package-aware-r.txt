@@ -746,6 +746,7 @@ id default_activity_button
 id dialog_button
 id edit_query
 id edit_text
+id edit_text_topic_name
 id error_frame
 id error_x
 id expand_activities_button
@@ -874,6 +875,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout alert_dialog
 layout custom_dialog
+layout edit
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

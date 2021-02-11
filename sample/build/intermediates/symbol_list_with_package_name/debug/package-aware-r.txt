@@ -764,6 +764,7 @@ id dialog_button
 id disableHome
 id edit_query
 id edit_text
+id edit_text_topic_name
 id end
 id error_frame
 id error_text_test
@@ -909,6 +910,7 @@ layout abc_tooltip
 layout alert_dialog
 layout custom_dialog
 layout customedittext
+layout edit
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
