@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KAlertDialog-master.iml" filepath="$PROJECT_DIR$/KAlertDialog-master.iml" group="KAlertDialog-master" />
-      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" group="KAlertDialog-master/library" />
-      <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" group="KAlertDialog-master/sample" />
+      <module fileurl="file://$PROJECT_DIR$/KAlertDialog-master.iml" filepath="$PROJECT_DIR$/KAlertDialog-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/KAlertDialog-master.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/KAlertDialog-master.library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sample/KAlertDialog-master.sample.iml" filepath="$PROJECT_DIR$/.idea/modules/sample/KAlertDialog-master.sample.iml" />
     </modules>
   </component>
 </project>
