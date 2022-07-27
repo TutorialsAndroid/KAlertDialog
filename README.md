@@ -42,7 +42,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v15.0.19'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v16.0.19'
 	}
 
 ## Usage
