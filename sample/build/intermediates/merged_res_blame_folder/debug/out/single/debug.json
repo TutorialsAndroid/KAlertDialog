@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-20:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-22:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-20:\\layout_sample_activity.xml.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-22:\\layout\\sample_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-20:\\layout_customedittext.xml.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-22:\\layout\\customedittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-20:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-22:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-20:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-22:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-20:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-22:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-20:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-22:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "com.developer.kalert.alert.sample-merged_res-20:/layout_sample_activity.xml.flat",
+        "source": "com.developer.kalert.alert.sample-main-22:/layout/sample_activity.xml"
+    }
+]
