@@ -1,16 +1,13 @@
 apply plugin: 'com.android.library'
 
-apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.TutorialsAndroid'
 
 android {
-	compileSdkVersion 29
+	compileSdkVersion 32
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 29
-        versionCode 19
-        versionName "12.0.19"
+        targetSdkVersion 32
     }
 
     compileOptions {
@@ -29,10 +26,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-	
-    //ANDROID SUPPORT LIBRARIES
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-
-    //TUTORIALS ANDROID LIBRARIES
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
     implementation 'com.github.TutorialsAndroid:progressx:v6.0.19'
 }

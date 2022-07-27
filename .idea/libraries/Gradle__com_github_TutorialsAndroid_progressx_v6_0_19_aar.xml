@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.TutorialsAndroid:progressx:v6.0.19@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c419f4684a85b0c37a53ea13928b0b25/jetified-progressx-v6.0.19/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c419f4684a85b0c37a53ea13928b0b25/jetified-progressx-v6.0.19/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c419f4684a85b0c37a53ea13928b0b25/jetified-progressx-v6.0.19/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6184ef27e72c1115fa17dc1ddd9c4fd3/transformed/jetified-progressx-v6.0.19/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6184ef27e72c1115fa17dc1ddd9c4fd3/transformed/jetified-progressx-v6.0.19/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6184ef27e72c1115fa17dc1ddd9c4fd3/transformed/jetified-progressx-v6.0.19/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -1,19 +1,19 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.developer.kalert.alert"
-4    android:versionCode="19"
-5    android:versionName="12.0.19" >
+4    android:versionCode="20"
+5    android:versionName="15.0.19" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
 8-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml
-9        android:targetSdkVersion="29" />
+9        android:targetSdkVersion="32" />
 9-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:6:5-18:19
+11-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:6:5-19:19
 12        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-12-->[androidx.core:core:1.1.0] C:\Users\tkdco\.gradle\caches\transforms-2\files-2.1\5e0a6259dbe125c6eb12a42b06ee549e\core-1.1.0\AndroidManifest.xml:24:18-86
+12-->[androidx.core:core:1.7.0] C:\Users\tkdco\.gradle\caches\transforms-3\9d4eb6c3e5debb59921a9f64deba1af9\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 13        android:debuggable="true"
 14        android:icon="@mipmap/ic_launcher"
 14-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:8:9-43
@@ -23,22 +23,46 @@
 17        android:theme="@android:style/Theme.NoTitleBar" >
 17-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:9:9-56
 18        <activity
-18-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:11:9-17:20
+18-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:11:9-18:20
 19            android:name="com.developer.kalert.alert.SampleActivity"
 19-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:11:19-49
-20            android:label="@string/app_name" >
-20-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:12:19-51
-21            <intent-filter>
-21-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:13:13-16:29
-22                <action android:name="android.intent.action.MAIN" />
-22-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:14:17-68
-22-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:14:25-66
-23
-24                <category android:name="android.intent.category.LAUNCHER" />
-24-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:15:17-76
-24-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:15:27-74
-25            </intent-filter>
-26        </activity>
-27    </application>
+20            android:exported="true"
+20-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:13:13-36
+21            android:label="@string/app_name" >
+21-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:12:19-51
+22            <intent-filter>
+22-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:14:13-17:29
+23                <action android:name="android.intent.action.MAIN" />
+23-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:15:17-68
+23-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:15:25-66
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:16:17-76
+25-->D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:16:27-74
+26            </intent-filter>
+27        </activity>
 28
-29</manifest>
+29        <provider
+29-->[androidx.emoji2:emoji2:1.0.0] C:\Users\tkdco\.gradle\caches\transforms-3\1b2dc060ee4e643aacad3b0dffb5f191\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+30            android:name="androidx.startup.InitializationProvider"
+30-->[androidx.emoji2:emoji2:1.0.0] C:\Users\tkdco\.gradle\caches\transforms-3\1b2dc060ee4e643aacad3b0dffb5f191\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+31            android:authorities="com.developer.kalert.alert.androidx-startup"
+31-->[androidx.emoji2:emoji2:1.0.0] C:\Users\tkdco\.gradle\caches\transforms-3\1b2dc060ee4e643aacad3b0dffb5f191\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+32            android:exported="false" >
+32-->[androidx.emoji2:emoji2:1.0.0] C:\Users\tkdco\.gradle\caches\transforms-3\1b2dc060ee4e643aacad3b0dffb5f191\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+33            <meta-data
+33-->[androidx.emoji2:emoji2:1.0.0] C:\Users\tkdco\.gradle\caches\transforms-3\1b2dc060ee4e643aacad3b0dffb5f191\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+34                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+34-->[androidx.emoji2:emoji2:1.0.0] C:\Users\tkdco\.gradle\caches\transforms-3\1b2dc060ee4e643aacad3b0dffb5f191\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+35                android:value="androidx.startup" />
+35-->[androidx.emoji2:emoji2:1.0.0] C:\Users\tkdco\.gradle\caches\transforms-3\1b2dc060ee4e643aacad3b0dffb5f191\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+36            <meta-data
+36-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\tkdco\.gradle\caches\transforms-3\98be890cd8d2d0f14f86e83bd53f510d\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+37                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+37-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\tkdco\.gradle\caches\transforms-3\98be890cd8d2d0f14f86e83bd53f510d\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+38                android:value="androidx.startup" />
+38-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\tkdco\.gradle\caches\transforms-3\98be890cd8d2d0f14f86e83bd53f510d\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+39        </provider>
+40    </application>
+41
+42</manifest>

@@ -95,13 +95,11 @@ public class SampleActivity extends Activity implements View.OnClickListener{
                                 .setConfirmClickListener(null)
                                 .changeAlertType(KAlertDialog.ERROR_TYPE))
                         .setConfirmClickListener(sDialog -> sDialog
-
-                                        .setConfirmText("OK")
-                                        .showCancelButton(false)
-                                        .setCancelClickListener(null)
-                                        .setConfirmClickListener(null)
-                                        .changeAlertType(KAlertDialog.SUCCESS_TYPE))
-
+                                .setConfirmText("OK")
+                                .showCancelButton(false)
+                                .setCancelClickListener(null)
+                                .setConfirmClickListener(null)
+                                .changeAlertType(KAlertDialog.SUCCESS_TYPE))
                         .show();
                 break;
             case R.id.custom_img_test:

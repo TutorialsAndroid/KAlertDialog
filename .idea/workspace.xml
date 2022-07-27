@@ -2,73 +2,640 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="pixel_5" />
+        <option name="nonWearDeviceLastStateName" value="Portrait" />
+      </config>
     </shared>
-  </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59b27e88-1fc9-49fb-84d5-281a821c7c76" name="Default Changelist" comment="">
+    <list default="true" id="314ad193-6a32-46e3-ad82-5c6b07142d9a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_2_4_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_experimental_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_3_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_3_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_3_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_intuit_sdp_sdp_android_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/KAlertDialog-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/library/KAlertDialog-master.library.androidTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/library/KAlertDialog-master.library.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/library/KAlertDialog-master.library.unitTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/sample/KAlertDialog-master.sample.androidTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/sample/KAlertDialog-master.sample.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/sample/KAlertDialog-master.sample.unitTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/aksha.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_4_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_4_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_7_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_3_6_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_3_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_4_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_TutorialsAndroid_progressx_v6_0_19_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_TutorialsAndroid_progressx_v6_0_19_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/library/KAlertDialog-master.library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/library/KAlertDialog-master.library.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/sample/KAlertDialog-master.sample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/sample/KAlertDialog-master.sample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/library.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/sample.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KAlertDialog-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KAlertDialog-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/02b51733558aa08d853ca67b84f9e6e6.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/02b51733558aa08d853ca67b84f9e6e6/classes/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/40c95dfcb2d07f073102af545c0d02f6.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/40c95dfcb2d07f073102af545c0d02f6/classes/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/4113c38108e13b9816e78e9010e3cda7.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/4113c38108e13b9816e78e9010e3cda7/classes/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/4674f3bb9c3950348ebace585bd40a79.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/4674f3bb9c3950348ebace585bd40a79/classes/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/7df690bccef38cfd0415209d603e246a.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/7df690bccef38cfd0415209d603e246a/classes/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/9dcdb0af1ece9bc05c7be54044f89e17.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/.transforms/9dcdb0af1ece9bc05c7be54044f89e17/classes/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-hdpi/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-hdpi/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-ldpi/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-ldpi/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-mdpi/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-mdpi/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-xhdpi/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-xhdpi/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-xxhdpi/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-xxhdpi/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/generated/source/buildConfig/debug/com/developer/kalert/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/generated/source/buildConfig/debug/com/developer/kalert/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/aar_main_jar/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/aar_main_jar/debug/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compile_library_classes/debug/classes.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compile_library_classes_jar/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compile_library_classes_jar/debug/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compile_only_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compile_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compile_symbol_list/debug/R.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_error_frame_in.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_error_frame_in.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_error_x_in.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_error_x_in.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_modal_in.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_modal_in.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_modal_out.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_modal_out.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_success_bow_roate.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_success_bow_roate.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_success_mask_layout.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/anim_success_mask_layout.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-anydpi-v21_ic_success_tick.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-anydpi-v21_ic_success_tick.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-hdpi-v4_ic_success_tick.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-hdpi-v4_ic_success_tick.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-ldpi-v4_ic_success_tick.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-ldpi-v4_ic_success_tick.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-mdpi-v4_ic_success_tick.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-mdpi-v4_ic_success_tick.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-xhdpi-v4_ic_success_tick.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-xhdpi-v4_ic_success_tick.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-xxhdpi-v4_ic_success_tick.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-xxhdpi-v4_ic_success_tick.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-xxxhdpi-v4_ic_success_tick.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable-xxxhdpi-v4_ic_success_tick.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_button_background.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_button_background.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_dialog_background.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_dialog_background.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_dialogdark.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_dialogdark.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_dialoglight.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_dialoglight.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_error_center_x.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_error_center_x.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_error_circle.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_error_circle.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_gray_button_background.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_gray_button_background.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_red_button_background.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_red_button_background.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_success_bow.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_success_bow.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_success_circle.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_success_circle.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_warning_circle.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_warning_circle.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_warning_sigh.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/drawable_warning_sigh.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/layout_alert_dialog.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/layout_alert_dialog.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/compiled_local_resources/debug/out/layout_edit.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/incremental/packageDebugResources/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/AnimationLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/AnimationLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/BuildConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/KAlertDialog$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/KAlertDialog$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/KAlertDialog$KAlertClickListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/KAlertDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/ProgressHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/Rotate3dAnimation$Description.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/Rotate3dAnimation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/SuccessTickView$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/javac/debug/classes/com/developer/kalert/SuccessTickView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/library_manifest/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/local_only_symbol_list/debug/R-def.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/local_only_symbol_list/debug/R-def.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/merged_manifests/debug/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-hdpi-v4/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-hdpi-v4/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-ldpi-v4/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-ldpi-v4/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-mdpi-v4/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-mdpi-v4/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-xhdpi-v4/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-xhdpi-v4/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-xxhdpi-v4/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-xxhdpi-v4/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-xxxhdpi-v4/ic_success_tick.png" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable-xxxhdpi-v4/ic_success_tick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable/button_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/drawable/button_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/layout/alert_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/layout/alert_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/layout/edit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/packaged_res/debug/values/values.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/runtime_library_classes/debug/classes.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/runtime_library_classes_jar/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/runtime_library_classes_jar/debug/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/outputs/aar/library-debug.aar" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/outputs/aar/library-debug.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/library/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/res/drawable/button_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/res/drawable/button_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/res/layout/alert_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/res/layout/alert_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/generated/source/buildConfig/debug/com/developer/kalert/alert/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/generated/source/buildConfig/debug/com/developer/kalert/alert/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/apk_list/debug/apk-list.gson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-af.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-am.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-as.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-az.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-b+sr+Latn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-be.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-bg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-bn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-bs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ca.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-cs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-da.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-de.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-el.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-en-rAU.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-en-rCA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-en-rGB.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-en-rIN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-en-rXC.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-es-rUS.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-es.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-et.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-eu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-fa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-fi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-fr-rCA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-fr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-gl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-gu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-h720dp-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-hdpi-v4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-hi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-hr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-hu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-hy.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-in.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-is.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-it.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-iw.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ja.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ka.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-kk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-km.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-kn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ko.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-land.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-large-v4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ldltr-v21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-lo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-lt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-lv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-mk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ml.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-mn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-mr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ms.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-my.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-nb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ne.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-night-v8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-nl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-or.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-pa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-pl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-port.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-pt-rBR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-pt-rPT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-pt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ru.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-si.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-sk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-sl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-sq.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-sr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-sv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-sw.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-sw600dp-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-te.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-th.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-tl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-tr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-uk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-ur.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-uz.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-v16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-v17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-v18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-v21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-v22.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-v23.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-v24.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-v25.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-v26.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-v28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-vi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-watch-v20.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-watch-v21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-xlarge-v4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-zh-rCN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-zh-rHK.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-zh-rTW.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values-zu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/bundle_manifest/debug/bundle-manifest/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/bundle_manifest/debug/bundle-manifest/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/compatible_screen_manifest/debug/out/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/dex/debug/mergeDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/dex/debug/mergeDexDebug/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/dex/debug/mergeLibDexDebug/out/classes_0.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/dex/debug/out/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/external_libs_dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/external_libs_dex/debug/mergeExtDexDebug/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/external_libs_dex/debug/out/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+FDrXlEqrN2ysC1U0Iw0clrqyS8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1jgUgJqgwb7K7SzZatdmPQ7u_wU=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/2iLm8zi2KWFRIStd7AcmFv1miFc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/5vuPdn2cxpGYBqfiYx4eIUudFX0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/853ncjiQxt0HuOR90jHHvUg7I5c=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/AaaTf9rG2Hf7z5gFwRXCXheGF1U=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ApTGeLR7S6+63ox0g2T8x+GBqow=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/CEhczEpVpzFLXqd0_WLCQtR4InI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/HvbHJCYBJEU3Do0mRjX4VhFXGT8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Lz6Y0OtVDVyZA9uQ6_XfFsosoZw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/MgFgnuOPXZKGYgvmyc6tSrBoNcg=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/NmRV97DFOPrb9QkLyXQT5MhyqPU=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ONuRuBKXlsM1MDrwlZ6R9lsb0V0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/UYtS9+x8Gc6VZOi+tQdCTDOgat0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_LTEz7Y_ltMHMziCANW3o2hxIsE=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_P4QMbLEroUkSwyWYrjUCUeYSz4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/e4YePMt9gOhoMODpYeFy6B2elkg=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/epbFBW7HKmYfjP48JvyetiTmybQ=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/euUjifvveXCn0ByPPLmQOlGdlOs=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/i6c16RNejIYUpgCiyXQToFeYTus=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/rRnuAd5U+LGN+aTJzxQb2NLNYeI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/yEv_zlxYbA3Wnhq6lmyuW6QqDp8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/yjyNs2bwHY+kH0jfBcn0T9kAFSc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zBC1Nw6G_izaDuCV6aBzCOroJPA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/+FDrXlEqrN2ysC1U0Iw0clrqyS8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/1jgUgJqgwb7K7SzZatdmPQ7u_wU=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/2iLm8zi2KWFRIStd7AcmFv1miFc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/5vuPdn2cxpGYBqfiYx4eIUudFX0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/853ncjiQxt0HuOR90jHHvUg7I5c=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/AaaTf9rG2Hf7z5gFwRXCXheGF1U=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/ApTGeLR7S6+63ox0g2T8x+GBqow=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/CEhczEpVpzFLXqd0_WLCQtR4InI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/HLvFSeToVpVZPFMarEAZD4GDZtQ=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/HvbHJCYBJEU3Do0mRjX4VhFXGT8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/Lz6Y0OtVDVyZA9uQ6_XfFsosoZw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/MgFgnuOPXZKGYgvmyc6tSrBoNcg=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/NmRV97DFOPrb9QkLyXQT5MhyqPU=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/ONuRuBKXlsM1MDrwlZ6R9lsb0V0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/UYtS9+x8Gc6VZOi+tQdCTDOgat0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/_LTEz7Y_ltMHMziCANW3o2hxIsE=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/_P4QMbLEroUkSwyWYrjUCUeYSz4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/e4YePMt9gOhoMODpYeFy6B2elkg=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/epbFBW7HKmYfjP48JvyetiTmybQ=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/euUjifvveXCn0ByPPLmQOlGdlOs=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/i6c16RNejIYUpgCiyXQToFeYTus=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/rRnuAd5U+LGN+aTJzxQb2NLNYeI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/sURMetOMafM66Ea6qdj9MLiBzVs=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/yEv_zlxYbA3Wnhq6lmyuW6QqDp8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/yjyNs2bwHY+kH0jfBcn0T9kAFSc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/zBC1Nw6G_izaDuCV6aBzCOroJPA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ar/values-ar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-as/values-as.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-be/values-be.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bn/values-bn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-cs/values-cs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-da/values-da.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-el/values-el.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-et/values-et.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fa/values-fa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fi/values-fi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gl/values-gl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gu/values-gu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hr/values-hr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-in/values-in.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-is/values-is.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-iw/values-iw.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kk/values-kk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-km/values-km.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kn/values-kn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ko/values-ko.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lo/values-lo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mn/values-mn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my/values-my.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nb/values-nb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ne/values-ne.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nl/values-nl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pa/values-pa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pl/values-pl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ro/values-ro.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-si/values-si.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sk/values-sk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sr/values-sr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw/values-sw.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ta/values-ta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-th/values-th.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tl/values-tl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v17/values-v17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-vi/values-vi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zu/values-zu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/instant_app_manifest/debug/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/javac/debug/classes/com/developer/kalert/alert/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/javac/debug/classes/com/developer/kalert/alert/BuildConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/javac/debug/classes/com/developer/kalert/alert/SampleActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/javac/debug/classes/com/developer/kalert/alert/SampleActivity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/javac/debug/classes/com/developer/kalert/alert/SampleActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/javac/debug/classes/com/developer/kalert/alert/SampleActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/merged_manifests/debug/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/metadata_feature_manifest/debug/metadata-feature/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/processed_res/debug/out/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/06b5df24d0491036f72ad9753c78108f0699aaa50a11e6b987eaef3a64f007c9_0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/06b5df24d0491036f72ad9753c78108f0699aaa50a11e6b987eaef3a64f007c9_1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/com/developer/kalert/alert/BuildConfig.dex" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/com/developer/kalert/alert/BuildConfig.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/com/developer/kalert/alert/SampleActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/com/developer/kalert/alert/SampleActivity$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/com/developer/kalert/alert/SampleActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/project_dex_archive/debug/out/com/developer/kalert/alert/SampleActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/layout_customedittext.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/layout_sample_activity.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-af_values-af.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-am_values-am.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ar_values-ar.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-as_values-as.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-az_values-az.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-be_values-be.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-bg_values-bg.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-bn_values-bn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-bs_values-bs.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ca_values-ca.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-cs_values-cs.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-da_values-da.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-de_values-de.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-el_values-el.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-en-rAU_values-en-rAU.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-en-rCA_values-en-rCA.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-en-rGB_values-en-rGB.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-en-rIN_values-en-rIN.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-en-rXC_values-en-rXC.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-es-rUS_values-es-rUS.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-es_values-es.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-et_values-et.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-eu_values-eu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-fa_values-fa.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-fi_values-fi.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-fr-rCA_values-fr-rCA.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-fr_values-fr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-gl_values-gl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-gu_values-gu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-h720dp-v13_values-h720dp-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-hdpi-v4_values-hdpi-v4.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-hi_values-hi.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-hr_values-hr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-hu_values-hu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-hy_values-hy.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-in_values-in.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-is_values-is.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-it_values-it.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-iw_values-iw.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ja_values-ja.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ka_values-ka.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-kk_values-kk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-km_values-km.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-kn_values-kn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ko_values-ko.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ky_values-ky.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-land_values-land.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-large-v4_values-large-v4.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ldltr-v21_values-ldltr-v21.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-lo_values-lo.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-lt_values-lt.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-lv_values-lv.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-mk_values-mk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ml_values-ml.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-mn_values-mn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-mr_values-mr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ms_values-ms.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-my_values-my.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-nb_values-nb.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ne_values-ne.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-night-v8_values-night-v8.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-nl_values-nl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-or_values-or.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-pa_values-pa.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-pl_values-pl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-port_values-port.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-pt-rBR_values-pt-rBR.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-pt-rPT_values-pt-rPT.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-pt_values-pt.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ro_values-ro.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ru_values-ru.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-si_values-si.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-sk_values-sk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-sl_values-sl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-sq_values-sq.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-sr_values-sr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-sv_values-sv.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-sw600dp-v13_values-sw600dp-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-sw_values-sw.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ta_values-ta.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-te_values-te.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-th_values-th.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-tl_values-tl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-tr_values-tr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-uk_values-uk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-ur_values-ur.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-uz_values-uz.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-v16_values-v16.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-v17_values-v17.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-v18_values-v18.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-v22_values-v22.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-v23_values-v23.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-v24_values-v24.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-v25_values-v25.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-v26_values-v26.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-v28_values-v28.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-vi_values-vi.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-watch-v20_values-watch-v20.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-watch-v21_values-watch-v21.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-xlarge-v4_values-xlarge-v4.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-zh-rCN_values-zh-rCN.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-zh-rHK_values-zh-rHK.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-zh-rTW_values-zh-rTW.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values-zu_values-zu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/outputs/apk/debug/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/outputs/apk/debug/sample-debug.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sample/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/src/main/java/com/developer/kalert/alert/SampleActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/java/com/developer/kalert/alert/SampleActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/src/main/res/layout/sample_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/src/main/res/layout/sample_activity.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\tkdco\.android\avd\Pixel_2_ANDROID_7.1.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\tkdco\.android\avd\Pixel_2_API_21.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view />
-      </state>
-    </system>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="valueResourceFile" />
-        <option value="resourceFile" />
-        <option value="Class" />
         <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>com.kinda.alert.main</find>
-      <find>com.developer.alert</find>
-      <find>com.kinda.alert</find>
-      <find>com.developer.kinda</find>
-      <find>spTo</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>com.developer.kinda</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1Z6eoKi0kYCtsRhTaGujaVGsuAm" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="2CW5O3loggTH2aDQQfTnUQx1Ipw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -76,24 +643,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="device.picker.selection" value="0123456789ABCDEF" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../../../sweetalert-master/library/src/main/java/cn/pedant/SweetAlert/SweetAlertDialog.java" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="sample" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="KAlertDialog-master.sample" />
       <option name="DEPLOY" value="true" />
@@ -105,12 +662,11 @@
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="specific_activity" />
+      <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Auto" />
@@ -140,12 +696,12 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
         <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="com.developer.kalert.alert.SampleActivity" />
+      <option name="ACTIVITY_CLASS" value="" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
@@ -154,88 +710,14 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="59b27e88-1fc9-49fb-84d5-281a821c7c76" name="Default Changelist" comment="" />
-      <created>1559394882809</created>
+      <changelist id="314ad193-6a32-46e3-ad82-5c6b07142d9a" name="Changes" comment="" />
+      <created>1658905474068</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1559394882809</updated>
+      <updated>1658905474068</updated>
     </task>
-    <task id="LOCAL-00001" summary="fixed in version name and some bug fixes.">
-      <created>1559471602211</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1559471602211</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added ability to hide confirm button">
-      <created>1590152006333</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1590152006333</updated>
-    </task>
-    <task id="LOCAL-00003" summary="UPDATED README">
-      <created>1590152084783</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1590152084783</updated>
-    </task>
-    <task id="LOCAL-00004" summary="ADDED SUPPORT FOR OLDER VERSIONS ANDROID AND ADDED ABILITY TO HIDE CONFIRM BUTTON">
-      <created>1590154090299</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1590154090299</updated>
-    </task>
-    <task id="LOCAL-00005" summary="UPDATED GRADLE VERSION AND FIXED DEPRECATION ISSUE">
-      <created>1596551123887</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1596551123887</updated>
-    </task>
-    <task id="LOCAL-00006" summary="UPDATED GRADLE VERSION AND FIXED DEPRECATION ISSUE">
-      <created>1596551431999</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1596551431999</updated>
-    </task>
-    <task id="LOCAL-00007" summary="UPDATED GRADLE VERSION AND FIXED DEPRECATION ISSUE">
-      <created>1596551546816</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1596551546816</updated>
-    </task>
-    <task id="LOCAL-00008" summary="FIXED ISSUE OF PRIVATE ACCESS IN CUSTOM IMAGE">
-      <created>1596807323990</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1596807323990</updated>
-    </task>
-    <task id="LOCAL-00009" summary="ADDED SETTING OF TITLE TEXT SIZE AND NOW LINKS ARE CLICKABLE">
-      <created>1596809333663</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1596809333664</updated>
-    </task>
-    <task id="LOCAL-00010" summary="UPDATED README.md">
-      <created>1596809724306</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1596809724306</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,73 +730,6 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed in version name and some bug fixes." />
-    <MESSAGE value="Added ability to hide confirm button" />
-    <MESSAGE value="UPDATED README" />
-    <MESSAGE value="ADDED SUPPORT FOR OLDER VERSIONS ANDROID AND ADDED ABILITY TO HIDE CONFIRM BUTTON" />
-    <MESSAGE value="UPDATED GRADLE VERSION AND FIXED DEPRECATION ISSUE" />
-    <MESSAGE value="FIXED ISSUE OF PRIVATE ACCESS IN CUSTOM IMAGE" />
-    <MESSAGE value="ADDED SETTING OF TITLE TEXT SIZE AND NOW LINKS ARE CLICKABLE" />
-    <MESSAGE value="UPDATED README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATED README.md" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="379" y="173" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1596547137607">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="379" y="173" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1596547137607" />
-    <state x="221" y="95" key="AndroidCreateResourceFileDialog" timestamp="1600680810924">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="221" y="95" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1600680810924" />
-    <state x="95" y="0" key="CommitChangelistDialog2" timestamp="1596809722240">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="95" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1596809722240" />
-    <state width="1236" height="268" key="GridCell.Tab.0.bottom" timestamp="1600682021649">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1236" height="268" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600682021649" />
-    <state width="1236" height="268" key="GridCell.Tab.0.center" timestamp="1600682021649">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1236" height="268" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600682021649" />
-    <state width="1236" height="268" key="GridCell.Tab.0.left" timestamp="1600682021648">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1236" height="268" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600682021648" />
-    <state width="1236" height="268" key="GridCell.Tab.0.right" timestamp="1600682021649">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1236" height="268" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600682021649" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1596809725691">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1596809725691" />
-    <state x="93" y="93" width="1095" height="495" maximized="true" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1596545714217">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="93" y="93" width="1095" height="495" maximized="true" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1280.680@0.0.1280.680" timestamp="1596545714217" />
-    <state x="298" y="151" key="run.anything.popup" timestamp="1596547376013">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="298" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1596547376013" />
   </component>
 </project>

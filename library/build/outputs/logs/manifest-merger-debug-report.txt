@@ -3,24 +3,12 @@ manifest
 ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
 INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
 INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
-INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
-INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
-INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
-INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
 	package
 		ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:11-41
 		INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
 		INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
-	android:versionName
-		INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
-		ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
-		INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
-	android:versionCode
-		INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
-		ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
-		INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
 application
 ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:2:5-19
 uses-sdk
