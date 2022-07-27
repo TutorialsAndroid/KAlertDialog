@@ -16,13 +16,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.Transformation;
 
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.core.content.ContextCompat;
 
 import java.util.Objects;
 
@@ -35,7 +36,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private TextView mTitleTextView, mContentTextView;
     private ImageView mErrorX, mSuccessTick, mCustomImage;
     private Drawable mCustomImgDrawable;
-    private Button mConfirmButton, mCancelButton;
+    private AppCompatButton mConfirmButton, mCancelButton;
     private Drawable mColor, mCancelColor;
     private View mDialogView;
     private View mCustomView;
@@ -418,20 +419,21 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
+
     public KAlertDialog confirmButtonColor (int color, Context context){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            return setConfirmButtonColor(getContext().getResources().getDrawable(color,context.getTheme()));
-        }else {
-            return setConfirmButtonColor(getContext().getResources().getDrawable(color));
-        }
+        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            return setConfirmButtonColor(ContextCompat.getDrawable(context, color));
+        //}else {
+            //return setConfirmButtonColor(ContextCompat.getDrawable(context, color));
+        //}
     }
 
     public KAlertDialog cancelButtonColor (int color, Context context){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            return setCancelButtonColor(getContext().getResources().getDrawable(color,context.getTheme()));
-        }else {
-            return setCancelButtonColor(getContext().getResources().getDrawable(color));
-        }
+        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            return setCancelButtonColor(ContextCompat.getDrawable(context, color));
+        //}else {
+            //return setCancelButtonColor(getContext().getResources().getDrawable(color));
+        //}
     }
 
     public KAlertDialog setTitleTextSize(int value){

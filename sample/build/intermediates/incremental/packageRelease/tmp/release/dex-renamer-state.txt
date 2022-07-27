@@ -1,0 +1,4 @@
+#Wed Jul 27 16:03:43 IST 2022
+base.0=D\:\\Projects\\AndroidLibraries\\KAlertDialog-master\\sample\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

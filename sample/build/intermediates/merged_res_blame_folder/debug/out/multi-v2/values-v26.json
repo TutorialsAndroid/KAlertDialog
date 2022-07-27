@@ -1,19 +1,11 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-18:/values-v26/values-v26.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\e384cf231685e6a77cae4bbba2e29662\\transformed\\appcompat-1.4.2\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\8ab22bcc2cf8e7238664609b05ba424d\\transformed\\appcompat-1.5.0-beta01\\res\\values-v26\\values-v26.xml",
                     "from": {
-                        "startLines": "2,3,4,8,12,16",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,130,217,431,657,896",
-                        "endLines": "2,3,7,11,15,16",
-                        "endColumns": "74,86,12,12,12,92",
-                        "endOffsets": "125,212,426,652,891,984"
-                    },
-                    "to": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
                         "startOffsets": "55,130,217,381,557,796",

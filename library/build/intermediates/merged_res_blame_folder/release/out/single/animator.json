@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/animator/fragment_open_exit.xml",
+        "source": "com.developer.kalert.library-fragment-1.3.6-13:/animator/fragment_open_exit.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/animator/fragment_close_enter.xml",
+        "source": "com.developer.kalert.library-fragment-1.3.6-13:/animator/fragment_close_enter.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/animator/fragment_fade_exit.xml",
+        "source": "com.developer.kalert.library-fragment-1.3.6-13:/animator/fragment_fade_exit.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/animator/fragment_fade_enter.xml",
+        "source": "com.developer.kalert.library-fragment-1.3.6-13:/animator/fragment_fade_enter.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/animator/fragment_close_exit.xml",
+        "source": "com.developer.kalert.library-fragment-1.3.6-13:/animator/fragment_close_exit.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/animator/fragment_open_enter.xml",
+        "source": "com.developer.kalert.library-fragment-1.3.6-13:/animator/fragment_open_enter.xml"
+    }
+]

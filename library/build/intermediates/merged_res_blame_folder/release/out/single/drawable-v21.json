@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/drawable-v21/abc_dialog_material_background.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/drawable-v21/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/drawable-v21/notification_action_background.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/drawable-v21/abc_edit_text_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/drawable-v21/abc_btn_colored_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/drawable-v21/abc_list_divider_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/drawable-v21/abc_list_divider_material.xml"
+    }
+]

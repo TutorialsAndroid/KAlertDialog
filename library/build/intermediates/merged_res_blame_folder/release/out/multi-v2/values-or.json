@@ -1,0 +1,68 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.developer.kalert.library-mergeReleaseResources-16:/values-or/values-or.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\9d4eb6c3e5debb59921a9f64deba1af9\\transformed\\core-1.7.0\\res\\values-or\\values-or.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "30",
+                        "startColumns": "4",
+                        "startOffsets": "2959",
+                        "endColumns": "100",
+                        "endOffsets": "3055"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\e384cf231685e6a77cae4bbba2e29662\\transformed\\appcompat-1.4.2\\res\\values-or\\values-or.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,224,334,441,527,631,751,830,911,1002,1095,1198,1293,1393,1486,1581,1677,1768,1858,1947,2057,2161,2267,2378,2482,2600,2763,2869",
+                        "endColumns": "118,109,106,85,103,119,78,80,90,92,102,94,99,92,94,95,90,89,88,109,103,105,110,103,117,162,105,89",
+                        "endOffsets": "219,329,436,522,626,746,825,906,997,1090,1193,1288,1388,1481,1576,1672,1763,1853,1942,2052,2156,2262,2373,2477,2595,2758,2864,2954"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.developer.kalert.library-merged_res-18:/values-or/values-or.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\9d4eb6c3e5debb59921a9f64deba1af9\\transformed\\core-1.7.0\\res\\values-or\\values-or.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "30",
+                        "startColumns": "4",
+                        "startOffsets": "2959",
+                        "endColumns": "100",
+                        "endOffsets": "3055"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\e384cf231685e6a77cae4bbba2e29662\\transformed\\appcompat-1.4.2\\res\\values-or\\values-or.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,224,334,441,527,631,751,830,911,1002,1095,1198,1293,1393,1486,1581,1677,1768,1858,1947,2057,2161,2267,2378,2482,2600,2763,2869",
+                        "endColumns": "118,109,106,85,103,119,78,80,90,92,102,94,99,92,94,95,90,89,88,109,103,105,110,103,117,162,105,89",
+                        "endOffsets": "219,329,436,522,626,746,825,906,997,1090,1193,1288,1388,1481,1576,1672,1763,1853,1942,2052,2156,2262,2373,2477,2595,2758,2864,2954"
+                    }
+                }
+            ]
+        }
+    ]
+}

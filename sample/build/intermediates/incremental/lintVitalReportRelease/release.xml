@@ -1,0 +1,34 @@
+<variant
+    name="release"
+    package="com.developer.kalert.alert"
+    minSdkVersion="19"
+    targetSdkVersion="32"
+    mergedManifest="build\intermediates\merged_manifest\release\AndroidManifest.xml"
+    manifestMergeReport="build\outputs\logs\manifest-merger-release-report.txt"
+    proguardFiles="build\intermediates\default_proguard_files\global\proguard-android.txt-7.2.1;proguard-rules.pro"
+    partialResultsDir="build\intermediates\lint_vital_partial_results\release\out">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifest="src\main\AndroidManifest.xml"
+        javaDirectories="src\main\java;src\main\kotlin"
+        resDirectories="src\main\res"
+        assetsDirectories="src\main\assets"/>
+    <sourceProvider
+        manifest="src\release\AndroidManifest.xml"
+        javaDirectories="src\release\java;src\release\kotlin"
+        resDirectories="src\release\res"
+        assetsDirectories="src\release\assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <mainArtifact
+      classOutputs="build\intermediates\javac\release\classes;build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
+      applicationId="com.developer.kalert.alert"
+      generatedSourceFolders="build\generated\source\buildConfig\release;build\generated\aidl_source_output_dir\release\out;build\generated\renderscript_source_output_dir\release\out;build\generated\ap_generated_sources\release\out"
+      generatedResourceFolders="build\generated\res\rs\release;build\generated\res\resValues\release">
+  </mainArtifact>
+</variant>

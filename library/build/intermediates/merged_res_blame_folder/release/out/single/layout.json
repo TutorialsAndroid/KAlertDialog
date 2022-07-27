@@ -1,0 +1,166 @@
+[
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_action_bar_up_container.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_cascading_menu_item_layout.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_cascading_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_action_mode_close_item_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_expanded_menu_layout.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_action_mode_bar.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_alert_dialog_title_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/custom_dialog.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/notification_template_part_time.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_screen_content_include.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/alert_dialog.xml",
+        "source": "com.developer.kalert.library-main-19:/layout/alert_dialog.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/select_dialog_singlechoice_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/notification_template_part_chronometer.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_popup_menu_item_layout.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_alert_dialog_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_search_view.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_list_menu_item_layout.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_screen_toolbar.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_list_menu_item_radio.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/notification_template_icon_group.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_action_menu_layout.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/notification_action.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/layout/notification_action.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/notification_action_tombstone.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_list_menu_item_checkbox.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_list_menu_item_icon.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_activity_chooser_view.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/select_dialog_multichoice_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/select_dialog_item_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_action_bar_title_item.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_screen_simple.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_select_dialog_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_action_menu_item_layout.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_tooltip.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_tooltip.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/sdp_example.xml",
+        "source": "com.developer.kalert.library-jetified-sdp-android-1.1.0-10:/layout/sdp_example.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/abc_dialog_title_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout/dp_example.xml",
+        "source": "com.developer.kalert.library-jetified-sdp-android-1.1.0-10:/layout/dp_example.xml"
+    }
+]

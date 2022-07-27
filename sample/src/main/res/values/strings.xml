@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">KALertDialog</string>
+    <string name="app_name">KAlertDialog</string>
     <string name="show_material_progress">Show Material Progress</string>
     <string name="a_basic_message">A Basic Message</string>
     <string name="a_title_with_a_text_under">A title with a text under</string>

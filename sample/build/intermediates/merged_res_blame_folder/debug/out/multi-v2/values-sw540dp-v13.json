@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-18:/values-sw540dp-v13/values-sw540dp-v13.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-sw540dp-v13/values-sw540dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\dd457fc2e8e036c463e7a7fda5ae1ca1\\transformed\\jetified-sdp-android-1.1.0\\res\\values-sw540dp-v13\\values-sw540dp-v13.xml",

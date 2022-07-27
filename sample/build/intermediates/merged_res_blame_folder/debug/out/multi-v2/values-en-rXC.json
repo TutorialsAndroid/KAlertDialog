@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-18:/values-en-rXC/values-en-rXC.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\e384cf231685e6a77cae4bbba2e29662\\transformed\\appcompat-1.4.2\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\8ab22bcc2cf8e7238664609b05ba424d\\transformed\\appcompat-1.5.0-beta01\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\9d4eb6c3e5debb59921a9f64deba1af9\\transformed\\core-1.7.0\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\22c51314e4a426ee83c793a2ea6e5e2c\\transformed\\core-1.8.0\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-18:/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\e384cf231685e6a77cae4bbba2e29662\\transformed\\appcompat-1.4.2\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\8ab22bcc2cf8e7238664609b05ba424d\\transformed\\appcompat-1.5.0-beta01\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\1730053365a3b49b2f5d88e0ffdd9870\\transformed\\material-1.7.0-alpha03\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,110",
+                        "endColumns": "54,61",
+                        "endOffsets": "105,167"
+                    }
+                }
+            ]
+        }
+    ]
+}

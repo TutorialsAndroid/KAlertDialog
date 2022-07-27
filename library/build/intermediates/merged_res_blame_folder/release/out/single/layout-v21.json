@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout-v21/notification_action_tombstone.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout-v21/notification_template_icon_group.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout-v21/notification_action.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-18:/layout-v21/notification_template_custom_big.xml",
+        "source": "com.developer.kalert.library-core-1.7.0-9:/layout-v21/notification_template_custom_big.xml"
+    }
+]
