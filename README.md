@@ -35,6 +35,13 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 `Latest version of this library is migrated to androidx`
 
+## Features
+- Materialistic alert dialog
+- Change font style
+- Change text color
+- Change button color and background
+- More features are comming soon
+
 ## ScreenShot
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/device-2019-03-23-132617.png)
 
