@@ -156,7 +156,7 @@ To Change the font of only content：
 
 Bind the listener to confirm button：
 
-    new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
+    new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
         .setTitleText("Are you sure?")
         .setContentText("Won't be able to recover this file!")
         .setConfirmText("Yes,delete it!")
@@ -170,7 +170,7 @@ Bind the listener to confirm button：
 
 Show the cancel button and bind listener to it：
 
-    new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
+    new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
         .setTitleText("Are you sure?")
         .setContentText("Won't be able to recover this file!")
         .setCancelText("No,cancel plx!")
@@ -237,7 +237,7 @@ And if you want to hide Title Text and Content Text of alert dialog
 
 **Change** the dialog style upon confirming：
 
-    new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
+    new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
         .setTitleText("Are you sure?")
         .setContentText("Won't be able to recover this file!")
         .setConfirmText("Yes,delete it!")
