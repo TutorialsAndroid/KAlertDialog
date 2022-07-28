@@ -5,6 +5,8 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="royal_blue">#4169E1</color>
+    <color name="orange">#FF6D00</color>
+    <color name="red">#D50000</color>
 
     <color name="float_transparent">#00000000</color>
     <color name="kalert_dialog_bg_color">#FFFFFF</color>

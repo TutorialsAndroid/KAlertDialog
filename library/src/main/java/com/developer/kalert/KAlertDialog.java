@@ -47,7 +47,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private FrameLayout mCustomViewContainer;
 
     private String mTitleText, mContentText, mCancelText, mConfirmText;
-    private int font, titleFont = 0, contentFont = 0;
+    private int font, titleFont = 0, contentFont = 0,
+            titleColor = 0, contentColor = 0;
 
     private boolean mShowCancel, mShowContent, mShowTitleText, mCloseFromCancel, mShowConfirm;
     private int contentTextSize = 0;
@@ -239,6 +240,9 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             if (titleTextSize != 0) {
                 mTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, spToPx(titleTextSize, getContext()));
             }
+            if (titleColor != 0) {
+                mTitleTextView.setTextColor(ContextCompat.getColor(context, titleColor));
+            }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 mTitleTextView.setText(Html.fromHtml(mTitleText,1));
             }else {
@@ -281,6 +285,9 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             showContentText();
             if (contentTextSize != 0) {
                 mContentTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, spToPx(contentTextSize, getContext()));
+            }
+            if (contentColor != 0) {
+                mContentTextView.setTextColor(ContextCompat.getColor(context, contentColor));
             }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 mContentTextView.setText(Html.fromHtml(mContentText,0));
@@ -475,6 +482,16 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         //}else {
             //return setCancelButtonColor(getContext().getResources().getDrawable(color));
         //}
+    }
+
+    public KAlertDialog setTitleColor(int color) {
+        this.titleColor = color;
+        return this;
+    }
+
+    public KAlertDialog setContentColor(int color) {
+        this.contentColor = color;
+        return this;
     }
 
     public KAlertDialog setTitleFont(int font) {

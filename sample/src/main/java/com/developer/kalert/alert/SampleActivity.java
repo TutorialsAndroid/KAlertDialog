@@ -61,7 +61,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.success_text_test) {
-            new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE, R.font.smooch_font)
+            new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE, 0)
                     .setTitleText("Good job!")
                     .setContentText("You clicked the button!")
                     .setConfirmText("Ok")

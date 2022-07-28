@@ -18,6 +18,8 @@
     <color name="material_blue_grey_95">#ff21272b</color>
     <color name="material_deep_teal_20">#ff80cbc4</color>
     <color name="material_deep_teal_50">#ff009688</color>
+    <color name="orange">#FF6D00</color>
+    <color name="red">#D50000</color>
     <color name="red_btn_bg_color">#DD6B55</color>
     <color name="red_btn_bg_pressed_color">#CD5B55</color>
     <color name="royal_blue">#4169E1</color>

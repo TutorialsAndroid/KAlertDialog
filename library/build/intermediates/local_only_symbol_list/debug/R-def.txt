@@ -29,6 +29,8 @@ color material_blue_grey_90
 color material_blue_grey_95
 color material_deep_teal_20
 color material_deep_teal_50
+color orange
+color red
 color red_btn_bg_color
 color red_btn_bg_pressed_color
 color royal_blue

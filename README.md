@@ -1,10 +1,11 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released v17.0.19 on 28-07-22
+# New version released v18.0.19 on 28-07-22
 ## Changelogs
 - Fixed issue in button color not changing
 - Using Scalable DP library
 - Added changing of font style
+- Added changing of title and content color
 ### Read the changes in README
 
 Alert Dialog ![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588) [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -54,7 +55,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v17.0.19'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v18.0.19'
 	}
 
 ## Usage
@@ -144,7 +145,7 @@ To Hide Cancel And Confirm Button：
 
 To Change the font of title and content：
 
-    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE, R.font.yourFontName)
+    new KAlertDialog(this, alertType, R.font.yourFontName)
 
 To Change the font of only title：
 
@@ -153,6 +154,11 @@ To Change the font of only title：
 To Change the font of only content：
 
     .dialogContentFont(R.font.yourFontName)
+
+To Change the color of title and content
+
+    .setTitleColor(R.color.yourColorName)
+    .setContentColor(R.color.yourColorName)
 
 Bind the listener to confirm button：
 
