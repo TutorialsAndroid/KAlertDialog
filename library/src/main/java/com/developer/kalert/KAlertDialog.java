@@ -1,6 +1,7 @@
 package com.developer.kalert;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 
 import android.os.Build;
@@ -24,11 +25,14 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 
 import java.util.Objects;
 
 @SuppressWarnings("ALL")
 public class KAlertDialog extends AlertDialog implements View.OnClickListener {
+
+    private Context context;
 
     private final AnimationSet mModalInAnim, mModalOutAnim, mErrorXInAnim;
     private final Animation mOverlayOutAnim, mImageAnim;
@@ -43,6 +47,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private FrameLayout mCustomViewContainer;
 
     private String mTitleText, mContentText, mCancelText, mConfirmText;
+    private int font, titleFont = 0, contentFont = 0;
 
     private boolean mShowCancel, mShowContent, mShowTitleText, mCloseFromCancel, mShowConfirm;
     private int contentTextSize = 0;
@@ -72,8 +77,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public static final int INPUT_TYPE = 6;
     private EditText mEditText;
 
-    public KAlertDialog(Context context) {
-        this(context, NORMAL_TYPE);
+    public KAlertDialog(Context context, Integer customFont) {
+        this(context, NORMAL_TYPE, customFont);
     }
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +107,9 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
         setCustomView(mCustomView);
         setTitleText(mTitleText);
+        dialogFont(font);
+        dialogTitleFont(titleFont);
+        dialogContentFont(contentFont);
         setContentText(mContentText);
         setCancelText(mCancelText);
         setConfirmText(mConfirmText);
@@ -110,8 +118,10 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         changeAlertType(mAlertType, true);
     }
 
-    public KAlertDialog(Context context, int alertType) {
+    public KAlertDialog(Context context, int alertType, Integer customFont) {
         super(context, DARK_STYLE ? R.style.alert_dialog_dark : R.style.alert_dialog_light);
+        this.context = context;
+        font = customFont;
 
         setCancelable(true);
         setCanceledOnTouchOutside(false);
@@ -298,6 +308,37 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
+    private KAlertDialog dialogFont(Integer font) {
+        if (context != null) {
+            if (mTitleTextView != null && mContentTextView != null && font != 0) {
+                Typeface typeface = ResourcesCompat.getFont(context, font);
+                mTitleTextView.setTypeface(typeface);
+                mContentTextView.setTypeface(typeface);
+            }
+        }
+        return this;
+    }
+
+    private KAlertDialog dialogTitleFont(Integer titleFont) {
+        if (context != null) {
+            if (mTitleTextView != null && titleFont != 0) {
+                Typeface typeface = ResourcesCompat.getFont(context, titleFont);
+                mTitleTextView.setTypeface(typeface);
+            }
+        }
+        return this;
+    }
+
+    private KAlertDialog dialogContentFont(Integer contentFont) {
+        if (context != null) {
+            if (mContentTextView != null && contentFont != 0) {
+                Typeface typeface = ResourcesCompat.getFont(context, contentFont);
+                mContentTextView.setTypeface(typeface);
+            }
+        }
+        return this;
+    }
+
     private void showContentText () {
         mShowContent = true;
         if (mContentTextView != null) {
@@ -436,7 +477,17 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         //}
     }
 
-    public KAlertDialog setTitleTextSize(int value){
+    public KAlertDialog setTitleFont(int font) {
+        this.titleFont = font;
+        return this;
+    }
+
+    public KAlertDialog setContentFont(int font) {
+        this.contentFont = font;
+        return this;
+    }
+
+    public KAlertDialog setTitleTextSize(int value) {
         this.titleTextSize = value;
         return this;
     }

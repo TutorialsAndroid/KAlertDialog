@@ -1215,10 +1215,6 @@ int color cardview_dark_background 0x0
 int color cardview_light_background 0x0
 int color cardview_shadow_end_color 0x0
 int color cardview_shadow_start_color 0x0
-int color colorAccent 0x0
-int color colorPrimary 0x0
-int color colorPrimaryDark 0x0
-int color cyber_yellow 0x0
 int color design_bottom_navigation_shadow_color 0x0
 int color design_box_stroke_color 0x0
 int color design_dark_default_color_background 0x0
@@ -1267,10 +1263,8 @@ int color error_stroke_color 0x0
 int color float_transparent 0x0
 int color foreground_material_dark 0x0
 int color foreground_material_light 0x0
-int color gray 0x0
 int color gray_btn_bg_color 0x0
 int color gray_btn_bg_pressed_color 0x0
-int color gray_scale 0x0
 int color highlighted_text_material_dark 0x0
 int color highlighted_text_material_light 0x0
 int color kalert_dialog_bg_color 0x0
@@ -1790,14 +1784,12 @@ int color switch_thumb_material_dark 0x0
 int color switch_thumb_material_light 0x0
 int color switch_thumb_normal_material_dark 0x0
 int color switch_thumb_normal_material_light 0x0
-int color teal_700 0x0
 int color text_color 0x0
 int color tooltip_background_dark 0x0
 int color tooltip_background_light 0x0
 int color trans_success_stroke_color 0x0
 int color warning_stroke_color 0x0
 int color white 0x0
-int color yellow 0x0
 int dimen _100sdp 0x0
 int dimen _101sdp 0x0
 int dimen _102sdp 0x0
@@ -3264,6 +3256,10 @@ int drawable tooltip_frame_dark 0x0
 int drawable tooltip_frame_light 0x0
 int drawable warning_circle 0x0
 int drawable warning_sigh 0x0
+int font lovelo 0x0
+int font lovelo_font 0x0
+int font smooch 0x0
+int font smooch_font 0x0
 int id BOTTOM_END 0x0
 int id BOTTOM_START 0x0
 int id NO_DEBUG 0x0

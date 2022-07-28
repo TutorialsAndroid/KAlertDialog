@@ -35,7 +35,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.basic_test) {
-            KAlertDialog sd = new KAlertDialog(this);
+            KAlertDialog sd = new KAlertDialog(this, 0);
             sd.setTitleText("Title");
             sd.setContentText("Content");
             sd.setConfirmText("Ok");
@@ -45,7 +45,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.under_text_test) {
-            new KAlertDialog(this)
+            new KAlertDialog(this, 0)
                     .setTitleText("Title Text")
                     .setContentText("Hello")
                     .setConfirmText("Ok")
@@ -53,7 +53,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.error_text_test) {
-            new KAlertDialog(this, KAlertDialog.ERROR_TYPE)
+            new KAlertDialog(this, KAlertDialog.ERROR_TYPE, 0)
                     .setTitleText("Opps.")
                     .setContentText("Something went wrong!")
                     .setConfirmText("Ok")
@@ -61,7 +61,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.success_text_test) {
-            new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE)
+            new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE, R.font.smooch_font)
                     .setTitleText("Good job!")
                     .setContentText("You clicked the button!")
                     .setConfirmText("Ok")
@@ -69,7 +69,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.warning_confirm_test) {
-            new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
+            new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
                     .setConfirmText("Yes,delete it!")
@@ -82,7 +82,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.warning_cancel_test) {
-            new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
+            new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
                     .setCancelText("No,cancel plx!")
@@ -105,7 +105,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.custom_img_test) {
-            new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
+            new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE, 0)
                     .setTitleText("KAlertDialog")
                     .setContentText("Here's a custom image.")
                     .setCustomImage(R.mipmap.ic_launcher,SampleActivity.this)
@@ -114,7 +114,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.progress_dialog) {
-            final KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE)
+            final KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE, 0)
                     .setTitleText("Loading");
             pDialog.show();
             pDialog.setCancelable(false);

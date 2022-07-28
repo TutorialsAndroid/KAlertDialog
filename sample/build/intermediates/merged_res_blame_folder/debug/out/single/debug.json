@@ -1,30 +1,46 @@
 [
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.developer.kalert.alert.sample-main-34:/mipmap-mdpi/ic_launcher.png"
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-32:\\layout_sample_activity.xml.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-34:\\layout\\sample_activity.xml"
     },
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.developer.kalert.alert.sample-main-34:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/font_smooch_font.ttf.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/font/smooch_font.ttf"
     },
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.developer.kalert.alert.sample-main-34:/mipmap-hdpi/ic_launcher.png"
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-32:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-34:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.developer.kalert.alert.sample-main-34:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-32:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-34:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.developer.kalert.alert.sample-main-34:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/font_lovelo_font.ttf.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/font/lovelo_font.ttf"
     },
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/layout_sample_activity.xml.flat",
-        "source": "com.developer.kalert.alert.sample-main-34:/layout/sample_activity.xml"
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-32:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-34:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/layout_customedittext.xml.flat",
-        "source": "com.developer.kalert.alert.sample-main-34:/layout/customedittext.xml"
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/font_smooch.xml.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/font/smooch.xml"
+    },
+    {
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-32:\\layout_customedittext.xml.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-34:\\layout\\customedittext.xml"
+    },
+    {
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/font_lovelo.xml.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/font/lovelo.xml"
+    },
+    {
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-32:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-34:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-merged_res-32:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.3.3\\com.developer.kalert.alert.sample-main-34:\\mipmap-xxxhdpi\\ic_launcher.png"
     }
 ]

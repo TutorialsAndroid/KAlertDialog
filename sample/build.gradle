@@ -7,8 +7,8 @@ android {
 		applicationId "com.developer.kalert.alert"
         minSdkVersion 19
         targetSdkVersion 32
-		versionCode 21
-        versionName "16.0.19"
+		versionCode 22
+        versionName "17.0.19"
     }
 
     lintOptions {

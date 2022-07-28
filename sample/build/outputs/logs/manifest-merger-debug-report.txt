@@ -4,8 +4,8 @@ ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\Andr
 INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:2:1-20:12
 INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:2:1-20:12
 INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:2:1-20:12
-MERGED from [com.google.android.material:material:1.7.0-alpha03] C:\Users\tkdco\.gradle\caches\transforms-3\1730053365a3b49b2f5d88e0ffdd9870\transformed\material-1.7.0-alpha03\AndroidManifest.xml:17:1-26:12
 MERGED from [:library] D:\Projects\AndroidLibraries\KAlertDialog-master\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.7.0-alpha03] C:\Users\tkdco\.gradle\caches\transforms-3\1730053365a3b49b2f5d88e0ffdd9870\transformed\material-1.7.0-alpha03\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\tkdco\.gradle\caches\transforms-3\52a402ee8b206eb73e13885d800e4abd\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.5.0-beta01] C:\Users\tkdco\.gradle\caches\transforms-3\aad03c4fb37738500abafd5fedfaf193\transformed\jetified-appcompat-resources-1.5.0-beta01\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.appcompat:appcompat:1.5.0-beta01] C:\Users\tkdco\.gradle\caches\transforms-3\8ab22bcc2cf8e7238664609b05ba424d\transformed\appcompat-1.5.0-beta01\AndroidManifest.xml:17:1-23:12
@@ -68,10 +68,10 @@ INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\A
 		ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:2:11-69
 application
 ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml:6:5-19:19
-MERGED from [com.google.android.material:material:1.7.0-alpha03] C:\Users\tkdco\.gradle\caches\transforms-3\1730053365a3b49b2f5d88e0ffdd9870\transformed\material-1.7.0-alpha03\AndroidManifest.xml:24:5-20
-MERGED from [com.google.android.material:material:1.7.0-alpha03] C:\Users\tkdco\.gradle\caches\transforms-3\1730053365a3b49b2f5d88e0ffdd9870\transformed\material-1.7.0-alpha03\AndroidManifest.xml:24:5-20
 MERGED from [:library] D:\Projects\AndroidLibraries\KAlertDialog-master\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-20
 MERGED from [:library] D:\Projects\AndroidLibraries\KAlertDialog-master\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.material:material:1.7.0-alpha03] C:\Users\tkdco\.gradle\caches\transforms-3\1730053365a3b49b2f5d88e0ffdd9870\transformed\material-1.7.0-alpha03\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.7.0-alpha03] C:\Users\tkdco\.gradle\caches\transforms-3\1730053365a3b49b2f5d88e0ffdd9870\transformed\material-1.7.0-alpha03\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\tkdco\.gradle\caches\transforms-3\52a402ee8b206eb73e13885d800e4abd\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\tkdco\.gradle\caches\transforms-3\52a402ee8b206eb73e13885d800e4abd\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
 MERGED from [androidx.emoji2:emoji2:1.2.0-beta01] C:\Users\tkdco\.gradle\caches\transforms-3\4789f3a5a4609ec918884e125fc5369f\transformed\jetified-emoji2-1.2.0-beta01\AndroidManifest.xml:24:5-34:19
@@ -118,10 +118,10 @@ uses-sdk
 INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml
 INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\sample\src\main\AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.7.0-alpha03] C:\Users\tkdco\.gradle\caches\transforms-3\1730053365a3b49b2f5d88e0ffdd9870\transformed\material-1.7.0-alpha03\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.material:material:1.7.0-alpha03] C:\Users\tkdco\.gradle\caches\transforms-3\1730053365a3b49b2f5d88e0ffdd9870\transformed\material-1.7.0-alpha03\AndroidManifest.xml:20:5-22:41
 MERGED from [:library] D:\Projects\AndroidLibraries\KAlertDialog-master\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:library] D:\Projects\AndroidLibraries\KAlertDialog-master\library\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.7.0-alpha03] C:\Users\tkdco\.gradle\caches\transforms-3\1730053365a3b49b2f5d88e0ffdd9870\transformed\material-1.7.0-alpha03\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.7.0-alpha03] C:\Users\tkdco\.gradle\caches\transforms-3\1730053365a3b49b2f5d88e0ffdd9870\transformed\material-1.7.0-alpha03\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\tkdco\.gradle\caches\transforms-3\52a402ee8b206eb73e13885d800e4abd\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\tkdco\.gradle\caches\transforms-3\52a402ee8b206eb73e13885d800e4abd\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.5.0-beta01] C:\Users\tkdco\.gradle\caches\transforms-3\aad03c4fb37738500abafd5fedfaf193\transformed\jetified-appcompat-resources-1.5.0-beta01\AndroidManifest.xml:20:5-21:38

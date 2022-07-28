@@ -1,15 +1,27 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
+# New version released v17.0.19 on 28-07-22
+## Changelogs
+- Fixed issue in button color not changing
+- Using Scalable DP library
+- Added changing of font style
+### Read the changes in README
+
 Alert Dialog ![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588) [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 ===================
 AlertDialog for Android, a beautiful and material alert dialog to use in your android app.
 
 `Older verion of this library has been removed please use new version of this library.`
 
+## Will you buy a coffee for me
 
-## And Don't Forget To Follow Me On Instagram
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.paypal.com/paypalme/tusharmasram)
+
+
+## And Don't Forget To Follow Me On Instagram / Twitter
 
 <p align="center">Follow me on instagram to stay up-to-date https://instagram.com/akshay.sunil.masram.1998
+<p align="center">Follow me on twitter to stay up-to-date https://twitter.com/akshaysmasram98
     
 
 ## Contributors
@@ -42,14 +54,14 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v16.0.19'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v17.0.19'
 	}
 
 ## Usage
 
 **Show material progress**
 
-    KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
+    KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE, 0);
     pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
     pDialog.setTitleText("Loading");
     pDialog.setCancelable(false);
@@ -79,27 +91,27 @@ You can customize progress bar dynamically with materialish-progress methods via
 
 A basic message：
 
-    new KAlertDialog(this)
+    new KAlertDialog(this, 0)
         .setTitleText("Here's a message!")
         .show();
 
 A title with a text under：
 
-    new KAlertDialog(this)
+    new KAlertDialog(this, 0)
         .setTitleText("Here's a message!")
         .setContentText("It's pretty, isn't it?")
         .show();
 
 A error message：
 
-    new KAlertDialog(this, KAlertDialog.ERROR_TYPE)
+    new KAlertDialog(this, KAlertDialog.ERROR_TYPE, 0)
         .setTitleText("Oops...")
         .setContentText("Something went wrong!")
         .show();
 
 A warning message：
 
-    new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
+    new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
         .setTitleText("Are you sure?")
         .setContentText("Won't be able to recover this file!")
         .setConfirmText("Yes,delete it!")
@@ -107,14 +119,14 @@ A warning message：
 
 A success message：
 
-    new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE)
+    new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE, 0)
         .setTitleText("Good job!")
         .setContentText("You clicked the button!")
         .show();
 
 A message with a custom icon：
 
-    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
+    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE, 0)
         .setTitleText("Sweet!")
         .setContentText("Here's a custom image.")
         .setCustomImage(R.drawable.custom_img)
@@ -122,13 +134,25 @@ A message with a custom icon：
 
 To Hide Cancel And Confirm Button：
 
-    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
+    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE, 0)
         .setTitleText("Sweet!")
         .setContentText("Here's a custom image.")
         .setCustomImage(R.drawable.custom_img)
         .setConfirmText("OK") //Do not call this if you don't want to show confirm button
         .setCancelText("CANCEL")//Do not call this if you don't want to show cancel button
         .show();
+
+To Change the font of title and content：
+
+    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE, R.font.yourFontName)
+
+To Change the font of only title：
+
+    .dialogTitleFont(R.font.yourFontName)
+
+To Change the font of only content：
+
+    .dialogContentFont(R.font.yourFontName)
 
 Bind the listener to confirm button：
 

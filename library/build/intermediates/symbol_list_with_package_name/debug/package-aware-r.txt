@@ -1216,10 +1216,6 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
-color colorAccent
-color colorPrimary
-color colorPrimaryDark
-color cyber_yellow
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1268,10 +1264,8 @@ color error_stroke_color
 color float_transparent
 color foreground_material_dark
 color foreground_material_light
-color gray
 color gray_btn_bg_color
 color gray_btn_bg_pressed_color
-color gray_scale
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color kalert_dialog_bg_color
@@ -1791,14 +1785,12 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
-color teal_700
 color text_color
 color tooltip_background_dark
 color tooltip_background_light
 color trans_success_stroke_color
 color warning_stroke_color
 color white
-color yellow
 dimen _100sdp
 dimen _101sdp
 dimen _102sdp
@@ -3265,6 +3257,10 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable warning_circle
 drawable warning_sigh
+font lovelo
+font lovelo_font
+font smooch
+font smooch_font
 id BOTTOM_END
 id BOTTOM_START
 id NO_DEBUG
