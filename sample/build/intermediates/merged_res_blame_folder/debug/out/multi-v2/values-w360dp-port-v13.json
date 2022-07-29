@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-31:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\1730053365a3b49b2f5d88e0ffdd9870\\transformed\\material-1.7.0-alpha03\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",

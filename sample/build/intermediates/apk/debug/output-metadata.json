@@ -11,8 +11,8 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 22,
-      "versionName": "17.0.19",
+      "versionCode": 23,
+      "versionName": "18.0.19",
       "outputFile": "sample-debug.apk"
     }
   ],

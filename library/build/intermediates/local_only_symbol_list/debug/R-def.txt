@@ -61,12 +61,14 @@ font smooch
 font smooch_font
 id cancel_button
 id content_text
+id custom_big_image
 id custom_confirm_button
 id custom_image
 id custom_view_container
 id edit_text
 id error_frame
 id error_x
+id image_loading
 id loading
 id progressWheel
 id progress_dialog

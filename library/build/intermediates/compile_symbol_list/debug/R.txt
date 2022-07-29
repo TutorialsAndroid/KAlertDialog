@@ -1174,6 +1174,7 @@ int color abc_decor_view_status_guard 0x0
 int color abc_decor_view_status_guard_light 0x0
 int color abc_hint_foreground_material_dark 0x0
 int color abc_hint_foreground_material_light 0x0
+int color abc_input_method_navigation_guard 0x0
 int color abc_primary_text_disable_only_material_dark 0x0
 int color abc_primary_text_disable_only_material_light 0x0
 int color abc_primary_text_material_dark 0x0
@@ -3365,6 +3366,7 @@ int id counterclockwise 0x0
 int id cradle 0x0
 int id custom 0x0
 int id customPanel 0x0
+int id custom_big_image 0x0
 int id custom_confirm_button 0x0
 int id custom_image 0x0
 int id custom_view_container 0x0
@@ -3421,6 +3423,7 @@ int id give_us_a_review_landmine_button 0x0
 int id give_us_a_review_landmine_main_layout 0x0
 int id give_us_a_review_landmine_text_1 0x0
 int id give_us_a_review_landmine_text_2 0x0
+int id glide_custom_view_target_tag 0x0
 int id gone 0x0
 int id group_divider 0x0
 int id guideline 0x0
@@ -3432,6 +3435,7 @@ int id icon_group 0x0
 int id ignore 0x0
 int id ignoreRequest 0x0
 int id image 0x0
+int id image_loading 0x0
 int id info 0x0
 int id invisible 0x0
 int id inward 0x0
@@ -3866,6 +3870,18 @@ int string abc_activity_chooser_view_see_all 0x0
 int string abc_activitychooserview_choose_application 0x0
 int string abc_capital_off 0x0
 int string abc_capital_on 0x0
+int string abc_font_family_body_1_material 0x0
+int string abc_font_family_body_2_material 0x0
+int string abc_font_family_button_material 0x0
+int string abc_font_family_caption_material 0x0
+int string abc_font_family_display_1_material 0x0
+int string abc_font_family_display_2_material 0x0
+int string abc_font_family_display_3_material 0x0
+int string abc_font_family_display_4_material 0x0
+int string abc_font_family_headline_material 0x0
+int string abc_font_family_menu_material 0x0
+int string abc_font_family_subhead_material 0x0
+int string abc_font_family_title_material 0x0
 int string abc_menu_alt_shortcut_label 0x0
 int string abc_menu_ctrl_shortcut_label 0x0
 int string abc_menu_delete_shortcut_label 0x0

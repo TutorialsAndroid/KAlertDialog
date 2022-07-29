@@ -2,6 +2,7 @@ package com.developer.kalert.alert;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
 
@@ -37,7 +38,8 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         if (v.getId() == R.id.basic_test) {
             KAlertDialog sd = new KAlertDialog(this, 0);
             sd.setTitleText("Title");
-            sd.setContentText("Content");
+            sd.setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,");
+            sd.setContentTextAlignment(View.TEXT_ALIGNMENT_CENTER, Gravity.CENTER);
             sd.setConfirmText("Ok");
             sd.setCancelable(true);
             sd.setCanceledOnTouchOutside(true);
@@ -105,10 +107,21 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.custom_img_test) {
+            /*
             new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE, 0)
                     .setTitleText("KAlertDialog")
                     .setContentText("Here's a custom image.")
                     .setCustomImage(R.mipmap.ic_launcher,SampleActivity.this)
+                    .setConfirmText("OK")
+                    .show();
+             */
+
+            new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE, 0)
+                    .setTitleText("KAlertDialog")
+                    .setContentText("Here's a custom image.")
+                    .setURLImage("https://images.unsplash.com/photo-1659098602926-969fc12ef61a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                            KAlertDialog.IMAGE_BIG
+                    )
                     .setConfirmText("OK")
                     .show();
         }

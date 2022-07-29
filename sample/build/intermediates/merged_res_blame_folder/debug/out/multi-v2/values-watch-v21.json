@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-31:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\8ab22bcc2cf8e7238664609b05ba424d\\transformed\\appcompat-1.5.0-beta01\\res\\values-watch-v21\\values-watch-v21.xml",

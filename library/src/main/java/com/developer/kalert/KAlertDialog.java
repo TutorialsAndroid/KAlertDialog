@@ -1,5 +1,7 @@
 package com.developer.kalert;
 
+import static android.view.View.GONE;
+
 import android.content.Context;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -11,6 +13,7 @@ import android.text.Html;
 import android.text.util.Linkify;
 import android.util.TypedValue;
 
+import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -22,10 +25,18 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
+import com.developer.progressx.ProgressWheel;
 
 import java.util.Objects;
 
@@ -38,7 +49,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private final Animation mOverlayOutAnim, mImageAnim;
 
     private TextView mTitleTextView, mContentTextView;
-    private ImageView mErrorX, mSuccessTick, mCustomImage;
+    private ImageView mErrorX, mSuccessTick, mCustomImage, mCustomBigImage;
     private Drawable mCustomImgDrawable;
     private AppCompatButton mConfirmButton, mCancelButton;
     private Drawable mColor, mCancelColor;
@@ -47,8 +58,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private FrameLayout mCustomViewContainer;
 
     private String mTitleText, mContentText, mCancelText, mConfirmText;
+    private String imageURL;
+    private int displayType;
     private int font, titleFont = 0, contentFont = 0,
             titleColor = 0, contentColor = 0;
+    private Integer contentAlignment, contentGravity;
 
     private boolean mShowCancel, mShowContent, mShowTitleText, mCloseFromCancel, mShowConfirm;
     private int contentTextSize = 0;
@@ -57,6 +71,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private FrameLayout mErrorFrame, mSuccessFrame, mProgressFrame, mWarningFrame;
 
     private final ProgressHelper mProgressHelper;
+    private ProgressWheel imageLoading;
     private KAlertDialog.KAlertClickListener mCancelClickListener;
     private KAlertDialog.KAlertClickListener mConfirmClickListener;
 
@@ -67,7 +82,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public static final int SUCCESS_TYPE = 2;
     public static final int WARNING_TYPE = 3;
     public static final int CUSTOM_IMAGE_TYPE = 4;
-    public static final int PROGRESS_TYPE = 5;
+    public static final int URL_IMAGE_TYPE = 5;
+    public static final int PROGRESS_TYPE = 6;
+
+    public static final int IMAGE_BIG = 8;
+    public static final int IMAGE_CIRCLE = 9;
 
     public static boolean DARK_STYLE = false;
 
@@ -75,7 +94,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         void onClick(KAlertDialog kAlertDialog);
     }
 
-    public static final int INPUT_TYPE = 6;
+    public static final int INPUT_TYPE = 7;
     private EditText mEditText;
 
     public KAlertDialog(Context context, Integer customFont) {
@@ -97,9 +116,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mProgressFrame = findViewById(R.id.progress_dialog);
         mSuccessTick = mSuccessFrame.findViewById(R.id.success_x);
         mCustomImage = findViewById(R.id.custom_image);
+        mCustomBigImage = findViewById(R.id.custom_big_image);
         mWarningFrame = findViewById(R.id.warning_frame);
         mCustomViewContainer = findViewById(R.id.custom_view_container);
         mProgressHelper.setProgressWheel(findViewById(R.id.progressWheel));
+        imageLoading = findViewById(R.id.image_loading);
 
         mConfirmButton = findViewById(R.id.custom_confirm_button);
         mCancelButton = findViewById(R.id.cancel_button);
@@ -138,7 +159,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                mDialogView.setVisibility(View.GONE);
+                mDialogView.setVisibility(GONE);
                 mDialogView.post(() -> {
                     if (mCloseFromCancel) {
                         KAlertDialog.super.cancel();
@@ -166,11 +187,13 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
     private void restore() {
-        mCustomImage.setVisibility(View.GONE);
-        mErrorFrame.setVisibility(View.GONE);
-        mSuccessFrame.setVisibility(View.GONE);
-        mWarningFrame.setVisibility(View.GONE);
-        mProgressFrame.setVisibility(View.GONE);
+        mCustomImage.setVisibility(GONE);
+        mCustomBigImage.setVisibility(GONE);
+        imageLoading.setVisibility(GONE);
+        mErrorFrame.setVisibility(GONE);
+        mSuccessFrame.setVisibility(GONE);
+        mWarningFrame.setVisibility(GONE);
+        mProgressFrame.setVisibility(GONE);
         mConfirmButton.setVisibility(View.VISIBLE);
 
         mConfirmButton.setBackgroundResource(R.drawable.button_background);
@@ -212,9 +235,13 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                     setCustomImage1(mCustomImgDrawable);
                     setConfirmButtonColor(mColor);
                     break;
+                case URL_IMAGE_TYPE:
+                    setURLImage1(imageURL, displayType);
+                    setConfirmButtonColor(mColor);
+                    break;
                 case PROGRESS_TYPE:
                     mProgressFrame.setVisibility(View.VISIBLE);
-                    mConfirmButton.setVisibility(View.GONE);
+                    mConfirmButton.setVisibility(GONE);
                     setConfirmButtonColor(mColor);
                     break;
                 case INPUT_TYPE:
@@ -260,8 +287,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
-
-
     public KAlertDialog setCustomImage(int resourceId, Context context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             return setCustomImage1(getContext().getResources().getDrawable(resourceId,context.getTheme()));
@@ -270,11 +295,66 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
+    public KAlertDialog setURLImage(String imageURL, int displayType) {
+        return setURLImage1(imageURL, displayType);
+    }
+
     private KAlertDialog setCustomImage1(Drawable drawable) {
         mCustomImgDrawable = drawable;
         if (mCustomImage != null && mCustomImgDrawable != null) {
             mCustomImage.setVisibility(View.VISIBLE);
             mCustomImage.setImageDrawable(mCustomImgDrawable);
+        }
+        return this;
+    }
+
+    private KAlertDialog setURLImage1(String imageURL, int displayType) {
+        this.imageURL = imageURL;
+        this.displayType = displayType;
+        if (mCustomImage != null && mCustomBigImage != null && imageLoading != null) {
+            imageLoading.setVisibility(View.VISIBLE);
+
+            switch (displayType) {
+                case IMAGE_BIG:
+                    mCustomBigImage.setVisibility(View.VISIBLE);
+                    Glide.with(mCustomBigImage)
+                            .load(imageURL)
+                            .listener(new RequestListener<Drawable>() {
+                                @Override
+                                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                                    imageLoading.setVisibility(GONE);
+                                    return false;
+                                }
+
+                                @Override
+                                public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                                    imageLoading.setVisibility(GONE);
+                                    return false;
+                                }
+                            })
+                            .into(mCustomBigImage);
+                    break;
+                case IMAGE_CIRCLE:
+                    mCustomImage.setVisibility(View.VISIBLE);
+                    Glide.with(mCustomImage)
+                            .load(imageURL)
+                            .listener(new RequestListener<Drawable>() {
+                                @Override
+                                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                                    imageLoading.setVisibility(GONE);
+                                    return false;
+                                }
+
+                                @Override
+                                public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                                    imageLoading.setVisibility(GONE);
+                                    return false;
+                                }
+                            })
+                            .circleCrop()
+                            .into(mCustomImage);
+                    break;
+            }
         }
         return this;
     }
@@ -289,12 +369,19 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             if (contentColor != 0) {
                 mContentTextView.setTextColor(ContextCompat.getColor(context, contentColor));
             }
+            if (contentAlignment != null && contentGravity != null) {
+                mContentTextView.setTextAlignment(contentAlignment);
+                mContentTextView.setGravity(contentGravity);
+            } else {
+                mContentTextView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                mContentTextView.setGravity(Gravity.CENTER);
+            }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 mContentTextView.setText(Html.fromHtml(mContentText,0));
             }else {
                 mContentTextView.setText(Html.fromHtml(mContentText));
             }
-            mCustomViewContainer.setVisibility(View.GONE);
+            mCustomViewContainer.setVisibility(GONE);
         }
         return this;
     }
@@ -302,7 +389,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public KAlertDialog showCancelButton ( boolean isShow){
         mShowCancel = isShow;
         if (mCancelButton != null) {
-            mCancelButton.setVisibility(mShowCancel ? View.VISIBLE : View.GONE);
+            mCancelButton.setVisibility(mShowCancel ? View.VISIBLE : GONE);
         }
         return this;
     }
@@ -310,7 +397,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public KAlertDialog showConfirmButton (boolean isShow){
         mShowConfirm = isShow;
         if (mConfirmButton != null) {
-            mConfirmButton.setVisibility(mShowConfirm ? View.VISIBLE : View.GONE);
+            mConfirmButton.setVisibility(mShowConfirm ? View.VISIBLE : GONE);
         }
         return this;
     }
@@ -501,6 +588,12 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     public KAlertDialog setContentFont(int font) {
         this.contentFont = font;
+        return this;
+    }
+
+    public KAlertDialog setContentTextAlignment(int contentAlignment, int contentGravity) {
+        this.contentAlignment = contentAlignment;
+        this.contentGravity = contentGravity;
         return this;
     }
 

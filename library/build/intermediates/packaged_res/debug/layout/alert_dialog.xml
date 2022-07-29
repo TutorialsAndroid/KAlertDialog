@@ -11,14 +11,32 @@
     android:background="?attr/alertDialogDark"
     android:padding="@dimen/_10sdp">
 
-    <ImageView
-        android:id="@+id/custom_image"
-        android:layout_width="@dimen/_53sdp"
-        android:layout_height="@dimen/_53sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:contentDescription="@string/app_name"
-        android:visibility="gone"
-        android:scaleType="fitCenter" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/custom_image"
+            android:layout_width="@dimen/_53sdp"
+            android:layout_height="@dimen/_53sdp"
+            android:visibility="gone"
+            android:scaleType="fitCenter" />
+        <ImageView
+            android:id="@+id/custom_big_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:scaleType="fitCenter" />
+        <com.developer.progressx.ProgressWheel
+            android:id="@+id/image_loading"
+            android:layout_width="@dimen/_53sdp"
+            android:layout_height="@dimen/_53sdp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            wheel:matProg_progressIndeterminate="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/error_frame"
@@ -123,8 +141,6 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/_14sdp"
         android:textColor="?attr/alertDialogContentTextColor"
-        android:textAlignment="center"
-        android:gravity="center"
         android:visibility="gone" />
 
     <FrameLayout

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-zh-rHK/values-zh-rHK.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-31:/values-zh-rHK/values-zh-rHK.xml",
             "map": [
                 {
                     "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\22c51314e4a426ee83c793a2ea6e5e2c\\transformed\\core-1.8.0\\res\\values-zh-rHK\\values-zh-rHK.xml",

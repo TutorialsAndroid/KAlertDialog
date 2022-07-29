@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-v23/values-v23.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-31:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\a1d45456215b5976992a4bf6605ff291\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
