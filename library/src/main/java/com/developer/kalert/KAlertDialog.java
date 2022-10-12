@@ -552,7 +552,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
 
-    public KAlertDialog confirmButtonColor (int color, Context context){
+    public KAlertDialog confirmButtonColor (int color){
         //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             return setConfirmButtonColor(ContextCompat.getDrawable(context, color));
         //}else {
@@ -560,7 +560,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         //}
     }
 
-    public KAlertDialog cancelButtonColor (int color, Context context){
+    public KAlertDialog cancelButtonColor (int color){
         //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             return setCancelButtonColor(ContextCompat.getDrawable(context, color));
         //}else {

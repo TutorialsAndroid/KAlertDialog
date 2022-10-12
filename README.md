@@ -1,9 +1,11 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released v19.0.19 on 30-07-22
+# New version released v20.0.0 on 12-10-2022
 ## Changelogs
-- Added use of custom image from URL
-- Added content text-alignment option
+- Auto dark mode
+- New Input field dialog
+- Dialog title alignment
+- Fixed crashing issue while using custom downloaded fonts
 ### Read the changes in README
 
 Alert Dialog ![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588) [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -40,10 +42,12 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 - Change button color and background
 - Show Custom Image from URL in dialog (type: circleCrop, full-size)
 - Change the content text-alignment as you want
+- Change the title text alignment
+- Input field dialog
 - More features are coming soon
 
 ## ScreenShot
-![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/device-2019-03-23-132617.png)
+![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/Screenshot_1665583187.png)
 
 ## Setup
 The simplest way to use AlertDialog is to add the library as dependency to your build.
@@ -62,14 +66,14 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v19.0.19'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v20.0.0'
 	}
 
 ## Usage
 
 **Show material progress**
 
-    KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE, 0);
+    KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE);
     pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
     pDialog.setTitleText("Loading");
     pDialog.setCancelable(false);
@@ -99,27 +103,42 @@ You can customize progress bar dynamically with materialish-progress methods via
 
 A basic message：
 
-    new KAlertDialog(this, 0)
+    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-18.png)
+
+    new KAlertDialog(this)
         .setTitleText("Here's a message!")
         .show();
 
 A title with a text under：
 
-    new KAlertDialog(this, 0)
+    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-18.png)
+
+    new KAlertDialog(this)
         .setTitleText("Here's a message!")
         .setContentText("It's pretty, isn't it?")
         .show();
 
+A title with gravity changed：
+
+    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-30.png)
+
+    new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+                    .setTitleText("Lorem Ipsum")
+                    .setTitleTextGravity(Gravity.START) //you can specify your own gravity
+                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+                    .setConfirmText("Ok")
+                    .show();
+
 A error message：
 
-    new KAlertDialog(this, KAlertDialog.ERROR_TYPE, 0)
+    new KAlertDialog(this, KAlertDialog.ERROR_TYPE)
         .setTitleText("Oops...")
         .setContentText("Something went wrong!")
         .show();
 
 A warning message：
 
-    new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
+    new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
         .setTitleText("Are you sure?")
         .setContentText("Won't be able to recover this file!")
         .setConfirmText("Yes,delete it!")
@@ -127,14 +146,16 @@ A warning message：
 
 A success message：
 
-    new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE, 0)
+    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-41-45.png)
+
+    new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE)
         .setTitleText("Good job!")
         .setContentText("You clicked the button!")
         .show();
 
 A message with a custom icon：
 
-    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE, 0)
+    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
         .setTitleText("Sweet!")
         .setContentText("Here's a custom image.")
         .setCustomImage(R.drawable.custom_img)
@@ -142,21 +163,41 @@ A message with a custom icon：
 
 A message with a custom image URL
 
+    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-12.png)
+
     displayType - KAlertDialog.IMAGE_BIG - For full size image
     displayType - KAlertDialog.IMAGE_CIRCLE - For Circle Crop image
 
     Note: This feature is still in development
 
-    new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE, 0)
+    new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE)
                     .setTitleText("KAlertDialog")
                     .setContentText("Here's a custom image.")
                     .setURLImage("put your image url", displayType)
                     .setConfirmText("OK")
                     .show();
 
+A dialog with input-field
+
+    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-36.png)
+
+    KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.INPUT_TYPE);
+    dialog.setInputFieldHint("Write message");
+    dialog.setTitleText("Edit Text");
+    dialog.setConfirmText("OK");
+    dialog.setConfirmClickListener(kAlertDialog -> {
+        kAlertDialog.dismissWithAnimation();
+        kAlertDialog.getInputText(); //you get the input text by calling this
+        Toast.makeText(this, kAlertDialog.getInputText(), Toast.LENGTH_SHORT).show();
+    });
+    dialog.show();
+    //below this line is necessary to show keyboard when using input-field
+    dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+            |WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM); //this will allow to show keyboard
+
 To Hide Cancel And Confirm Button：
 
-    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE, 0)
+    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
         .setTitleText("Sweet!")
         .setContentText("Here's a custom image.")
         .setCustomImage(R.drawable.custom_img)
@@ -164,17 +205,33 @@ To Hide Cancel And Confirm Button：
         .setCancelText("CANCEL")//Do not call this if you don't want to show cancel button
         .show();
 
-To Change the font of title and content：
-
-    new KAlertDialog(this, alertType, R.font.yourFontName)
-
 To Change the font of only title：
 
-    .dialogTitleFont(R.font.yourFontName)
+    To apply custom downloaded fonts of TTF format you have place your font.ttf file in assest folder below 
+    is the screen-shot for reference about how to place your font file in assest folder
+
+    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/structure.png)
+
+    new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+        .setTitleText("Lorem Ipsum")
+        .setTitleTTFFont("fonts/os.ttf")
+        .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+        .setConfirmText("Ok")
+        .show();
 
 To Change the font of only content：
 
-    .dialogContentFont(R.font.yourFontName)
+    To apply custom downloaded fonts of TTF format you have place your font.ttf file in assest folder below 
+    is the screen-shot for reference about how to place your font file in assest folder
+
+    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/structure.png)
+
+    new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+        .setTitleText("Lorem Ipsum")
+        .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+        .setContentTTFFont("fonts/sf.ttf")
+        .setConfirmText("Ok")
+        .show();
 
 To Change the color of title and content
 
@@ -189,7 +246,7 @@ To Change the content textAlignment
     or
 
     //Text alignment center
-    .setContentTextAlignment(View.TEXT_ALIGNMENT_CENTER, Gravity.CENTER)
+    .setContentTextAlignment(View.TEXT_ALIGNMENT_CENTER, Gravity.CENTER)    
 
 Bind the listener to confirm button：
 
@@ -227,22 +284,6 @@ Customizing the alert dialog
     .cancelButtonColor(R.color.colorAccent) // you can change the color of cancel button
     .setContentTextSize(50) // you can change the content text size
     .setTitleText("<h2>Title</h2><br><p>Description here</p>") //you can use html in title text
-    
-    //This is how you can set dark theme to alert dialog box
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
-        //sets the theme for app
-        SharedPreferences sharedPreferences = this
-                .getSharedPreferences("theme", Context.MODE_PRIVATE);
-        final boolean dark = sharedPreferences.getBoolean("dark", false);
-        setTheme(dark ? R.style.AppThemeDark : R.style.AppTheme);
-
-        DARK_STYLE = dark; //this will apply dark theme to KAlertDialog Box
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_ui);
-    }
   
 
 And if you want to change the button corners with color create a drawable file

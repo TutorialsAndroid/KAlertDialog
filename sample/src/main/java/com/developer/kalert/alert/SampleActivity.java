@@ -25,6 +25,8 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
 
         findViewById(R.id.basic_test).setOnClickListener(this);
         findViewById(R.id.under_text_test).setOnClickListener(this);
+        findViewById(R.id.title_with_font_changed).setOnClickListener(this);
+        findViewById(R.id.content_text_with_font_changed).setOnClickListener(this);
         findViewById(R.id.title_gravity).setOnClickListener(this);
         findViewById(R.id.error_text_test).setOnClickListener(this);
         findViewById(R.id.success_text_test).setOnClickListener(this);
@@ -54,7 +56,24 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
                     .setTitleText("Lorem Ipsum")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,")
-                    .setContentTextAlignment(View.TEXT_ALIGNMENT_CENTER, Gravity.CENTER)
+                    .setConfirmText("Ok")
+                    .show();
+        }
+
+        if (v.getId() == R.id.title_with_font_changed) {
+            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+                    .setTitleText("Lorem Ipsum")
+                    .setTitleTTFFont("fonts/os.ttf")
+                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+                    .setConfirmText("Ok")
+                    .show();
+        }
+
+        if (v.getId() == R.id.content_text_with_font_changed) {
+            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+                    .setTitleText("Lorem Ipsum")
+                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+                    .setContentTTFFont("fonts/sf.ttf")
                     .setConfirmText("Ok")
                     .show();
         }
@@ -158,9 +177,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             dialog.setConfirmText("OK");
             dialog.setConfirmClickListener(kAlertDialog -> {
                 kAlertDialog.dismissWithAnimation();
-
-                //you get the input text by calling
-                kAlertDialog.getInputText();
+                kAlertDialog.getInputText(); //you get the input text by calling this
                 Toast.makeText(this, kAlertDialog.getInputText(), Toast.LENGTH_SHORT).show();
             });
             dialog.show();

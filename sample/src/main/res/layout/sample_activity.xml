@@ -36,9 +36,27 @@
         <Button
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:id="@+id/title_gravity"
+            android:id="@+id/title_with_font_changed"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/under_text_test"
+            android:layout_margin="10dp"
+            android:text="A Title with font changed"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/content_text_with_font_changed"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/title_with_font_changed"
+            android:layout_margin="10dp"
+            android:text="A Content text with font changed"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/title_gravity"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/content_text_with_font_changed"
             android:layout_margin="10dp"
             android:text="@string/title_gravity"/>
 
