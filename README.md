@@ -103,7 +103,7 @@ You can customize progress bar dynamically with materialish-progress methods via
 
 A basic message：
 
-    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-18.png)
+![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-18.png)
 
     new KAlertDialog(this)
         .setTitleText("Here's a message!")
@@ -111,7 +111,7 @@ A basic message：
 
 A title with a text under：
 
-    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-18.png)
+![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-18.png)
 
     new KAlertDialog(this)
         .setTitleText("Here's a message!")
@@ -120,7 +120,7 @@ A title with a text under：
 
 A title with gravity changed：
 
-    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-30.png)
+![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-30.png)
 
     new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
                     .setTitleText("Lorem Ipsum")
@@ -146,7 +146,7 @@ A warning message：
 
 A success message：
 
-    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-41-45.png)
+![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-41-45.png)
 
     new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE)
         .setTitleText("Good job!")
@@ -163,7 +163,7 @@ A message with a custom icon：
 
 A message with a custom image URL
 
-    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-12.png)
+![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-12.png)
 
     displayType - KAlertDialog.IMAGE_BIG - For full size image
     displayType - KAlertDialog.IMAGE_CIRCLE - For Circle Crop image
@@ -179,7 +179,7 @@ A message with a custom image URL
 
 A dialog with input-field
 
-    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-36.png)
+![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-36.png)
 
     KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.INPUT_TYPE);
     dialog.setInputFieldHint("Write message");
@@ -210,7 +210,7 @@ To Change the font of only title：
     To apply custom downloaded fonts of TTF format you have place your font.ttf file in assest folder below 
     is the screen-shot for reference about how to place your font file in assest folder
 
-    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/structure.png)
+![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/structure.png)
 
     new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
         .setTitleText("Lorem Ipsum")
@@ -224,7 +224,7 @@ To Change the font of only content：
     To apply custom downloaded fonts of TTF format you have place your font.ttf file in assest folder below 
     is the screen-shot for reference about how to place your font file in assest folder
 
-    ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/structure.png)
+![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/structure.png)
 
     new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
         .setTitleText("Lorem Ipsum")
