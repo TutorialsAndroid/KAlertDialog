@@ -2,10 +2,11 @@
     name="release"
     package="com.developer.kalert.alert"
     minSdkVersion="19"
-    targetSdkVersion="32"
+    targetSdkVersion="33"
     mergedManifest="build\intermediates\merged_manifest\release\AndroidManifest.xml"
-    proguardFiles="build\intermediates\default_proguard_files\global\proguard-android.txt-7.2.1;proguard-rules.pro"
-    partialResultsDir="build\intermediates\lint_vital_partial_results\release\out">
+    proguardFiles="build\intermediates\default_proguard_files\global\proguard-android.txt-7.3.0;proguard-rules.pro"
+    partialResultsDir="build\intermediates\lint_vital_partial_results\release\out"
+    desugaredMethodsFiles="C:\Users\tkdco\.gradle\caches\transforms-3\55d951fd7134d68db52ef2ce045e144c\transformed\D8BackportedDesugaredMethods.txt">
   <buildFeatures
       namespacing="REQUIRED"/>
   <sourceProviders>
@@ -27,7 +28,7 @@
   <mainArtifact
       classOutputs="build\intermediates\javac\release\classes;build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
       applicationId="com.developer.kalert.alert"
-      generatedSourceFolders="build\generated\source\buildConfig\release;build\generated\aidl_source_output_dir\release\out;build\generated\renderscript_source_output_dir\release\out;build\generated\ap_generated_sources\release\out"
+      generatedSourceFolders="build\generated\ap_generated_sources\release\out;build\generated\aidl_source_output_dir\release\out;build\generated\source\buildConfig\release;build\generated\renderscript_source_output_dir\release\out"
       generatedResourceFolders="build\generated\res\rs\release;build\generated\res\resValues\release">
   </mainArtifact>
 </variant>

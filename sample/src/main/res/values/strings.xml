@@ -9,4 +9,8 @@
     <string name="a_warning_message_with_a_listener_bind_to_the_confirm_button">A warning message, with a listener bind to the Confirm-button…</string>
     <string name="a_warning_message_with_listeners_bind_to_cancel_and_confirm_button">A warning message, with listeners bind to Cancel and Confirm button…</string>
     <string name="a_message_with_a_custom_icon">A message with a custom icon</string>
+    <string name="a_message_with_a_custom_image">A message with a custom image</string>
+    <string name="a_message_with_a_custom_image_big">A message with a custom image big</string>
+    <string name="title_gravity">A title with gravity changed</string>
+    <string name="edit_text_dialog">Edit text dialog</string>
 </resources>

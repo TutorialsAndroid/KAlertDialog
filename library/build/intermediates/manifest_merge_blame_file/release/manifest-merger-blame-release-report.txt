@@ -5,7 +5,7 @@
 5    <uses-sdk
 6        android:minSdkVersion="19"
 6-->D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
-7        android:targetSdkVersion="32" />
+7        android:targetSdkVersion="33" />
 7-->D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
 8
 9    <application />

@@ -3,11 +3,11 @@ apply plugin: 'com.android.library'
 group='com.github.TutorialsAndroid'
 
 android {
-	compileSdkVersion 32
+	compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 32
+        targetSdkVersion 33
     }
 
     compileOptions {
@@ -15,22 +15,23 @@ android {
         targetCompatibility 1.8
     }
 
-    lintOptions {
-        abortOnError false
-    }
     compileOptions {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+    lint {
+        abortOnError false
+    }
+    namespace 'com.developer.kalert'
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.7.0-alpha03'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.8.0-alpha01'
 
     //SCALABLE DP
-    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    //implementation 'com.intuit.sdp:sdp-android:1.1.0'
     //PROGRESS VIEW
     implementation 'com.github.TutorialsAndroid:progressx:v6.0.19'
     //GLIDE IMAGE LOADING LIBRARY

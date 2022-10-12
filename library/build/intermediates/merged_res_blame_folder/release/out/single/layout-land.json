@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/layout-land/material_clock_period_toggle_land.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/layout-land/material_clock_period_toggle_land.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/layout-land/material_timepicker.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/layout-land/material_timepicker.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/layout-land/mtrl_picker_header_dialog.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/layout-land/mtrl_picker_header_dialog.xml"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/layout-sw600dp-v13/mtrl_layout_snackbar.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/layout-sw600dp-v13/mtrl_layout_snackbar.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/layout-sw600dp-v13/design_layout_snackbar.xml"
+    }
+]

@@ -11,8 +11,8 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 20,
-      "versionName": "15.0.19",
+      "versionCode": 25,
+      "versionName": "20.0.0",
       "outputFile": "sample-release-unsigned.apk"
     }
   ],

@@ -36,9 +36,18 @@
         <Button
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:id="@+id/error_text_test"
+            android:id="@+id/title_gravity"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/under_text_test"
+            android:layout_margin="10dp"
+            android:text="@string/title_gravity"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/error_text_test"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/title_gravity"
             android:layout_margin="10dp"
             android:text="@string/show_error_message"/>
 
@@ -78,15 +87,32 @@
             android:layout_margin="10dp"
             android:text="@string/a_message_with_a_custom_icon"/>
 
-
-        <CheckBox
-            android:id="@+id/checkbox1"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/custom_url_image_circle"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/custom_img_test"
-            android:layout_centerInParent="true"
-            android:text="Dark Theme"
-            android:textColor="#D50000" />
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/custom_img_test"
+            android:layout_margin="10dp"
+            android:text="@string/a_message_with_a_custom_image"/>
+
+        <Button
+            android:id="@+id/custom_url_image_big"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/custom_url_image_circle"
+            android:layout_margin="10dp"
+            android:text="@string/a_message_with_a_custom_image_big"/>
+
+        <Button
+            android:id="@+id/edit_text_dialog"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/custom_url_image_big"
+            android:layout_margin="10dp"
+            android:text="@string/edit_text_dialog"/>
     </RelativeLayout>
 
 </ScrollView>

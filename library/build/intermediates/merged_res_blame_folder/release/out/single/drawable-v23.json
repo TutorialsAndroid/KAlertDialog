@@ -1,6 +1,34 @@
 [
     {
-        "merged": "com.developer.kalert.library-merged_res-18:/drawable-v23/abc_control_background_material.xml",
-        "source": "com.developer.kalert.library-appcompat-1.4.2-11:/drawable-v23/abc_control_background_material.xml"
+        "merged": "com.developer.kalert.library-merged_res-30:/drawable-v23/m3_radiobutton_ripple.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/drawable-v23/m3_radiobutton_ripple.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/drawable-v23/mtrl_popupmenu_background_overlay.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/drawable-v23/mtrl_popupmenu_background_overlay.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/drawable-v23/m3_tabs_background.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/drawable-v23/m3_tabs_background.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/drawable-v23/abc_control_background_material.xml",
+        "source": "com.developer.kalert.library-appcompat-1.5.1-8:/drawable-v23/abc_control_background_material.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/drawable-v23/m3_selection_control_ripple.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/drawable-v23/m3_selection_control_ripple.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/drawable-v23/m3_popupmenu_background_overlay.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/drawable-v23/m3_popupmenu_background_overlay.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/drawable-v23/m3_tabs_transparent_background.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/drawable-v23/m3_tabs_transparent_background.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/drawable-v23/m3_appbar_background.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/drawable-v23/m3_appbar_background.xml"
     }
 ]

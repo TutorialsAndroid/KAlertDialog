@@ -4,11 +4,11 @@
     name=":sample"
     type="APP"
     maven="KAlertDialog-master:sample:"
-    gradle="7.2.1"
+    gradle="7.3.0"
     buildFolder="build"
-    bootClassPath="C:\Users\tkdco\AppData\Local\Android\Sdk\platforms\android-32\android.jar;C:\Users\tkdco\AppData\Local\Android\Sdk\build-tools\30.0.3\core-lambda-stubs.jar"
+    bootClassPath="C:\Users\tkdco\AppData\Local\Android\Sdk\platforms\android-33\android.jar;C:\Users\tkdco\AppData\Local\Android\Sdk\build-tools\30.0.3\core-lambda-stubs.jar"
     javaSourceLevel="1.8"
-    compileTarget="android-32"
+    compileTarget="android-33"
     neverShrinking="true">
   <lintOptions
       absolutePaths="true"

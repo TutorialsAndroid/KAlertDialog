@@ -1,19 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-	compileSdkVersion 32
+	compileSdkVersion 33
     
 	defaultConfig {
 		applicationId "com.developer.kalert.alert"
         minSdkVersion 19
-        targetSdkVersion 32
-		versionCode 24
-        versionName "19.0.19"
+        targetSdkVersion 33
+		versionCode 25
+        versionName "20.0.0"
     }
 
-    lintOptions {
-        abortOnError false
-    }
 
     compileOptions {
         sourceCompatibility 1.8
@@ -32,6 +29,10 @@ android {
             debuggable true
         }
     }
+    lint {
+        abortOnError false
+    }
+    namespace 'com.developer.kalert.alert'
     compileOptions {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
@@ -40,8 +41,8 @@ android {
 
 dependencies {
 	implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.7.0-alpha03'
-    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.8.0-alpha01'
+    //implementation 'com.intuit.sdp:sdp-android:1.1.0'
     implementation project(':library')
 }

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/color-night-v8/material_timepicker_modebutton_tint.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/color-night-v8/material_timepicker_modebutton_tint.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/color-night-v8/material_timepicker_button_stroke.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/color-night-v8/material_timepicker_button_stroke.xml"
+    },
+    {
+        "merged": "com.developer.kalert.library-merged_res-30:/color-night-v8/material_timepicker_clockface.xml",
+        "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/color-night-v8/material_timepicker_clockface.xml"
+    }
+]

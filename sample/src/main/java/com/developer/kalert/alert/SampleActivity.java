@@ -4,14 +4,16 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.developer.kalert.KAlertDialog;
 
-public class SampleActivity extends AppCompatActivity implements View.OnClickListener{
+public class SampleActivity extends AppCompatActivity implements View.OnClickListener {
 
     private int i = -1;
 
@@ -23,21 +25,23 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
 
         findViewById(R.id.basic_test).setOnClickListener(this);
         findViewById(R.id.under_text_test).setOnClickListener(this);
+        findViewById(R.id.title_gravity).setOnClickListener(this);
         findViewById(R.id.error_text_test).setOnClickListener(this);
         findViewById(R.id.success_text_test).setOnClickListener(this);
         findViewById(R.id.warning_confirm_test).setOnClickListener(this);
         findViewById(R.id.warning_cancel_test).setOnClickListener(this);
         findViewById(R.id.custom_img_test).setOnClickListener(this);
+        findViewById(R.id.custom_url_image_circle).setOnClickListener(this);
+        findViewById(R.id.custom_url_image_big).setOnClickListener(this);
+        findViewById(R.id.edit_text_dialog).setOnClickListener(this);
         findViewById(R.id.progress_dialog).setOnClickListener(this);
-
-        findViewById(R.id.checkbox1).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.basic_test) {
-            KAlertDialog sd = new KAlertDialog(this, 0);
-            sd.setTitleText("Title");
+            KAlertDialog sd = new KAlertDialog(this, KAlertDialog.NORMAL_TYPE);
+            sd.setTitleText("Lorem Ipsum");
             sd.setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,");
             sd.setContentTextAlignment(View.TEXT_ALIGNMENT_CENTER, Gravity.CENTER);
             sd.setConfirmText("Ok");
@@ -47,15 +51,25 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.under_text_test) {
-            new KAlertDialog(this, 0)
-                    .setTitleText("Title Text")
-                    .setContentText("Hello")
+            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+                    .setTitleText("Lorem Ipsum")
+                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,")
+                    .setContentTextAlignment(View.TEXT_ALIGNMENT_CENTER, Gravity.CENTER)
+                    .setConfirmText("Ok")
+                    .show();
+        }
+
+        if (v.getId() == R.id.title_gravity) {
+            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+                    .setTitleText("Lorem Ipsum")
+                    .setTitleTextGravity(Gravity.START) //you can specify your own gravity
+                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,")
                     .setConfirmText("Ok")
                     .show();
         }
 
         if (v.getId() == R.id.error_text_test) {
-            new KAlertDialog(this, KAlertDialog.ERROR_TYPE, 0)
+            new KAlertDialog(this, KAlertDialog.ERROR_TYPE)
                     .setTitleText("Opps.")
                     .setContentText("Something went wrong!")
                     .setConfirmText("Ok")
@@ -63,7 +77,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.success_text_test) {
-            new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE, 0)
+            new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE)
                     .setTitleText("Good job!")
                     .setContentText("You clicked the button!")
                     .setConfirmText("Ok")
@@ -71,7 +85,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.warning_confirm_test) {
-            new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
+            new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
                     .setConfirmText("Yes,delete it!")
@@ -84,7 +98,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.warning_cancel_test) {
-            new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
+            new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
                     .setCancelText("No,cancel plx!")
@@ -107,16 +121,27 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.custom_img_test) {
-            /*
-            new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE, 0)
+            new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
                     .setTitleText("KAlertDialog")
                     .setContentText("Here's a custom image.")
-                    .setCustomImage(R.mipmap.ic_launcher,SampleActivity.this)
+                    .setCustomImage(R.mipmap.ic_launcher)
                     .setConfirmText("OK")
                     .show();
-             */
+        }
 
-            new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE, 0)
+        if (v.getId() == R.id.custom_url_image_circle) {
+            new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE)
+                    .setTitleText("KAlertDialog")
+                    .setContentText("Here's a custom image.")
+                    .setURLImage("https://images.unsplash.com/photo-1659098602926-969fc12ef61a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                            KAlertDialog.IMAGE_CIRCLE
+                    )
+                    .setConfirmText("OK")
+                    .show();
+        }
+
+        if (v.getId() == R.id.custom_url_image_big) {
+            new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE)
                     .setTitleText("KAlertDialog")
                     .setContentText("Here's a custom image.")
                     .setURLImage("https://images.unsplash.com/photo-1659098602926-969fc12ef61a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
@@ -126,8 +151,25 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                     .show();
         }
 
+        if (v.getId() == R.id.edit_text_dialog) {
+            KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.INPUT_TYPE);
+            dialog.setInputFieldHint("Write message");
+            dialog.setTitleText("Edit Text");
+            dialog.setConfirmText("OK");
+            dialog.setConfirmClickListener(kAlertDialog -> {
+                kAlertDialog.dismissWithAnimation();
+
+                //you get the input text by calling
+                kAlertDialog.getInputText();
+                Toast.makeText(this, kAlertDialog.getInputText(), Toast.LENGTH_SHORT).show();
+            });
+            dialog.show();
+            dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                    |WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM); //this will allow to show keyboard
+        }
+
         if (v.getId() == R.id.progress_dialog) {
-            final KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE, 0)
+            final KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE)
                     .setTitleText("Loading");
             pDialog.show();
             pDialog.setCancelable(false);
@@ -170,10 +212,6 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                             .changeAlertType(KAlertDialog.SUCCESS_TYPE);
                 }
             }.start();
-        }
-
-        if (v.getId() == R.id.checkbox1) {
-            KAlertDialog.DARK_STYLE = ((CheckBox) v).isChecked();
         }
     }
 }

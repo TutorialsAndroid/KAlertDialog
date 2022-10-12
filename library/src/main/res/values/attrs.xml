@@ -14,5 +14,7 @@
 
     <attr name="alertDialogDark" format="reference"/>
     <attr name="alertDialogTextColor" format="color|reference"/>
+    <attr name="alertDialogInputFieldHintColor" format="color|reference"/>
     <attr name="alertDialogContentTextColor" format="color|reference"/>
+    <attr name="alertDialogProgressColor" format="color|reference"/>
 </resources>

@@ -4,8 +4,8 @@ ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\And
 INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
 INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
 	package
-		ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:11-41
 		INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
+		ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
 		INJECTED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:1:1-3:12
