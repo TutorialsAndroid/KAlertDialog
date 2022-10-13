@@ -1,6 +1,6 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released v20.0.0 on 12-10-2022
+# New version released v20.1.0 on 13-10-2022
 ## Changelogs
 - Auto dark mode
 - New Input field dialog
@@ -37,6 +37,7 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 ## Features
 - Materialistic alert dialog
+- Auto dark mode
 - Change font style
 - Change text color
 - Change button color and background
@@ -66,7 +67,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v20.0.0'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v20.1.0'
 	}
 
 ## Usage
@@ -159,6 +160,15 @@ A message with a custom icon：
         .setTitleText("Sweet!")
         .setContentText("Here's a custom image.")
         .setCustomImage(R.drawable.custom_img)
+        .show();
+
+A message with a custom vector drawable with tint option in dark mode: 
+
+    new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
+        .setTitleText("Sweet!")
+        .setContentText("Here's a custom image.")
+        .setCustomImage(R.drawable.vector_drawable)
+        .setDrawableTintOnNightMode(true, R.color.red) //it will work only if your app is running in night mode
         .show();
 
 A message with a custom image URL
