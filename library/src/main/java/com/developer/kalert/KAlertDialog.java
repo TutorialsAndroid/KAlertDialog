@@ -62,6 +62,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private String titleFont, contentFont;
     private int displayType;
     private int titleColor = 0, contentColor = 0;
+    private int drawableColor = 0;
     private Integer contentAlignment, contentGravity;
     private int titleTextGravity = Gravity.CENTER;
 
@@ -232,6 +233,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                     break;
                 case CUSTOM_IMAGE_TYPE:
                     setCustomImage1(mCustomImgDrawable);
+                    setCustomImageColorFilter(drawableColor);
                     setConfirmButtonColor(mColor);
                     break;
                 case URL_IMAGE_TYPE:
@@ -309,6 +311,13 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
+    public KAlertDialog setDrawableTintOnNightMode(boolean isTinted, int tintColor) {
+        if ( isTinted && isNightMode(context) ) {
+            setCustomImageColorFilter( tintColor );
+        }
+        return this;
+    }
+
     public KAlertDialog setURLImage(String imageURL, int displayType) {
         return setURLImage1(imageURL, displayType);
     }
@@ -318,6 +327,15 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         if (mCustomImage != null && mCustomImgDrawable != null) {
             mCustomImage.setVisibility(View.VISIBLE);
             mCustomImage.setImageDrawable(mCustomImgDrawable);
+        }
+        return this;
+    }
+
+    private KAlertDialog setCustomImageColorFilter(int color) {
+        drawableColor = color;
+        if (mCustomImage != null && drawableColor != 0) {
+            mCustomImage.setColorFilter(ContextCompat.getColor(context, drawableColor),
+                    android.graphics.PorterDuff.Mode.SRC_IN);
         }
         return this;
     }
