@@ -1,58 +1,30 @@
 [
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/drawable-ldpi_ic_baseline_check_circle_24.png.flat",
-        "source": "com.developer.kalert.alert.sample-pngs-27:/drawable-ldpi/ic_baseline_check_circle_24.png"
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-merged_res-32:\\layout_sample_activity.xml.flat",
-        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-main-34:\\layout\\sample_activity.xml"
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/drawable-xxxhdpi_ic_baseline_check_circle_24.png.flat",
-        "source": "com.developer.kalert.alert.sample-pngs-27:/drawable-xxxhdpi/ic_baseline_check_circle_24.png"
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/drawable-hdpi_ic_baseline_check_circle_24.png.flat",
-        "source": "com.developer.kalert.alert.sample-pngs-27:/drawable-hdpi/ic_baseline_check_circle_24.png"
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-merged_res-32:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-main-34:\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-merged_res-32:\\layout_customedittext.xml.flat",
-        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-main-34:\\layout\\customedittext.xml"
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/layout_customedittext.xml.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/layout/customedittext.xml"
     },
     {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/drawable-anydpi-v21_ic_baseline_check_circle_24.xml.flat",
-        "source": "com.developer.kalert.alert.sample-pngs-27:/drawable-anydpi-v21/ic_baseline_check_circle_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-merged_res-32:\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-main-34:\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/drawable-mdpi_ic_baseline_check_circle_24.png.flat",
-        "source": "com.developer.kalert.alert.sample-pngs-27:/drawable-mdpi/ic_baseline_check_circle_24.png"
-    },
-    {
-        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-merged_res-32:\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-main-34:\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-merged_res-32:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-main-34:\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-merged_res-32:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\tkdco\\.gradle\\daemon\\7.4\\com.developer.kalert.alert.sample-main-34:\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/drawable-xhdpi_ic_baseline_check_circle_24.png.flat",
-        "source": "com.developer.kalert.alert.sample-pngs-27:/drawable-xhdpi/ic_baseline_check_circle_24.png"
-    },
-    {
-        "merged": "com.developer.kalert.alert.sample-merged_res-32:/drawable-xxhdpi_ic_baseline_check_circle_24.png.flat",
-        "source": "com.developer.kalert.alert.sample-pngs-27:/drawable-xxhdpi/ic_baseline_check_circle_24.png"
+        "merged": "com.developer.kalert.alert.sample-merged_res-32:/layout_sample_activity.xml.flat",
+        "source": "com.developer.kalert.alert.sample-main-34:/layout/sample_activity.xml"
     }
 ]

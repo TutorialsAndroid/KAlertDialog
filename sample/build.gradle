@@ -7,8 +7,8 @@ android {
 		applicationId "com.developer.kalert.alert"
         minSdkVersion 19
         targetSdkVersion 33
-		versionCode 26
-        versionName "20.1.0"
+		versionCode 27
+        versionName "20.2.0"
     }
 
 

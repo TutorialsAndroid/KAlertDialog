@@ -2530,7 +2530,6 @@ drawable dialoglight
 drawable error_center_x
 drawable error_circle
 drawable gray_button_background
-drawable ic_baseline_check_circle_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_m3_chip_check

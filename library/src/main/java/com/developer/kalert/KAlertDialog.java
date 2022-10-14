@@ -61,7 +61,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private String imageURL;
     private String titleFont, contentFont;
     private int displayType;
-    private int titleColor = 0, contentColor = 0;
+    private int titleColor = 0, contentColor = 0,
+            confirmTextColor = android.R.color.white, cancelTextColor = android.R.color.white;
     private int drawableColor = 0;
     private Integer contentAlignment, contentGravity;
     private int titleTextGravity = Gravity.CENTER;
@@ -135,7 +136,9 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         dialogContentFont(contentFont);
         setContentText(mContentText);
         setCancelText(mCancelText);
+        setCancelText(mCancelText, cancelTextColor);
         setConfirmText(mConfirmText);
+        setConfirmText(mConfirmText, confirmTextColor);
         setConfirmButtonColor(mColor);
         setCancelButtonColor(mCancelColor);
         changeAlertType(mAlertType, true);
@@ -463,12 +466,38 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
+    @Deprecated
     public KAlertDialog setCancelClickListener (KAlertClickListener listener){
         mCancelClickListener = listener;
         return this;
     }
+    public KAlertDialog setCancelClickListener (String text, KAlertClickListener listener){
+        //noinspection deprecation
+        setCancelText(text);
+        mCancelClickListener = listener;
+        return this;
+    }
+    public KAlertDialog setCancelClickListener (String text, int color, KAlertClickListener listener) {
+        //noinspection deprecation
+        setCancelText(text, color);
+        mCancelClickListener = listener;
+        return this;
+    }
 
+    @Deprecated
     public KAlertDialog setConfirmClickListener (KAlertClickListener listener){
+        mConfirmClickListener = listener;
+        return this;
+    }
+    public KAlertDialog setConfirmClickListener (String text, KAlertClickListener listener){
+        //noinspection deprecation
+        setConfirmText(text);
+        mConfirmClickListener = listener;
+        return this;
+    }
+    public KAlertDialog setConfirmClickListener (String text, int color, KAlertClickListener listener) {
+        //noinspection deprecation
+        setConfirmText(text, color);
         mConfirmClickListener = listener;
         return this;
     }
@@ -546,11 +575,25 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return mCancelText;
     }
 
+    @Deprecated
     public KAlertDialog setCancelText (String text){
         mCancelText = text;
         if (mCancelButton != null && mCancelText != null) {
             showCancelButton(true);
             mCancelButton.setText(mCancelText);
+            mCancelButton.setTextColor( ContextCompat.getColor(context, cancelTextColor) );
+        }
+        return this;
+    }
+
+    @Deprecated
+    public KAlertDialog setCancelText (String text, int color){
+        mCancelText = text;
+        cancelTextColor = color;
+        if (mCancelButton != null && mCancelText != null && cancelTextColor != 0) {
+            showCancelButton(true);
+            mCancelButton.setText(mCancelText);
+            mCancelButton.setTextColor( ContextCompat.getColor(context, cancelTextColor) );
         }
         return this;
     }
@@ -559,12 +602,25 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return mConfirmText;
     }
 
+    @Deprecated
     public KAlertDialog setConfirmText (String text){
         mConfirmText = text;
         if (mConfirmButton != null && mConfirmText != null) {
             showConfirmButton(true);
             mConfirmButton.setText(mConfirmText);
+            mConfirmButton.setTextColor(ContextCompat.getColor(context, confirmTextColor));
+        }
+        return this;
+    }
 
+    @Deprecated
+    public KAlertDialog setConfirmText (String text, int color) {
+        mConfirmText = text;
+        confirmTextColor = color;
+        if (mConfirmButton != null && mConfirmText != null && confirmTextColor != 0) {
+            showConfirmButton(true);
+            mConfirmButton.setText(mConfirmText);
+            mConfirmButton.setTextColor( ContextCompat.getColor(context, confirmTextColor) );
         }
         return this;
     }

@@ -2729,6 +2729,7 @@ id container
 id content
 id contentPanel
 id content_text
+id content_text_with_font_changed
 id contiguous
 id coordinator
 id cos
@@ -3040,6 +3041,7 @@ id titleDividerNoCustom
 id title_gravity
 id title_template
 id title_text
+id title_with_font_changed
 id toggle
 id top
 id topPanel

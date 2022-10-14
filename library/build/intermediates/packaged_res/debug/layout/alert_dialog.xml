@@ -138,7 +138,7 @@
         android:singleLine="true"
         android:visibility="gone"
         android:textColor="?attr/alertDialogTextColor"
-        android:text="@string/dialog_default_title" />
+        tools:text="@string/dialog_default_title" />
 
     <TextView
         android:id="@+id/content_text"
@@ -180,7 +180,7 @@
         <androidx.appcompat.widget.AppCompatButton
             style="@style/dialog_blue_button"
             android:id="@+id/cancel_button"
-            android:text="@string/dialog_cancel"
+            tools:text="@string/dialog_cancel"
             android:visibility="gone"
             android:layout_marginEnd="10dp" />
 
@@ -188,6 +188,6 @@
             style="@style/dialog_blue_button"
             android:id="@+id/custom_confirm_button"
             android:visibility="gone"
-            android:text="@string/dialog_ok"/>
+            tools:text="@string/dialog_ok"/>
     </LinearLayout>
 </LinearLayout>

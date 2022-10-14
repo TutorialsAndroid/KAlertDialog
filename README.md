@@ -1,11 +1,9 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released v20.1.0 on 13-10-2022
+# New version released v20.2.0 on 14-10-2022
 ## Changelogs
-- Auto dark mode
-- New Input field dialog
-- Dialog title alignment
-- Fixed crashing issue while using custom downloaded fonts
+- Added option to change button text color
+- Added option to tint vector drawable in dark mode
 ### Read the changes in README
 
 Alert Dialog ![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588) [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -41,9 +39,12 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 - Change font style
 - Change text color
 - Change button color and background
+- Change button text color
+- Show vector drawable image with tint option in dark mode
 - Show Custom Image from URL in dialog (type: circleCrop, full-size)
 - Change the content text-alignment as you want
 - Change the title text alignment
+- Progress type dialog
 - Input field dialog
 - More features are coming soon
 
@@ -67,7 +68,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v20.1.0'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v20.2.0'
 	}
 
 ## Usage
@@ -124,11 +125,11 @@ A title with gravity changed：
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/photo_2022-10-12_19-42-30.png)
 
     new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
-                    .setTitleText("Lorem Ipsum")
-                    .setTitleTextGravity(Gravity.START) //you can specify your own gravity
-                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-                    .setConfirmText("Ok")
-                    .show();
+        .setTitleText("Lorem Ipsum")
+        .setTitleTextGravity(Gravity.START) //you can specify your own gravity
+        .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+        .setConfirmClickListener("OK", null)
+        .show();
 
 A error message：
 
@@ -142,7 +143,7 @@ A warning message：
     new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
         .setTitleText("Are you sure?")
         .setContentText("Won't be able to recover this file!")
-        .setConfirmText("Yes,delete it!")
+        .setConfirmClickListener("Yes,delete it!", null)
         .show();
 
 A success message：
@@ -184,7 +185,7 @@ A message with a custom image URL
                     .setTitleText("KAlertDialog")
                     .setContentText("Here's a custom image.")
                     .setURLImage("put your image url", displayType)
-                    .setConfirmText("OK")
+                    .setConfirmClickListener("OK", null)
                     .show();
 
 A dialog with input-field
@@ -194,8 +195,7 @@ A dialog with input-field
     KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.INPUT_TYPE);
     dialog.setInputFieldHint("Write message");
     dialog.setTitleText("Edit Text");
-    dialog.setConfirmText("OK");
-    dialog.setConfirmClickListener(kAlertDialog -> {
+    dialog.setConfirmClickListener("OK", kAlertDialog -> {
         kAlertDialog.dismissWithAnimation();
         kAlertDialog.getInputText(); //you get the input text by calling this
         Toast.makeText(this, kAlertDialog.getInputText(), Toast.LENGTH_SHORT).show();
@@ -211,8 +211,8 @@ To Hide Cancel And Confirm Button：
         .setTitleText("Sweet!")
         .setContentText("Here's a custom image.")
         .setCustomImage(R.drawable.custom_img)
-        .setConfirmText("OK") //Do not call this if you don't want to show confirm button
-        .setCancelText("CANCEL")//Do not call this if you don't want to show cancel button
+        .showConfirmButton(false) //to hide the confirm button set it to true
+        .showCancelButton(false) //to hide the cancel button set it to false
         .show();
 
 To Change the font of only title：
@@ -226,7 +226,7 @@ To Change the font of only title：
         .setTitleText("Lorem Ipsum")
         .setTitleTTFFont("fonts/os.ttf")
         .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-        .setConfirmText("Ok")
+        .setConfirmClickListener("OK", null)
         .show();
 
 To Change the font of only content：
@@ -240,7 +240,7 @@ To Change the font of only content：
         .setTitleText("Lorem Ipsum")
         .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
         .setContentTTFFont("fonts/sf.ttf")
-        .setConfirmText("Ok")
+        .setConfirmClickListener("OK", null)
         .show();
 
 To Change the color of title and content
@@ -263,8 +263,7 @@ Bind the listener to confirm button：
     new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
         .setTitleText("Are you sure?")
         .setContentText("Won't be able to recover this file!")
-        .setConfirmText("Yes,delete it!")
-        .setConfirmClickListener(new KAlertDialog.KAlertClickListener() {
+        .setConfirmClickListener("Yes,delete it!",new KAlertDialog.KAlertClickListener() {
             @Override
             public void onClick(KAlertDialog sDialog) {
                 sDialog.dismissWithAnimation();
@@ -277,10 +276,9 @@ Show the cancel button and bind listener to it：
     new KAlertDialog(this, KAlertDialog.WARNING_TYPE, 0)
         .setTitleText("Are you sure?")
         .setContentText("Won't be able to recover this file!")
-        .setCancelText("No,cancel plx!")
-        .setConfirmText("Yes,delete it!")
+        .setConfirmClickListener("Yes,delete it!", null)
         .showCancelButton(true)
-        .setCancelClickListener(new KAlertDialog.KAlertClickListener() {
+        .setCancelClickListener("No,cancel plx!", new KAlertDialog.KAlertClickListener() {
             @Override
             public void onClick(KAlertDialog sDialog) {
                 sDialog.cancel();
@@ -290,10 +288,26 @@ Show the cancel button and bind listener to it：
 
 Customizing the alert dialog
 
-    .confirmButtonColor(R.color.colorPrimary) // you can change the color of confirm button
-    .cancelButtonColor(R.color.colorAccent) // you can change the color of cancel button
-    .setContentTextSize(50) // you can change the content text size
-    .setTitleText("<h2>Title</h2><br><p>Description here</p>") //you can use html in title text
+    //if your app is night mode then you can tint your vector drawable to specific color you want
+    .setDrawableTintOnNightMode(true, R.color.white)
+
+    // you can change the color of confirm button
+    .confirmButtonColor(R.color.colorPrimary)
+
+    // you can change the color of cancel button
+    .cancelButtonColor(R.color.colorAccent) 
+
+    //you can change the color of button text
+    .setConfirmClickListener("OK", R.color.black, clickListener) 
+
+    //you can change the color of button text 
+    .setCancelClickListener("CANCEL", R.color.black, clickListener)
+
+    // you can change the content text size
+    .setContentTextSize(50) 
+
+    //you can use html in title text and same in content text
+    .setTitleText("<h2>Title</h2><br><p>Description here</p>")
   
 
 And if you want to change the button corners with color create a drawable file

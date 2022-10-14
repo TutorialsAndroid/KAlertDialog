@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.developer.kalert.library-merged_res-30:/layout-sw600dp-v13/alert_dialog.xml",
+        "source": "com.developer.kalert.library-main-31:/layout-sw600dp/alert_dialog.xml"
+    },
+    {
         "merged": "com.developer.kalert.library-merged_res-30:/layout-sw600dp-v13/mtrl_layout_snackbar.xml",
         "source": "com.developer.kalert.library-material-1.8.0-alpha01-22:/layout-sw600dp-v13/mtrl_layout_snackbar.xml"
     },

@@ -2529,7 +2529,6 @@ int drawable dialoglight 0x7f070083
 int drawable error_center_x 0x7f070084
 int drawable error_circle 0x7f070085
 int drawable gray_button_background 0x7f070086
-int drawable ic_baseline_check_circle_24 0x7f0700dd
 int drawable ic_clock_black_24dp 0x7f070087
 int drawable ic_keyboard_black_24dp 0x7f070088
 int drawable ic_m3_chip_check 0x7f070089

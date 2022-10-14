@@ -3145,6 +3145,25 @@
             "outputFile": "com.developer.kalert.alert.sample-merged_res-32:/values-sw600dp-v13_values-sw600dp-v13.arsc.flat",
             "map": [
                 {
+                    "source": "D:\\Projects\\AndroidLibraries\\KAlertDialog-master\\library\\build\\intermediates\\packaged_res\\release\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "10",
+                        "endColumns": "12",
+                        "endOffsets": "552"
+                    },
+                    "to": {
+                        "startLines": "26",
+                        "startColumns": "4",
+                        "startOffsets": "1523",
+                        "endLines": "34",
+                        "endColumns": "12",
+                        "endOffsets": "2020"
+                    }
+                },
+                {
                     "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\e888ee523abae03248b52faf6a4cab91\\transformed\\material-1.8.0-alpha01\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",

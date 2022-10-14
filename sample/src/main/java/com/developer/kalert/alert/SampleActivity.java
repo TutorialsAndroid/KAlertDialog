@@ -5,7 +5,6 @@ import android.os.CountDownTimer;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.CheckBox;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,9 +43,8 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         if (v.getId() == R.id.basic_test) {
             KAlertDialog sd = new KAlertDialog(this, KAlertDialog.NORMAL_TYPE);
             sd.setTitleText("Lorem Ipsum");
-            sd.setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,");
-            sd.setContentTextAlignment(View.TEXT_ALIGNMENT_CENTER, Gravity.CENTER);
-            sd.setConfirmText("Ok");
+            sd.setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
+            sd.setConfirmClickListener("OK", null);
             sd.setCancelable(true);
             sd.setCanceledOnTouchOutside(true);
             sd.show();
@@ -55,8 +53,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         if (v.getId() == R.id.under_text_test) {
             new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
                     .setTitleText("Lorem Ipsum")
-                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,")
-                    .setConfirmText("Ok")
+                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
                     .show();
         }
 
@@ -65,7 +62,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                     .setTitleText("Lorem Ipsum")
                     .setTitleTTFFont("fonts/os.ttf")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-                    .setConfirmText("Ok")
+                    .setConfirmClickListener("OK", null)
                     .show();
         }
 
@@ -74,7 +71,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                     .setTitleText("Lorem Ipsum")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
                     .setContentTTFFont("fonts/sf.ttf")
-                    .setConfirmText("Ok")
+                    .setConfirmClickListener("OK", null)
                     .show();
         }
 
@@ -82,8 +79,8 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
                     .setTitleText("Lorem Ipsum")
                     .setTitleTextGravity(Gravity.START) //you can specify your own gravity
-                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,")
-                    .setConfirmText("Ok")
+                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+                    .setConfirmClickListener("OK", null)
                     .show();
         }
 
@@ -91,7 +88,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             new KAlertDialog(this, KAlertDialog.ERROR_TYPE)
                     .setTitleText("Opps.")
                     .setContentText("Something went wrong!")
-                    .setConfirmText("Ok")
+                    .setConfirmClickListener("OK", null)
                     .show();
         }
 
@@ -99,7 +96,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE)
                     .setTitleText("Good job!")
                     .setContentText("You clicked the button!")
-                    .setConfirmText("Ok")
+                    .setConfirmClickListener("OK", null)
                     .show();
         }
 
@@ -107,11 +104,9 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
-                    .setConfirmText("Yes,delete it!")
-                    .setConfirmClickListener(sDialog -> sDialog.setTitleText("Deleted!")
+                    .setConfirmClickListener("Yes,delete it!", sDialog -> sDialog.setTitleText("Deleted!")
                             .setContentText("Your imaginary file has been deleted!")
-                            .setConfirmText("OK")
-                            .setConfirmClickListener(null)
+                            .setConfirmClickListener("OK", null)
                             .changeAlertType(KAlertDialog.SUCCESS_TYPE))
                     .show();
         }
@@ -120,21 +115,16 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
-                    .setCancelText("No,cancel plx!")
-                    .setConfirmText("Yes,delete it!")
                     .showCancelButton(true)
-                    .setCancelClickListener(sDialog -> sDialog.setTitleText("Cancelled!")
+                    .setCancelClickListener("No,cancel plx!", sDialog -> sDialog.setTitleText("Cancelled!")
                             .setContentText("Your imaginary file is safe :)")
-                            .setConfirmText("OK")
                             .showCancelButton(false)
-                            .setCancelClickListener(null)
-                            .setConfirmClickListener(null)
+                            .setConfirmClickListener("OK", null)
                             .changeAlertType(KAlertDialog.ERROR_TYPE))
-                    .setConfirmClickListener(sDialog -> sDialog
-                            .setConfirmText("OK")
+                    .setConfirmClickListener("Yes,delete it!",sDialog -> sDialog.setTitleText("Deleted!")
                             .showCancelButton(false)
-                            .setCancelClickListener(null)
-                            .setConfirmClickListener(null)
+                            .setContentText("Your imaginary file has been deleted!")
+                            .setConfirmClickListener("OK",null)
                             .changeAlertType(KAlertDialog.SUCCESS_TYPE))
                     .show();
         }
@@ -144,7 +134,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                     .setTitleText("KAlertDialog")
                     .setContentText("Here's a custom image.")
                     .setCustomImage(R.mipmap.ic_launcher)
-                    .setConfirmText("OK")
+                    .setConfirmClickListener("OK", null)
                     .show();
         }
 
@@ -155,7 +145,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                     .setURLImage("https://images.unsplash.com/photo-1659098602926-969fc12ef61a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
                             KAlertDialog.IMAGE_CIRCLE
                     )
-                    .setConfirmText("OK")
+                    .setConfirmClickListener("OK", null)
                     .show();
         }
 
@@ -166,7 +156,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                     .setURLImage("https://images.unsplash.com/photo-1659098602926-969fc12ef61a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
                             KAlertDialog.IMAGE_BIG
                     )
-                    .setConfirmText("OK")
+                    .setConfirmClickListener("OK", null)
                     .show();
         }
 
@@ -174,8 +164,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.INPUT_TYPE);
             dialog.setInputFieldHint("Write message");
             dialog.setTitleText("Edit Text");
-            dialog.setConfirmText("OK");
-            dialog.setConfirmClickListener(kAlertDialog -> {
+            dialog.setConfirmClickListener("OK",kAlertDialog -> {
                 kAlertDialog.dismissWithAnimation();
                 kAlertDialog.getInputText(); //you get the input text by calling this
                 Toast.makeText(this, kAlertDialog.getInputText(), Toast.LENGTH_SHORT).show();
@@ -225,7 +214,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                 public void onFinish() {
                     i = -1;
                     pDialog.setTitleText("Success!")
-                            .setConfirmText("OK")
+                            .setConfirmClickListener("OK", null)
                             .changeAlertType(KAlertDialog.SUCCESS_TYPE);
                 }
             }.start();
