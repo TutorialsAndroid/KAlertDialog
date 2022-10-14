@@ -211,7 +211,7 @@ To Hide Cancel And Confirm Button：
         .setTitleText("Sweet!")
         .setContentText("Here's a custom image.")
         .setCustomImage(R.drawable.custom_img)
-        .showConfirmButton(false) //to hide the confirm button set it to true
+        .showConfirmButton(false) //to hide the confirm button set it to false
         .showCancelButton(false) //to hide the cancel button set it to false
         .show();
 
@@ -349,8 +349,7 @@ And if you want to hide Title Text and Content Text of alert dialog
                 sDialog
                     .setTitleText("Deleted!")
                     .setContentText("Your imaginary file has been deleted!")
-                    .setConfirmText("OK")
-                    .setConfirmClickListener(null)
+                    .setConfirmClickListener("OK", null)
                     .changeAlertType(KAlertDialog.SUCCESS_TYPE);
             }
         })
