@@ -43,7 +43,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         if (v.getId() == R.id.basic_test) {
             KAlertDialog sd = new KAlertDialog(this, KAlertDialog.NORMAL_TYPE);
             sd.setTitleText("Lorem Ipsum");
-            sd.setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
+            sd.setContentText("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.");
             sd.setConfirmClickListener("OK",null);
             sd.setCancelable(true);
             sd.setCanceledOnTouchOutside(true);

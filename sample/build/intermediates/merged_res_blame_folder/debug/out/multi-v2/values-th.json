@@ -4,24 +4,7 @@
             "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-th/values-th.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\b7e855e7d9c4eb6d509150f30458088f\\transformed\\core-1.8.0\\res\\values-th\\values-th.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "91",
-                        "startColumns": "4",
-                        "startOffsets": "7471",
-                        "endColumns": "100",
-                        "endOffsets": "7567"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\6de95aad2571f635b7c51b858e1ce38f\\transformed\\appcompat-1.5.1\\res\\values-th\\values-th.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\b66b44409dcfaf833b574ca7219a2709\\transformed\\appcompat-1.5.1\\res\\values-th\\values-th.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\e888ee523abae03248b52faf6a4cab91\\transformed\\material-1.8.0-alpha01\\res\\values-th\\values-th.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\1ba05e89ddab93b55378eb755a5b26f5\\transformed\\material-1.8.0-alpha01\\res\\values-th\\values-th.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -54,6 +37,23 @@
                         "endLines": "5,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89",
                         "endColumns": "12,82,98,112,79,69,89,69,59,86,64,60,63,60,53,100,60,59,53,69,110,86,80,142,78,81,91,53,52,65,69,77,85,71,77,68,68,81,87,92,93,73,68,94,51,67,84,87,61,63,62,99,92,96,92,57,56,76",
                         "endOffsets": "330,3042,3141,3254,3334,3404,3494,3564,3624,3711,3776,3837,3901,3962,4016,4117,4178,4238,4292,4362,4473,4560,4641,4784,4863,4945,5037,5091,5144,5210,5280,5358,5444,5516,5594,5663,5732,5814,5902,5995,6089,6163,6232,6327,6379,6447,6532,6620,6682,6746,6809,6909,7002,7099,7192,7250,7307,7384"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\89836f8a94e002417ad2b62870b6075b\\transformed\\core-1.8.0\\res\\values-th\\values-th.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "91",
+                        "startColumns": "4",
+                        "startOffsets": "7471",
+                        "endColumns": "100",
+                        "endOffsets": "7567"
                     }
                 }
             ]

@@ -4,6 +4,7 @@ import static android.view.View.GONE;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 
@@ -22,6 +23,7 @@ import android.view.animation.AnimationSet;
 import android.view.animation.Transformation;
 
 import android.view.inputmethod.InputMethodManager;
+import android.webkit.WebView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -50,6 +52,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private final Animation mOverlayOutAnim, mImageAnim;
 
     private TextView mTitleTextView, mContentTextView;
+    private WebView justifyContentTextView;
     private ImageView mErrorX, mSuccessTick, mCustomImage, mCustomBigImage;
     private Drawable mCustomImgDrawable;
     private AppCompatButton mConfirmButton, mCancelButton;
@@ -57,7 +60,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private View mDialogView;
     private FrameLayout mCustomViewContainer;
 
-    private String mTitleText, mContentText, mCancelText, mConfirmText, mInputFieldHint;
+    private String mTitleText, mContentText, justifyContentText, justifyContentTextColor,
+            justifyContentTextSize, mCancelText, mConfirmText, mInputFieldHint;
     private String imageURL;
     private String titleFont, contentFont;
     private int displayType;
@@ -111,6 +115,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mDialogView = Objects.requireNonNull(getWindow()).getDecorView().findViewById(android.R.id.content);
         mTitleTextView = findViewById(R.id.title_text);
         mContentTextView = findViewById(R.id.content_text);
+        justifyContentTextView = findViewById(R.id.content_text2);
         mErrorFrame = findViewById(R.id.error_frame);
         assert mErrorFrame != null;
         mErrorX = mErrorFrame.findViewById(R.id.error_x);
@@ -135,6 +140,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         dialogTitleFont(titleFont);
         dialogContentFont(contentFont);
         setContentText(mContentText);
+        justifyContentText(justifyContentText, justifyContentTextColor, justifyContentTextSize);
         setCancelText(mCancelText);
         setCancelText(mCancelText, cancelTextColor);
         setConfirmText(mConfirmText);
@@ -427,6 +433,43 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
+    /**
+     * This method is for test only use at your own risk
+     * its not fully customizable like we can't use custom fonts
+     * it's still under development. We respect to your contribution if you
+     * have any idea then please contribute to this library.
+     * @param content: dialog content text
+     * @param textColor: write the name of text color same as we use in html css for ex: red, grey, white, black
+     * @param fontSize: set the font size in px for example 16px, 18px, 20px,
+     * @return ---
+     */
+    public KAlertDialog justifyContentText(String content, String textColor, String fontSize) {
+        justifyContentText = content;
+        justifyContentTextColor = textColor;
+        justifyContentTextSize = fontSize;
+        if ( justifyContentTextView != null && justifyContentText != null &&
+                justifyContentTextColor != null && justifyContentTextSize != null)
+        {
+            justifyContentTextView.setBackgroundColor(Color.TRANSPARENT);
+            showJustifyText(true);
+            String text;
+            text = "<html><body><p ";
+            text+= "style=\"color:";
+            text+= textColor;
+            text+= ";";
+            text+= "font-size:";
+            text+= justifyContentTextSize;
+            text+= "\"";
+            text+= "align=\"justify\">";
+            text+= justifyContentText;
+            text+= "</p></body></html>";
+            justifyContentTextView.loadData(text, "text/html", "utf-8");
+        } else {
+            showJustifyText(false);
+        }
+        return this;
+    }
+
     public KAlertDialog showCancelButton ( boolean isShow){
         mShowCancel = isShow;
         if (mCancelButton != null) {
@@ -470,6 +513,12 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         if (mContentTextView != null) {
             mContentTextView.setVisibility(isShow ? View.VISIBLE : GONE);
             mContentTextView.setAutoLinkMask(Linkify.ALL);
+        }
+    }
+
+    private void showJustifyText(boolean isShow) {
+        if (justifyContentTextView != null) {
+            justifyContentTextView.setVisibility(isShow ? View.VISIBLE : GONE);
         }
     }
 

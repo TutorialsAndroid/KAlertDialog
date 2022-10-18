@@ -4,7 +4,7 @@
             "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\6de95aad2571f635b7c51b858e1ce38f\\transformed\\appcompat-1.5.1\\res\\values-v17\\values-v17.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\b66b44409dcfaf833b574ca7219a2709\\transformed\\appcompat-1.5.1\\res\\values-v17\\values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,25,29,33,37,40,43,46,50,53,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

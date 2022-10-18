@@ -2722,6 +2722,7 @@ int id container 0x0
 int id content 0x0
 int id contentPanel 0x0
 int id content_text 0x0
+int id content_text2 0x0
 int id contiguous 0x0
 int id coordinator 0x0
 int id cos 0x0

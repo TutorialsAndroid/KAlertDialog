@@ -53,6 +53,7 @@ drawable warning_circle
 drawable warning_sigh
 id cancel_button
 id content_text
+id content_text2
 id custom_big_image
 id custom_confirm_button
 id custom_image

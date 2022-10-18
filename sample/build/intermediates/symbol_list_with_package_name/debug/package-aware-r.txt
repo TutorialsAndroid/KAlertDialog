@@ -2729,6 +2729,7 @@ id container
 id content
 id contentPanel
 id content_text
+id content_text2
 id content_text_with_font_changed
 id contiguous
 id coordinator
