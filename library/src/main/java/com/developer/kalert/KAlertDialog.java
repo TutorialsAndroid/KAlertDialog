@@ -222,6 +222,9 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                 restore();
             }
             switch (mAlertType) {
+                case NORMAL_TYPE:
+                    setConfirmButtonColor(mColor);
+                    break;
                 case ERROR_TYPE:
                     mErrorFrame.setVisibility(View.VISIBLE);
                     setConfirmButtonColor(mColor);
