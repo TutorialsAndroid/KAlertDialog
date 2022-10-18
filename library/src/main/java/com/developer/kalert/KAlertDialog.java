@@ -272,7 +272,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
         mTitleText = text;
         if (mTitleTextView != null && mTitleText != null) {
-            showTitleText();
+            showTitleText(true);
             if (titleTextSize != 0) {
                 mTitleTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, spToPx(titleTextSize, getContext()));
             }
@@ -284,6 +284,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             }else {
                 mTitleTextView.setText(Html.fromHtml(mTitleText));
             }
+        } else {
+            showTitleText(false);
         }
         return this;
     }
@@ -300,11 +302,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    private void showTitleText() {
+    private void showTitleText(boolean isShow) {
         mShowTitleText = true;
         if (mTitleTextView != null) {
-            mTitleTextView.setVisibility(View.VISIBLE);
-            mContentTextView.setAutoLinkMask(Linkify.ALL);
+            mTitleTextView.setVisibility( isShow ? View.VISIBLE : GONE );
+            mTitleTextView.setAutoLinkMask(Linkify.ALL);
         }
     }
 
@@ -400,7 +402,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public KAlertDialog setContentText(String text) {
         mContentText = text;
         if (mContentTextView != null && mContentText != null) {
-            showContentText();
+            showContentText(true);
             if (contentTextSize != 0) {
                 mContentTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, spToPx(contentTextSize, getContext()));
             }
@@ -419,6 +421,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             }else {
                 mContentTextView.setText(Html.fromHtml(mContentText));
             }
+        } else {
+            showContentText(false);
         }
         return this;
     }
@@ -461,10 +465,10 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    private void showContentText () {
+    private void showContentText (boolean isShow) {
         mShowContent = true;
         if (mContentTextView != null) {
-            mContentTextView.setVisibility(View.VISIBLE);
+            mContentTextView.setVisibility(isShow ? View.VISIBLE : GONE);
             mContentTextView.setAutoLinkMask(Linkify.ALL);
         }
     }
