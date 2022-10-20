@@ -1,6 +1,6 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released v20.3.4 on 20-10-2022
+# New version released v20.3.5 on 20-10-2022
 ## Changelogs
 - Fixed issue in button sizes on larger text length of buttons
 ### Read the changes in README
@@ -67,7 +67,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v20.3.4'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v20.3.5'
 	}
 
 ## Usage
