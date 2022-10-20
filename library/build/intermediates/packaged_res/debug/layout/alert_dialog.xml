@@ -3,7 +3,7 @@
     xmlns:wheel="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/loading"
-    android:layout_width="290dp"
+    android:layout_width="300dp"
     android:layout_height="wrap_content"
     android:gravity="center"
     android:layout_gravity="center"
@@ -185,13 +185,14 @@
 
         <androidx.appcompat.widget.AppCompatButton
             style="@style/dialog_blue_button"
+            android:layout_weight="0.5"
             android:id="@+id/cancel_button"
             tools:text="@string/dialog_cancel"
-            android:visibility="gone"
-            android:layout_marginEnd="10dp" />
+            android:visibility="gone"/>
 
         <androidx.appcompat.widget.AppCompatButton
             style="@style/dialog_blue_button"
+            android:layout_weight="0.5"
             android:id="@+id/custom_confirm_button"
             android:visibility="gone"
             tools:text="@string/dialog_ok"/>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-es-rUS/values-es-rUS.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-34:/values-es-rUS/values-es-rUS.xml",
             "map": [
                 {
                     "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\b66b44409dcfaf833b574ca7219a2709\\transformed\\appcompat-1.5.1\\res\\values-es-rUS\\values-es-rUS.xml",

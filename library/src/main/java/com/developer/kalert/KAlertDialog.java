@@ -13,10 +13,13 @@ import android.os.Bundle;
 
 import android.text.Html;
 import android.text.util.Linkify;
+import android.util.Log;
 import android.util.TypedValue;
 
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
@@ -59,6 +62,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private Drawable mColor, mCancelColor;
     private View mDialogView;
     private FrameLayout mCustomViewContainer;
+    //private ViewTreeObserver mCancelButtonObserver, mConfirmButtonObserver;
+    //private ViewTreeObserver.OnGlobalLayoutListener mConfirmButtonGlobalListener, mCancelButtonGlobalListener;
 
     private String mTitleText, mContentText, justifyContentText, justifyContentTextColor,
             justifyContentTextSize, mCancelText, mConfirmText, mInputFieldHint;
@@ -70,6 +75,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private int drawableColor = 0;
     private Integer contentAlignment, contentGravity;
     private int titleTextGravity = Gravity.CENTER;
+    private Integer cancelButtonHeight, confirmButtonHeight;
 
     private boolean mShowCancel, mShowContent, mShowTitleText, mCloseFromCancel, mShowConfirm;
     private int contentTextSize = 0;
@@ -147,6 +153,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         setConfirmText(mConfirmText, confirmTextColor);
         setConfirmButtonColor(mColor);
         setCancelButtonColor(mCancelColor);
+        //setButtonMatchingHeight();
         changeAlertType(mAlertType, true);
         setInputFieldHint(mInputFieldHint);
     }
@@ -485,6 +492,50 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
         return this;
     }
+
+    /*
+    Method to set the matching height of both confirm and cancel button. It helps
+    when device font sized is increased or the text of any one button has greater length
+    the specific button heights also get increased and this leads to un-usual height of both
+    buttons. So this method set's the height of both button remain same.
+
+    private void setButtonMatchingHeight() {
+        if (mConfirmButton != null && mCancelButton != null) {
+            mConfirmButtonObserver = mConfirmButton.getViewTreeObserver();
+            mCancelButtonObserver = mCancelButton.getViewTreeObserver();
+
+            if (mConfirmButton.getVisibility() == View.VISIBLE) {
+                mConfirmButtonGlobalListener = () -> {
+                    confirmButtonHeight = mConfirmButton.getHeight();
+                    setMatchingHeight();
+                };
+                mConfirmButtonObserver.addOnGlobalLayoutListener(mConfirmButtonGlobalListener);
+            }
+
+            if (mCancelButton.getVisibility() == View.VISIBLE) {
+                mCancelButtonGlobalListener = () -> {
+                    cancelButtonHeight = mCancelButton.getHeight();
+                    setMatchingHeight();
+                };
+                mCancelButtonObserver.addOnGlobalLayoutListener(mCancelButtonGlobalListener);
+            }
+        }
+    }
+
+    private void setMatchingHeight() {
+        if ( confirmButtonHeight != null && cancelButtonHeight != null ) {
+            //check which button value is greater
+            if (confirmButtonHeight.equals(cancelButtonHeight)) { }
+            else if ( confirmButtonHeight > cancelButtonHeight ) {
+                mCancelButton.setLayoutParams(new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT, confirmButtonHeight));
+            } else {
+                mConfirmButton.setLayoutParams(new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT, cancelButtonHeight));
+            }
+        }
+    }
+    */
 
     private KAlertDialog dialogTitleFont(String path) {
         if (context != null) {

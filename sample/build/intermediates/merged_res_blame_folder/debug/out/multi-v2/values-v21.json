@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-v21/values-v21.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-34:/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\89836f8a94e002417ad2b62870b6075b\\transformed\\core-1.8.0\\res\\values-v21\\values-v21.xml",
@@ -20,6 +20,25 @@
                         "endLines": "2,17,18,19,339,340,341,342,546,551",
                         "endColumns": "117,63,66,63,115,125,125,127,12,12",
                         "endOffsets": "168,1467,1534,1598,24967,25093,25219,25347,37387,37739"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\c2a57dc1ec97665848c12d464d3d51be\\transformed\\jetified-leakcanary-android-core-2.9.1\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,313",
+                        "endLines": "5,9",
+                        "endColumns": "10,10",
+                        "endOffsets": "308,535"
+                    },
+                    "to": {
+                        "startLines": "569,573",
+                        "startColumns": "4,4",
+                        "startOffsets": "38781,39039",
+                        "endLines": "572,576",
+                        "endColumns": "10,10",
+                        "endOffsets": "39034,39261"
                     }
                 },
                 {

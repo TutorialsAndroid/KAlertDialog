@@ -34,16 +34,22 @@
 
     </style><style name="dialog_blue_button" parent="android:Widget.Button">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/button_background</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:layout_margin">7dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
         <item name="android:paddingLeft">21dp</item>
         <item name="android:paddingRight">21dp</item>
     </style></file><file path="D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\main\res\values-sw600dp\styles.xml" qualifiers="sw600dp-v13"><style name="dialog_blue_button" parent="android:Widget.Button">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/button_background</item>
         <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
         <item name="android:paddingLeft">21dp</item>
         <item name="android:paddingRight">21dp</item>
     </style></file></source><source path="D:\Projects\AndroidLibraries\KAlertDialog-master\library\build\generated\res\rs\debug"/><source path="D:\Projects\AndroidLibraries\KAlertDialog-master\library\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Projects\AndroidLibraries\KAlertDialog-master\library\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"/><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"/><mergedItems><configuration qualifiers=""><declare-styleable name="Rotate3dAnimation">

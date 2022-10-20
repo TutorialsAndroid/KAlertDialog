@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-30:/values-ms/values-ms.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-34:/values-ms/values-ms.xml",
             "map": [
                 {
                     "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\89836f8a94e002417ad2b62870b6075b\\transformed\\core-1.8.0\\res\\values-ms\\values-ms.xml",

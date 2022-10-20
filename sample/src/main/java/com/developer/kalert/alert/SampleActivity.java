@@ -54,6 +54,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
                     .setTitleText("Lorem Ipsum")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+                    .setConfirmClickListener("OK",null)
                     .show();
         }
 

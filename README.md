@@ -1,9 +1,8 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released v20.2.4 on 18-10-2022
+# New version released v20.3.4 on 20-10-2022
 ## Changelogs
-- Fixed issue in button not changing color in NORMAL_TYPE dialog
-- Now you can hide confirm and cancel button on alert dialog type change
+- Fixed issue in button sizes on larger text length of buttons
 ### Read the changes in README
 
 Alert Dialog ![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588) [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -68,7 +67,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v20.2.4'
+	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v20.3.4'
 	}
 
 ## Usage
