@@ -7,8 +7,8 @@ android {
 		applicationId "com.developer.kalert.alert"
         minSdkVersion 19
         targetSdkVersion 33
-		versionCode 32
-        versionName "20.3.4"
+		versionCode 35
+        versionName "20.3.7"
     }
 
 
@@ -45,9 +45,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.8.0-alpha01'
 
-    //implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
 
     implementation project(':library')
-
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
 }

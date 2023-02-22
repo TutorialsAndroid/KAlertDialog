@@ -1,6 +1,6 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released v20.2.4 on 20-10-2022
+# New version released v20.3.7 on 22-02-2023 [ Migrated from jitpack to mavenCentral() ]
 ## Changelogs
 - Fixed issue in button sizes on larger text length of buttons
 ### Read the changes in README
@@ -25,10 +25,6 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 ## Contributors
 
 [NassB (Nassim B.)](https://github.com/NassB)
-
-**Library available at JitPack.io**
-
-[![](https://jitpack.io/v/TutorialsAndroid/KAlertDialog.svg)](https://jitpack.io/#TutorialsAndroid/KAlertDialog)
 
 `Latest version of this library is migrated to androidx`
 
@@ -60,14 +56,16 @@ Add it in your root build.gradle at the end of repositories:
 	allprojects {
 		repositories {
 			...
+            mavenCentral()
 			maven { url 'https://jitpack.io' }
 		}
 	}
 
-Step 2. Add the dependency
+Step 2. On your root build.gradle, add mavenCentral() to the allprojects section. On your module build.gradle, add
 
 	dependencies {
-	        implementation 'com.github.TutorialsAndroid:KAlertDialog:v20.2.4'
+          implementation 'io.github.tutorialsandroid:kalertdialog:20.3.6'
+          implementation 'com.github.TutorialsAndroid:progressx:v6.0.19' //required for kalertdialog lib
 	}
 
 ## Usage
