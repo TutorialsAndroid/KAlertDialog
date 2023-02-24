@@ -41,25 +41,25 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.basic_test) {
-            KAlertDialog sd = new KAlertDialog(this, KAlertDialog.NORMAL_TYPE);
+            KAlertDialog sd = new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true);
             sd.setTitleText("Lorem Ipsum");
             sd.setContentText("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.");
-            sd.setConfirmClickListener("OK",null);
+            sd.setConfirmClickListener("OK", null);
             sd.setCancelable(true);
             sd.setCanceledOnTouchOutside(true);
             sd.show();
         }
 
         if (v.getId() == R.id.under_text_test) {
-            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
                     .setTitleText("Lorem Ipsum")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-                    .setConfirmClickListener("OK",null)
+                    .setConfirmClickListener("OK", null)
                     .show();
         }
 
         if (v.getId() == R.id.title_with_font_changed) {
-            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
                     .setTitleText("Lorem Ipsum")
                     .setTitleTTFFont("fonts/os.ttf")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
@@ -68,7 +68,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.content_text_with_font_changed) {
-            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
                     .setTitleText("Lorem Ipsum")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
                     .setContentTTFFont("fonts/sf.ttf")
@@ -77,7 +77,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.title_gravity) {
-            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
+            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
                     .setTitleText("Lorem Ipsum")
                     .setTitleTextGravity(Gravity.START) //you can specify your own gravity
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
@@ -86,15 +86,15 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.error_text_test) {
-            new KAlertDialog(this, KAlertDialog.ERROR_TYPE)
-                    .setTitleText("Opps.")
+            new KAlertDialog(this, KAlertDialog.ERROR_TYPE, true)
+                    .setTitleText("Oops.")
                     .setContentText("Something went wrong!")
                     .setConfirmClickListener("OK", null)
                     .show();
         }
 
         if (v.getId() == R.id.success_text_test) {
-            new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE)
+            new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE, true)
                     .setTitleText("Good job!")
                     .setContentText("You clicked the button!")
                     .setConfirmClickListener("OK", null)
@@ -102,7 +102,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.warning_confirm_test) {
-            new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
+            new KAlertDialog(this, KAlertDialog.WARNING_TYPE, true)
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
                     .setConfirmClickListener("Yes,delete it!", sDialog -> sDialog.setTitleText("Deleted!")
@@ -113,7 +113,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.warning_cancel_test) {
-            new KAlertDialog(this, KAlertDialog.WARNING_TYPE)
+            new KAlertDialog(this, KAlertDialog.WARNING_TYPE, true)
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
                     .showCancelButton(true)
@@ -122,16 +122,16 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                             .showCancelButton(false)
                             .setConfirmClickListener("OK", null)
                             .changeAlertType(KAlertDialog.ERROR_TYPE))
-                    .setConfirmClickListener("Yes,delete it!",sDialog -> sDialog.setTitleText("Deleted!")
+                    .setConfirmClickListener("Yes,delete it!", sDialog -> sDialog.setTitleText("Deleted!")
                             .showCancelButton(false)
                             .setContentText("Your imaginary file has been deleted!")
-                            .setConfirmClickListener("OK",null)
+                            .setConfirmClickListener("OK", null)
                             .changeAlertType(KAlertDialog.SUCCESS_TYPE))
                     .show();
         }
 
         if (v.getId() == R.id.custom_img_test) {
-            new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)
+            new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE, true)
                     .setTitleText("KAlertDialog")
                     .setContentText("Here's a custom image.")
                     .setCustomImage(R.mipmap.ic_launcher)
@@ -140,7 +140,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.custom_url_image_circle) {
-            new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE)
+            new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE, true)
                     .setTitleText("KAlertDialog")
                     .setContentText("Here's a custom image.")
                     .setURLImage("https://images.unsplash.com/photo-1659098602926-969fc12ef61a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
@@ -151,7 +151,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.custom_url_image_big) {
-            new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE)
+            new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE, true)
                     .setTitleText("KAlertDialog")
                     .setContentText("Here's a custom image.")
                     .setURLImage("https://images.unsplash.com/photo-1659098602926-969fc12ef61a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
@@ -162,21 +162,21 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if (v.getId() == R.id.edit_text_dialog) {
-            KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.INPUT_TYPE);
+            KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.INPUT_TYPE, true);
             dialog.setInputFieldHint("Write message");
             dialog.setTitleText("Edit Text");
-            dialog.setConfirmClickListener("OK",kAlertDialog -> {
+            dialog.setConfirmClickListener("OK", kAlertDialog -> {
                 kAlertDialog.dismissWithAnimation();
                 kAlertDialog.getInputText(); //you get the input text by calling this
                 Toast.makeText(this, kAlertDialog.getInputText(), Toast.LENGTH_SHORT).show();
             });
             dialog.show();
             dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
-                    |WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM); //this will allow to show keyboard
+                    | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM); //this will allow to show keyboard
         }
 
         if (v.getId() == R.id.progress_dialog) {
-            final KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE)
+            final KAlertDialog pDialog = new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE, true)
                     .setTitleText("Loading");
             pDialog.show();
             pDialog.setCancelable(false);
@@ -186,28 +186,28 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                     switch (i) {
                         case 0:
                             pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
-                                    (SampleActivity.this,R.color.blue_btn_bg_color));
+                                    (SampleActivity.this, R.color.blue_btn_bg_color));
                             break;
                         case 1:
                             pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
-                                    (SampleActivity.this,R.color.material_deep_teal_50));
+                                    (SampleActivity.this, R.color.material_deep_teal_50));
                             break;
                         case 2:
                         case 6:
                             pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
-                                    (SampleActivity.this,R.color.success_stroke_color));
+                                    (SampleActivity.this, R.color.success_stroke_color));
                             break;
                         case 3:
                             pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
-                                    (SampleActivity.this,R.color.material_deep_teal_20));
+                                    (SampleActivity.this, R.color.material_deep_teal_20));
                             break;
                         case 4:
                             pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
-                                    (SampleActivity.this,R.color.material_blue_grey_80));
+                                    (SampleActivity.this, R.color.material_blue_grey_80));
                             break;
                         case 5:
                             pDialog.getProgressHelper().setBarColor(ContextCompat.getColor
-                                    (SampleActivity.this,R.color.warning_stroke_color));
+                                    (SampleActivity.this, R.color.warning_stroke_color));
                             break;
                     }
                 }
