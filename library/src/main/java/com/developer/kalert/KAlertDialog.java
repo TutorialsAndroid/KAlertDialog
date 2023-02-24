@@ -59,8 +59,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     //private ViewTreeObserver mCancelButtonObserver, mConfirmButtonObserver;
     //private ViewTreeObserver.OnGlobalLayoutListener mConfirmButtonGlobalListener, mCancelButtonGlobalListener;
 
-    private String mTitleText, mContentText, justifyContentText, justifyContentTextColor,
-            justifyContentTextSize, mCancelText, mConfirmText, mInputFieldHint;
+    private String mTitleText, mContentText, justifyContentText, justifyContentTextColor, justifyContentTextSize,
+            justifyContentTextFont, justifyContentTextFontExtension, mCancelText, mConfirmText, mInputFieldHint;
     private String imageURL;
     private String titleFontAssets, contentFontAssets, confirmButtonFontAssets, cancelButtonFontAssets;
     private int displayType;
@@ -147,7 +147,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         setDialogTextFont(mConfirmButton, confirmButtonFont, confirmButtonFontAssets);
         setDialogTextFont(mCancelButton, cancelButtonFont, cancelButtonFontAssets);
         setContentText(mContentText);
-        justifyContentText(justifyContentText, justifyContentTextColor, justifyContentTextSize);
+        justifyContentText(justifyContentText, justifyContentTextColor, justifyContentTextSize, justifyContentTextFont, justifyContentTextFontExtension);
         setCancelText(mCancelText);
         setCancelText(mCancelText, cancelTextColor);
         setConfirmText(mConfirmText);
@@ -443,36 +443,51 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
     /**
-     * This method is for test only use at your own risk
-     * its not fully customizable like we can't use custom fonts
-     * it's still under development. We respect to your contribution if you
-     * have any idea then please contribute to this library.
+     * Custom font must be placed in assets/fonts folder.
+     * <p>
+     * Set the font params to 'null' or an empty string to use the default font.
      *
-     * @param content:   dialog content text
-     * @param textColor: write the name of text color same as we use in html css for ex: red, grey, white, black
-     * @param fontSize:  set the font size in px for example 16px, 18px, 20px,
-     * @return ---
+     * @param content       dialog content text
+     * @param textColor     text color as used in html css: "red", "grey", "white", "black" etc
+     * @param fontSize      font size in px: "16px", "18px", "20px" etc
+     * @param fontName      custom font name: "my_custom_font_name"
+     * @param fontExtension font extension: ".ttf" or ".otf"
      */
-    public KAlertDialog justifyContentText(String content, String textColor, String fontSize) {
+    public KAlertDialog justifyContentText(String content, String textColor, String fontSize, String fontName, String fontExtension) {
         justifyContentText = content;
         justifyContentTextColor = textColor;
         justifyContentTextSize = fontSize;
+        justifyContentTextFont = fontName;
+        justifyContentTextFontExtension = fontExtension;
         if (justifyContentTextView != null && justifyContentText != null &&
                 justifyContentTextColor != null && justifyContentTextSize != null) {
             justifyContentTextView.setBackgroundColor(Color.TRANSPARENT);
             showJustifyText(true);
+
             String text;
-            text = "<html><body><p ";
+            text = "<html><style type='text/css'>@font-face{";
+            text += "font-family: ";
+            text += fontName;
+            text += ";";
+            text += "src: url('fonts/";
+            text += fontName;
+            text += fontExtension;
+            text += "');} </style>";
+            text += "<body ><p ";
             text += "style=\"color:";
             text += textColor;
             text += ";";
             text += "font-size:";
             text += justifyContentTextSize;
+            text += ";";
+            text += "font-family:";
+            text += fontName;
             text += "\"";
             text += "align=\"justify\">";
             text += justifyContentText;
             text += "</p></body></html>";
-            justifyContentTextView.loadData(text, "text/html", "utf-8");
+
+            justifyContentTextView.loadDataWithBaseURL("file:///android_asset/", text, "text/html", "utf-8", null);
         } else {
             showJustifyText(false);
         }
