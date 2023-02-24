@@ -7,24 +7,17 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-
 import android.os.Build;
 import android.os.Bundle;
-
 import android.text.Html;
 import android.text.util.Linkify;
-import android.util.Log;
 import android.util.TypedValue;
-
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.Transformation;
-
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
@@ -36,6 +29,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -68,8 +62,9 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private String mTitleText, mContentText, justifyContentText, justifyContentTextColor,
             justifyContentTextSize, mCancelText, mConfirmText, mInputFieldHint;
     private String imageURL;
-    private String titleFont, contentFont;
+    private String titleFontAssets, contentFontAssets;
     private int displayType;
+    private int titleFont = 0, contentFont = 0;
     private int titleColor = 0, contentColor = 0,
             confirmTextColor = android.R.color.white, cancelTextColor = android.R.color.white;
     private int drawableColor = 0;
@@ -147,8 +142,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
         setTitleText(mTitleText);
         setTitleTextGravity(titleTextGravity);
-        dialogTitleFont(titleFont);
-        dialogContentFont(contentFont);
+        setDialogTextFont(mTitleTextView, titleFont, titleFontAssets);
+        setDialogTextFont(mContentTextView, contentFont, contentFontAssets);
         setContentText(mContentText);
         justifyContentText(justifyContentText, justifyContentTextColor, justifyContentTextSize);
         setCancelText(mCancelText);
@@ -542,25 +537,45 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
     */
 
-    private KAlertDialog dialogTitleFont(String path) {
+    private void setDialogTextFont(TextView contentText, Integer font, String path) {
         if (context != null) {
-            if (mTitleTextView != null && path != null) {
-                Typeface font = Typeface.createFromAsset(context.getAssets(), path);
-                //Typeface typeface = ResourcesCompat.getFont(context, titleFont);
-                mTitleTextView.setTypeface(font);
+            if (contentText != null) {
+                if (path != null) {
+                    setTypefaceAssets(contentText, path);
+                } else if (font != 0) {
+                    setTypeface(contentText, font);
+                }
             }
         }
+    }
+
+    private void setTypeface(TextView contentText, int font) {
+        Typeface typeface = ResourcesCompat.getFont(context, font);
+        contentText.setTypeface(typeface);
+    }
+
+    private void setTypefaceAssets(TextView contentText, String path) {
+        Typeface typeface = Typeface.createFromAsset(context.getAssets(), path);
+        contentText.setTypeface(typeface);
+    }
+
+    public KAlertDialog setTitleFont(int font) {
+        this.titleFont = font;
         return this;
     }
 
-    private KAlertDialog dialogContentFont(String path) {
-        if (context != null) {
-            if (mContentTextView != null && path != null) {
-                Typeface font = Typeface.createFromAsset(context.getAssets(), path);
-                //Typeface typeface = ResourcesCompat.getFont(context, contentFont);
-                mContentTextView.setTypeface(font);
-            }
-        }
+    public KAlertDialog setContentFont(int font) {
+        this.contentFont = font;
+        return this;
+    }
+
+    public KAlertDialog setTitleFontAssets(String path) {
+        this.titleFontAssets = path;
+        return this;
+    }
+
+    public KAlertDialog setContentFontAssets(String path) {
+        this.contentFontAssets = path;
         return this;
     }
 
@@ -765,16 +780,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     public KAlertDialog setContentColor(int color) {
         this.contentColor = color;
-        return this;
-    }
-
-    public KAlertDialog setTitleTTFFont(String fontPath) {
-        this.titleFont = fontPath;
-        return this;
-    }
-
-    public KAlertDialog setContentTTFFont(String fontPath) {
-        this.contentFont = fontPath;
         return this;
     }
 

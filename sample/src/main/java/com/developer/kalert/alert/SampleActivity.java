@@ -61,7 +61,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         if (v.getId() == R.id.title_with_font_changed) {
             new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
                     .setTitleText("Lorem Ipsum")
-                    .setTitleTTFFont("fonts/os.ttf")
+                    .setTitleFontAssets("fonts/sf.ttf")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
                     .setConfirmClickListener("OK", null)
                     .show();
@@ -71,7 +71,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
                     .setTitleText("Lorem Ipsum")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-                    .setContentTTFFont("fonts/sf.ttf")
+                    .setContentFont(R.font.sf)
                     .setConfirmClickListener("OK", null)
                     .show();
         }

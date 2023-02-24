@@ -214,21 +214,21 @@ To Hide Cancel And Confirm Button：
 
 To Change the font of only title：
 
-    To apply custom downloaded fonts of TTF format you have place your font.ttf file in assest folder below 
+    To apply custom downloaded fonts you have place your font file in "assest/fonts" folder or under "res/font" folder. Below 
     is the screen-shot for reference about how to place your font file in assest folder
 
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/structure.png)
 
     new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
         .setTitleText("Lorem Ipsum")
-        .setTitleTTFFont("fonts/os.ttf")
+        .setTitleFontAssets("fonts/os.ttf")
         .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
         .setConfirmClickListener("OK", null)
         .show();
 
 To Change the font of only content：
 
-    To apply custom downloaded fonts of TTF format you have place your font.ttf file in assest folder below 
+    To apply custom downloaded fonts you have place your font file in "assest/fonts" folder or under "res/font" folder. Below 
     is the screen-shot for reference about how to place your font file in assest folder
 
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/structure.png)
@@ -236,7 +236,7 @@ To Change the font of only content：
     new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
         .setTitleText("Lorem Ipsum")
         .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-        .setContentTTFFont("fonts/sf.ttf")
+        .setContentFont(R.font.sf)
         .setConfirmClickListener("OK", null)
         .show();
 
