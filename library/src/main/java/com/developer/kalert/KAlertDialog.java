@@ -62,9 +62,9 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private String mTitleText, mContentText, justifyContentText, justifyContentTextColor,
             justifyContentTextSize, mCancelText, mConfirmText, mInputFieldHint;
     private String imageURL;
-    private String titleFontAssets, contentFontAssets;
+    private String titleFontAssets, contentFontAssets, confirmButtonFontAssets, cancelButtonFontAssets;
     private int displayType;
-    private int titleFont = 0, contentFont = 0;
+    private int titleFont = 0, contentFont = 0, confirmButtonFont = 0, cancelButtonFont = 0;
     private int titleColor = 0, contentColor = 0,
             confirmTextColor = android.R.color.white, cancelTextColor = android.R.color.white;
     private int drawableColor = 0;
@@ -144,6 +144,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         setTitleTextGravity(titleTextGravity);
         setDialogTextFont(mTitleTextView, titleFont, titleFontAssets);
         setDialogTextFont(mContentTextView, contentFont, contentFontAssets);
+        setDialogTextFont(mConfirmButton, confirmButtonFont, confirmButtonFontAssets);
+        setDialogTextFont(mCancelButton, cancelButtonFont, cancelButtonFontAssets);
         setContentText(mContentText);
         justifyContentText(justifyContentText, justifyContentTextColor, justifyContentTextSize);
         setCancelText(mCancelText);
@@ -576,6 +578,26 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     public KAlertDialog setContentFontAssets(String path) {
         this.contentFontAssets = path;
+        return this;
+    }
+
+    public KAlertDialog setConfirmButtonFont(int font) {
+        this.confirmButtonFont = font;
+        return this;
+    }
+
+    public KAlertDialog setCancelButtonFont(int font) {
+        this.cancelButtonFont = font;
+        return this;
+    }
+
+    public KAlertDialog setConfirmButtonFontAssets(String path) {
+        this.confirmButtonFontAssets = path;
+        return this;
+    }
+
+    public KAlertDialog setCancelButtonFontAssets(String path) {
+        this.cancelButtonFontAssets = path;
         return this;
     }
 

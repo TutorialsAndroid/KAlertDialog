@@ -117,6 +117,8 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
                     .showCancelButton(true)
+                    .setConfirmButtonFont(R.font.sf)
+                    .setCancelButtonFontAssets("fonts/sf.ttf")
                     .setCancelClickListener("No,cancel plx!", sDialog -> sDialog.setTitleText("Cancelled!")
                             .setContentText("Your imaginary file is safe :)")
                             .showCancelButton(false)
