@@ -7,24 +7,17 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-
 import android.os.Build;
 import android.os.Bundle;
-
 import android.text.Html;
 import android.text.util.Linkify;
-import android.util.Log;
 import android.util.TypedValue;
-
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.Transformation;
-
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
@@ -36,6 +29,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -65,11 +59,12 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     //private ViewTreeObserver mCancelButtonObserver, mConfirmButtonObserver;
     //private ViewTreeObserver.OnGlobalLayoutListener mConfirmButtonGlobalListener, mCancelButtonGlobalListener;
 
-    private String mTitleText, mContentText, justifyContentText, justifyContentTextColor,
-            justifyContentTextSize, mCancelText, mConfirmText, mInputFieldHint;
+    private String mTitleText, mContentText, justifyContentText, justifyContentTextColor, justifyContentTextSize,
+            justifyContentTextFont, justifyContentTextFontExtension, mCancelText, mConfirmText, mInputFieldHint;
     private String imageURL;
-    private String titleFont, contentFont;
+    private String titleFontAssets, contentFontAssets, confirmButtonFontAssets, cancelButtonFontAssets;
     private int displayType;
+    private int titleFont = 0, contentFont = 0, confirmButtonFont = 0, cancelButtonFont = 0;
     private int titleColor = 0, contentColor = 0,
             confirmTextColor = android.R.color.white, cancelTextColor = android.R.color.white;
     private int drawableColor = 0;
@@ -111,7 +106,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
     public KAlertDialog(Context context) {
-        this(context, NORMAL_TYPE);
+        this(context, NORMAL_TYPE, false);
+    }
+
+    public KAlertDialog(Context context, boolean autoNightMode) {
+        this(context, NORMAL_TYPE, autoNightMode);
     }
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,10 +142,12 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
         setTitleText(mTitleText);
         setTitleTextGravity(titleTextGravity);
-        dialogTitleFont(titleFont);
-        dialogContentFont(contentFont);
+        setDialogTextFont(mTitleTextView, titleFont, titleFontAssets);
+        setDialogTextFont(mContentTextView, contentFont, contentFontAssets);
+        setDialogTextFont(mConfirmButton, confirmButtonFont, confirmButtonFontAssets);
+        setDialogTextFont(mCancelButton, cancelButtonFont, cancelButtonFontAssets);
         setContentText(mContentText);
-        justifyContentText(justifyContentText, justifyContentTextColor, justifyContentTextSize);
+        justifyContentText(justifyContentText, justifyContentTextColor, justifyContentTextSize, justifyContentTextFont, justifyContentTextFontExtension);
         setCancelText(mCancelText);
         setCancelText(mCancelText, cancelTextColor);
         setConfirmText(mConfirmText);
@@ -158,8 +159,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         setInputFieldHint(mInputFieldHint);
     }
 
-    public KAlertDialog(Context context, int alertType) {
-        super(context, isNightMode(context) ? R.style.alert_dialog_dark : R.style.alert_dialog_light);
+    public KAlertDialog(Context context, int alertType, boolean autoNightMode) {
+        super(context, isNightMode(context, autoNightMode) ? R.style.alert_dialog_dark : R.style.alert_dialog_light);
         //super(context, DARK_STYLE ? R.style.alert_dialog_dark : R.style.alert_dialog_light);
         this.context = context;
 
@@ -173,7 +174,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mModalOutAnim = (AnimationSet) AnimationLoader.loadAnimation(getContext(), R.anim.modal_out);
         Objects.requireNonNull(mModalOutAnim).setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) { }
+            public void onAnimationStart(Animation animation) {
+            }
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -293,8 +295,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                 mTitleTextView.setTextColor(ContextCompat.getColor(context, titleColor));
             }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                mTitleTextView.setText(Html.fromHtml(mTitleText,1));
-            }else {
+                mTitleTextView.setText(Html.fromHtml(mTitleText, 1));
+            } else {
                 mTitleTextView.setText(Html.fromHtml(mTitleText));
             }
         } else {
@@ -305,7 +307,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     public KAlertDialog setTitleTextGravity(int gravity) {
         titleTextGravity = gravity;
-        if ( mTitleTextView != null ) {
+        if (mTitleTextView != null) {
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             params.gravity = gravity;
 
@@ -318,7 +320,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private void showTitleText(boolean isShow) {
         mShowTitleText = true;
         if (mTitleTextView != null) {
-            mTitleTextView.setVisibility( isShow ? View.VISIBLE : GONE );
+            mTitleTextView.setVisibility(isShow ? View.VISIBLE : GONE);
             mTitleTextView.setAutoLinkMask(Linkify.ALL);
         }
     }
@@ -326,15 +328,15 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public KAlertDialog setCustomImage(int resourceId) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             //ResourcesCompat.getDrawable( context.getResources(), resourceId, context.getTheme() );
-            return setCustomImage1(getContext().getResources().getDrawable( resourceId, context.getTheme() ) );
-       } else {
+            return setCustomImage1(getContext().getResources().getDrawable(resourceId, context.getTheme()));
+        } else {
             return setCustomImage1(getContext().getResources().getDrawable(resourceId));
         }
     }
 
     public KAlertDialog setDrawableTintOnNightMode(boolean isTinted, int tintColor) {
-        if ( isTinted && isNightMode(context) ) {
-            setCustomImageColorFilter( tintColor );
+        if (isTinted && isNightMode(context, true)) {
+            setCustomImageColorFilter(tintColor);
         }
         return this;
     }
@@ -430,8 +432,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                 mContentTextView.setGravity(Gravity.CENTER);
             }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                mContentTextView.setText(Html.fromHtml(mContentText,0));
-            }else {
+                mContentTextView.setText(Html.fromHtml(mContentText, 0));
+            } else {
                 mContentTextView.setText(Html.fromHtml(mContentText));
             }
         } else {
@@ -441,43 +443,58 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
     /**
-     * This method is for test only use at your own risk
-     * its not fully customizable like we can't use custom fonts
-     * it's still under development. We respect to your contribution if you
-     * have any idea then please contribute to this library.
-     * @param content: dialog content text
-     * @param textColor: write the name of text color same as we use in html css for ex: red, grey, white, black
-     * @param fontSize: set the font size in px for example 16px, 18px, 20px,
-     * @return ---
+     * Custom font must be placed in assets/fonts folder.
+     * <p>
+     * Set the font params to 'null' or an empty string to use the default font.
+     *
+     * @param content       dialog content text
+     * @param textColor     text color as used in html css: "red", "grey", "white", "black" etc
+     * @param fontSize      font size in px: "16px", "18px", "20px" etc
+     * @param fontName      custom font name: "my_custom_font_name"
+     * @param fontExtension font extension: ".ttf" or ".otf"
      */
-    public KAlertDialog justifyContentText(String content, String textColor, String fontSize) {
+    public KAlertDialog justifyContentText(String content, String textColor, String fontSize, String fontName, String fontExtension) {
         justifyContentText = content;
         justifyContentTextColor = textColor;
         justifyContentTextSize = fontSize;
-        if ( justifyContentTextView != null && justifyContentText != null &&
-                justifyContentTextColor != null && justifyContentTextSize != null)
-        {
+        justifyContentTextFont = fontName;
+        justifyContentTextFontExtension = fontExtension;
+        if (justifyContentTextView != null && justifyContentText != null &&
+                justifyContentTextColor != null && justifyContentTextSize != null) {
             justifyContentTextView.setBackgroundColor(Color.TRANSPARENT);
             showJustifyText(true);
+
             String text;
-            text = "<html><body><p ";
-            text+= "style=\"color:";
-            text+= textColor;
-            text+= ";";
-            text+= "font-size:";
-            text+= justifyContentTextSize;
-            text+= "\"";
-            text+= "align=\"justify\">";
-            text+= justifyContentText;
-            text+= "</p></body></html>";
-            justifyContentTextView.loadData(text, "text/html", "utf-8");
+            text = "<html><style type='text/css'>@font-face{";
+            text += "font-family: ";
+            text += fontName;
+            text += ";";
+            text += "src: url('fonts/";
+            text += fontName;
+            text += fontExtension;
+            text += "');} </style>";
+            text += "<body ><p ";
+            text += "style=\"color:";
+            text += textColor;
+            text += ";";
+            text += "font-size:";
+            text += justifyContentTextSize;
+            text += ";";
+            text += "font-family:";
+            text += fontName;
+            text += "\"";
+            text += "align=\"justify\">";
+            text += justifyContentText;
+            text += "</p></body></html>";
+
+            justifyContentTextView.loadDataWithBaseURL("file:///android_asset/", text, "text/html", "utf-8", null);
         } else {
             showJustifyText(false);
         }
         return this;
     }
 
-    public KAlertDialog showCancelButton ( boolean isShow){
+    public KAlertDialog showCancelButton(boolean isShow) {
         mShowCancel = isShow;
         if (mCancelButton != null) {
             mCancelButton.setVisibility(mShowCancel ? View.VISIBLE : GONE);
@@ -485,7 +502,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    public KAlertDialog showConfirmButton (boolean isShow){
+    public KAlertDialog showConfirmButton(boolean isShow) {
         mShowConfirm = isShow;
         if (mConfirmButton != null) {
             mConfirmButton.setVisibility(mShowConfirm ? View.VISIBLE : GONE);
@@ -537,29 +554,69 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
     */
 
-    private KAlertDialog dialogTitleFont(String path) {
+    private void setDialogTextFont(TextView contentText, Integer font, String path) {
         if (context != null) {
-            if (mTitleTextView != null && path != null) {
-                Typeface font = Typeface.createFromAsset(context.getAssets(), path);
-                //Typeface typeface = ResourcesCompat.getFont(context, titleFont);
-                mTitleTextView.setTypeface(font);
+            if (contentText != null) {
+                if (path != null) {
+                    setTypefaceAssets(contentText, path);
+                } else if (font != 0) {
+                    setTypeface(contentText, font);
+                }
             }
         }
+    }
+
+    private void setTypeface(TextView contentText, int font) {
+        Typeface typeface = ResourcesCompat.getFont(context, font);
+        contentText.setTypeface(typeface);
+    }
+
+    private void setTypefaceAssets(TextView contentText, String path) {
+        Typeface typeface = Typeface.createFromAsset(context.getAssets(), path);
+        contentText.setTypeface(typeface);
+    }
+
+    public KAlertDialog setTitleFont(int font) {
+        this.titleFont = font;
         return this;
     }
 
-    private KAlertDialog dialogContentFont(String path) {
-        if (context != null) {
-            if (mContentTextView != null && path != null) {
-                Typeface font = Typeface.createFromAsset(context.getAssets(), path);
-                //Typeface typeface = ResourcesCompat.getFont(context, contentFont);
-                mContentTextView.setTypeface(font);
-            }
-        }
+    public KAlertDialog setContentFont(int font) {
+        this.contentFont = font;
         return this;
     }
 
-    private void showContentText (boolean isShow) {
+    public KAlertDialog setTitleFontAssets(String path) {
+        this.titleFontAssets = path;
+        return this;
+    }
+
+    public KAlertDialog setContentFontAssets(String path) {
+        this.contentFontAssets = path;
+        return this;
+    }
+
+    public KAlertDialog setConfirmButtonFont(int font) {
+        this.confirmButtonFont = font;
+        return this;
+    }
+
+    public KAlertDialog setCancelButtonFont(int font) {
+        this.cancelButtonFont = font;
+        return this;
+    }
+
+    public KAlertDialog setConfirmButtonFontAssets(String path) {
+        this.confirmButtonFontAssets = path;
+        return this;
+    }
+
+    public KAlertDialog setCancelButtonFontAssets(String path) {
+        this.cancelButtonFontAssets = path;
+        return this;
+    }
+
+    private void showContentText(boolean isShow) {
         mShowContent = true;
         if (mContentTextView != null) {
             mContentTextView.setVisibility(isShow ? View.VISIBLE : GONE);
@@ -574,17 +631,19 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
     @Deprecated
-    public KAlertDialog setCancelClickListener (KAlertClickListener listener){
+    public KAlertDialog setCancelClickListener(KAlertClickListener listener) {
         mCancelClickListener = listener;
         return this;
     }
-    public KAlertDialog setCancelClickListener (String text, KAlertClickListener listener){
+
+    public KAlertDialog setCancelClickListener(String text, KAlertClickListener listener) {
         //noinspection deprecation
         setCancelText(text);
         mCancelClickListener = listener;
         return this;
     }
-    public KAlertDialog setCancelClickListener (String text, int color, KAlertClickListener listener) {
+
+    public KAlertDialog setCancelClickListener(String text, int color, KAlertClickListener listener) {
         //noinspection deprecation
         setCancelText(text, color);
         mCancelClickListener = listener;
@@ -592,35 +651,37 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
     @Deprecated
-    public KAlertDialog setConfirmClickListener (KAlertClickListener listener){
+    public KAlertDialog setConfirmClickListener(KAlertClickListener listener) {
         mConfirmClickListener = listener;
         return this;
     }
-    public KAlertDialog setConfirmClickListener (String text, KAlertClickListener listener){
+
+    public KAlertDialog setConfirmClickListener(String text, KAlertClickListener listener) {
         //noinspection deprecation
         setConfirmText(text);
         mConfirmClickListener = listener;
         return this;
     }
-    public KAlertDialog setConfirmClickListener (String text, int color, KAlertClickListener listener) {
+
+    public KAlertDialog setConfirmClickListener(String text, int color, KAlertClickListener listener) {
         //noinspection deprecation
         setConfirmText(text, color);
         mConfirmClickListener = listener;
         return this;
     }
 
-    protected void onStart () {
+    protected void onStart() {
         super.onStart();
         mDialogView.startAnimation(mModalInAnim);
         playAnimation();
     }
 
     @Override
-    public void cancel () {
+    public void cancel() {
         dismissWithAnimation(true);
     }
 
-    private KAlertDialog setConfirmButtonColor (Drawable background){
+    private KAlertDialog setConfirmButtonColor(Drawable background) {
         mColor = background;
         if (mConfirmButton != null && mColor != null) {
             mConfirmButton.setBackground(mColor);
@@ -628,7 +689,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    private KAlertDialog setCancelButtonColor (Drawable background){
+    private KAlertDialog setCancelButtonColor(Drawable background) {
         mCancelColor = background;
         if (mCancelButton != null && mCancelColor != null) {
             mCancelButton.setBackground(mCancelColor);
@@ -636,81 +697,81 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    public void dismissWithAnimation () {
+    public void dismissWithAnimation() {
         dismissWithAnimation(false);
     }
 
-    public void dismissWithAnimation ( boolean fromCancel){
+    public void dismissWithAnimation(boolean fromCancel) {
         mCloseFromCancel = fromCancel;
         mConfirmButton.startAnimation(mOverlayOutAnim);
         mDialogView.startAnimation(mModalOutAnim);
     }
 
-    public static int spToPx ( float sp, Context context){
+    public static int spToPx(float sp, Context context) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, context.getResources().getDisplayMetrics());
     }
 
-    public int getAlertType () {
+    public int getAlertType() {
         return mAlertType;
     }
 
-    public String getTitleText () {
+    public String getTitleText() {
         return mTitleText;
     }
 
-    public boolean isShowTitleText () {
+    public boolean isShowTitleText() {
         return mShowTitleText;
     }
 
-    public String getContentText () {
+    public String getContentText() {
         return mContentText;
     }
 
-    public boolean isShowCancelButton () {
+    public boolean isShowCancelButton() {
         return mShowCancel;
     }
 
-    public boolean isShowConfirmButton () {
+    public boolean isShowConfirmButton() {
         return mShowConfirm;
     }
 
-    public boolean isShowContentText () {
+    public boolean isShowContentText() {
         return mShowContent;
     }
 
-    public String getCancelText () {
+    public String getCancelText() {
         return mCancelText;
     }
 
     @Deprecated
-    public KAlertDialog setCancelText (String text){
+    public KAlertDialog setCancelText(String text) {
         mCancelText = text;
         if (mCancelButton != null && mCancelText != null) {
             showCancelButton(true);
             mCancelButton.setText(mCancelText);
-            mCancelButton.setTextColor( ContextCompat.getColor(context, cancelTextColor) );
+            mCancelButton.setTextColor(ContextCompat.getColor(context, cancelTextColor));
         }
         return this;
     }
 
     @Deprecated
-    public KAlertDialog setCancelText (String text, int color){
+    public KAlertDialog setCancelText(String text, int color) {
         mCancelText = text;
         cancelTextColor = color;
         if (mCancelButton != null && mCancelText != null && cancelTextColor != 0) {
             showCancelButton(true);
             mCancelButton.setText(mCancelText);
-            mCancelButton.setTextColor( ContextCompat.getColor(context, cancelTextColor) );
+            mCancelButton.setTextColor(ContextCompat.getColor(context, cancelTextColor));
         }
         return this;
     }
 
-    public String getConfirmText () {
+    public String getConfirmText() {
         return mConfirmText;
     }
 
     @Deprecated
-    public KAlertDialog setConfirmText (String text){
+    public KAlertDialog setConfirmText(String text) {
         mConfirmText = text;
         if (mConfirmButton != null && mConfirmText != null) {
             showConfirmButton(true);
@@ -721,31 +782,31 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
     @Deprecated
-    public KAlertDialog setConfirmText (String text, int color) {
+    public KAlertDialog setConfirmText(String text, int color) {
         mConfirmText = text;
         confirmTextColor = color;
         if (mConfirmButton != null && mConfirmText != null && confirmTextColor != 0) {
             showConfirmButton(true);
             mConfirmButton.setText(mConfirmText);
-            mConfirmButton.setTextColor( ContextCompat.getColor(context, confirmTextColor) );
+            mConfirmButton.setTextColor(ContextCompat.getColor(context, confirmTextColor));
         }
         return this;
     }
 
 
-    public KAlertDialog confirmButtonColor (int color){
+    public KAlertDialog confirmButtonColor(int color) {
         //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            return setConfirmButtonColor(ContextCompat.getDrawable(context, color));
+        return setConfirmButtonColor(ContextCompat.getDrawable(context, color));
         //}else {
-            //return setConfirmButtonColor(ContextCompat.getDrawable(context, color));
+        //return setConfirmButtonColor(ContextCompat.getDrawable(context, color));
         //}
     }
 
-    public KAlertDialog cancelButtonColor (int color){
+    public KAlertDialog cancelButtonColor(int color) {
         //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            return setCancelButtonColor(ContextCompat.getDrawable(context, color));
+        return setCancelButtonColor(ContextCompat.getDrawable(context, color));
         //}else {
-            //return setCancelButtonColor(getContext().getResources().getDrawable(color));
+        //return setCancelButtonColor(getContext().getResources().getDrawable(color));
         //}
     }
 
@@ -756,16 +817,6 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     public KAlertDialog setContentColor(int color) {
         this.contentColor = color;
-        return this;
-    }
-
-    public KAlertDialog setTitleTTFFont(String fontPath) {
-        this.titleFont = fontPath;
-        return this;
-    }
-
-    public KAlertDialog setContentTTFFont(String fontPath) {
-        this.contentFont = fontPath;
         return this;
     }
 
@@ -784,18 +835,17 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return titleTextSize;
     }
 
-    public KAlertDialog setContentTextSize ( int value){
+    public KAlertDialog setContentTextSize(int value) {
         this.contentTextSize = value;
         return this;
     }
 
-    public int getContentTextSize ()
-    {
+    public int getContentTextSize() {
         return contentTextSize;
     }
 
     @Override
-    public void onClick (View v){
+    public void onClick(View v) {
         if (v.getId() == R.id.cancel_button) {
             if (mCancelClickListener != null) {
                 mCancelClickListener.onClick(KAlertDialog.this);
@@ -811,7 +861,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
-    public ProgressHelper getProgressHelper () {
+    public ProgressHelper getProgressHelper() {
         return mProgressHelper;
     }
 
@@ -821,6 +871,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             showKeyboard();
         }
     }
+
     private void hideInputView() {
         if (mCustomViewContainer != null) {
             mCustomViewContainer.setVisibility(View.GONE);
@@ -835,7 +886,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    public String getInputText () {
+    public String getInputText() {
         return mEditText.getText().toString();
     }
 
@@ -852,14 +903,18 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     private void hideKeyboard() {
         if (mEditText != null) {
-            InputMethodManager imm = (InputMethodManager)context.getSystemService
+            InputMethodManager imm = (InputMethodManager) context.getSystemService
                     (Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(mEditText.getWindowToken(), 0);
         }
     }
 
-    public static boolean isNightMode(Context context) {
-        int nightModeFlags = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
-        return nightModeFlags == Configuration.UI_MODE_NIGHT_YES;
+    public static boolean isNightMode(Context context, boolean autoNightMode) {
+        if (autoNightMode) {
+            int nightModeFlags = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+            return nightModeFlags == Configuration.UI_MODE_NIGHT_YES;
+        } else {
+            return false;
+        }
     }
 }
