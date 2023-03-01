@@ -26,6 +26,9 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 [NassB (Nassim B.)](https://github.com/NassB)
 
+[moisoni97 (Moisoni Ioan)](https://github.com/moisoni97)
+
+
 `Latest version of this library is migrated to androidx`
 
 ## Features
