@@ -23,7 +23,9 @@ ext {
 //apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
 
 android {
-	compileSdkVersion 33
+    namespace 'com.developer.kalert'
+
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 19
@@ -45,10 +47,10 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+
     lint {
         abortOnError false
     }
-    namespace 'com.developer.kalert'
 }
 
 dependencies {
@@ -61,4 +63,14 @@ dependencies {
     //GLIDE IMAGE LOADING LIBRARY
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'io.github.tutorialsandroid'
+            artifactId = 'kalertdialog'
+            version = '20.3.7'
+        }
+    }
 }
