@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 
 ext {
     PUBLISH_GROUP_ID = 'com.github.ubook-editora'
-    PUBLISH_VERSION = '20.3.9'
+    PUBLISH_VERSION = '20.3.10'
     PUBLISH_ARTIFACT_ID = 'kalertdialog'
     PUBLISH_DESCRIPTION = 'AlertDialog for Android, a beautiful and material alert dialog to use in your android app.'
     PUBLISH_URL = 'https://github.com/tutorialsandroid/KAlertDialog'
@@ -20,7 +20,6 @@ ext {
     PUBLISH_SCM_URL =
             'https://github.com/tutorialsandroid/kalertdialog/tree/master'
 }
-//apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
 
 android {
     namespace 'com.developer.kalert'
@@ -75,5 +74,9 @@ publishing {
             from components.findByName('release')
             artifact("$buildDir/outputs/aar/library-release.aar")
         }
+    }
+
+    tasks.named('publishReleasePublicationToMavenLocal') {
+        dependsOn tasks.named('bundleReleaseAar')
     }
 }
