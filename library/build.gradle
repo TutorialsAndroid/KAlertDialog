@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 
 ext {
     PUBLISH_GROUP_ID = 'com.github.ubook-editora'
-    PUBLISH_VERSION = '20.3.7'
+    PUBLISH_VERSION = '20.3.8'
     PUBLISH_ARTIFACT_ID = 'kalertdialog'
     PUBLISH_DESCRIPTION = 'AlertDialog for Android, a beautiful and material alert dialog to use in your android app.'
     PUBLISH_URL = 'https://github.com/tutorialsandroid/KAlertDialog'
@@ -68,9 +68,9 @@ dependencies {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId = 'com.github.ubook-editora'
-            artifactId = 'kalertdialog'
-            version = '20.3.7'
+            groupId = PUBLISH_GROUP_ID
+            artifactId = PUBLISH_ARTIFACT_ID
+            version = PUBLISH_VERSION
         }
     }
 }
