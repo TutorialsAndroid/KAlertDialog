@@ -20,10 +20,11 @@ ext {
     PUBLISH_SCM_URL =
             'https://github.com/tutorialsandroid/kalertdialog/tree/master'
 }
-apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
 
 android {
-	compileSdkVersion 33
+    namespace 'com.developer.kalert'
+
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 19
@@ -45,20 +46,37 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+
     lint {
         abortOnError false
     }
-    namespace 'com.developer.kalert'
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.8.0-alpha01'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
 
     //PROGRESS VIEW
     implementation 'com.github.TutorialsAndroid:progressx:v6.0.19'
     //GLIDE IMAGE LOADING LIBRARY
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = PUBLISH_GROUP_ID
+            artifactId = PUBLISH_ARTIFACT_ID
+            version = PUBLISH_VERSION
+
+            from components.findByName('release')
+            artifact("$buildDir/outputs/aar/library-release.aar")
+        }
+    }
+
+    tasks.named('publishReleasePublicationToMavenLocal') {
+        dependsOn tasks.named('bundleReleaseAar')
+    }
 }
