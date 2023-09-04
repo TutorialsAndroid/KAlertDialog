@@ -1,6 +1,7 @@
 package com.developer.kalert;
 
 import static android.view.View.GONE;
+import static android.view.View.TEXT_ALIGNMENT_CENTER;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -69,7 +70,9 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             confirmTextColor = android.R.color.white, cancelTextColor = android.R.color.white;
     private int drawableColor = 0;
     private Integer contentAlignment, contentGravity;
+    private int titleTextLayoutGravity = Gravity.CENTER;
     private int titleTextGravity = Gravity.CENTER;
+    private int titleTextAlignment = TEXT_ALIGNMENT_CENTER;
     private Integer cancelButtonHeight, confirmButtonHeight;
 
     private boolean mShowCancel, mShowContent, mShowTitleText, mCloseFromCancel, mShowConfirm;
@@ -141,7 +144,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mCancelButton.setOnClickListener(this);
 
         setTitleText(mTitleText);
-        setTitleTextGravity(titleTextGravity);
+        setTitleTextGravity(titleTextLayoutGravity);
+        setTitleTextLayoutGravity(titleTextLayoutGravity);
         setDialogTextFont(mTitleTextView, titleFont, titleFontAssets);
         setDialogTextFont(mContentTextView, contentFont, contentFontAssets);
         setDialogTextFont(mConfirmButton, confirmButtonFont, confirmButtonFontAssets);
@@ -305,13 +309,22 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    public KAlertDialog setTitleTextGravity(int gravity) {
-        titleTextGravity = gravity;
+    public KAlertDialog setTitleTextLayoutGravity(int gravity) {
+        titleTextLayoutGravity = gravity;
         if (mTitleTextView != null) {
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             params.gravity = gravity;
 
             mTitleTextView.setLayoutParams(params);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setTitleTextGravity(int gravity) {
+        titleTextGravity = gravity;
+        if (mTitleTextView != null) {
+            mTitleTextView.setGravity(gravity);
         }
 
         return this;

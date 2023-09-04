@@ -79,7 +79,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         if (v.getId() == R.id.title_gravity) {
             new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
                     .setTitleText("Lorem Ipsum")
-                    .setTitleTextGravity(Gravity.START) //you can specify your own gravity
+                    .setTitleTextLayoutGravity(Gravity.START) //you can specify your own gravity
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
                     .setConfirmClickListener("OK", null)
                     .show();
@@ -166,7 +166,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         if (v.getId() == R.id.edit_text_dialog) {
             KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.INPUT_TYPE, true);
             dialog.setInputFieldHint("Write message");
-            dialog.setTitleText("Edit Text");
+            dialog.setTitleText("A Very Big Edit Text Title With Line Break On Small Devices");
             dialog.setConfirmClickListener("OK", kAlertDialog -> {
                 kAlertDialog.dismissWithAnimation();
                 kAlertDialog.getInputText(); //you get the input text by calling this

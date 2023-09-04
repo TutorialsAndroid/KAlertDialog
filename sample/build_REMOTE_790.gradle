@@ -7,14 +7,9 @@ android {
 		applicationId "com.developer.kalert.alert"
         minSdkVersion 19
         targetSdkVersion 33
-<<<<<<< HEAD
-		versionCode 36
-        versionName "20.4.8"
-=======
 		versionCode 35
         versionName "20.3.7"
         multiDexEnabled true
->>>>>>> d0489639ac763746788a6c9bd4d2110ae62f2791
     }
 
     compileOptions {
