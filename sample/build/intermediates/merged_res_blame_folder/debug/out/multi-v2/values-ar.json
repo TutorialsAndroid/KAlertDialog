@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-34:/values-ar/values-ar.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-4:/values-ar/values-ar.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\89836f8a94e002417ad2b62870b6075b\\transformed\\core-1.8.0\\res\\values-ar\\values-ar.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "95",
-                        "startColumns": "4",
-                        "startOffsets": "7749",
-                        "endColumns": "100",
-                        "endOffsets": "7845"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\1ba05e89ddab93b55378eb755a5b26f5\\transformed\\material-1.8.0-alpha01\\res\\values-ar\\values-ar.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\19a78f88b34406154121032f01d4e878\\transformed\\material-1.8.0-alpha01\\res\\values-ar\\values-ar.xml",
                     "from": {
                         "startLines": "2,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\b66b44409dcfaf833b574ca7219a2709\\transformed\\appcompat-1.5.1\\res\\values-ar\\values-ar.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\66b43d727b406bc274b9cb996bc7e085\\transformed\\appcompat-1.5.1\\res\\values-ar\\values-ar.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -54,6 +37,23 @@
                         "startOffsets": "515,623,727,834,916,1017,1131,1211,1290,1381,1474,1566,1660,1760,1853,1948,2041,2132,2226,2305,2410,2508,2606,2714,2814,2917,3072,7667",
                         "endColumns": "107,103,106,81,100,113,79,78,90,92,91,93,99,92,94,92,90,93,78,104,97,97,107,99,102,154,96,81",
                         "endOffsets": "618,722,829,911,1012,1126,1206,1285,1376,1469,1561,1655,1755,1848,1943,2036,2127,2221,2300,2405,2503,2601,2709,2809,2912,3067,3164,7744"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\323bb4854d72082329264fe1dc66894b\\transformed\\core-1.8.0\\res\\values-ar\\values-ar.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "95",
+                        "startColumns": "4",
+                        "startOffsets": "7749",
+                        "endColumns": "100",
+                        "endOffsets": "7845"
                     }
                 }
             ]

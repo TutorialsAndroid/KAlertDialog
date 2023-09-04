@@ -11,8 +11,8 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 32,
-      "versionName": "20.3.4",
+      "versionCode": 36,
+      "versionName": "20.4.8",
       "outputFile": "sample-debug.apk"
     }
   ],

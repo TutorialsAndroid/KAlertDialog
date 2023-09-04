@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.tutorialsandroid</groupId>
+  <artifactId>kalertdialog</artifactId>
+  <version>20.4.8</version>
+  <packaging>aar</packaging>
+  <name>kalertdialog</name>
+  <description>AlertDialog for Android, a beautiful and material alert dialog to use in your android app.</description>
+  <url>https://github.com/tutorialsandroid/KAlertDialog</url>
+  <licenses>
+    <license>
+      <name>Apache License</name>
+      <url>https://github.com/TutorialsAndroid/KAlertDialog/blob/master/LICENSE</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>tutorialsandroid</id>
+      <name>Akshay Masram</name>
+      <email>akshaysunilmasram@yahoo.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:github.com/tutorialsandroid/kalertdialog.git</connection>
+    <developerConnection>scm:git:ssh://github.com/tutorialsandroid/kalertdialog.git</developerConnection>
+    <url>https://github.com/tutorialsandroid/kalertdialog/tree/master</url>
+  </scm>
+</project>

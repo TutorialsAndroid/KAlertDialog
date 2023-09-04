@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.developer.kalert.alert"
+    android:versionCode="36"
+    android:versionName="20.4.8" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="33" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:testOnly="true"
+        android:theme="@style/Theme.App" >
+        <activity
+            android:name="com.developer.kalert.alert.SampleActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.developer.kalert.alert.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>

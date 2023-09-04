@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-34:/values-pt-rPT/values-pt-rPT.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-4:/values-pt-rPT/values-pt-rPT.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\1ba05e89ddab93b55378eb755a5b26f5\\transformed\\material-1.8.0-alpha01\\res\\values-pt-rPT\\values-pt-rPT.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\323bb4854d72082329264fe1dc66894b\\transformed\\core-1.8.0\\res\\values-pt-rPT\\values-pt-rPT.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "91",
+                        "startColumns": "4",
+                        "startOffsets": "7758",
+                        "endColumns": "100",
+                        "endOffsets": "7854"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\19a78f88b34406154121032f01d4e878\\transformed\\material-1.8.0-alpha01\\res\\values-pt-rPT\\values-pt-rPT.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\b66b44409dcfaf833b574ca7219a2709\\transformed\\appcompat-1.5.1\\res\\values-pt-rPT\\values-pt-rPT.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\66b43d727b406bc274b9cb996bc7e085\\transformed\\appcompat-1.5.1\\res\\values-pt-rPT\\values-pt-rPT.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -37,23 +54,6 @@
                         "startOffsets": "323,431,537,644,733,834,952,1037,1117,1209,1303,1400,1494,1593,1687,1783,1878,1970,2062,2147,2254,2365,2467,2575,2683,2790,2955,7672",
                         "endColumns": "107,105,106,88,100,117,84,79,91,93,96,93,98,93,95,94,91,91,84,106,110,101,107,107,106,164,98,85",
                         "endOffsets": "426,532,639,728,829,947,1032,1112,1204,1298,1395,1489,1588,1682,1778,1873,1965,2057,2142,2249,2360,2462,2570,2678,2785,2950,3049,7753"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\89836f8a94e002417ad2b62870b6075b\\transformed\\core-1.8.0\\res\\values-pt-rPT\\values-pt-rPT.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "91",
-                        "startColumns": "4",
-                        "startOffsets": "7758",
-                        "endColumns": "100",
-                        "endOffsets": "7854"
                     }
                 }
             ]

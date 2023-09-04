@@ -71,7 +71,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
                     .setTitleText("Lorem Ipsum")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-                    .setContentFont(R.font.sf)
+                    //.setContentFont(R.font.sf)
                     .setConfirmClickListener("OK", null)
                     .show();
         }
@@ -117,7 +117,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
                     .showCancelButton(true)
-                    .setConfirmButtonFont(R.font.sf)
+                    //.setConfirmButtonFont(R.font.sf)
                     .setCancelButtonFontAssets("fonts/sf.ttf")
                     .setCancelClickListener("No,cancel plx!", sDialog -> sDialog.setTitleText("Cancelled!")
                             .setContentText("Your imaginary file is safe :)")

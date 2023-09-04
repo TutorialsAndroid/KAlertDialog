@@ -10,19 +10,19 @@
     </facet>
     <facet type="android" name="Android">
       <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="release" />
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
-        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../sample/src/main/res;file://$MODULE_DIR$/../../../sample/src/release/res;file://$MODULE_DIR$/../../../sample/build/generated/res/rs/release;file://$MODULE_DIR$/../../../sample/build/generated/res/resValues/release" />
-        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../sample/src/main/res;file://$MODULE_DIR$/../../../sample/src/debug/res;file://$MODULE_DIR$/../../../sample/build/generated/res/rs/debug;file://$MODULE_DIR$/../../../sample/build/generated/res/resValues/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../sample/src/androidTest/res;file://$MODULE_DIR$/../../../sample/src/androidTestDebug/res;file://$MODULE_DIR$/../../../sample/build/generated/res/rs/androidTest/debug;file://$MODULE_DIR$/../../../sample/build/generated/res/resValues/androidTest/debug" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../../sample/build/intermediates/javac/release/classes" />
-    <output-test url="file://$MODULE_DIR$/../../../sample/build/intermediates/javac/releaseUnitTest/classes" />
+    <output url="file://$MODULE_DIR$/../../../sample/build/intermediates/javac/debug/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../sample/build/intermediates/javac/debugUnitTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../sample">
       <excludeFolder url="file://$MODULE_DIR$/../../../sample/.gradle" />

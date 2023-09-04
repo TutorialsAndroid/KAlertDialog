@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-34:/values-v22/values-v22.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-4:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\b66b44409dcfaf833b574ca7219a2709\\transformed\\appcompat-1.5.1\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\66b43d727b406bc274b9cb996bc7e085\\transformed\\appcompat-1.5.1\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

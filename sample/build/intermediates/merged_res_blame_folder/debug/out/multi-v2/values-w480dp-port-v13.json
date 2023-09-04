@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-34:/values-w480dp-port-v13/values-w480dp-port-v13.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-4:/values-w480dp-port-v13/values-w480dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\1ba05e89ddab93b55378eb755a5b26f5\\transformed\\material-1.8.0-alpha01\\res\\values-w480dp-port-v13\\values-w480dp-port-v13.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\19a78f88b34406154121032f01d4e878\\transformed\\material-1.8.0-alpha01\\res\\values-w480dp-port-v13\\values-w480dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
