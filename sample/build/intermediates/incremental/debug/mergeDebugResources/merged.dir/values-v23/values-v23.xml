@@ -54,6 +54,14 @@
     <style name="ThemeOverlay.Material3.AutoCompleteTextView" parent="Base.ThemeOverlay.Material3.AutoCompleteTextView">
     <item name="colorControlNormal">@color/m3_textfield_indicator_text_color</item>
   </style>
+    <style name="ThemeOverlay.Material3.Chip" parent="">
+    
+    <item name="colorControlNormal">@color/m3_chip_text_color</item>
+  </style>
+    <style name="ThemeOverlay.Material3.Chip.Assist" parent="">
+    
+    <item name="colorControlNormal">@color/m3_assist_chip_icon_tint_color</item>
+  </style>
     <style name="ThemeOverlay.Material3.TextInputEditText" parent="Base.ThemeOverlay.Material3.TextInputEditText">
     <item name="colorControlNormal">@color/m3_textfield_indicator_text_color</item>
   </style>

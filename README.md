@@ -1,8 +1,8 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released v20.3.7 on 22-02-2023 [ Migrated from jitpack to mavenCentral() ]
+# New version released 20.5.8 on 22-02-2023 [ Migrated from jitpack to mavenCentral() ]
 ## Changelogs
-- Fixed issue in button sizes on larger text length of buttons
+- Added option to set default text in input field.
 ### Read the changes in README
 
 Alert Dialog ![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588) [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -20,7 +20,6 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 <p align="center">Follow me on instagram to stay up-to-date https://instagram.com/a.masram444
 <p align="center">Follow me on twitter to stay up-to-date https://twitter.com/a_masram444
-    
 
 ## Contributors
 
@@ -69,7 +68,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. On your root build.gradle, add mavenCentral() to the allprojects section. On your module build.gradle, add
 
 	dependencies {
-          implementation 'io.github.tutorialsandroid:kalertdialog:20.3.6'
+          implementation 'io.github.tutorialsandroid:kalertdialog:20.4.8'
           implementation 'com.github.TutorialsAndroid:progressx:v6.0.19' //required for kalertdialog lib
 	}
 
@@ -196,6 +195,7 @@ A dialog with input-field
 
     KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.INPUT_TYPE);
     dialog.setInputFieldHint("Write message");
+    dialog.setInputFieldText("Hello World!"); //If you want to set default text in input field
     dialog.setTitleText("Edit Text");
     dialog.setConfirmClickListener("OK", kAlertDialog -> {
         kAlertDialog.dismissWithAnimation();

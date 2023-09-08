@@ -61,7 +61,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     //private ViewTreeObserver.OnGlobalLayoutListener mConfirmButtonGlobalListener, mCancelButtonGlobalListener;
 
     private String mTitleText, mContentText, justifyContentText, justifyContentTextColor, justifyContentTextSize,
-            justifyContentTextFont, justifyContentTextFontExtension, mCancelText, mConfirmText, mInputFieldHint;
+            justifyContentTextFont, justifyContentTextFontExtension, mCancelText, mConfirmText, mInputFieldHint, mInputFieldText;
     private String imageURL;
     private String titleFontAssets, contentFontAssets, confirmButtonFontAssets, cancelButtonFontAssets;
     private int displayType;
@@ -161,6 +161,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         //setButtonMatchingHeight();
         changeAlertType(mAlertType, true);
         setInputFieldHint(mInputFieldHint);
+        setInputFieldText(mInputFieldText);
     }
 
     public KAlertDialog(Context context, int alertType, boolean autoNightMode) {
@@ -895,6 +896,14 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mInputFieldHint = text;
         if (mEditText != null && mInputFieldHint != null) {
             mEditText.setHint(mInputFieldHint);
+        }
+        return this;
+    }
+
+    public KAlertDialog setInputFieldText(String text) {
+        mInputFieldText = text;
+        if (mEditText != null && mInputFieldText != null) {
+            mEditText.setText(mInputFieldText);
         }
         return this;
     }

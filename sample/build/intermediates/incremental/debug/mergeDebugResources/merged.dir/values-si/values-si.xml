@@ -31,7 +31,11 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"සමග බෙදා ගන්න"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> සමඟ බෙදා ගන්න"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"හකුළන්න"</string>
+    <string name="bottomsheet_action_collapse">පහළම පත්‍රය හකුළන්න</string>
+    <string name="bottomsheet_action_expand">පහළම පත්‍රය දිග හරින්න</string>
     <string name="bottomsheet_action_expand_halfway">අඩක් දිග හරින්න</string>
+    <string name="bottomsheet_drag_handle_clicked">ඇදීම් හැඬලය දෙවරක් තට්ටු කර ඇත</string>
+    <string name="bottomsheet_drag_handle_content_description">හැඬලය අදින්න</string>
     <string name="character_counter_content_description">අනුලකුණු %2$dන් %1$dක් ඇතුළු කෙරිණි</string>
     <string name="character_counter_overflowed_content_description">අනුලකුණු සීමාව %2$dකින් %1$d ඉක්ම විය</string>
     <string name="clear_text_end_icon_content_description">පෙළ හිස් කරන්න</string>
@@ -40,6 +44,7 @@
     <string name="icon_content_description">සංවාද නිරූපකය</string>
     <string name="item_view_role_description">ටැබය</string>
     <string name="material_clock_toggle_content_description">පෙරවරු හෝ පස්වරු තෝරන්න</string>
+    <string name="material_hour_24h_suffix">පැය %1$sක්</string>
     <string name="material_hour_selection">පැය තෝරන්න</string>
     <string name="material_hour_suffix">%1$sයි</string>
     <string name="material_minute_selection">මිනිත්තු තෝරන්න</string>
@@ -56,18 +61,22 @@
     <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">නව දැනුම්දීම් %1$dකට වඩා</string>
     <string name="mtrl_picker_a11y_next_month">ලබන මාසයට වෙනස් කරන්න</string>
     <string name="mtrl_picker_a11y_prev_month">කලින් මාසයට වෙනස් කරන්න</string>
+    <string name="mtrl_picker_announce_current_range_selection">ආරම්භක දිනය තේරීම: %1$s – අවසාන දිනය තේරීම: %2$s</string>
     <string name="mtrl_picker_announce_current_selection">වත්මන් තේරීම: %1$s</string>
+    <string name="mtrl_picker_announce_current_selection_none">කිසිවක් නැත</string>
     <string name="mtrl_picker_cancel">අවලංගු කරන්න</string>
     <string name="mtrl_picker_confirm">හරි</string>
     <string name="mtrl_picker_date_header_selected">%1$s</string>
     <string name="mtrl_picker_date_header_title">දිනය තෝරන්න</string>
     <string name="mtrl_picker_date_header_unselected">තේරූ දිනය</string>
     <string name="mtrl_picker_day_of_week_column_header">දින තීරුව: %1$s</string>
+    <string name="mtrl_picker_end_date_description">අවසාන දිනය %1$s</string>
     <string name="mtrl_picker_invalid_format">අවලංගු ආකෘතියකි.</string>
     <string name="mtrl_picker_invalid_format_example">උදාහරණය: %1$s</string>
     <string name="mtrl_picker_invalid_format_use">භාවිතය: %1$s</string>
     <string name="mtrl_picker_invalid_range">අවලංගු පරාසයකි.</string>
-    <string name="mtrl_picker_navigate_to_year_description">%1$s වසරට සංචාලනය කරන්න</string>
+    <string name="mtrl_picker_navigate_to_current_year_description">වත්මන් වර්ෂය %1$d වෙත සංචාලනය කරන්න</string>
+    <string name="mtrl_picker_navigate_to_year_description">%1$d වසරට සංචාලනය කරන්න</string>
     <string name="mtrl_picker_out_of_range">පරාසයෙන් පිටත: %1$s</string>
     <string name="mtrl_picker_range_header_only_end_selected">ආරම්භක දිනය – %1$s</string>
     <string name="mtrl_picker_range_header_only_start_selected">%1$s – නිමා වන දිනය</string>
@@ -75,16 +84,18 @@
     <string name="mtrl_picker_range_header_title">පරාසය තෝරන්න</string>
     <string name="mtrl_picker_range_header_unselected">ආරම්භක දිනය – නිමා වන දිනය</string>
     <string name="mtrl_picker_save">සුරකින්න</string>
+    <string name="mtrl_picker_start_date_description">ආරම්භක දිනය %1$s</string>
     <string name="mtrl_picker_text_input_date_hint">දිනය</string>
     <string name="mtrl_picker_text_input_date_range_end_hint">නිමා වන දිනය</string>
     <string name="mtrl_picker_text_input_date_range_start_hint">ආරම්භක දිනය</string>
     <string name="mtrl_picker_text_input_day_abbr">ද</string>
     <string name="mtrl_picker_text_input_month_abbr">ම</string>
     <string name="mtrl_picker_text_input_year_abbr">ව</string>
+    <string name="mtrl_picker_today_description">අද %1$s</string>
     <string name="mtrl_picker_toggle_to_calendar_input_mode">දින දර්ශන ආදාන ප්‍රකාරයට මාරු වන්න</string>
-    <string name="mtrl_picker_toggle_to_day_selection">දිනයක් තේරීමට මාරු වීමට තට්ටු කරන්න</string>
+    <string name="mtrl_picker_toggle_to_day_selection">දින දර්ශන දසුන වෙත මාරු වීමට තට්ටු කරන්න</string>
     <string name="mtrl_picker_toggle_to_text_input_mode">පෙළ ආදාන ප්‍රකාරයට මාරු වන්න</string>
-    <string name="mtrl_picker_toggle_to_year_selection">වසරක් තේරීමට මාරු වීමට තට්ටු කරන්න</string>
+    <string name="mtrl_picker_toggle_to_year_selection">වසරේ දසුන වෙත මාරු වීමට තට්ටු කරන්න</string>
     <string name="mtrl_timepicker_cancel">අවලංගු කරන්න</string>
     <string name="mtrl_timepicker_confirm">හරි</string>
     <string name="password_toggle_content_description">මුරපදය පෙන්වන්න</string>

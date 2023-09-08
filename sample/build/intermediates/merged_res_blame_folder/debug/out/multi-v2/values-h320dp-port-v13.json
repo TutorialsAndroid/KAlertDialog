@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-4:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-3:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\19a78f88b34406154121032f01d4e878\\transformed\\material-1.8.0-alpha01\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\ac8cf3012daebf29d7e8496dab1086f6\\transformed\\material-1.11.0-alpha02\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "75",
-                        "endOffsets": "126"
+                        "endColumns": "63",
+                        "endOffsets": "114"
                     }
                 }
             ]

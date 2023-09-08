@@ -1,29 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-4:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.developer.kalert.alert.sample-mergeDebugResources-3:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\19a78f88b34406154121032f01d4e878\\transformed\\material-1.8.0-alpha01\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\ac8cf3012daebf29d7e8496dab1086f6\\transformed\\material-1.11.0-alpha02\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
-                        "startLines": "2,3,4,10",
+                        "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "55,177,311,752",
-                        "endLines": "2,3,9,15",
-                        "endColumns": "121,133,10,10",
-                        "endOffsets": "172,306,747,1190"
+                        "startOffsets": "55,169,285,407",
+                        "endColumns": "113,115,121,133",
+                        "endOffsets": "164,280,402,536"
                     },
                     "to": {
-                        "startLines": "11,12,13,19",
+                        "startLines": "11,12,13,14",
                         "startColumns": "4,4,4,4",
-                        "startOffsets": "752,874,1008,1449",
-                        "endLines": "11,12,18,24",
-                        "endColumns": "121,133,10,10",
-                        "endOffsets": "869,1003,1444,1887"
+                        "startOffsets": "752,866,982,1104",
+                        "endColumns": "113,115,121,133",
+                        "endOffsets": "861,977,1099,1233"
                     }
                 },
                 {
-                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\66b43d727b406bc274b9cb996bc7e085\\transformed\\appcompat-1.5.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\tkdco\\.gradle\\caches\\transforms-3\\4c0983160a6d2560313e6cbc04780909\\transformed\\appcompat-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

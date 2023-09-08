@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.tutorialsandroid</groupId>
   <artifactId>kalertdialog</artifactId>
-  <version>20.4.8</version>
+  <version>20.5.8</version>
   <packaging>aar</packaging>
   <name>kalertdialog</name>
   <description>AlertDialog for Android, a beautiful and material alert dialog to use in your android app.</description>

@@ -2,13 +2,10 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.developer.kalert" >
 4
-5    <uses-sdk
-6        android:minSdkVersion="19"
-6-->C:\Akshay\Android_Projects\Android_Libraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
-7        android:targetSdkVersion="33" />
-7-->C:\Akshay\Android_Projects\Android_Libraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
+5    <uses-sdk android:minSdkVersion="19" />
+5-->C:\Akshay\Android_Projects\Android_Libraries\KAlertDialog-master\library\src\main\AndroidManifest.xml
+6
+7    <application />
+7-->C:\Akshay\Android_Projects\Android_Libraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:2:5-19
 8
-9    <application />
-9-->C:\Akshay\Android_Projects\Android_Libraries\KAlertDialog-master\library\src\main\AndroidManifest.xml:2:5-19
-10
-11</manifest>
+9</manifest>

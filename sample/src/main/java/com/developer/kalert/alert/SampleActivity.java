@@ -166,6 +166,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         if (v.getId() == R.id.edit_text_dialog) {
             KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.INPUT_TYPE, true);
             dialog.setInputFieldHint("Write message");
+            dialog.setInputFieldText("Hello World!");
             dialog.setTitleText("A Very Big Edit Text Title With Line Break On Small Devices");
             dialog.setConfirmClickListener("OK", kAlertDialog -> {
                 kAlertDialog.dismissWithAnimation();
