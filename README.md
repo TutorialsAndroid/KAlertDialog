@@ -1,6 +1,6 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released 20.5.8 on 08-09-2023 [ Migrated from jitpack to mavenCentral() ]
+# New version released 20.5.8 on 08-09-2023
 ## Changelogs
 - Added option to set default text in input field.
 ### Read the changes in README
