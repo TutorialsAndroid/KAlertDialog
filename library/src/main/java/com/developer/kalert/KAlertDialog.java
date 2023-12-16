@@ -26,11 +26,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -156,8 +158,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         setCancelText(mCancelText, cancelTextColor);
         setConfirmText(mConfirmText);
         setConfirmText(mConfirmText, confirmTextColor);
-        setConfirmButtonColor(mColor);
-        setCancelButtonColor(mCancelColor);
+        setConfirmButtonDrawable(mColor);
+        setCancelButtonDrawable(mCancelColor);
         //setButtonMatchingHeight();
         changeAlertType(mAlertType, true);
         setInputFieldHint(mInputFieldHint);
@@ -243,37 +245,37 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             }
             switch (mAlertType) {
                 case NORMAL_TYPE:
-                    setConfirmButtonColor(mColor);
+                    setConfirmButtonDrawable(mColor);
                     break;
                 case ERROR_TYPE:
                     mErrorFrame.setVisibility(View.VISIBLE);
-                    setConfirmButtonColor(mColor);
+                    setConfirmButtonDrawable(mColor);
                     break;
                 case SUCCESS_TYPE:
                     mSuccessFrame.setVisibility(View.VISIBLE);
-                    setConfirmButtonColor(mColor);
+                    setConfirmButtonDrawable(mColor);
                     break;
                 case WARNING_TYPE:
                     mWarningFrame.setVisibility(View.VISIBLE);
-                    setConfirmButtonColor(mColor);
+                    setConfirmButtonDrawable(mColor);
                     break;
                 case CUSTOM_IMAGE_TYPE:
                     setCustomImage1(mCustomImgDrawable);
                     setCustomImageColorFilter(drawableColor);
-                    setConfirmButtonColor(mColor);
+                    setConfirmButtonDrawable(mColor);
                     break;
                 case URL_IMAGE_TYPE:
                     setURLImage1(imageURL, displayType);
-                    setConfirmButtonColor(mColor);
+                    setConfirmButtonDrawable(mColor);
                     break;
                 case PROGRESS_TYPE:
                     mProgressFrame.setVisibility(View.VISIBLE);
                     mConfirmButton.setVisibility(GONE);
-                    setConfirmButtonColor(mColor);
+                    setConfirmButtonDrawable(mColor);
                     break;
                 case INPUT_TYPE:
                     showInputView();
-                    setConfirmButtonColor(mColor);
+                    setConfirmButtonDrawable(mColor);
                     break;
             }
             if (!fromCreate) {
@@ -695,7 +697,21 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         dismissWithAnimation(true);
     }
 
-    private KAlertDialog setConfirmButtonColor(Drawable background) {
+    private KAlertDialog setConfirmButtonColor(@ColorInt int tintColor) {
+        if (mConfirmButton != null) {
+            DrawableCompat.setTint(mConfirmButton.getBackground(), tintColor);
+        }
+        return this;
+    }
+
+    private KAlertDialog setCancelButtonColor(@ColorInt int tintColor) {
+        if (mCancelButton != null) {
+            DrawableCompat.setTint(mCancelButton.getBackground(), tintColor);
+        }
+        return this;
+    }
+
+    private KAlertDialog setConfirmButtonDrawable(Drawable background) {
         mColor = background;
         if (mConfirmButton != null && mColor != null) {
             mConfirmButton.setBackground(mColor);
@@ -703,7 +719,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-    private KAlertDialog setCancelButtonColor(Drawable background) {
+    private KAlertDialog setCancelButtonDrawable(Drawable background) {
         mCancelColor = background;
         if (mCancelButton != null && mCancelColor != null) {
             mCancelButton.setBackground(mCancelColor);
@@ -807,21 +823,20 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
-
     public KAlertDialog confirmButtonColor(int color) {
-        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-        return setConfirmButtonColor(ContextCompat.getDrawable(context, color));
-        //}else {
-        //return setConfirmButtonColor(ContextCompat.getDrawable(context, color));
-        //}
+        return setConfirmButtonColor(color);
+    }
+
+    public KAlertDialog confirmButtonDrawable(int drawableResId) {
+        return setConfirmButtonDrawable(ContextCompat.getDrawable(context, drawableResId));
     }
 
     public KAlertDialog cancelButtonColor(int color) {
-        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-        return setCancelButtonColor(ContextCompat.getDrawable(context, color));
-        //}else {
-        //return setCancelButtonColor(getContext().getResources().getDrawable(color));
-        //}
+        return setCancelButtonColor(color);
+    }
+
+    public KAlertDialog cancelButtonDrawable(int drawableResId) {
+        return setCancelButtonDrawable(ContextCompat.getDrawable(context, drawableResId));
     }
 
     public KAlertDialog setTitleColor(int color) {
