@@ -1,24 +1,19 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released 20.5.8 on 08-09-2023
+# New version released 20.5.10 on 19-05-2026
 ## Changelogs
 - Added option to set default text in input field.
 ### Read the changes in README
 
-Alert Dialog ![Maven Central](https://img.shields.io/maven-central/v/io.github.tutorialsandroid/kalertdialog) ![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-KAlertDiaog-blue.svg?style=flat)](https://android-arsenal.com/details/1/7588) [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+Alert Dialog ![Maven Central](https://img.shields.io/maven-central/v/io.github.tutorialsandroid/kalertdialog) ![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 ===================
 AlertDialog for Android, a beautiful and material alert dialog to use in your android app.
 
 `Older verion of this library has been removed please use new version of this library.`
 
-## Will you buy a coffee for me
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.paypal.com/paypalme/tusharmasram)
-
-
 ## And Don't Forget To Follow Me On Instagram / Twitter
 
-<p align="center">Follow me on instagram to stay up-to-date https://instagram.com/a.masram444
+<p align="center">Follow me on instagram to stay up-to-date https://instagram.com/coderx09
 <p align="center">Follow me on twitter to stay up-to-date https://twitter.com/a_masram444
 
 ## Contributors
