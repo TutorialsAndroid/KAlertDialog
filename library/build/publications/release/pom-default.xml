@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.tutorialsandroid</groupId>
   <artifactId>kalertdialog</artifactId>
-  <version>20.5.8</version>
+  <version>20.5.10</version>
   <packaging>aar</packaging>
   <name>kalertdialog</name>
   <description>AlertDialog for Android, a beautiful and material alert dialog to use in your android app.</description>
@@ -27,4 +32,36 @@
     <developerConnection>scm:git:ssh://github.com/tutorialsandroid/kalertdialog.git</developerConnection>
     <url>https://github.com/tutorialsandroid/kalertdialog/tree/master</url>
   </scm>
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>2.2.10</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.appcompat</groupId>
+      <artifactId>appcompat</artifactId>
+      <version>1.7.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.android.material</groupId>
+      <artifactId>material</artifactId>
+      <version>1.14.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.TutorialsAndroid</groupId>
+      <artifactId>progressx</artifactId>
+      <version>v6.0.19</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.bumptech.glide</groupId>
+      <artifactId>glide</artifactId>
+      <version>5.0.7</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
 </project>

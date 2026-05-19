@@ -38,3 +38,7 @@ Thumbs.db
 Brewfile.lock.json
 Gemfile.lock
 .metals/
+create-central-bundle.ps1
+HowToPublish.txt
+library/build/
+sample/build/

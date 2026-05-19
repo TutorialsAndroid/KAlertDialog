@@ -2,26 +2,25 @@ apply plugin: 'com.android.application'
 
 android {
     namespace 'com.developer.kalert.alert'
-    compileSdk 34
+    compileSdk 37
 
     defaultConfig {
         applicationId "com.developer.kalert.alert"
-        minSdkVersion 19
-        targetSdkVersion 34
+        minSdkVersion 23
+        targetSdkVersion 37
         versionCode 36
-        versionName "20.5.8"
+        versionName "20.5.10"
     }
 
     compileOptions {
-        sourceCompatibility 1.8
-        targetCompatibility 1.8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     buildTypes {
-
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
         debug {
@@ -43,10 +42,15 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.11.0-alpha02'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.14.0'
 
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.12'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.14'
 
     implementation project(':library')
+}
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }

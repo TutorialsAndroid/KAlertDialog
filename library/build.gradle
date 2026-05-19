@@ -1,40 +1,42 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
 
 ext {
     PUBLISH_GROUP_ID = 'io.github.tutorialsandroid'
-    PUBLISH_VERSION = '20.5.8'
+    PUBLISH_VERSION = '20.5.10'
     PUBLISH_ARTIFACT_ID = 'kalertdialog'
     PUBLISH_DESCRIPTION = 'AlertDialog for Android, a beautiful and material alert dialog to use in your android app.'
     PUBLISH_URL = 'https://github.com/tutorialsandroid/KAlertDialog'
     PUBLISH_LICENSE_NAME = 'Apache License'
-    PUBLISH_LICENSE_URL =
-            'https://github.com/TutorialsAndroid/KAlertDialog/blob/master/LICENSE'
+    PUBLISH_LICENSE_URL = 'https://github.com/TutorialsAndroid/KAlertDialog/blob/master/LICENSE'
     PUBLISH_DEVELOPER_ID = 'tutorialsandroid'
     PUBLISH_DEVELOPER_NAME = 'Akshay Masram'
     PUBLISH_DEVELOPER_EMAIL = 'akshaysunilmasram@yahoo.com'
-    PUBLISH_SCM_CONNECTION =
-            'scm:git:github.com/tutorialsandroid/kalertdialog.git'
-    PUBLISH_SCM_DEVELOPER_CONNECTION =
-            'scm:git:ssh://github.com/tutorialsandroid/kalertdialog.git'
-    PUBLISH_SCM_URL =
-            'https://github.com/tutorialsandroid/kalertdialog/tree/master'
+    PUBLISH_SCM_CONNECTION = 'scm:git:github.com/tutorialsandroid/kalertdialog.git'
+    PUBLISH_SCM_DEVELOPER_CONNECTION = 'scm:git:ssh://github.com/tutorialsandroid/kalertdialog.git'
+    PUBLISH_SCM_URL = 'https://github.com/tutorialsandroid/kalertdialog/tree/master'
 }
-apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
 
 android {
     namespace 'com.developer.kalert'
 
-    compileSdk 34
+    compileSdk 37
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 34
+        minSdk 23
+        targetSdk 37
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
 
@@ -50,13 +52,14 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
 
-    //PROGRESS VIEW
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.14.0'
+
     implementation 'com.github.TutorialsAndroid:progressx:v6.0.19'
 
-    //GLIDE IMAGE LOADING LIBRARY
-    implementation 'com.github.bumptech.glide:glide:4.16.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    implementation 'com.github.bumptech.glide:glide:5.0.7'
+    annotationProcessor 'com.github.bumptech.glide:compiler:5.0.7'
 }
+
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"

@@ -1,7 +1,0 @@
-#Fri Sep 08 19:13:38 IST 2023
-base.0=C\:\\Akshay\\Android_Projects\\Android_Libraries\\KAlertDialog-master\\sample\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-base.1=C\:\\Akshay\\Android_Projects\\Android_Libraries\\KAlertDialog-master\\sample\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
-path.0=classes.dex
-path.1=classes2.dex
-renamed.0=classes.dex
-renamed.1=classes2.dex
