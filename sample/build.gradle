@@ -9,7 +9,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 37
         versionCode 36
-        versionName "20.5.10"
+        versionName "20.5.11"
     }
 
     compileOptions {

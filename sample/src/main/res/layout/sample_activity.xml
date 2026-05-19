@@ -131,6 +131,15 @@
             android:layout_below="@id/custom_url_image_big"
             android:layout_margin="10dp"
             android:text="@string/edit_text_dialog"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/btn_with_custom_drawable"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/edit_text_dialog"
+            android:layout_margin="10dp"
+            android:text="@string/btn_with_custom_drawable"/>
     </RelativeLayout>
 
 </ScrollView>

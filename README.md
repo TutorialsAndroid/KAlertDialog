@@ -202,6 +202,17 @@ A dialog with input-field
     dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
             |WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM); //this will allow to show keyboard
 
+Custom drawable to confirm button and cancel button
+
+`  new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
+   .setTitleText("Lorem Ipsum")
+   .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+   .setConfirmClickListener("OK", null)
+   .setCancelClickListener("Cancel", null)
+   .confirmButtonDrawable(R.drawable.red_button_background)
+   .cancelButtonDrawable(R.drawable.button_background)
+   .show();`
+
 To Hide Cancel And Confirm Button：
 
     new KAlertDialog(this, KAlertDialog.CUSTOM_IMAGE_TYPE)

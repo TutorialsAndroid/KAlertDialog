@@ -35,6 +35,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.custom_url_image_circle).setOnClickListener(this);
         findViewById(R.id.custom_url_image_big).setOnClickListener(this);
         findViewById(R.id.edit_text_dialog).setOnClickListener(this);
+        findViewById(R.id.btn_with_custom_drawable).setOnClickListener(this);
         findViewById(R.id.progress_dialog).setOnClickListener(this);
     }
 
@@ -71,7 +72,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
                     .setTitleText("Lorem Ipsum")
                     .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-                    //.setContentFont(R.font.sf)
+                    .setContentFontAssets("fonts/sf.ttf")
                     .setConfirmClickListener("OK", null)
                     .show();
         }
@@ -117,8 +118,6 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                     .setTitleText("Are you sure?")
                     .setContentText("Won't be able to recover this file!")
                     .showCancelButton(true)
-                    //.setConfirmButtonFont(R.font.sf)
-                    .setCancelButtonFontAssets("fonts/sf.ttf")
                     .setCancelClickListener("No,cancel plx!", sDialog -> sDialog.setTitleText("Cancelled!")
                             .setContentText("Your imaginary file is safe :)")
                             .showCancelButton(false)
@@ -176,6 +175,17 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             dialog.show();
             dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
                     | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM); //this will allow to show keyboard
+        }
+
+        if (v.getId() == R.id.btn_with_custom_drawable) {
+            new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
+                    .setTitleText("Lorem Ipsum")
+                    .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+                    .setConfirmClickListener("OK", null)
+                    .setCancelClickListener("Cancel", null)
+                    .confirmButtonDrawable(R.drawable.red_button_background)
+                    .cancelButtonDrawable(R.drawable.button_background)
+                    .show();
         }
 
         if (v.getId() == R.id.progress_dialog) {

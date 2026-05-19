@@ -13,4 +13,5 @@
     <string name="a_message_with_a_custom_image_big">A message with a custom image big</string>
     <string name="title_gravity">A title with gravity changed</string>
     <string name="edit_text_dialog">Edit text dialog</string>
+    <string name="btn_with_custom_drawable">Button with custom drawable</string>
 </resources>
