@@ -204,7 +204,7 @@ A dialog with input-field
     dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
             |WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM); //this will allow to show keyboard
 
-Custom drawable to confirm button and cancel button
+Custom drawable to confirm button and cancel button (*NEW UPDATED 19-05-2026)
 
 <p>
 <img src="https://raw.githubusercontent.com/TutorialsAndroid/KAlertDialog/refs/heads/master/art/Screenshot_1779197194.png" width="250" alt="KAlert Dialog"/>
