@@ -206,14 +206,14 @@ A dialog with input-field
 
 Custom drawable to confirm button and cancel button
 
-`  new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
-   .setTitleText("Lorem Ipsum")
-   .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
-   .setConfirmClickListener("OK", null)
-   .setCancelClickListener("Cancel", null)
-   .confirmButtonDrawable(R.drawable.red_button_background)
-   .cancelButtonDrawable(R.drawable.button_background)
-   .show();`
+	  new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
+	   .setTitleText("Lorem Ipsum")
+	   .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+	   .setConfirmClickListener("OK", null)
+	   .setCancelClickListener("Cancel", null)
+	   .confirmButtonDrawable(R.drawable.red_button_background)
+	   .cancelButtonDrawable(R.drawable.button_background)
+	   .show();
 
 To Hide Cancel And Confirm Button：
 
