@@ -42,3 +42,4 @@ create-central-bundle.ps1
 HowToPublish.txt
 library/build/
 sample/build/
+/gradle/gradle-daemon-jvm.properties
