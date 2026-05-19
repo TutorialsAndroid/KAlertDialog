@@ -24,6 +24,8 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 
 [paulocoutinhox (Paulo Coutinho)](https://github.com/paulocoutinhox)
 
+[SamarthaKV29 (Sam V)](https://github.com/SamarthaKV29)
+
 
 `Latest version of this library is migrated to androidx`
 
