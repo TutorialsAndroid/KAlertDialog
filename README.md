@@ -206,6 +206,10 @@ A dialog with input-field
 
 Custom drawable to confirm button and cancel button
 
+<p>
+<img src="https://raw.githubusercontent.com/TutorialsAndroid/KAlertDialog/refs/heads/master/art/Screenshot_1779197194.png" width="250" alt="KAlert Dialog"/>
+</p>
+
 	  new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
 	   .setTitleText("Lorem Ipsum")
 	   .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
