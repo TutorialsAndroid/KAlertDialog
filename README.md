@@ -63,7 +63,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. On your root build.gradle, add mavenCentral() to the allprojects section. On your module build.gradle, add
 
 	dependencies {
-          implementation 'io.github.tutorialsandroid:kalertdialog:20.4.8'
+          implementation 'io.github.tutorialsandroid:kalertdialog:20.5.10'
           implementation 'com.github.TutorialsAndroid:progressx:v6.0.19' //required for kalertdialog lib
 	}
 
