@@ -82,6 +82,96 @@ Step 2. On your root build.gradle, add mavenCentral() to the allprojects section
           implementation 'io.github.tutorialsandroid:kalertdialog:20.5.15'
           implementation 'io.github.tutorialsandroid:progressx:7.0.5' //required for kalertdialog lib
 	}
+	
+## ⚠️ Important: compileSdk Requirement
+
+Starting from the latest versions of **KAlertDialog** and **ProgressX**, this library is built with the latest Android SDK.
+
+If you are using:
+
+```gradle
+implementation 'io.github.tutorialsandroid:kalertdialog:20.5.15'
+implementation 'io.github.tutorialsandroid:progressx:7.0.5'
+````
+
+your app must compile against **Android API 37 or higher**.
+
+### Required configuration
+
+In your app-level `build.gradle`, make sure your `compileSdk` is set to **37** or higher:
+
+```gradle
+android {
+    compileSdk 37
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 36
+    }
+}
+```
+
+For Kotlin DSL:
+
+```kotlin
+android {
+    compileSdk = 37
+
+    defaultConfig {
+        minSdk = 23
+        targetSdk = 36
+    }
+}
+```
+
+### Why is this required?
+
+If your project is using an older `compileSdk`, for example:
+
+```gradle
+compileSdk 36
+```
+
+you may see an error like this:
+
+```txt
+Dependency 'io.github.tutorialsandroid:kalertdialog:20.5.15' requires libraries and applications
+that depend on it to compile against version 37 or later of the Android APIs.
+
+:app is currently compiled against android-36.1.
+```
+
+This happens because the latest version of KAlertDialog and ProgressX is compiled with **Android API 37**.
+
+### Important note
+
+Updating `compileSdk` is safe and different from updating `targetSdk` or `minSdk`.
+
+* `compileSdk` allows your app to compile with the latest Android APIs.
+* `targetSdk` controls which Android runtime behavior changes your app opts into.
+* `minSdk` controls the minimum Android version your app can be installed on.
+
+So you can update only `compileSdk` to 37 while keeping your existing `targetSdk` and `minSdk`.
+
+### Solution
+
+Update your app-level Gradle file:
+
+```gradle
+android {
+    compileSdk 37
+}
+```
+
+Then sync the project again in Android Studio.
+
+If Android Studio asks to install Android API 37, install it from:
+
+```txt
+Tools > SDK Manager > Android SDK
+```
+
+After updating `compileSdk`, the AAR metadata error should be resolved.
 
 ## Usage
 
