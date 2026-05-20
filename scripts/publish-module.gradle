@@ -4,6 +4,8 @@ apply plugin: 'signing'
 group = PUBLISH_GROUP_ID
 version = PUBLISH_VERSION
 
+def isJitPack = System.getenv("JITPACK") == "true"
+
 afterEvaluate {
     publishing {
         publications {
@@ -46,17 +48,27 @@ afterEvaluate {
         }
     }
 
+    def hasSigningKeys =
+            project.hasProperty("signing.keyId") &&
+                    project.hasProperty("signing.password") &&
+                    project.hasProperty("signing.secretKeyRingFile") &&
+                    project.property("signing.keyId") &&
+                    project.property("signing.password") &&
+                    project.property("signing.secretKeyRingFile")
+
     signing {
         required {
-            gradle.taskGraph.allTasks.any { task ->
-                task.name.toLowerCase().contains("publish")
-            }
+            !isJitPack &&
+                    hasSigningKeys &&
+                    !version.toString().endsWith("SNAPSHOT")
         }
 
         sign publishing.publications.release
     }
-}
-ext["signing.keyId"] = rootProject.ext["signing.keyId"]
-ext["signing.password"] = rootProject.ext["signing.password"]
-ext["signing.secretKeyRingFile"] = rootProject.ext["signing.secretKeyRingFile"]
 
+    tasks.withType(Sign).configureEach {
+        onlyIf {
+            !isJitPack && hasSigningKeys
+        }
+    }
+}
