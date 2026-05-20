@@ -8,7 +8,7 @@ android {
         applicationId "com.developer.kalert.alert"
         minSdkVersion 23
         targetSdkVersion 37
-        versionCode 36
+        versionCode 40
         versionName "20.5.11"
     }
 
@@ -31,11 +31,6 @@ android {
 
     lint {
         abortOnError false
-    }
-
-    compileOptions {
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
     }
 }
 
