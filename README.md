@@ -228,7 +228,7 @@ A title with gravity changed：
 
     new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
         .setTitleText("Lorem Ipsum")
-        .setTitleTextGravity(Gravity.START) //you can specify your own gravity
+        .setTitleTextLayoutGravity(Gravity.START); //you can specify your own gravity
         .setContentText("Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
         .setConfirmClickListener("OK", null)
         .show();
