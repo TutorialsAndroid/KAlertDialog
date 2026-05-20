@@ -204,7 +204,7 @@ A dialog with input-field
     dialog.setTitleText("Edit Text");
     dialog.setConfirmClickListener("OK", kAlertDialog -> {
         kAlertDialog.dismissWithAnimation();
-        kAlertDialog.getInputText(); //you get the input text by calling this
+        kAlertDialog.getInputText(); //you get the input text by calling thi`s
         Toast.makeText(this, kAlertDialog.getInputText(), Toast.LENGTH_SHORT).show();
     });
     dialog.show();
