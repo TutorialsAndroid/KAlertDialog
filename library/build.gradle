@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 
 ext {
     PUBLISH_GROUP_ID = 'io.github.tutorialsandroid'
-    PUBLISH_VERSION = '20.5.13'
+    PUBLISH_VERSION = '20.5.14'
     PUBLISH_ARTIFACT_ID = 'kalertdialog'
     PUBLISH_DESCRIPTION = 'AlertDialog for Android, a beautiful and material alert dialog to use in your android app.'
     PUBLISH_URL = 'https://github.com/tutorialsandroid/KAlertDialog'
@@ -57,7 +57,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'com.google.android.material:material:1.14.0'
 
-    implementation 'com.github.TutorialsAndroid:progressx:v6.0.19'
+    implementation 'com.github.TutorialsAndroid:progressx:v7.0.5'
 
     implementation 'com.github.bumptech.glide:glide:5.0.7'
     annotationProcessor 'com.github.bumptech.glide:compiler:5.0.7'

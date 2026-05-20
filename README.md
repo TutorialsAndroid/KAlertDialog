@@ -1,7 +1,8 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released 20.5.11 on 19-05-2026
+# New version released 20.5.14 on 19-05-2026
 ## Changelogs
+- Updated progressx library to latest version
 - Added support for custom button drawables
 - Upgrade Gradle Wrapper to 9.4.1 and Android Gradle Plugin to 9.2.1.
 - Update compileSdk and targetSdk to 37 across the project.
@@ -73,8 +74,8 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. On your root build.gradle, add mavenCentral() to the allprojects section. On your module build.gradle, add
 
 	dependencies {
-          implementation 'io.github.tutorialsandroid:kalertdialog:20.5.11'
-          implementation 'com.github.TutorialsAndroid:progressx:v6.0.19' //required for kalertdialog lib
+          implementation 'io.github.tutorialsandroid:kalertdialog:20.5.14'
+          implementation 'io.github.tutorialsandroid:progressx:7.0.5' //required for kalertdialog lib
 	}
 
 ## Usage
