@@ -352,7 +352,11 @@ To Change the font of only content：
     To apply custom downloaded fonts you have place your font file in "assest/fonts" folder or under "res/font" folder. Below 
     is the screen-shot for reference about how to place your font file in assest folder
 
+    kAlertDialog.setContentFontAssets("fonts/poppins_regular.ttf");
+
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/structure.png)
+
+You can also have font in the res/font folder and apply directly.
 
     new KAlertDialog(this, KAlertDialog.NORMAL_TYPE)
         .setTitleText("Lorem Ipsum")
