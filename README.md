@@ -5,8 +5,9 @@
 
 <img src="https://raw.githubusercontent.com/TutorialsAndroid/KAlertDialog/refs/heads/master/art/banner.png"  align="center"/>
 
-New version released 20.5.15 on 19-05-2026
+New version released 20.6.15 on 20-05-2026
 ## Changelogs
+- Added option to set font weight for title and content
 - Updated progressx library to latest version
 - Added support for custom button drawables
 - Upgrade Gradle Wrapper to 9.4.1 and Android Gradle Plugin to 9.2.1.
@@ -47,6 +48,7 @@ AlertDialog for Android, a beautiful and material alert dialog to use in your an
 - Materialistic alert dialog
 - Auto dark mode
 - Change font style
+- Change font weight
 - Change text color
 - Change button color and background
 - Change button text color
@@ -79,7 +81,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. On your root build.gradle, add mavenCentral() to the allprojects section. On your module build.gradle, add
 
 	dependencies {
-          implementation 'io.github.tutorialsandroid:kalertdialog:20.5.15'
+          implementation 'io.github.tutorialsandroid:kalertdialog:20.6.15'
           implementation 'io.github.tutorialsandroid:progressx:7.0.5' //required for kalertdialog lib
 	}
 	
@@ -90,7 +92,7 @@ Starting from the latest versions of **KAlertDialog** and **ProgressX**, this li
 If you are using:
 
 ```gradle
-implementation 'io.github.tutorialsandroid:kalertdialog:20.5.15'
+implementation 'io.github.tutorialsandroid:kalertdialog:20.6.15'
 implementation 'io.github.tutorialsandroid:progressx:7.0.5'
 ````
 
@@ -135,7 +137,7 @@ compileSdk 36
 you may see an error like this:
 
 ```txt
-Dependency 'io.github.tutorialsandroid:kalertdialog:20.5.15' requires libraries and applications
+Dependency 'io.github.tutorialsandroid:kalertdialog:20.6.15' requires libraries and applications
 that depend on it to compile against version 37 or later of the Android APIs.
 
 :app is currently compiled against android-36.1.
@@ -369,6 +371,11 @@ To Change the color of title and content
 
     .setTitleColor(R.color.yourColorName)
     .setContentColor(R.color.yourColorName)
+
+To Change the font weight of title and content
+
+    .setTitleFontWeight(Typeface.BOLD)
+    .setContentFontWeight(Typeface.ITALIC)
 
 To Change the content textAlignment
 

@@ -1,5 +1,6 @@
 package com.developer.kalert.alert;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.Gravity;

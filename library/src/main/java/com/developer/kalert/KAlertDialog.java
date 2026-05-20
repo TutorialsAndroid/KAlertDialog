@@ -69,6 +69,8 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private String titleFontAssets, contentFontAssets, confirmButtonFontAssets, cancelButtonFontAssets;
     private int displayType;
     private int titleFont = 0, contentFont = 0, confirmButtonFont = 0, cancelButtonFont = 0;
+    private int titleFontWeight = Typeface.NORMAL;
+    private int contentFontWeight = Typeface.NORMAL;
     private int titleColor = 0, contentColor = 0,
             confirmTextColor = android.R.color.white, cancelTextColor = android.R.color.white;
     private int drawableColor = 0;
@@ -317,6 +319,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             } else {
                 mTitleTextView.setText(Html.fromHtml(mTitleText));
             }
+            mTitleTextView.setTypeface(mTitleTextView.getTypeface(), titleFontWeight);
         } else {
             showTitleText(false);
         }
@@ -463,6 +466,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             } else {
                 mContentTextView.setText(Html.fromHtml(mContentText));
             }
+            mContentTextView.setTypeface(mContentTextView.getTypeface(), contentFontWeight);
         } else {
             showContentText(false);
         }
@@ -610,6 +614,22 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     public KAlertDialog setContentFont(int font) {
         this.contentFont = font;
+        return this;
+    }
+
+    public KAlertDialog setTitleFontWeight(int fontWeight) {
+        this.titleFontWeight = fontWeight;
+        if (mTitleTextView != null) {
+            mTitleTextView.setTypeface(mTitleTextView.getTypeface(), fontWeight);
+        }
+        return this;
+    }
+
+    public KAlertDialog setContentFontWeight(int fontWeight) {
+        this.contentFontWeight = fontWeight;
+        if (mContentTextView != null) {
+            mContentTextView.setTypeface(mContentTextView.getTypeface(), fontWeight);
+        }
         return this;
     }
 
