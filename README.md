@@ -3,6 +3,8 @@
   KAlertDialog
 </h1>
 
+<img src="https://raw.githubusercontent.com/TutorialsAndroid/KAlertDialog/refs/heads/master/art/banner.png"  align="center"/>
+
 New version released 20.5.15 on 19-05-2026
 ## Changelogs
 - Updated progressx library to latest version
