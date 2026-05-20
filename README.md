@@ -1,8 +1,16 @@
 ![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
 
-# New version released 20.5.10 on 19-05-2026
+# New version released 20.5.11 on 19-05-2026
 ## Changelogs
-- Added option to set default text in input field.
+- Added support for custom button drawables
+- Upgrade Gradle Wrapper to 9.4.1 and Android Gradle Plugin to 9.2.1.
+- Update compileSdk and targetSdk to 37 across the project.
+- Increase minSdkVersion to 23.
+- Update dependencies including Glide 5.0.7, Material 1.14.0, and AppCompat 1.7.1.
+- Refactor publish-module.gradle to utilize modern maven-publish components and signing.
+- Configure Java toolchain to version 17 and set Java 11 compatibility.
+- Clean up gradle.properties and update .gitignore.
+  
 ### Read the changes in README
 
 Alert Dialog ![Maven Central](https://img.shields.io/maven-central/v/io.github.tutorialsandroid/kalertdialog) ![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat) [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle) [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
