@@ -1,8 +1,9 @@
-# KAlertDialog
+<h1>
+  <img src="https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png" width="55" align="center" />
+  KAlertDialog
+</h1>
 
-![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/sample/src/main/res/mipmap-xxhdpi/ic_launcher.png)
-
-# New version released 20.5.15 on 19-05-2026
+New version released 20.5.15 on 19-05-2026
 ## Changelogs
 - Updated progressx library to latest version
 - Added support for custom button drawables
