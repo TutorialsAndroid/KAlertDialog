@@ -8,8 +8,8 @@ android {
         applicationId "com.developer.kalert.alert"
         minSdkVersion 23
         targetSdkVersion 37
-        versionCode 45
-        versionName "20.6.15"
+        versionCode 46
+        versionName "21.0.0"
     }
 
     compileOptions {

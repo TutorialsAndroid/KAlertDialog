@@ -11,38 +11,42 @@
     android:background="?attr/alertDialogDark"
     android:padding="10dp">
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/custom_image_frame"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/custom_image"
-            android:layout_width="53dp"
-            android:layout_height="53dp"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
             android:visibility="gone"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
             tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/custom_big_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
             android:scaleType="fitCenter"
+            android:visibility="gone"
             tools:ignore="ContentDescription" />
 
         <com.developer.progressx.ProgressWheel
             android:id="@+id/image_loading"
             android:layout_width="53dp"
             android:layout_height="53dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
+            android:layout_gravity="center"
             wheel:matProg_barColor="?attr/alertDialogProgressColor"
             wheel:matProg_progressIndeterminate="true"
-            android:visibility="gone"/>
-    </RelativeLayout>
+            android:visibility="gone" />
+
+    </FrameLayout>
 
     <FrameLayout
         android:id="@+id/error_frame"

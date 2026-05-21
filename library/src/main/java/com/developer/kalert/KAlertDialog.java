@@ -42,6 +42,15 @@ import com.bumptech.glide.request.target.Target;
 import com.developer.progressx.ProgressWheel;
 import com.google.android.material.textfield.TextInputEditText;
 
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.GradientDrawable;
+import android.text.InputFilter;
+import android.text.InputType;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+
+import com.bumptech.glide.request.RequestOptions;
+
 import java.util.Objects;
 
 public class KAlertDialog extends AlertDialog implements View.OnClickListener {
@@ -88,8 +97,37 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     private final ProgressHelper mProgressHelper;
     private ProgressWheel imageLoading;
+
     private KAlertDialog.KAlertClickListener mCancelClickListener;
     private KAlertDialog.KAlertClickListener mConfirmClickListener;
+
+    private InputValidator inputValidator;
+    private InputConfirmListener inputConfirmListener;
+    private DialogShowListener dialogShowListener;
+    private DialogDismissListener dialogDismissListener;
+
+    private String inputErrorMessage;
+
+    private View customView;
+    private int customViewLayoutRes = 0;
+
+    private Integer dialogBackgroundColor = null;
+    private Float dialogCornerRadiusDp = null;
+    private Float dialogElevationDp = null;
+    private Float dialogDimAmount = null;
+
+    private int confirmButtonTextSize = 0;
+    private int cancelButtonTextSize = 0;
+    private int confirmButtonFontWeight = Typeface.NORMAL;
+    private int cancelButtonFontWeight = Typeface.NORMAL;
+    private boolean confirmButtonAllCaps = false;
+    private boolean cancelButtonAllCaps = false;
+
+    private int confirmButtonIconRes = 0;
+    private int cancelButtonIconRes = 0;
+
+    private int urlImagePlaceholderRes = 0;
+    private int urlImageErrorRes = 0;
 
     private int mAlertType;
     public static final int NORMAL_TYPE = 0;
@@ -107,10 +145,36 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public static boolean DARK_STYLE = false;
 
     public static final int INPUT_TYPE = 7;
+
+    public static final int CUSTOM_VIEW_TYPE = 10;
+    public static final int INFO_TYPE = 11;
+    public static final int QUESTION_TYPE = 12;
+
+    public static final int STYLE_CLASSIC = 0;
+    public static final int STYLE_MODERN = 1;
+    public static final int STYLE_MINIMAL = 2;
+    public static final int STYLE_ROUNDED = 3;
+
     private TextInputEditText mEditText;
 
     public interface KAlertClickListener {
         void onClick(KAlertDialog kAlertDialog);
+    }
+
+    public interface InputValidator {
+        boolean isValid(String input);
+    }
+
+    public interface InputConfirmListener {
+        void onConfirm(KAlertDialog kAlertDialog, String input);
+    }
+
+    public interface DialogShowListener {
+        void onShow(KAlertDialog kAlertDialog);
+    }
+
+    public interface DialogDismissListener {
+        void onDismiss(KAlertDialog kAlertDialog);
     }
 
     public KAlertDialog(Context context) {
@@ -147,6 +211,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mCancelButton = findViewById(R.id.cancel_button);
         mConfirmButton.setOnClickListener(this);
         mCancelButton.setOnClickListener(this);
+        applyDialogWindowDefaults();
 
         setTitleText(mTitleText);
         setTitleTextGravity(titleTextLayoutGravity);
@@ -169,6 +234,10 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         changeAlertType(mAlertType, true);
         setInputFieldHint(mInputFieldHint);
         setInputFieldText(mInputFieldText);
+
+        applyDialogAppearance();
+        applyButtonAppearance();
+        applyCustomViewIfNeeded();
     }
 
     public KAlertDialog(Context context, int alertType, boolean autoNightMode) {
@@ -216,6 +285,123 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mOverlayOutAnim.setDuration(120);
     }
 
+    private void applyDialogWindowDefaults() {
+        if (getWindow() != null) {
+            getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        }
+    }
+
+    private void applyDialogAppearance() {
+        if (mDialogView == null) {
+            return;
+        }
+
+        if (dialogBackgroundColor != null || dialogCornerRadiusDp != null) {
+            GradientDrawable background = new GradientDrawable();
+            background.setShape(GradientDrawable.RECTANGLE);
+
+            if (dialogBackgroundColor != null) {
+                background.setColor(dialogBackgroundColor);
+            } else {
+                background.setColor(Color.TRANSPARENT);
+            }
+
+            if (dialogCornerRadiusDp != null) {
+                background.setCornerRadius(dpToPx(dialogCornerRadiusDp));
+            }
+
+            mDialogView.setBackground(background);
+        }
+
+        if (dialogElevationDp != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            mDialogView.setElevation(dpToPx(dialogElevationDp));
+        }
+
+        if (dialogDimAmount != null && getWindow() != null) {
+            WindowManager.LayoutParams params = getWindow().getAttributes();
+            params.dimAmount = dialogDimAmount;
+            getWindow().setAttributes(params);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        }
+    }
+
+    private void applyButtonAppearance() {
+        if (mConfirmButton != null) {
+            if (confirmButtonTextSize != 0) {
+                mConfirmButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, confirmButtonTextSize);
+            }
+
+            mConfirmButton.setTypeface(mConfirmButton.getTypeface(), confirmButtonFontWeight);
+            mConfirmButton.setAllCaps(confirmButtonAllCaps);
+
+            if (confirmButtonIconRes != 0) {
+                mConfirmButton.setCompoundDrawablesRelativeWithIntrinsicBounds(confirmButtonIconRes, 0, 0, 0);
+                mConfirmButton.setCompoundDrawablePadding((int) dpToPx(8));
+            }
+        }
+
+        if (mCancelButton != null) {
+            if (cancelButtonTextSize != 0) {
+                mCancelButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, cancelButtonTextSize);
+            }
+
+            mCancelButton.setTypeface(mCancelButton.getTypeface(), cancelButtonFontWeight);
+            mCancelButton.setAllCaps(cancelButtonAllCaps);
+
+            if (cancelButtonIconRes != 0) {
+                mCancelButton.setCompoundDrawablesRelativeWithIntrinsicBounds(cancelButtonIconRes, 0, 0, 0);
+                mCancelButton.setCompoundDrawablePadding((int) dpToPx(8));
+            }
+        }
+    }
+
+    private void applyCustomViewIfNeeded() {
+        if (mCustomViewContainer == null) {
+            return;
+        }
+
+        if (customView != null) {
+            mCustomViewContainer.removeAllViews();
+            mCustomViewContainer.addView(customView);
+        } else if (customViewLayoutRes != 0) {
+            View inflatedView = LayoutInflater.from(context).inflate(customViewLayoutRes, mCustomViewContainer, false);
+            mCustomViewContainer.removeAllViews();
+            mCustomViewContainer.addView(inflatedView);
+            customView = inflatedView;
+        }
+    }
+
+    private boolean validateInputIfNeeded() {
+        if (mAlertType != INPUT_TYPE) {
+            return true;
+        }
+
+        if (inputValidator == null) {
+            return true;
+        }
+
+        String input = getInputText();
+        boolean isValid = inputValidator.isValid(input);
+
+        if (!isValid && mEditText != null) {
+            if (inputErrorMessage != null) {
+                mEditText.setError(inputErrorMessage);
+            } else {
+                mEditText.setError("Invalid input");
+            }
+        }
+
+        return isValid;
+    }
+
+    private float dpToPx(float dp) {
+        return TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                dp,
+                getContext().getResources().getDisplayMetrics()
+        );
+    }
+
     private void restore() {
         mCustomImage.setVisibility(GONE);
         mCustomBigImage.setVisibility(GONE);
@@ -224,6 +410,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mSuccessFrame.setVisibility(GONE);
         mWarningFrame.setVisibility(GONE);
         mProgressFrame.setVisibility(GONE);
+
+        if (mCustomViewContainer != null) {
+            mCustomViewContainer.setVisibility(GONE);
+        }
+
         mConfirmButton.setVisibility(View.VISIBLE);
 
         mConfirmButton.setBackgroundResource(R.drawable.button_background);
@@ -290,6 +481,18 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 //                    setConfirmButtonColor(mColor);
                     setConfirmButtonDrawable(mConfirmButtonDrawable);
                     break;
+                case CUSTOM_VIEW_TYPE:
+                    showCustomView();
+                    setConfirmButtonDrawable(mConfirmButtonDrawable);
+                    break;
+
+                case INFO_TYPE:
+                    setConfirmButtonDrawable(mConfirmButtonDrawable);
+                    break;
+
+                case QUESTION_TYPE:
+                    setConfirmButtonDrawable(mConfirmButtonDrawable);
+                    break;
             }
             if (!fromCreate) {
                 playAnimation();
@@ -299,8 +502,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     public void changeAlertType(int alertType) {
         changeAlertType(alertType, false);
-        hideInputView();
-        hideKeyboard();
+
+        if (alertType != INPUT_TYPE && alertType != CUSTOM_VIEW_TYPE) {
+            hideInputView();
+            hideKeyboard();
+        }
     }
 
     public KAlertDialog setTitleText(String text) {
@@ -396,51 +602,82 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private KAlertDialog setURLImage1(String imageURL, int displayType) {
         this.imageURL = imageURL;
         this.displayType = displayType;
-        if (mCustomImage != null && mCustomBigImage != null && imageLoading != null) {
-            imageLoading.setVisibility(View.VISIBLE);
 
-            switch (displayType) {
-                case IMAGE_BIG:
-                    mCustomBigImage.setVisibility(View.VISIBLE);
-                    Glide.with(mCustomBigImage)
-                            .load(imageURL)
-                            .listener(new RequestListener<Drawable>() {
-                                @Override
-                                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                                    imageLoading.setVisibility(GONE);
-                                    return false;
-                                }
-
-                                @Override
-                                public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                                    imageLoading.setVisibility(GONE);
-                                    return false;
-                                }
-                            })
-                            .into(mCustomBigImage);
-                    break;
-                case IMAGE_CIRCLE:
-                    mCustomImage.setVisibility(View.VISIBLE);
-                    Glide.with(mCustomImage)
-                            .load(imageURL)
-                            .listener(new RequestListener<Drawable>() {
-                                @Override
-                                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                                    imageLoading.setVisibility(GONE);
-                                    return false;
-                                }
-
-                                @Override
-                                public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                                    imageLoading.setVisibility(GONE);
-                                    return false;
-                                }
-                            })
-                            .circleCrop()
-                            .into(mCustomImage);
-                    break;
-            }
+        if (mCustomImage == null || mCustomBigImage == null || imageLoading == null) {
+            return this;
         }
+
+        if (imageURL == null || imageURL.trim().isEmpty()) {
+            imageLoading.setVisibility(GONE);
+            mCustomImage.setVisibility(GONE);
+            mCustomBigImage.setVisibility(GONE);
+            return this;
+        }
+
+        imageLoading.setVisibility(View.VISIBLE);
+
+        RequestOptions requestOptions = new RequestOptions();
+
+        if (urlImagePlaceholderRes != 0) {
+            requestOptions = requestOptions.placeholder(urlImagePlaceholderRes);
+        }
+
+        if (urlImageErrorRes != 0) {
+            requestOptions = requestOptions.error(urlImageErrorRes);
+        }
+
+        switch (displayType) {
+            case IMAGE_BIG:
+                mCustomImage.setVisibility(GONE);
+                mCustomBigImage.setVisibility(View.VISIBLE);
+
+                Glide.with(mCustomBigImage)
+                        .load(imageURL)
+                        .apply(requestOptions)
+                        .listener(new RequestListener<Drawable>() {
+                            @Override
+                            public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                                imageLoading.setVisibility(GONE);
+                                return false;
+                            }
+
+                            @Override
+                            public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                                imageLoading.setVisibility(GONE);
+                                return false;
+                            }
+                        })
+                        .into(mCustomBigImage);
+                break;
+
+            case IMAGE_CIRCLE:
+                mCustomBigImage.setVisibility(GONE);
+                mCustomImage.setVisibility(View.VISIBLE);
+
+                Glide.with(mCustomImage)
+                        .load(imageURL)
+                        .apply(requestOptions.circleCrop())
+                        .listener(new RequestListener<Drawable>() {
+                            @Override
+                            public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                                imageLoading.setVisibility(GONE);
+                                return false;
+                            }
+
+                            @Override
+                            public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                                imageLoading.setVisibility(GONE);
+                                return false;
+                            }
+                        })
+                        .into(mCustomImage);
+                break;
+
+            default:
+                imageLoading.setVisibility(GONE);
+                break;
+        }
+
         return this;
     }
 
@@ -717,10 +954,28 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         return this;
     }
 
+    @Override
     protected void onStart() {
         super.onStart();
-        mDialogView.startAnimation(mModalInAnim);
+
+        if (mDialogView != null && mModalInAnim != null) {
+            mDialogView.startAnimation(mModalInAnim);
+        }
+
         playAnimation();
+
+        if (dialogShowListener != null) {
+            dialogShowListener.onShow(this);
+        }
+    }
+
+    @Override
+    public void dismiss() {
+        super.dismiss();
+
+        if (dialogDismissListener != null) {
+            dialogDismissListener.onDismiss(this);
+        }
     }
 
     @Override
@@ -780,8 +1035,20 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     public void dismissWithAnimation(boolean fromCancel) {
         mCloseFromCancel = fromCancel;
-        mConfirmButton.startAnimation(mOverlayOutAnim);
-        mDialogView.startAnimation(mModalOutAnim);
+
+        if (mConfirmButton != null && mOverlayOutAnim != null) {
+            mConfirmButton.startAnimation(mOverlayOutAnim);
+        }
+
+        if (mDialogView != null && mModalOutAnim != null) {
+            mDialogView.startAnimation(mModalOutAnim);
+        } else {
+            if (fromCancel) {
+                KAlertDialog.super.cancel();
+            } else {
+                KAlertDialog.super.dismiss();
+            }
+        }
     }
 
     public static int spToPx(float sp, Context context) {
@@ -937,7 +1204,18 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
             } else {
                 dismissWithAnimation();
             }
+
         } else if (v.getId() == R.id.custom_confirm_button) {
+
+            if (!validateInputIfNeeded()) {
+                return;
+            }
+
+            if (mAlertType == INPUT_TYPE && inputConfirmListener != null) {
+                inputConfirmListener.onConfirm(KAlertDialog.this, getInputText());
+                return;
+            }
+
             if (mConfirmClickListener != null) {
                 mConfirmClickListener.onClick(KAlertDialog.this);
             } else {
@@ -948,6 +1226,14 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     public ProgressHelper getProgressHelper() {
         return mProgressHelper;
+    }
+
+    private void showCustomView() {
+        if (mCustomViewContainer != null) {
+            applyCustomViewIfNeeded();
+            mCustomViewContainer.setVisibility(View.VISIBLE);
+            hideKeyboard();
+        }
     }
 
     private void showInputView() {
@@ -980,12 +1266,23 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     }
 
     public String getInputText() {
+        if (mEditText == null || mEditText.getText() == null) {
+            return "";
+        }
         return mEditText.getText().toString();
     }
 
     private void showKeyboard() {
+        if (mEditText == null) {
+            return;
+        }
+
         final InputMethodManager imm = (InputMethodManager)
                 context.getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        if (imm == null) {
+            return;
+        }
 
         if (!mEditText.hasFocus()) {
             mEditText.requestFocus();
@@ -996,9 +1293,10 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     private void hideKeyboard() {
         if (mEditText != null) {
-            InputMethodManager imm = (InputMethodManager) context.getSystemService
-                    (Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(mEditText.getWindowToken(), 0);
+            InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm != null) {
+                imm.hideSoftInputFromWindow(mEditText.getWindowToken(), 0);
+            }
         }
     }
 
@@ -1009,5 +1307,289 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         } else {
             return false;
         }
+    }
+
+    public KAlertDialog setCustomView(View view) {
+        this.customView = view;
+        this.customViewLayoutRes = 0;
+
+        if (mCustomViewContainer != null && customView != null) {
+            mCustomViewContainer.removeAllViews();
+            mCustomViewContainer.addView(customView);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setCustomView(int layoutResId) {
+        this.customViewLayoutRes = layoutResId;
+        this.customView = null;
+
+        if (mCustomViewContainer != null && customViewLayoutRes != 0) {
+            View inflatedView = LayoutInflater.from(context).inflate(customViewLayoutRes, mCustomViewContainer, false);
+            mCustomViewContainer.removeAllViews();
+            mCustomViewContainer.addView(inflatedView);
+            customView = inflatedView;
+        }
+
+        return this;
+    }
+
+    public View getCustomView() {
+        return customView;
+    }
+
+    public KAlertDialog setDialogBackgroundColor(@ColorInt int color) {
+        this.dialogBackgroundColor = color;
+        applyDialogAppearance();
+        return this;
+    }
+
+    public KAlertDialog setDialogBackgroundColorResource(int colorRes) {
+        this.dialogBackgroundColor = ContextCompat.getColor(context, colorRes);
+        applyDialogAppearance();
+        return this;
+    }
+
+    public KAlertDialog setDialogCornerRadius(float radiusDp) {
+        this.dialogCornerRadiusDp = radiusDp;
+        applyDialogAppearance();
+        return this;
+    }
+
+    public KAlertDialog setDialogElevation(float elevationDp) {
+        this.dialogElevationDp = elevationDp;
+        applyDialogAppearance();
+        return this;
+    }
+
+    public KAlertDialog setDimAmount(float amount) {
+        this.dialogDimAmount = amount;
+        applyDialogAppearance();
+        return this;
+    }
+
+    public KAlertDialog setInputType(int inputType) {
+        if (mEditText != null) {
+            mEditText.setInputType(inputType);
+        }
+        return this;
+    }
+
+    public KAlertDialog setInputMaxLength(int maxLength) {
+        if (mEditText != null && maxLength > 0) {
+            mEditText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        }
+        return this;
+    }
+
+    public KAlertDialog setInputError(String errorMessage) {
+        this.inputErrorMessage = errorMessage;
+
+        if (mEditText != null && errorMessage != null) {
+            mEditText.setError(errorMessage);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setInputValidator(InputValidator validator) {
+        this.inputValidator = validator;
+        return this;
+    }
+
+    public KAlertDialog setOnInputConfirmListener(InputConfirmListener listener) {
+        this.inputConfirmListener = listener;
+        return this;
+    }
+
+    public KAlertDialog onConfirm(KAlertClickListener listener) {
+        this.mConfirmClickListener = listener;
+        return this;
+    }
+
+    public KAlertDialog onCancel(KAlertClickListener listener) {
+        this.mCancelClickListener = listener;
+        return this;
+    }
+
+    public KAlertDialog onDialogShow(DialogShowListener listener) {
+        this.dialogShowListener = listener;
+        return this;
+    }
+
+    public KAlertDialog onDialogDismiss(DialogDismissListener listener) {
+        this.dialogDismissListener = listener;
+        return this;
+    }
+
+    public KAlertDialog setConfirmButtonTextSize(int sizeSp) {
+        this.confirmButtonTextSize = sizeSp;
+
+        if (mConfirmButton != null) {
+            mConfirmButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, sizeSp);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setCancelButtonTextSize(int sizeSp) {
+        this.cancelButtonTextSize = sizeSp;
+
+        if (mCancelButton != null) {
+            mCancelButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, sizeSp);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setConfirmButtonFontWeight(int fontWeight) {
+        this.confirmButtonFontWeight = fontWeight;
+
+        if (mConfirmButton != null) {
+            mConfirmButton.setTypeface(mConfirmButton.getTypeface(), fontWeight);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setCancelButtonFontWeight(int fontWeight) {
+        this.cancelButtonFontWeight = fontWeight;
+
+        if (mCancelButton != null) {
+            mCancelButton.setTypeface(mCancelButton.getTypeface(), fontWeight);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setConfirmButtonAllCaps(boolean allCaps) {
+        this.confirmButtonAllCaps = allCaps;
+
+        if (mConfirmButton != null) {
+            mConfirmButton.setAllCaps(allCaps);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setCancelButtonAllCaps(boolean allCaps) {
+        this.cancelButtonAllCaps = allCaps;
+
+        if (mCancelButton != null) {
+            mCancelButton.setAllCaps(allCaps);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setConfirmButtonIcon(int drawableResId) {
+        this.confirmButtonIconRes = drawableResId;
+
+        if (mConfirmButton != null && drawableResId != 0) {
+            mConfirmButton.setCompoundDrawablesRelativeWithIntrinsicBounds(drawableResId, 0, 0, 0);
+            mConfirmButton.setCompoundDrawablePadding((int) dpToPx(8));
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setCancelButtonIcon(int drawableResId) {
+        this.cancelButtonIconRes = drawableResId;
+
+        if (mCancelButton != null && drawableResId != 0) {
+            mCancelButton.setCompoundDrawablesRelativeWithIntrinsicBounds(drawableResId, 0, 0, 0);
+            mCancelButton.setCompoundDrawablePadding((int) dpToPx(8));
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setURLImagePlaceholder(int drawableResId) {
+        this.urlImagePlaceholderRes = drawableResId;
+        return this;
+    }
+
+    public KAlertDialog setURLImageError(int drawableResId) {
+        this.urlImageErrorRes = drawableResId;
+        return this;
+    }
+
+    public KAlertDialog setProgressColor(@ColorInt int color) {
+        mProgressHelper.setBarColor(color);
+        return this;
+    }
+
+    public KAlertDialog setProgressColorResource(int colorRes) {
+        mProgressHelper.setBarColor(ContextCompat.getColor(context, colorRes));
+        return this;
+    }
+
+    public KAlertDialog setProgressWidth(int widthPx) {
+        mProgressHelper.setBarWidth(widthPx);
+        return this;
+    }
+
+    public KAlertDialog setProgressValue(float progress) {
+        mProgressHelper.setProgress(progress);
+        return this;
+    }
+
+    public KAlertDialog setProgressInstantValue(float progress) {
+        mProgressHelper.setInstantProgress(progress);
+        return this;
+    }
+
+    public KAlertDialog setProgressSpinSpeed(float speed) {
+        mProgressHelper.setSpinSpeed(speed);
+        return this;
+    }
+
+    public KAlertDialog setProgressCircleRadius(int radiusPx) {
+        mProgressHelper.setCircleRadius(radiusPx);
+        return this;
+    }
+
+    public KAlertDialog applyStyle(int style) {
+        switch (style) {
+            case STYLE_MODERN:
+                setDialogCornerRadius(28);
+                setDialogElevation(12);
+                setDimAmount(0.45f);
+                setTitleFontWeight(Typeface.BOLD);
+                setContentFontWeight(Typeface.NORMAL);
+                setConfirmButtonFontWeight(Typeface.BOLD);
+                setCancelButtonFontWeight(Typeface.BOLD);
+                setConfirmButtonTextSize(14);
+                setCancelButtonTextSize(14);
+                setConfirmButtonAllCaps(false);
+                setCancelButtonAllCaps(false);
+                break;
+
+            case STYLE_MINIMAL:
+                setDialogCornerRadius(18);
+                setDialogElevation(4);
+                setDimAmount(0.30f);
+                setTitleFontWeight(Typeface.BOLD);
+                setContentFontWeight(Typeface.NORMAL);
+                setConfirmButtonAllCaps(false);
+                setCancelButtonAllCaps(false);
+                break;
+
+            case STYLE_ROUNDED:
+                setDialogCornerRadius(32);
+                setDialogElevation(10);
+                setDimAmount(0.40f);
+                setTitleFontWeight(Typeface.BOLD);
+                setConfirmButtonFontWeight(Typeface.BOLD);
+                setCancelButtonFontWeight(Typeface.BOLD);
+                break;
+
+            case STYLE_CLASSIC:
+            default:
+                break;
+        }
+
+        return this;
     }
 }

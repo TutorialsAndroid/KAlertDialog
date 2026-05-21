@@ -1,145 +1,328 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sample_scroll"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F4F7FB"
+    android:fillViewport="true">
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/sample_root"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#111827"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <TextView
+                android:id="@+id/title_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KAlertDialog"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/subtitle_demo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Professional Android dialog showcase with modern styles, validation, custom views, images, progress and advanced button APIs."
+                android:textColor="#CBD5E1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/version_demo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="#1F2937"
+                android:paddingStart="12dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="7dp"
+                android:text="Modern UI Update Demo"
+                android:textColor="#86EFAC"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Modern Styling Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Modern Styling"
+            android:textColor="#0F172A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Show new style presets, custom radius, elevation, dim amount and font weight."
+            android:textColor="#64748B"
+            android:textSize="13sp" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_modern_success"
             android:layout_width="match_parent"
-            android:id="@+id/progress_dialog"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
-            android:text="@string/show_material_progress"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#10B981"
+            android:text="Modern Success Style"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_custom_appearance"
             android:layout_width="match_parent"
-            android:id="@+id/basic_test"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/progress_dialog"
-            android:layout_margin="10dp"
-            android:text="@string/a_basic_message"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#2563EB"
+            android:text="Custom Radius, Elevation and Dim"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_font_weight"
             android:layout_width="match_parent"
-            android:id="@+id/under_text_test"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/basic_test"
-            android:layout_margin="10dp"
-            android:text="@string/a_title_with_a_text_under"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#7C3AED"
+            android:text="Title and Content Font Weight"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Dialog Types Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Dialog Types"
+            android:textColor="#0F172A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Basic, success, error, warning and dynamic alert type changes."
+            android:textColor="#64748B"
+            android:textSize="13sp" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_basic_message"
             android:layout_width="match_parent"
-            android:id="@+id/title_with_font_changed"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/under_text_test"
-            android:layout_margin="10dp"
-            android:text="A Title with font changed"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#334155"
+            android:text="Basic Message Dialog"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_error_dialog"
             android:layout_width="match_parent"
-            android:id="@+id/content_text_with_font_changed"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/title_with_font_changed"
-            android:layout_margin="10dp"
-            android:text="A Content text with font changed"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#EF4444"
+            android:text="Error Dialog"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_warning_flow"
             android:layout_width="match_parent"
-            android:id="@+id/title_gravity"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/content_text_with_font_changed"
-            android:layout_margin="10dp"
-            android:text="@string/title_gravity"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#F59E0B"
+            android:text="Warning Confirm / Cancel Flow"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Input Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Input and Custom View"
+            android:textColor="#0F172A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Show input validation, max length, input type and custom layout support."
+            android:textColor="#64748B"
+            android:textSize="13sp" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_input_validation"
             android:layout_width="match_parent"
-            android:id="@+id/error_text_test"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/title_gravity"
-            android:layout_margin="10dp"
-            android:text="@string/show_error_message"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#0EA5E9"
+            android:text="Input Dialog with Validation"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_custom_view"
             android:layout_width="match_parent"
-            android:id="@+id/success_text_test"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/error_text_test"
-            android:layout_margin="10dp"
-            android:text="@string/a_success_message"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#14B8A6"
+            android:text="Custom View Dialog"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Images Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Images"
+            android:textColor="#0F172A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Show custom icon, circle URL image, big URL image, placeholder and error image APIs."
+            android:textColor="#64748B"
+            android:textSize="13sp" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_custom_icon"
             android:layout_width="match_parent"
-            android:id="@+id/warning_confirm_test"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/success_text_test"
-            android:layout_margin="10dp"
-            android:text="@string/a_warning_message_with_a_listener_bind_to_the_confirm_button"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#6366F1"
+            android:text="Custom Icon Dialog"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/warning_cancel_test"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_url_circle"
             android:layout_width="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/warning_confirm_test"
-            android:layout_margin="10dp"
-            android:text="@string/a_warning_message_with_listeners_bind_to_cancel_and_confirm_button"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#8B5CF6"
+            android:text="URL Image Circle"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_url_big"
             android:layout_width="match_parent"
-            android:id="@+id/custom_img_test"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/warning_cancel_test"
-            android:layout_margin="10dp"
-            android:text="@string/a_message_with_a_custom_icon"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#A855F7"
+            android:text="URL Image Big"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Advanced Controls Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Advanced Controls"
+            android:textColor="#0F172A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Show button icons, custom drawable buttons, callbacks and progress shortcut methods."
+            android:textColor="#64748B"
+            android:textSize="13sp" />
 
         <Button
-            android:id="@+id/custom_url_image_circle"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_custom_buttons"
             android:layout_width="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/custom_img_test"
-            android:layout_margin="10dp"
-            android:text="@string/a_message_with_a_custom_image"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#DC2626"
+            android:text="Custom Drawable Buttons"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/custom_url_image_big"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_button_icons"
             android:layout_width="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/custom_url_image_circle"
-            android:layout_margin="10dp"
-            android:text="@string/a_message_with_a_custom_image_big"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#0891B2"
+            android:text="Button Icons and Text Styling"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/edit_text_dialog"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_progress_shortcuts"
             android:layout_width="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/custom_url_image_big"
-            android:layout_margin="10dp"
-            android:text="@string/edit_text_dialog"/>
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#059669"
+            android:text="Progress Shortcut Methods"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
         <Button
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_callbacks"
             android:layout_width="match_parent"
-            android:id="@+id/btn_with_custom_drawable"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/edit_text_dialog"
-            android:layout_margin="10dp"
-            android:text="@string/btn_with_custom_drawable"/>
-    </RelativeLayout>
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#475569"
+            android:text="Show and Dismiss Callbacks"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="18dp"
+            android:gravity="center"
+            android:text="KAlertDialog demo gallery"
+            android:textColor="#94A3B8"
+            android:textSize="12sp" />
+
+    </LinearLayout>
 
 </ScrollView>
