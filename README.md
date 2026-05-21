@@ -5,6 +5,18 @@
 
 <img src="https://raw.githubusercontent.com/TutorialsAndroid/KAlertDialog/refs/heads/master/art/banner.png" align="center" />
 
+<p align="center">
+  <a href="https://tutorialsandroid.github.io/KAlertDialog" target="_blank">
+    <img src="https://img.shields.io/badge/Visit%20Official%20Website-KAlertDialog-00d6c9?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visit KAlertDialog Official Website" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://tutorialsandroid.github.io/KAlertDialog" target="_blank">
+    <b>🚀 Explore the full documentation, screenshot gallery, setup guide, and API examples on the official website</b>
+  </a>
+</p>
+
 # KAlertDialog
 
 **KAlertDialog** is a beautiful, modern, customizable Material-style AlertDialog library for Android.
