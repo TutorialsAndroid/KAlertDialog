@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic SEO -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>KAlertDialog - Beautiful Material Alert Dialog Library for Android</title>
+
+  <meta name="title" content="KAlertDialog - Beautiful Material Alert Dialog Library for Android" />
+  <meta name="description"
+    content="KAlertDialog is a modern, customizable, Material-style Android AlertDialog library with success, error, warning, progress, input, custom view, URL image dialogs, dark mode, validation, and advanced button styling." />
+  <meta name="keywords"
+    content="KAlertDialog, Android AlertDialog library, Android dialog library, Material AlertDialog Android, Java Android dialog, Android custom dialog, Android success dialog, Android error dialog, Android warning dialog, Android progress dialog, Android input dialog, Android custom view dialog, Maven Central Android library, TutorialsAndroid" />
+  <meta name="author" content="TutorialsAndroid" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="theme-color" content="#00d6c9" />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tutorialsandroid.github.io/KAlertDialog/" />
+
+  <!-- Favicon / App Icon -->
+  <link rel="icon" type="image/png" href="sample/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+  <link rel="apple-touch-icon" href="sample/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tutorialsandroid.github.io/KAlertDialog/" />
+  <meta property="og:title" content="KAlertDialog - Beautiful Material Alert Dialog Library for Android" />
+  <meta property="og:description"
+    content="Create professional Android dialogs with modern styles, dark mode, input validation, custom views, URL images, progress dialogs, and advanced button customization." />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/TutorialsAndroid/KAlertDialog/refs/heads/master/art/banner.png" />
+  <meta property="og:image:alt" content="KAlertDialog Android Material Alert Dialog Library Banner" />
+  <meta property="og:site_name" content="KAlertDialog" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://tutorialsandroid.github.io/KAlertDialog/" />
+  <meta name="twitter:title" content="KAlertDialog - Beautiful Material Alert Dialog Library for Android" />
+  <meta name="twitter:description"
+    content="A modern Android AlertDialog library with Material-style dialogs, custom views, progress, input validation, URL images, and dark mode support." />
+  <meta name="twitter:image"
+    content="https://raw.githubusercontent.com/TutorialsAndroid/KAlertDialog/refs/heads/master/art/banner.png" />
+  <meta name="twitter:creator" content="@a_masram444" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin />
+  <link rel="preconnect" href="https://img.shields.io" crossorigin />
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Structured Data: SoftwareApplication -->
+  <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "KAlertDialog",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Android",
+            "softwareVersion": "21.0.0",
+            "datePublished": "2026-05-21",
+            "description": "KAlertDialog is a beautiful, modern, customizable Material-style AlertDialog library for Android. It supports success, error, warning, progress, input, custom image, URL image, custom view dialogs, dark mode, validation, and advanced button styling.",
+            "programmingLanguage": "Java",
+            "license": "https://opensource.org/licenses/Apache-2.0",
+            "codeRepository": "https://github.com/TutorialsAndroid/KAlertDialog",
+            "downloadUrl": "https://search.maven.org/artifact/io.github.tutorialsandroid/kalertdialog",
+            "image": "https://raw.githubusercontent.com/TutorialsAndroid/KAlertDialog/refs/heads/master/art/banner.png",
+            "author": {
+                "@type": "Organization",
+                "name": "TutorialsAndroid",
+                "url": "https://github.com/TutorialsAndroid"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+        }
+    </script>
+
+  <!-- Structured Data: FAQ -->
+  <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is KAlertDialog?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "KAlertDialog is a modern Material-style AlertDialog library for Android that supports success, error, warning, progress, input, custom image, URL image, and custom view dialogs."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What compileSdk is required for KAlertDialog 21.0.0?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "KAlertDialog 21.0.0 requires Android API 37 or higher as compileSdk because the latest KAlertDialog and ProgressX libraries are compiled with Android API 37."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does KAlertDialog support dark mode?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. KAlertDialog supports auto dark mode when you pass true in the constructor."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I use custom views in KAlertDialog?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. KAlertDialog supports CUSTOM_VIEW_TYPE with setCustomView(View) and setCustomView(int layoutResId)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is KAlertDialog available on Maven Central?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. You can add KAlertDialog using implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'."
+                    }
+                }
+            ]
+        }
+    </script>
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0b1728;
+      --bg-card: rgba(15, 23, 42, 0.78);
+      --surface: #ffffff;
+      --surface-soft: #f8fafc;
+      --text: #e5f0ff;
+      --muted: #9fb1c7;
+      --dark-text: #0f172a;
+      --dark-muted: #64748b;
+      --primary: #00d6c9;
+      --primary-2: #22c55e;
+      --accent: #7c3aed;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --success: #10b981;
+      --info: #0ea5e9;
+      --border: rgba(148, 163, 184, 0.18);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+      --radius: 28px;
+      --radius-sm: 18px;
+      --code-bg: #09111f;
+      --code-border: rgba(34, 211, 238, 0.18);
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(0, 214, 201, 0.22), transparent 34%),
+        radial-gradient(circle at 90% 5%, rgba(124, 58, 237, 0.22), transparent 35%),
+        radial-gradient(circle at 50% 90%, rgba(34, 197, 94, 0.12), transparent 36%),
+        var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ::selection {
+      background: rgba(0, 214, 201, 0.28);
+      color: #ffffff;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 16px;
+      background: #ffffff;
+      color: #0f172a;
+      padding: 10px 14px;
+      border-radius: 12px;
+      z-index: 9999;
+    }
+
+    .skip-link:focus {
+      left: 16px;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(20px);
+      background: rgba(7, 17, 31, 0.74);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: max-content;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      padding: 7px;
+      box-shadow: 0 12px 35px rgba(0, 214, 201, 0.22);
+    }
+
+    .brand-title {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand-title strong {
+      font-size: 18px;
+      letter-spacing: -0.04em;
+    }
+
+    .brand-title span {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 12px;
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #06111f;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: 0 18px 45px rgba(0, 214, 201, 0.22);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 20px 55px rgba(0, 214, 201, 0.32);
+    }
+
+    .btn-ghost {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--border);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero {
+      position: relative;
+      padding: 84px 0 72px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      align-items: center;
+      gap: 52px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: #cde7ff;
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .pill.green {
+      color: #a7f3d0;
+      border-color: rgba(34, 197, 94, 0.28);
+      background: rgba(34, 197, 94, 0.08);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 0.96;
+      letter-spacing: -0.075em;
+      max-width: 780px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff, #d9fffb 38%, var(--primary), var(--primary-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-lead {
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.75;
+      margin: 24px 0 0;
+      max-width: 720px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .install-card {
+      margin-top: 26px;
+      border: 1px solid var(--code-border);
+      border-radius: 22px;
+      background: rgba(9, 17, 31, 0.82);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.26);
+      overflow: hidden;
+      max-width: 740px;
+    }
+
+    .install-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 15px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+      color: #cbd5e1;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .copy-btn {
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      padding: 7px 11px;
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 12px;
+    }
+
+    .copy-btn:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    pre {
+      margin: 0;
+      overflow-x: auto;
+      padding: 18px;
+      background: var(--code-bg);
+      color: #dbeafe;
+      font-family: "JetBrains Mono", Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.65;
+      border-radius: 0 0 22px 22px;
+    }
+
+    code {
+      font-family: "JetBrains Mono", Consolas, monospace;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 560px;
+    }
+
+    .phone-shell {
+      position: absolute;
+      right: 28px;
+      top: 28px;
+      width: min(330px, 72vw);
+      border-radius: 42px;
+      padding: 12px;
+      background: linear-gradient(145deg, #1f2937, #030712);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      transform: rotate(4deg);
+    }
+
+    .phone-screen {
+      min-height: 560px;
+      border-radius: 32px;
+      background:
+        linear-gradient(180deg, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 0.75)),
+        radial-gradient(circle at top, rgba(0, 214, 201, 0.18), transparent 40%);
+      padding: 24px 18px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .phone-notch {
+      width: 86px;
+      height: 22px;
+      background: #020617;
+      border-radius: 999px;
+      margin: 0 auto 24px;
+    }
+
+    .mock-row {
+      height: 58px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 14px;
+    }
+
+    .floating-dialog {
+      position: absolute;
+      width: 310px;
+      border-radius: 24px;
+      padding: 22px;
+      background: #ffffff;
+      color: #0f172a;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .floating-dialog.success {
+      top: 76px;
+      left: 0;
+      transform: rotate(-3deg);
+    }
+
+    .floating-dialog.error {
+      top: 226px;
+      right: 0;
+      transform: rotate(3deg);
+    }
+
+    .floating-dialog.input {
+      bottom: 34px;
+      left: 46px;
+      transform: rotate(-1deg);
+    }
+
+    .dialog-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .dialog-icon.green {
+      background: linear-gradient(135deg, #16a34a, #22c55e);
+    }
+
+    .dialog-icon.red {
+      background: linear-gradient(135deg, #dc2626, #ef4444);
+    }
+
+    .dialog-icon.purple {
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+    }
+
+    .floating-dialog h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.03em;
+    }
+
+    .floating-dialog p {
+      margin: 0;
+      color: #475569;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .input-mini {
+      height: 42px;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      margin-top: 14px;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      font-size: 14px;
+      background: #f8fafc;
+    }
+
+    .section {
+      padding: 76px 0;
+      position: relative;
+    }
+
+    .section.light {
+      background: #ffffff;
+      color: var(--dark-text);
+    }
+
+    .section.soft {
+      background: #f8fafc;
+      color: var(--dark-text);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 42px;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      min-height: 32px;
+      align-items: center;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #047857;
+      background: #d1fae5;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 54px);
+      letter-spacing: -0.065em;
+      line-height: 1.04;
+    }
+
+    .section-desc {
+      margin: 16px auto 0;
+      color: var(--dark-muted);
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 760px;
+    }
+
+    .dark-section .section-desc {
+      color: var(--muted);
+    }
+
+    .dark-section .section-kicker {
+      background: rgba(16, 185, 129, 0.12);
+      color: #86efac;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card {
+      border-radius: 24px;
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+      transition: 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.11);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-size: 22px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    }
+
+    .feature-card h3 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: -0.035em;
+    }
+
+    .feature-card p {
+      color: var(--dark-muted);
+      margin: 10px 0 0;
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .release-box {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .release-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .release-version {
+      font-size: 54px;
+      letter-spacing: -0.075em;
+      line-height: 1;
+      margin: 0 0 8px;
+      background: linear-gradient(135deg, #ffffff, var(--primary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .release-date {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .changelog {
+      columns: 2;
+      column-gap: 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .changelog li {
+      break-inside: avoid;
+      margin: 0 0 12px;
+      color: #dbeafe;
+      line-height: 1.55;
+      position: relative;
+      padding-left: 24px;
+      font-size: 14px;
+    }
+
+    .changelog li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--primary-2);
+      font-weight: 900;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .shot {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 14px;
+      box-shadow: 0 14px 44px rgba(15, 23, 42, 0.08);
+      transition: 0.2s ease;
+    }
+
+    .shot:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.16);
+    }
+
+    .shot figure {
+      margin: 0;
+    }
+
+    .shot-img-wrap {
+      background: linear-gradient(180deg, #f8fafc, #e2e8f0);
+      border-radius: 18px;
+      overflow: hidden;
+      min-height: 250px;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+    }
+
+    .shot img {
+      width: 90%;
+      margin: 0 auto;
+      border-radius: 16px;
+      object-fit: contain;
+    }
+
+    .shot figcaption {
+      margin-top: 12px;
+      color: #0f172a;
+      font-weight: 900;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .doc-layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 26px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 96px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--border);
+      padding: 14px;
+    }
+
+    .toc strong {
+      display: block;
+      padding: 8px 10px 12px;
+      color: #ffffff;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      padding: 9px 10px;
+      border-radius: 12px;
+      transition: 0.2s ease;
+    }
+
+    .toc a:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .docs {
+      min-width: 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .doc-card {
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--border);
+      padding: 24px;
+      scroll-margin-top: 100px;
+    }
+
+    .doc-card h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      letter-spacing: -0.04em;
+    }
+
+    .doc-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 16px;
+    }
+
+    .doc-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #dbeafe;
+      line-height: 1.8;
+    }
+
+    .code-card {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--code-border);
+      background: var(--code-bg);
+      margin-top: 14px;
+    }
+
+    .code-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+      color: #cbd5e1;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .api-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .api-card {
+      border-radius: 24px;
+      padding: 20px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    .api-card h3 {
+      margin: 0 0 12px;
+      font-size: 19px;
+      letter-spacing: -0.035em;
+    }
+
+    .api-card pre {
+      border-radius: 16px;
+      font-size: 12px;
+      padding: 14px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+      max-width: 940px;
+      margin: 0 auto;
+    }
+
+    details {
+      border-radius: 20px;
+      background: #ffffff;
+      color: var(--dark-text);
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 12px 36px rgba(15, 23, 42, 0.06);
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 18px 20px;
+      font-weight: 900;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      margin: 0;
+      padding: 0 20px 20px;
+      color: var(--dark-muted);
+      line-height: 1.7;
+    }
+
+    .cta {
+      border-radius: 36px;
+      padding: 42px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(0, 214, 201, 0.3), transparent 30%),
+        linear-gradient(135deg, #0f172a, #111827);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .cta h2 {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 16px auto 0;
+      line-height: 1.7;
+    }
+
+    .footer {
+      padding: 42px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer a {
+      color: #dbeafe;
+      font-weight: 800;
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.86);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.2s ease;
+      z-index: 900;
+    }
+
+    .to-top.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%) translateY(20px);
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 900;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.2s ease;
+      z-index: 1200;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 1050px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 520px;
+      }
+
+      .phone-shell {
+        right: 50%;
+        transform: translateX(50%) rotate(3deg);
+      }
+
+      .floating-dialog.success {
+        left: 0;
+      }
+
+      .floating-dialog.error {
+        right: 0;
+      }
+
+      .cards-grid,
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .doc-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: relative;
+        top: auto;
+      }
+
+      .release-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .mobile-toggle {
+        display: inline-grid;
+        place-items: center;
+      }
+
+      .nav-links {
+        position: fixed;
+        inset: 76px 16px auto 16px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px;
+        border-radius: 24px;
+        background: rgba(7, 17, 31, 0.98);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 14px;
+      }
+
+      .nav-actions .btn-ghost {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .floating-dialog {
+        width: 260px;
+      }
+
+      .floating-dialog.success {
+        top: 52px;
+      }
+
+      .floating-dialog.error {
+        top: 236px;
+      }
+
+      .floating-dialog.input {
+        left: 0;
+      }
+
+      .changelog {
+        columns: 1;
+      }
+
+      .api-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .hero-visual {
+        min-height: 610px;
+      }
+
+      .phone-shell {
+        width: 285px;
+      }
+
+      .floating-dialog {
+        width: 236px;
+        padding: 18px;
+      }
+
+      .floating-dialog.success {
+        left: 0;
+        top: 34px;
+      }
+
+      .floating-dialog.error {
+        top: 250px;
+        right: 0;
+      }
+
+      .floating-dialog.input {
+        bottom: 20px;
+        left: 10px;
+      }
+
+      .cards-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .cta {
+        padding: 28px;
+        border-radius: 28px;
+      }
+
+      .release-version {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="KAlertDialog home">
+        <img class="brand-logo" src="sample/src/main/res/mipmap-xxhdpi/ic_launcher.png" alt="KAlertDialog logo" />
+        <span class="brand-title">
+          <strong>KAlertDialog</strong>
+          <span>Android Alert Dialog Library</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#setup">Setup</a>
+        <a href="#docs">Docs</a>
+        <a href="#api">API</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/TutorialsAndroid/KAlertDialog" target="_blank"
+          rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="#setup">Install</a>
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <div class="pill-row">
+            <span class="pill green">Version 21.0.0</span>
+            <span class="pill">API 23+</span>
+            <span class="pill">Maven Central</span>
+            <span class="pill">Apache 2.0</span>
+          </div>
+
+          <h1>
+            Beautiful <span class="gradient-text">Material Alert Dialogs</span> for Android
+          </h1>
+
+          <p class="hero-lead">
+            KAlertDialog is a modern, customizable, Material-style Android AlertDialog library for professional apps.
+            Build success, error, warning, progress, input, custom view, URL image, and dark-mode dialogs with clean
+            Java code.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#setup">Get Started</a>
+            <a class="btn btn-ghost" href="https://github.com/TutorialsAndroid/KAlertDialog" target="_blank"
+              rel="noopener">View on GitHub</a>
+            <a class="btn btn-ghost" href="#gallery">See Screenshots</a>
+          </div>
+
+          <div class="install-card" id="quick-install">
+            <div class="install-head">
+              <span>Gradle dependency</span>
+              <button class="copy-btn"
+                data-copy="implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'&#10;implementation 'io.github.tutorialsandroid:progressx:7.0.5'">Copy</button>
+            </div>
+            <pre><code>dependencies {
+    implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'
+    implementation 'io.github.tutorialsandroid:progressx:7.0.5'
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="phone-shell">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <div class="mock-row"></div>
+              <div class="mock-row"></div>
+              <div class="mock-row"></div>
+              <div class="mock-row"></div>
+              <div class="mock-row"></div>
+            </div>
+          </div>
+
+          <div class="floating-dialog success">
+            <div class="dialog-icon green">✓</div>
+            <h3>Success</h3>
+            <p>Your changes were saved successfully.</p>
+          </div>
+
+          <div class="floating-dialog error">
+            <div class="dialog-icon red">×</div>
+            <h3>Error</h3>
+            <p>Something went wrong. Please try again.</p>
+          </div>
+
+          <div class="floating-dialog input">
+            <div class="dialog-icon purple">✎</div>
+            <h3>Input</h3>
+            <p>Please enter your project name.</p>
+            <div class="input-mini">KAlertDialog Pro</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Features</span>
+          <h2>Everything you need for production-ready Android dialogs.</h2>
+          <p class="section-desc">
+            KAlertDialog includes modern presets, dark mode, custom views, input validation, image loading, progress
+            helpers, button styling, font customization, and dynamic alert type changes.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>Material-style dialogs</h3>
+            <p>Create beautiful success, error, warning, normal, progress, input, custom image, URL image, and custom
+              view dialogs.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">◐</div>
+            <h3>Auto dark mode</h3>
+            <p>Use the autoNightMode constructor to automatically adapt dialogs when your Android app runs in night
+              mode.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">⚙</div>
+            <h3>Advanced customization</h3>
+            <p>Control title, content, fonts, font weight, colors, alignment, buttons, icons, radius, elevation, and dim
+              amount.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">⌨</div>
+            <h3>Input validation</h3>
+            <p>Build input dialogs with hint, default text, input type, max length, validation, and custom confirm
+              callbacks.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">▣</div>
+            <h3>Custom view support</h3>
+            <p>Attach your own XML layout or custom View inside KAlertDialog using CUSTOM_VIEW_TYPE.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">↻</div>
+            <h3>Dynamic alert type change</h3>
+            <p>Switch from warning to success, error, or other dialog states after user actions.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🖼</div>
+            <h3>URL image dialogs</h3>
+            <p>Load remote images with circle crop, big image mode, placeholder, and error drawable support.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">◌</div>
+            <h3>Progress shortcuts</h3>
+            <p>Use helper methods or direct shortcut APIs to customize progress color, radius, speed, and value.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">☰</div>
+            <h3>Modern callbacks</h3>
+            <p>Use onConfirm, onCancel, onDialogShow, and onDialogDismiss for cleaner callback-style code.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="release">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Latest Release</span>
+          <h2>Version 21.0.0</h2>
+          <p class="section-desc">
+            A major update focused on modern UI customization, better input handling, custom views, advanced button
+            APIs, and improved documentation.
+          </p>
+        </div>
+
+        <div class="release-box">
+          <div class="release-grid">
+            <div>
+              <h3 class="release-version">21.0.0</h3>
+              <p class="release-date">Released on 21-05-2026</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#setup">Install 21.0.0</a>
+                <a class="btn btn-ghost" href="https://github.com/TutorialsAndroid/KAlertDialog/releases"
+                  target="_blank" rel="noopener">Releases</a>
+              </div>
+            </div>
+
+            <ul class="changelog">
+              <li>Added option to set font weight for title and content.</li>
+              <li>Added modern style presets.</li>
+              <li>Added dialog corner radius customization.</li>
+              <li>Added dialog elevation customization.</li>
+              <li>Added dialog dim amount customization.</li>
+              <li>Added input validation support.</li>
+              <li>Added input max length support.</li>
+              <li>Added input type support.</li>
+              <li>Added custom view dialog support.</li>
+              <li>Added button text size customization.</li>
+              <li>Added button font weight customization.</li>
+              <li>Added button all-caps control.</li>
+              <li>Added button icon support.</li>
+              <li>Added URL image placeholder support.</li>
+              <li>Added URL image error drawable support.</li>
+              <li>Added progress shortcut methods.</li>
+              <li>Added show and dismiss callback APIs.</li>
+              <li>Updated compileSdk and targetSdk to 37.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Screenshots</span>
+          <h2>Screenshot gallery</h2>
+          <p class="section-desc">
+            Examples of modern dialogs created with KAlertDialog. Keep these image files inside your repository under
+            <strong>art/new/</strong>.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/modern_dialog.png" alt="KAlertDialog Modern Success Dialog" loading="lazy" />
+              </div>
+              <figcaption>Modern Success Dialog</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/custom_radius.png" alt="KAlertDialog Custom Radius Elevation and Dim Dialog"
+                  loading="lazy" />
+              </div>
+              <figcaption>Custom Radius, Elevation and Dim</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/font_weight.png" alt="KAlertDialog Title and Content Font Weight Dialog"
+                  loading="lazy" />
+              </div>
+              <figcaption>Title and Content Font Weight</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/basic_message.png" alt="KAlertDialog Basic Message Dialog" loading="lazy" />
+              </div>
+              <figcaption>Basic Message Dialog</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/error_dialog.png" alt="KAlertDialog Error Dialog" loading="lazy" />
+              </div>
+              <figcaption>Error Dialog</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/warning_dialog.png" alt="KAlertDialog Warning Confirm Cancel Flow" loading="lazy" />
+              </div>
+              <figcaption>Warning Confirm / Cancel Flow</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/input_dialog.png" alt="KAlertDialog Input Validation Dialog" loading="lazy" />
+              </div>
+              <figcaption>Input Validation Dialog</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/custom_dialog.png" alt="KAlertDialog Custom View Dialog" loading="lazy" />
+              </div>
+              <figcaption>Custom View Dialog</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/custom_icon_dialog.png" alt="KAlertDialog Custom Icon Dialog" loading="lazy" />
+              </div>
+              <figcaption>Custom Icon Dialog</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/url_image_circle_dialog.png" alt="KAlertDialog URL Image Circle Dialog"
+                  loading="lazy" />
+              </div>
+              <figcaption>URL Image Circle Dialog</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/big_image_dialog.png" alt="KAlertDialog Big URL Image Dialog" loading="lazy" />
+              </div>
+              <figcaption>Big URL Image Dialog</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/custom_drawable_button_dialog.png" alt="KAlertDialog Custom Button Drawable Dialog"
+                  loading="lazy" />
+              </div>
+              <figcaption>Custom Button Drawable Dialog</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/button_icons_dialog.png" alt="KAlertDialog Button Icon Styling Dialog"
+                  loading="lazy" />
+              </div>
+              <figcaption>Button Icon Styling Dialog</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/progress_dialog.png" alt="KAlertDialog Progress Shortcut Methods Dialog"
+                  loading="lazy" />
+              </div>
+              <figcaption>Progress Shortcut Methods</figcaption>
+            </figure>
+          </article>
+
+          <article class="shot">
+            <figure>
+              <div class="shot-img-wrap">
+                <img src="art/new/callbacks_dialog.png" alt="KAlertDialog Show and Dismiss Callbacks Dialog"
+                  loading="lazy" />
+              </div>
+              <figcaption>Show and Dismiss Callbacks</figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="setup">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Setup</span>
+          <h2>Install KAlertDialog</h2>
+          <p class="section-desc">
+            Add Maven Central and JitPack, then add KAlertDialog and ProgressX dependencies to your Android project.
+          </p>
+        </div>
+
+        <div class="api-grid">
+          <div class="api-card">
+            <h3>Step 1: Add repositories</h3>
+            <div class="code-card">
+              <div class="code-title">
+                <span>settings.gradle</span>
+                <button class="copy-btn" data-target="repoCode">Copy</button>
+              </div>
+              <pre id="repoCode"><code>dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}</code></pre>
+            </div>
+          </div>
+
+          <div class="api-card">
+            <h3>Step 2: Add dependencies</h3>
+            <div class="code-card">
+              <div class="code-title">
+                <span>app/build.gradle</span>
+                <button class="copy-btn" data-target="depCode">Copy</button>
+              </div>
+              <pre id="depCode"><code>dependencies {
+    implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'
+    implementation 'io.github.tutorialsandroid:progressx:7.0.5'
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="doc-card" style="margin-top: 20px; background: #fff7ed; color: #7c2d12; border-color: #fed7aa;">
+          <h3>Important: compileSdk requirement</h3>
+          <p style="color:#9a3412;">
+            Latest KAlertDialog and ProgressX versions require your app to compile against Android API 37 or higher.
+            Updating compileSdk is different from changing targetSdk or minSdk.
+          </p>
+          <div class="code-card">
+            <div class="code-title">
+              <span>Required configuration</span>
+              <button class="copy-btn" data-target="sdkCode">Copy</button>
+            </div>
+            <pre id="sdkCode"><code>android {
+    compileSdk 37
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 36
+    }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="docs">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Documentation</span>
+          <h2>Usage examples</h2>
+          <p class="section-desc">
+            Copy-paste ready examples for common KAlertDialog use cases.
+          </p>
+        </div>
+
+        <div class="doc-layout">
+          <aside class="toc" aria-label="Documentation table of contents">
+            <strong>Docs</strong>
+            <a href="#basic">Basic</a>
+            <a href="#types">Dialog Types</a>
+            <a href="#styles">Modern Styles</a>
+            <a href="#progress">Progress</a>
+            <a href="#input">Input Validation</a>
+            <a href="#custom-view">Custom View</a>
+            <a href="#images">Images</a>
+            <a href="#fonts">Fonts</a>
+            <a href="#buttons">Buttons</a>
+            <a href="#callbacks">Callbacks</a>
+            <a href="#dynamic">Dynamic Change</a>
+          </aside>
+
+          <div class="docs">
+            <article class="doc-card" id="basic">
+              <h3>Basic message</h3>
+              <p>Create a simple dialog with only title text.</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn" data-target="basicCode">Copy</button>
+                </div>
+                <pre id="basicCode"><code>new KAlertDialog(this)
+        .setTitleText("Here's a message!")
+        .show();</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card" id="types">
+              <h3>Dialog types</h3>
+              <p>KAlertDialog supports normal, success, error, warning, progress, input, image, URL image, and custom
+                view dialogs.</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn" data-target="typeCode">Copy</button>
+                </div>
+                <pre id="typeCode"><code>KAlertDialog.NORMAL_TYPE
+KAlertDialog.ERROR_TYPE
+KAlertDialog.SUCCESS_TYPE
+KAlertDialog.WARNING_TYPE
+KAlertDialog.CUSTOM_IMAGE_TYPE
+KAlertDialog.URL_IMAGE_TYPE
+KAlertDialog.PROGRESS_TYPE
+KAlertDialog.INPUT_TYPE
+KAlertDialog.CUSTOM_VIEW_TYPE</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card" id="styles">
+              <h3>Modern style preset</h3>
+              <p>Apply a modern style preset with professional radius, elevation, dim amount, and button styling.</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn" data-target="styleCode">Copy</button>
+                </div>
+                <pre id="styleCode"><code>new KAlertDialog(this, KAlertDialog.SUCCESS_TYPE, true)
+        .setTitleText("Success")
+        .setContentText("Your changes were saved successfully.")
+        .applyStyle(KAlertDialog.STYLE_MODERN)
+        .setConfirmClickListener("Done", dialog -> dialog.dismissWithAnimation())
+        .show();</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card">
+              <h3>Custom dialog appearance</h3>
+              <p>Control dialog corner radius, elevation, dim amount, and background color.</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn"
+                    data-target="appearanceCode">Copy</button></div>
+                <pre id="appearanceCode"><code>new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
+        .setTitleText("Custom Appearance")
+        .setContentText("This dialog has custom radius, elevation and dim amount.")
+        .setDialogCornerRadius(30)
+        .setDialogElevation(14)
+        .setDimAmount(0.55f)
+        .setConfirmClickListener("Looks Good", null)
+        .show();</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card" id="progress">
+              <h3>Progress dialog</h3>
+              <p>Show loading or processing states with progress helper APIs or direct shortcut methods.</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn"
+                    data-target="progressCode">Copy</button></div>
+                <pre id="progressCode"><code>new KAlertDialog(this, KAlertDialog.PROGRESS_TYPE, true)
+        .setTitleText("Processing")
+        .setContentText("Please wait while we prepare your request.")
+        .applyStyle(KAlertDialog.STYLE_MODERN)
+        .setProgressColor(Color.parseColor("#10B981"))
+        .setProgressSpinSpeed(1.1f)
+        .show();</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card" id="input">
+              <h3>Input dialog with validation</h3>
+              <p>Validate input before confirming and show an error message directly in the input field.</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn" data-target="inputCode">Copy</button>
+                </div>
+                <pre id="inputCode"><code>new KAlertDialog(this, KAlertDialog.INPUT_TYPE, true)
+        .setTitleText("Create Project")
+        .setContentText("Enter a project name with at least 3 characters.")
+        .applyStyle(KAlertDialog.STYLE_MODERN)
+        .setInputFieldHint("Project name")
+        .setInputFieldText("KAlertDialog")
+        .setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_WORDS)
+        .setInputMaxLength(30)
+        .setInputError("Project name must be at least 3 characters")
+        .setInputValidator(input -> input != null && input.trim().length() >= 3)
+        .setOnInputConfirmListener((dialog, input) -> {
+            dialog.dismissWithAnimation();
+            Toast.makeText(this, "Created: " + input.trim(), Toast.LENGTH_SHORT).show();
+        })
+        .setConfirmClickListener("Create", null)
+        .show();</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card" id="custom-view">
+              <h3>Custom view dialog</h3>
+              <p>Attach your own XML layout inside KAlertDialog and access its views using getCustomView().</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn"
+                    data-target="customViewCode">Copy</button></div>
+                <pre id="customViewCode"><code>KAlertDialog dialog = new KAlertDialog(this, KAlertDialog.CUSTOM_VIEW_TYPE, true)
+        .setTitleText("Custom View")
+        .setContentText("This dialog uses your custom XML layout.")
+        .applyStyle(KAlertDialog.STYLE_MODERN)
+        .setCustomView(R.layout.customedittext)
+        .showCancelButton(true)
+        .setCancelClickListener("Cancel", kAlertDialog -> kAlertDialog.dismissWithAnimation());
+
+dialog.setConfirmClickListener("Save", kAlertDialog -> {
+    View customView = kAlertDialog.getCustomView();
+
+    if (customView == null) {
+        return;
+    }
+
+    EditText editText = customView.findViewById(R.id.edit_query);
+    String value = editText.getText().toString().trim();
+
+    if (value.length() < 3) {
+        editText.setError("Please enter at least 3 characters");
+        return;
+    }
+
+    kAlertDialog.dismissWithAnimation();
+});
+
+dialog.show();</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card" id="images">
+              <h3>URL image dialog</h3>
+              <p>Load remote images as circle crop or big images with placeholder and error fallback.</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn" data-target="imageCode">Copy</button>
+                </div>
+                <pre id="imageCode"><code>new KAlertDialog(this, KAlertDialog.URL_IMAGE_TYPE, true)
+        .setTitleText("Big URL Image")
+        .setContentText("This image is loaded from a URL as a large image.")
+        .applyStyle(KAlertDialog.STYLE_ROUNDED)
+        .setURLImagePlaceholder(R.mipmap.ic_launcher)
+        .setURLImageError(R.mipmap.ic_launcher)
+        .setURLImage("https://example.com/image.png", KAlertDialog.IMAGE_BIG)
+        .setConfirmClickListener("Close", null)
+        .show();</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card" id="fonts">
+              <h3>Font and font weight</h3>
+              <p>Use fonts from assets or res/font and apply font weight to title, content, and buttons.</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn" data-target="fontCode">Copy</button>
+                </div>
+                <pre id="fontCode"><code>new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
+        .setTitleText("Font Weight")
+        .setContentText("Title is bold and content is italic.")
+        .setTitleFontAssets("fonts/os.ttf")
+        .setContentFontAssets("fonts/poppins_regular.ttf")
+        .setTitleFontWeight(Typeface.BOLD)
+        .setContentFontWeight(Typeface.ITALIC)
+        .setConfirmClickListener("OK", null)
+        .show();</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card" id="buttons">
+              <h3>Button customization</h3>
+              <p>Customize button text size, font weight, all-caps behavior, icons, colors, and drawable backgrounds.
+              </p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn" data-target="buttonCode">Copy</button>
+                </div>
+                <pre id="buttonCode"><code>new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
+        .setTitleText("Button Styling")
+        .setContentText("This example shows button text size, font weight, all caps control and button icons.")
+        .applyStyle(KAlertDialog.STYLE_MINIMAL)
+        .showCancelButton(true)
+        .setConfirmButtonTextSize(15)
+        .setCancelButtonTextSize(15)
+        .setConfirmButtonFontWeight(Typeface.BOLD)
+        .setCancelButtonFontWeight(Typeface.BOLD)
+        .setConfirmButtonAllCaps(false)
+        .setCancelButtonAllCaps(false)
+        .setConfirmButtonIcon(android.R.drawable.checkbox_on_background)
+        .setCancelButtonIcon(android.R.drawable.ic_menu_close_clear_cancel)
+        .setConfirmClickListener("Accept", dialog -> dialog.dismissWithAnimation())
+        .setCancelClickListener("Decline", dialog -> dialog.dismissWithAnimation())
+        .show();</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card" id="callbacks">
+              <h3>Modern callbacks</h3>
+              <p>Use callback-style APIs for confirm, cancel, show, and dismiss events.</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn"
+                    data-target="callbackCode">Copy</button></div>
+                <pre id="callbackCode"><code>new KAlertDialog(this, KAlertDialog.NORMAL_TYPE, true)
+        .setTitleText("Callbacks")
+        .setContentText("This dialog shows modern listener APIs.")
+        .applyStyle(KAlertDialog.STYLE_MODERN)
+        .showCancelButton(true)
+        .onDialogShow(dialog -> {
+            Toast.makeText(this, "Dialog shown", Toast.LENGTH_SHORT).show();
+        })
+        .onDialogDismiss(dialog -> {
+            Toast.makeText(this, "Dialog dismissed", Toast.LENGTH_SHORT).show();
+        })
+        .onConfirm(dialog -> {
+            Toast.makeText(this, "Confirmed", Toast.LENGTH_SHORT).show();
+            dialog.dismissWithAnimation();
+        })
+        .onCancel(dialog -> {
+            Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show();
+            dialog.dismissWithAnimation();
+        })
+        .setConfirmClickListener("Confirm", null)
+        .setCancelClickListener("Cancel", null)
+        .show();</code></pre>
+              </div>
+            </article>
+
+            <article class="doc-card" id="dynamic">
+              <h3>Dynamic alert type change</h3>
+              <p>Change the alert type after user interaction, such as warning to success or error.</p>
+              <div class="code-card">
+                <div class="code-title"><span>Java</span><button class="copy-btn"
+                    data-target="dynamicCode">Copy</button></div>
+                <pre id="dynamicCode"><code>new KAlertDialog(this, KAlertDialog.WARNING_TYPE, true)
+        .setTitleText("Are you sure?")
+        .setContentText("You won't be able to recover this file!")
+        .showCancelButton(true)
+        .setCancelClickListener("Cancel", dialog -> {
+            dialog.setTitleText("Cancelled")
+                    .setContentText("Your file is safe.")
+                    .showCancelButton(false)
+                    .setConfirmClickListener("OK", null)
+                    .changeAlertType(KAlertDialog.ERROR_TYPE);
+        })
+        .setConfirmClickListener("Delete", dialog -> {
+            dialog.setTitleText("Deleted")
+                    .setContentText("Your file has been deleted.")
+                    .showCancelButton(false)
+                    .setConfirmClickListener("OK", null)
+                    .changeAlertType(KAlertDialog.SUCCESS_TYPE);
+        })
+        .show();</code></pre>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="api">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">API Summary</span>
+          <h2>Quick API reference</h2>
+          <p class="section-desc">
+            The most-used constants and methods in one place.
+          </p>
+        </div>
+
+        <div class="api-grid">
+          <article class="api-card">
+            <h3>Constructors</h3>
+            <pre><code>new KAlertDialog(context)
+new KAlertDialog(context, autoNightMode)
+new KAlertDialog(context, alertType, autoNightMode)</code></pre>
+          </article>
+
+          <article class="api-card">
+            <h3>Dialog types</h3>
+            <pre><code>KAlertDialog.NORMAL_TYPE
+KAlertDialog.ERROR_TYPE
+KAlertDialog.SUCCESS_TYPE
+KAlertDialog.WARNING_TYPE
+KAlertDialog.CUSTOM_IMAGE_TYPE
+KAlertDialog.URL_IMAGE_TYPE
+KAlertDialog.PROGRESS_TYPE
+KAlertDialog.INPUT_TYPE
+KAlertDialog.CUSTOM_VIEW_TYPE</code></pre>
+          </article>
+
+          <article class="api-card">
+            <h3>Style presets</h3>
+            <pre><code>KAlertDialog.STYLE_CLASSIC
+KAlertDialog.STYLE_MODERN
+KAlertDialog.STYLE_MINIMAL
+KAlertDialog.STYLE_ROUNDED</code></pre>
+          </article>
+
+          <article class="api-card">
+            <h3>Text methods</h3>
+            <pre><code>.setTitleText("Title")
+.setContentText("Content")
+.setTitleTextSize(20)
+.setContentTextSize(16)
+.setTitleColor(R.color.color)
+.setContentColor(R.color.color)
+.setTitleFontWeight(Typeface.BOLD)
+.setContentFontWeight(Typeface.NORMAL)</code></pre>
+          </article>
+
+          <article class="api-card">
+            <h3>Button methods</h3>
+            <pre><code>.setConfirmClickListener("OK", listener)
+.setCancelClickListener("Cancel", listener)
+.showConfirmButton(true)
+.showCancelButton(true)
+.setConfirmButtonTextSize(15)
+.setConfirmButtonFontWeight(Typeface.BOLD)
+.setConfirmButtonAllCaps(false)
+.setConfirmButtonIcon(R.drawable.icon)</code></pre>
+          </article>
+
+          <article class="api-card">
+            <h3>Input methods</h3>
+            <pre><code>.setInputFieldHint("Hint")
+.setInputFieldText("Default text")
+.setInputType(InputType.TYPE_CLASS_TEXT)
+.setInputMaxLength(30)
+.setInputError("Error message")
+.setInputValidator(input -> input.trim().length() >= 3)
+.setOnInputConfirmListener((dialog, input) -> { })
+.getInputText()</code></pre>
+          </article>
+
+          <article class="api-card">
+            <h3>Custom view methods</h3>
+            <pre><code>.setCustomView(R.layout.custom_layout)
+.setCustomView(view)
+.getCustomView()</code></pre>
+          </article>
+
+          <article class="api-card">
+            <h3>URL image methods</h3>
+            <pre><code>.setURLImage("https://example.com/image.png", KAlertDialog.IMAGE_CIRCLE)
+.setURLImage("https://example.com/image.png", KAlertDialog.IMAGE_BIG)
+.setURLImagePlaceholder(R.drawable.placeholder)
+.setURLImageError(R.drawable.error_image)</code></pre>
+          </article>
+
+          <article class="api-card">
+            <h3>Progress methods</h3>
+            <pre><code>.getProgressHelper()
+.setProgressColor(Color.GREEN)
+.setProgressColorResource(R.color.color)
+.setProgressWidth(6)
+.setProgressValue(0.5f)
+.setProgressInstantValue(0.5f)
+.setProgressSpinSpeed(1.1f)
+.setProgressCircleRadius(80)</code></pre>
+          </article>
+
+          <article class="api-card">
+            <h3>Callbacks</h3>
+            <pre><code>.onConfirm(dialog -> { })
+.onCancel(dialog -> { })
+.onDialogShow(dialog -> { })
+.onDialogDismiss(dialog -> { })</code></pre>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">FAQ</span>
+          <h2>Common questions</h2>
+          <p class="section-desc">
+            Quick answers for setup and common issues.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details open>
+            <summary>What is KAlertDialog?</summary>
+            <p>KAlertDialog is a modern Material-style Android AlertDialog library for Java Android apps. It supports
+              success, error, warning, progress, input, custom image, URL image, and custom view dialogs.</p>
+          </details>
+
+          <details>
+            <summary>What compileSdk is required?</summary>
+            <p>KAlertDialog 21.0.0 requires compileSdk 37 or higher because the latest KAlertDialog and ProgressX
+              libraries are compiled with Android API 37.</p>
+          </details>
+
+          <details>
+            <summary>Does updating compileSdk change targetSdk behavior?</summary>
+            <p>No. compileSdk controls which APIs your app can compile against. targetSdk controls Android runtime
+              behavior changes, and minSdk controls the minimum installable Android version.</p>
+          </details>
+
+          <details>
+            <summary>Does KAlertDialog support dark mode?</summary>
+            <p>Yes. Pass true in the constructor to enable auto dark mode behavior.</p>
+          </details>
+
+          <details>
+            <summary>Can I add my own custom layout?</summary>
+            <p>Yes. Use CUSTOM_VIEW_TYPE with setCustomView(R.layout.your_layout) or setCustomView(view), then access it
+              using getCustomView().</p>
+          </details>
+
+          <details>
+            <summary>Why is my big URL image small?</summary>
+            <p>Make sure custom_big_image has a fixed height such as 170dp, the parent image frame has match_parent
+              width, and IMAGE_BIG uses centerCrop in Glide.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <span class="section-kicker">Open Source</span>
+          <h2>Build beautiful Android dialogs faster with KAlertDialog.</h2>
+          <p>
+            Install the latest version, explore the sample app, and star the GitHub repository if this library helps
+            your Android projects.
+          </p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="btn btn-primary" href="#setup">Install Now</a>
+            <a class="btn btn-ghost" href="https://github.com/TutorialsAndroid/KAlertDialog" target="_blank"
+              rel="noopener">Star on GitHub</a>
+            <a class="btn btn-ghost" href="https://search.maven.org/artifact/io.github.tutorialsandroid/kalertdialog"
+              target="_blank" rel="noopener">Maven Central</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>KAlertDialog</strong>
+        <div>Beautiful Material Alert Dialog Library for Android.</div>
+      </div>
+
+      <div>
+        <a href="https://github.com/TutorialsAndroid/KAlertDialog" target="_blank" rel="noopener">GitHub</a>
+        ·
+        <a href="https://instagram.com/coderx09" target="_blank" rel="noopener">Instagram</a>
+        ·
+        <a href="https://twitter.com/a_masram444" target="_blank" rel="noopener">Twitter/X</a>
+      </div>
+
+      <div>Apache License 2.0</div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast">Copied to clipboard</div>
+
+  <script>
+    const mobileToggle = document.getElementById("mobileToggle");
+    const navLinks = document.getElementById("navLinks");
+    const toTop = document.getElementById("toTop");
+    const toast = document.getElementById("toast");
+
+    mobileToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      document.body.classList.toggle("menu-open");
+      mobileToggle.textContent = navLinks.classList.contains("open") ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        mobileToggle.textContent = "☰";
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        toTop.classList.add("show");
+      } else {
+        toTop.classList.remove("show");
+      }
+    });
+
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast("Copied to clipboard");
+      } catch (e) {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+        showToast("Copied to clipboard");
+      }
+    }
+
+    document.querySelectorAll(".copy-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        const directText = button.getAttribute("data-copy");
+        const targetId = button.getAttribute("data-target");
+
+        if (directText) {
+          copyText(directText);
+          return;
+        }
+
+        if (targetId) {
+          const target = document.getElementById(targetId);
+          if (target) {
+            copyText(target.innerText.trim());
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
