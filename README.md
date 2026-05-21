@@ -139,9 +139,84 @@ Thanks to all contributors who helped improve this library.
 
 ---
 
-## Screenshot
+## Screenshot Gallery
 
-![](https://github.com/TutorialsAndroid/KAlertDialog/blob/master/art/Screenshot_1665583187.png)
+Below are some examples of dialogs created using **KAlertDialog**.
+
+<p align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <b>Modern Success Dialog</b><br><br>
+        <img src="art/new/modern_dialog.png" width="90%" alt="KAlert Dialog Modern Success Dialog"/>
+      </td>
+      <td align="center">
+        <b>Custom Radius, Elevation and Dim</b><br><br>
+        <img src="art/new/custom_radius.png" width="90%" alt="KAlert Dialog Custom Radius, Elevation and Dim"/>
+      </td>
+      <td align="center">
+        <b>Title and Content Font Weight</b><br><br>
+        <img src="art/new/font_weight.png" width="90%" alt="KAlert Dialog Title and Content Font Weight"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <b>Basic Message Dialog</b><br><br>
+        <img src="art/new/basic_message.png" width="90%" alt="KAlert Dialog Basic Message Dialog"/>
+      </td>
+      <td align="center">
+        <b>Error Dialog</b><br><br>
+        <img src="art/new/error_dialog.png" width="90%" alt="KAlert Dialog Error Dialog"/>
+      </td>
+      <td align="center">
+        <b>Warning Confirm / Cancel Flow</b><br><br>
+        <img src="art/new/warning_dialog.png" width="90%" alt="KAlert Dialog Warning Confirm / Cancel Flow"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <b>Input Validation Dialog</b><br><br>
+        <img src="art/new/input_dialog.png" width="90%" alt="KAlert Dialog Input Validation Dialog"/>
+      </td>
+      <td align="center">
+        <b>Custom View Dialog</b><br><br>
+        <img src="art/new/custom_dialog.png" width="90%" alt="KAlert Dialog Custom View Dialog"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <b>Custom Icon Dialog</b><br><br>
+        <img src="art/new/custom_icon_dialog.png" width="90%" alt="KAlert Dialog Custom Icon Dialog"/>
+      </td>
+      <td align="center">
+        <b>URL Image Circle Dialog</b><br><br>
+        <img src="art/new/url_image_circle_dialog.png" width="90%" alt="KAlert Dialog URL Image Circle Dialog"/>
+      </td>
+      <td align="center">
+        <b>Big URL Image Dialog</b><br><br>
+        <img src="art/new/big_image_dialog.png" width="90%" alt="KAlert Dialog Big URL Image Dialog"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <b>Custom Button Drawable Dialog</b><br><br>
+        <img src="art/new/custom_drawable_button_dialog.png" width="90%" alt="KAlert Dialog Custom Button Drawable Dialog"/>
+      </td>
+      <td align="center">
+        <b>Button Icon Styling Dialog</b><br><br>
+        <img src="art/new/button_icons_dialog.png" width="90%" alt="KAlert Dialog Button Icon Styling Dialog"/>
+      </td>
+      <td align="center">
+        <b>Progress Shortcut Methods</b><br><br>
+        <img src="art/new/progress_dialog.png" width="90%" alt="KAlert Dialog Progress Shortcut Methods"/>
+      </td>
+      <td align="center">
+        <b>Show and Dismiss Callbacks</b><br><br>
+        <img src="art/new/callbacks_dialog.png" width="90%" alt="KAlert Dialog Show and Dismiss Callbacks"/>
+      </td>
+    </tr>
+  </table>
+</p>
 
 ---
 
