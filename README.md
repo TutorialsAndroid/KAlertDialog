@@ -76,6 +76,18 @@ Latest version is migrated to **AndroidX**.
 
 ---
 
+## ❤️ Support the Project
+
+If this library helps you, please consider supporting my open-source work.
+
+<p align="center">
+  <a href="https://github.com/sponsors/TutorialsAndroid">
+    <img src="https://img.shields.io/badge/Sponsor%20on-GitHub-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor on GitHub" />
+  </a>
+</p>
+
+---
+
 ## Follow
 
 <p align="center">
