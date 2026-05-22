@@ -13,7 +13,7 @@
   <meta name="description"
     content="KAlertDialog is a modern, customizable, Material-style Android AlertDialog library with success, error, warning, progress, input, custom view, URL image dialogs, dark mode, validation, and advanced button styling." />
   <meta name="keywords"
-    content="KAlertDialog, Android AlertDialog library, Android dialog library, Material AlertDialog Android, Java Android dialog, Android custom dialog, Android success dialog, Android error dialog, Android warning dialog, Android progress dialog, Android input dialog, Android custom view dialog, Maven Central Android library, TutorialsAndroid" />
+    content="KAlertDialog, KAlertFlutter, Android AlertDialog library, Flutter dialog package, Flutter alert dialog, Android dialog library, Material AlertDialog Android, Java Android dialog, Dart Flutter dialog, Android custom dialog, Flutter custom dialog, Android success dialog, Flutter success dialog, Android error dialog, Flutter error dialog, Android warning dialog, Flutter warning dialog, Android progress dialog, Flutter progress dialog, Android input dialog, Flutter input dialog, Android custom view dialog, Flutter custom view dialog, Maven Central Android library, pub.dev Flutter package, TutorialsAndroid" />
   <meta name="author" content="TutorialsAndroid" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="English" />
@@ -133,6 +133,14 @@
                         "@type": "Answer",
                         "text": "Yes. You can add KAlertDialog using implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'."
                     }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is there a Flutter version of KAlertDialog?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. KAlertFlutter is the Flutter version inspired by KAlertDialog. It is available on pub.dev and supports success, error, warning, info, question, progress, input, custom image, URL image, and custom view dialogs."
+                  }
                 }
             ]
         }
@@ -349,6 +357,168 @@
 
     .btn-ghost:hover {
       background: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-flutter {
+      color: #ffffff;
+      background: linear-gradient(135deg, #54c5f8, #0175c2);
+      box-shadow: 0 18px 45px rgba(1, 117, 194, 0.32);
+    }
+
+    .btn-flutter:hover {
+      box-shadow: 0 20px 55px rgba(1, 117, 194, 0.46);
+    }
+
+    .flutter-box {
+      border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(84, 197, 248, 0.20), transparent 34%),
+        linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.94));
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .flutter-box::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -90px;
+      top: -90px;
+      background: radial-gradient(circle, rgba(84, 197, 248, 0.22), transparent 68%);
+      pointer-events: none;
+    }
+
+    .flutter-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .flutter-title {
+      font-size: clamp(30px, 4vw, 50px);
+      letter-spacing: -0.065em;
+      line-height: 1.05;
+      margin: 0;
+    }
+
+    .flutter-text {
+      color: var(--muted);
+      line-height: 1.75;
+      margin: 16px 0 0;
+      font-size: 16px;
+    }
+
+    .flutter-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .flutter-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      color: #dff6ff;
+      background: rgba(84, 197, 248, 0.10);
+      border: 1px solid rgba(84, 197, 248, 0.24);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .flutter-card {
+      border-radius: 26px;
+      background: #ffffff;
+      color: #0f172a;
+      padding: 24px;
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.30);
+      transform: rotate(2deg);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .flutter-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .flutter-logo-dot {
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #54c5f8, #0175c2);
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-size: 26px;
+      font-weight: 900;
+      box-shadow: 0 16px 36px rgba(1, 117, 194, 0.26);
+    }
+
+    .flutter-card h3 {
+      margin: 0;
+      font-size: 21px;
+      letter-spacing: -0.045em;
+    }
+
+    .flutter-card p {
+      margin: 8px 0 0;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    .flutter-code-mini {
+      margin-top: 18px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #09111f;
+      color: #dbeafe;
+      border: 1px solid rgba(84, 197, 248, 0.20);
+    }
+
+    .flutter-code-mini pre {
+      border-radius: 0;
+      font-size: 12px;
+      padding: 14px;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.05);
+      margin-top: 20px;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #dbeafe;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .compare-table th {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: 0;
     }
 
     .hero {
@@ -1052,6 +1222,10 @@
         grid-template-columns: 1fr;
       }
 
+      .flutter-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero-visual {
         min-height: 520px;
       }
@@ -1153,6 +1327,16 @@
     }
 
     @media (max-width: 620px) {
+      .flutter-box {
+        padding: 24px;
+      }
+
+      .compare-table th,
+      .compare-table td {
+        padding: 12px;
+        font-size: 12px;
+      }
+
       .container {
         width: min(100% - 24px, var(--max));
       }
@@ -1224,6 +1408,7 @@
         <a href="#gallery">Gallery</a>
         <a href="#setup">Setup</a>
         <a href="#docs">Docs</a>
+        <a href="#flutter">Flutter</a>
         <a href="#api">API</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -1263,6 +1448,7 @@
             <a class="btn btn-ghost" href="https://github.com/TutorialsAndroid/KAlertDialog" target="_blank"
               rel="noopener">View on GitHub</a>
             <a class="btn btn-ghost" href="#gallery">See Screenshots</a>
+            <a class="btn btn-flutter" href="#flutter">Flutter Version</a>
           </div>
 
           <div class="install-card" id="quick-install">
@@ -1950,6 +2136,101 @@ dialog.show();</code></pre>
       </div>
     </section>
 
+    <section class="section dark-section" id="flutter">
+      <div class="container">
+        <div class="flutter-box">
+          <div class="flutter-grid">
+            <div>
+              <span class="section-kicker">Flutter Version Available</span>
+
+              <h2 class="flutter-title">
+                Building Flutter apps? Use KAlertFlutter.
+              </h2>
+
+              <p class="flutter-text">
+                KAlertFlutter brings the same modern dialog experience to Flutter apps. It is inspired by KAlertDialog
+                and supports beautiful success, error, warning, info, question, progress, input, custom image, URL
+                image, and custom view dialogs with a clean Dart API.
+              </p>
+
+              <div class="flutter-badges">
+                <span class="flutter-badge">Flutter</span>
+                <span class="flutter-badge">Dart</span>
+                <span class="flutter-badge">pub.dev</span>
+                <span class="flutter-badge">Dark Mode</span>
+                <span class="flutter-badge">Input Validation</span>
+                <span class="flutter-badge">Custom View</span>
+              </div>
+
+              <div class="hero-actions">
+                <a class="btn btn-flutter" href="https://pub.dev/packages/kalertflutter" target="_blank" rel="noopener">
+                  View on pub.dev
+                </a>
+
+                <a class="btn btn-ghost" href="https://github.com/TutorialsAndroid/KAlertFlutter" target="_blank"
+                  rel="noopener">
+                  KAlertFlutter GitHub
+                </a>
+
+                <a class="btn btn-ghost" href="https://tutorialsandroid.github.io/KAlertFlutter/" target="_blank"
+                  rel="noopener">
+                  Flutter Website
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div class="flutter-card">
+                <div class="flutter-card-header">
+                  <div class="flutter-logo-dot">F</div>
+                  <div>
+                    <h3>KAlertFlutter</h3>
+                    <p>Modern Alert Dialog Library for Flutter</p>
+                  </div>
+                </div>
+
+                <p>
+                  Add beautiful Flutter dialogs to your apps with a simple package dependency.
+                </p>
+
+                <div class="flutter-code-mini">
+                  <pre><code>dependencies:
+  kalertflutter: ^2.0.0</code></pre>
+                </div>
+              </div>
+
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th>Library</th>
+                    <th>Platform</th>
+                    <th>Package</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>KAlertDialog</td>
+                    <td>Native Android Java</td>
+                    <td>Maven Central</td>
+                  </tr>
+                  <tr>
+                    <td>KAlertFlutter</td>
+                    <td>Flutter / Dart</td>
+                    <td>pub.dev</td>
+                  </tr>
+                  <tr>
+                    <td>Purpose</td>
+                    <td>Modern dialogs</td>
+                    <td>Open source</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section soft" id="api">
       <div class="container">
         <div class="section-header">
@@ -2108,6 +2389,16 @@ KAlertDialog.STYLE_ROUNDED</code></pre>
             <p>Make sure custom_big_image has a fixed height such as 170dp, the parent image frame has match_parent
               width, and IMAGE_BIG uses centerCrop in Glide.</p>
           </details>
+
+          <details>
+            <summary>Is there a Flutter version of KAlertDialog?</summary>
+            <p>
+              Yes. KAlertFlutter is available for Flutter developers. It brings a similar modern dialog experience to
+              Flutter apps and is available on pub.dev:
+              <a href="https://pub.dev/packages/kalertflutter" target="_blank"
+                rel="noopener">https://pub.dev/packages/kalertflutter</a>
+            </p>
+          </details>
         </div>
       </div>
     </section>
@@ -2127,6 +2418,8 @@ KAlertDialog.STYLE_ROUNDED</code></pre>
               rel="noopener">Star on GitHub</a>
             <a class="btn btn-ghost" href="https://search.maven.org/artifact/io.github.tutorialsandroid/kalertdialog"
               target="_blank" rel="noopener">Maven Central</a>
+            <a class="btn btn-flutter" href="https://pub.dev/packages/kalertflutter" target="_blank"
+              rel="noopener">Flutter Version</a>
           </div>
         </div>
       </div>
@@ -2142,6 +2435,13 @@ KAlertDialog.STYLE_ROUNDED</code></pre>
 
       <div>
         <a href="https://github.com/TutorialsAndroid/KAlertDialog" target="_blank" rel="noopener">GitHub</a>
+        ·
+        <a href="https://search.maven.org/artifact/io.github.tutorialsandroid/kalertdialog" target="_blank"
+          rel="noopener">Maven Central</a>
+        ·
+        <a href="https://pub.dev/packages/kalertflutter" target="_blank" rel="noopener">KAlertFlutter</a>
+        ·
+        <a href="https://github.com/TutorialsAndroid/KAlertFlutter" target="_blank" rel="noopener">Flutter GitHub</a>
         ·
         <a href="https://instagram.com/coderx09" target="_blank" rel="noopener">Instagram</a>
         ·
