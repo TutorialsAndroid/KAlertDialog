@@ -232,6 +232,40 @@ Below are some examples of dialogs created using **KAlertDialog**.
 
 ---
 
+---
+
+## 💙 Flutter Version Available
+
+If you are building apps with **Flutter**, you can use the Flutter version of this library:
+
+<p align="center">
+  <a href="https://pub.dev/packages/kalertflutter" target="_blank">
+    <img src="https://img.shields.io/badge/KAlertFlutter-Flutter%20Dialog%20Library-0175C2?style=for-the-badge&logo=flutter&logoColor=white" alt="KAlertFlutter Flutter Dialog Library" />
+  </a>
+  <a href="https://github.com/TutorialsAndroid/KAlertFlutter" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-KAlertFlutter-111827?style=for-the-badge&logo=github&logoColor=white" alt="KAlertFlutter GitHub Repository" />
+  </a>
+  <a href="https://pub.dev/packages/kalertflutter" target="_blank">
+    <img src="https://img.shields.io/pub/v/kalertflutter?style=for-the-badge&logo=dart&logoColor=white" alt="KAlertFlutter pub.dev version" />
+  </a>
+</p>
+
+<p align="center">
+  <b>🚀 KAlertFlutter brings the same modern KAlertDialog experience to Flutter apps.</b>
+</p>
+
+<p align="center">
+  Create beautiful Flutter dialogs including success, error, warning, info, question, progress, input, custom image, URL image, and custom view dialogs.
+</p>
+
+<p align="center">
+  <a href="https://pub.dev/packages/kalertflutter"><b>View on pub.dev</b></a>
+  ·
+  <a href="https://github.com/TutorialsAndroid/KAlertFlutter"><b>View on GitHub</b></a>
+</p>
+
+---
+
 ## Setup
 
 The simplest way to use KAlertDialog is to add it as a dependency in your Android project.
