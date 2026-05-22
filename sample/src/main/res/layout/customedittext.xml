@@ -1,13 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/custom_view_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="8dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/custom_view_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Project name"
+        android:textColor="#0F172A"
+        android:textSize="13sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edit_query"
         android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#2563EB"
+        android:hint="Example: KAlertDialog Pro"
+        android:inputType="textCapWords"
+        android:maxLength="40"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColor="#111827"
+        android:textColorHint="#94A3B8"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/custom_view_hint"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="TODO"/>
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="2dp"
+        android:text="This custom layout is attached using setCustomView(). You can place any custom XML inside KAlertDialog."
+        android:textColor="#64748B"
+        android:textSize="12sp" />
 
 </LinearLayout>
