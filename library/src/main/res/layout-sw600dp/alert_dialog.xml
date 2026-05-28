@@ -3,7 +3,7 @@
     xmlns:wheel="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/loading"
-    android:layout_width="310dp"
+    android:layout_width="560dp"
     android:layout_height="wrap_content"
     android:gravity="center"
     android:layout_gravity="center"
@@ -153,6 +153,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/web_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@android:color/transparent">
+
+        <WebView
+            android:id="@+id/dialog_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent" />
+
+        <ProgressBar
+            android:id="@+id/web_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="top"
+            android:max="100"
+            android:progress="0"
+            android:visibility="gone" />
+
+        <com.developer.progressx.ProgressWheel
+            android:id="@+id/web_loading"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            wheel:matProg_barColor="?attr/alertDialogProgressColor"
+            wheel:matProg_progressIndeterminate="true"
+            android:visibility="gone" />
+
+    </FrameLayout>
 
     <FrameLayout
         android:id="@+id/custom_view_container"

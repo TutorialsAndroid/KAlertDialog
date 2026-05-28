@@ -200,6 +200,35 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
+        <!-- WebView Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="WebView Dialog"
+            android:textColor="#0F172A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Show Terms, Privacy Policy, Help pages or any hosted web page inside a dialog with loading progress."
+            android:textColor="#64748B"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_webview_terms"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#0284C7"
+            android:text="WebView Terms and Privacy Dialog"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
         <!-- Images Section -->
         <TextView
             android:layout_width="match_parent"

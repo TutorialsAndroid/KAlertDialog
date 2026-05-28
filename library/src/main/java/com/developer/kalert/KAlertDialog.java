@@ -1,5 +1,16 @@
 package com.developer.kalert;
 
+import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
+import android.net.http.SslError;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
+import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
+
 import static android.view.View.GONE;
 import static android.view.View.TEXT_ALIGNMENT_CENTER;
 
@@ -62,6 +73,11 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     private TextView mTitleTextView, mContentTextView;
     private WebView justifyContentTextView;
+    private WebView dialogWebView;
+    private ProgressBar webProgressBar;
+    private ProgressWheel webLoading;
+    private FrameLayout webViewContainer;
+
     private ImageView mErrorX, mSuccessTick, mCustomImage, mCustomBigImage;
     private Drawable mCustomImgDrawable;
     private AppCompatButton mConfirmButton, mCancelButton;
@@ -75,6 +91,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private String mTitleText, mContentText, justifyContentText, justifyContentTextColor, justifyContentTextSize,
             justifyContentTextFont, justifyContentTextFontExtension, mCancelText, mConfirmText, mInputFieldHint, mInputFieldText;
     private String imageURL;
+    private String webViewUrl;
     private String titleFontAssets, contentFontAssets, confirmButtonFontAssets, cancelButtonFontAssets;
     private int displayType;
     private int titleFont = 0, contentFont = 0, confirmButtonFont = 0, cancelButtonFont = 0;
@@ -92,6 +109,19 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     private boolean mShowCancel, mShowContent, mShowTitleText, mCloseFromCancel, mShowConfirm;
     private int contentTextSize = 0;
     private int titleTextSize = 0;
+
+    private boolean webViewJavaScriptEnabled = true;
+    private boolean webViewDomStorageEnabled = true;
+    private boolean webViewZoomEnabled = false;
+    private boolean webViewUseWideViewPort = true;
+    private boolean webViewLoadWithOverviewMode = true;
+    private boolean webViewAllowMixedContent = false;
+    private boolean webViewShowHorizontalProgress = true;
+    private boolean webViewShowCenterLoader = true;
+
+    private int webViewHeightDp = 360;
+
+    private WebViewPageListener webViewPageListener;
 
     private FrameLayout mErrorFrame, mSuccessFrame, mProgressFrame, mWarningFrame;
 
@@ -149,6 +179,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public static final int CUSTOM_VIEW_TYPE = 10;
     public static final int INFO_TYPE = 11;
     public static final int QUESTION_TYPE = 12;
+    public static final int WEB_VIEW_TYPE = 13;
 
     public static final int STYLE_CLASSIC = 0;
     public static final int STYLE_MODERN = 1;
@@ -177,6 +208,14 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         void onDismiss(KAlertDialog kAlertDialog);
     }
 
+    public interface WebViewPageListener {
+        void onPageStarted(KAlertDialog kAlertDialog, String url);
+
+        void onPageFinished(KAlertDialog kAlertDialog, String url);
+
+        void onPageError(KAlertDialog kAlertDialog, String url, String error);
+    }
+
     public KAlertDialog(Context context) {
         this(context, NORMAL_TYPE, false);
     }
@@ -193,6 +232,10 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mTitleTextView = findViewById(R.id.title_text);
         mContentTextView = findViewById(R.id.content_text);
         justifyContentTextView = findViewById(R.id.content_text2);
+        webViewContainer = findViewById(R.id.web_view_container);
+        dialogWebView = findViewById(R.id.dialog_web_view);
+        webProgressBar = findViewById(R.id.web_progress_bar);
+        webLoading = findViewById(R.id.web_loading);
         mErrorFrame = findViewById(R.id.error_frame);
         assert mErrorFrame != null;
         mErrorX = mErrorFrame.findViewById(R.id.error_x);
@@ -410,6 +453,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         mSuccessFrame.setVisibility(GONE);
         mWarningFrame.setVisibility(GONE);
         mProgressFrame.setVisibility(GONE);
+        hideWebView();
 
         if (mCustomViewContainer != null) {
             mCustomViewContainer.setVisibility(GONE);
@@ -485,6 +529,10 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
                     showCustomView();
                     setConfirmButtonDrawable(mConfirmButtonDrawable);
                     break;
+                case WEB_VIEW_TYPE:
+                    showWebView();
+                    setConfirmButtonDrawable(mConfirmButtonDrawable);
+                    break;
 
                 case INFO_TYPE:
                     setConfirmButtonDrawable(mConfirmButtonDrawable);
@@ -503,7 +551,7 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
     public void changeAlertType(int alertType) {
         changeAlertType(alertType, false);
 
-        if (alertType != INPUT_TYPE && alertType != CUSTOM_VIEW_TYPE) {
+        if (alertType != INPUT_TYPE && alertType != CUSTOM_VIEW_TYPE && alertType != WEB_VIEW_TYPE) {
             hideInputView();
             hideKeyboard();
         }
@@ -971,10 +1019,27 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     @Override
     public void dismiss() {
+        destroyDialogWebView();
+
         super.dismiss();
 
         if (dialogDismissListener != null) {
             dialogDismissListener.onDismiss(this);
+        }
+    }
+
+    private void destroyDialogWebView() {
+        if (dialogWebView != null) {
+            try {
+                dialogWebView.stopLoading();
+                dialogWebView.setWebChromeClient(null);
+                dialogWebView.setWebViewClient(null);
+                dialogWebView.clearHistory();
+                dialogWebView.clearCache(false);
+                dialogWebView.loadUrl("about:blank");
+                dialogWebView.destroy();
+            } catch (Exception ignored) {
+            }
         }
     }
 
@@ -1236,6 +1301,181 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
         }
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
+    private void showWebView() {
+        if (webViewContainer == null || dialogWebView == null) {
+            return;
+        }
+
+        hideKeyboard();
+
+        webViewContainer.setVisibility(View.VISIBLE);
+
+        ViewGroup.LayoutParams params = webViewContainer.getLayoutParams();
+        params.height = (int) dpToPx(webViewHeightDp);
+        webViewContainer.setLayoutParams(params);
+
+        WebSettings settings = dialogWebView.getSettings();
+        settings.setJavaScriptEnabled(webViewJavaScriptEnabled);
+        settings.setDomStorageEnabled(webViewDomStorageEnabled);
+        settings.setUseWideViewPort(webViewUseWideViewPort);
+        settings.setLoadWithOverviewMode(webViewLoadWithOverviewMode);
+        settings.setBuiltInZoomControls(webViewZoomEnabled);
+        settings.setDisplayZoomControls(false);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            settings.setMixedContentMode(
+                    webViewAllowMixedContent
+                            ? WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+                            : WebSettings.MIXED_CONTENT_NEVER_ALLOW
+            );
+        }
+
+        dialogWebView.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onProgressChanged(WebView view, int newProgress) {
+                super.onProgressChanged(view, newProgress);
+
+                if (webProgressBar != null) {
+                    webProgressBar.setProgress(newProgress);
+
+                    if (webViewShowHorizontalProgress && newProgress < 100) {
+                        webProgressBar.setVisibility(View.VISIBLE);
+                    } else {
+                        webProgressBar.setVisibility(GONE);
+                    }
+                }
+            }
+        });
+
+        dialogWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                super.onPageStarted(view, url, favicon);
+
+                if (webLoading != null && webViewShowCenterLoader) {
+                    webLoading.setVisibility(View.VISIBLE);
+                }
+
+                if (webProgressBar != null && webViewShowHorizontalProgress) {
+                    webProgressBar.setVisibility(View.VISIBLE);
+                    webProgressBar.setProgress(0);
+                }
+
+                if (webViewPageListener != null) {
+                    webViewPageListener.onPageStarted(KAlertDialog.this, url);
+                }
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+
+                if (webLoading != null) {
+                    webLoading.setVisibility(GONE);
+                }
+
+                if (webProgressBar != null) {
+                    webProgressBar.setVisibility(GONE);
+                }
+
+                if (webViewPageListener != null) {
+                    webViewPageListener.onPageFinished(KAlertDialog.this, url);
+                }
+            }
+
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+                super.onReceivedError(view, request, error);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (request == null) {
+                        return;
+                    }
+
+                    // Important:
+                    // Ignore errors from images, scripts, favicon, CSS, iframe, analytics, etc.
+                    // Only report error if the main page itself failed.
+                    if (!request.isForMainFrame()) {
+                        return;
+                    }
+
+                    if (webLoading != null) {
+                        webLoading.setVisibility(GONE);
+                    }
+
+                    if (webProgressBar != null) {
+                        webProgressBar.setVisibility(GONE);
+                    }
+
+                    if (webViewPageListener != null && request.getUrl() != null) {
+                        webViewPageListener.onPageError(
+                                KAlertDialog.this,
+                                request.getUrl().toString(),
+                                error != null ? String.valueOf(error.getDescription()) : "WebView error"
+                        );
+                    }
+                }
+            }
+
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                if (handler != null) {
+                    handler.cancel();
+                }
+
+                if (webLoading != null) {
+                    webLoading.setVisibility(GONE);
+                }
+
+                if (webProgressBar != null) {
+                    webProgressBar.setVisibility(GONE);
+                }
+
+                if (webViewPageListener != null) {
+                    webViewPageListener.onPageError(
+                            KAlertDialog.this,
+                            webViewUrl,
+                            "SSL error"
+                    );
+                }
+            }
+        });
+
+        if (webViewUrl != null && !webViewUrl.trim().isEmpty()) {
+            dialogWebView.loadUrl(webViewUrl);
+        }
+    }
+
+    private void hideWebView() {
+        if (webViewContainer != null) {
+            webViewContainer.setVisibility(GONE);
+        }
+
+        if (webLoading != null) {
+            webLoading.setVisibility(GONE);
+        }
+
+        if (webProgressBar != null) {
+            webProgressBar.setVisibility(GONE);
+        }
+
+        if (dialogWebView != null) {
+            dialogWebView.stopLoading();
+        }
+    }
+
+    public boolean canWebViewGoBack() {
+        return dialogWebView != null && dialogWebView.canGoBack();
+    }
+
+    public KAlertDialog goBackWebView() {
+        if (dialogWebView != null && dialogWebView.canGoBack()) {
+            dialogWebView.goBack();
+        }
+        return this;
+    }
+
     private void showInputView() {
         if (mCustomViewContainer != null) {
             mCustomViewContainer.setVisibility(View.VISIBLE);
@@ -1337,6 +1577,123 @@ public class KAlertDialog extends AlertDialog implements View.OnClickListener {
 
     public View getCustomView() {
         return customView;
+    }
+
+    public KAlertDialog setWebViewUrl(String url) {
+        this.webViewUrl = url;
+
+        if (dialogWebView != null && webViewUrl != null && !webViewUrl.trim().isEmpty()) {
+            dialogWebView.loadUrl(webViewUrl);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setWebViewHeight(int heightDp) {
+        this.webViewHeightDp = heightDp;
+
+        if (webViewContainer != null) {
+            ViewGroup.LayoutParams params = webViewContainer.getLayoutParams();
+            params.height = (int) dpToPx(heightDp);
+            webViewContainer.setLayoutParams(params);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setWebViewJavaScriptEnabled(boolean enabled) {
+        this.webViewJavaScriptEnabled = enabled;
+
+        if (dialogWebView != null) {
+            dialogWebView.getSettings().setJavaScriptEnabled(enabled);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setWebViewDomStorageEnabled(boolean enabled) {
+        this.webViewDomStorageEnabled = enabled;
+
+        if (dialogWebView != null) {
+            dialogWebView.getSettings().setDomStorageEnabled(enabled);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setWebViewZoomEnabled(boolean enabled) {
+        this.webViewZoomEnabled = enabled;
+
+        if (dialogWebView != null) {
+            WebSettings settings = dialogWebView.getSettings();
+            settings.setBuiltInZoomControls(enabled);
+            settings.setDisplayZoomControls(false);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setWebViewWideViewPortEnabled(boolean enabled) {
+        this.webViewUseWideViewPort = enabled;
+
+        if (dialogWebView != null) {
+            dialogWebView.getSettings().setUseWideViewPort(enabled);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setWebViewLoadWithOverviewMode(boolean enabled) {
+        this.webViewLoadWithOverviewMode = enabled;
+
+        if (dialogWebView != null) {
+            dialogWebView.getSettings().setLoadWithOverviewMode(enabled);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setWebViewAllowMixedContent(boolean allow) {
+        this.webViewAllowMixedContent = allow;
+
+        if (dialogWebView != null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dialogWebView.getSettings().setMixedContentMode(
+                    allow
+                            ? WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+                            : WebSettings.MIXED_CONTENT_NEVER_ALLOW
+            );
+        }
+
+        return this;
+    }
+
+    public KAlertDialog showWebViewHorizontalProgress(boolean show) {
+        this.webViewShowHorizontalProgress = show;
+
+        if (webProgressBar != null) {
+            webProgressBar.setVisibility(show ? View.VISIBLE : GONE);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog showWebViewCenterLoader(boolean show) {
+        this.webViewShowCenterLoader = show;
+
+        if (webLoading != null) {
+            webLoading.setVisibility(show ? View.VISIBLE : GONE);
+        }
+
+        return this;
+    }
+
+    public KAlertDialog setWebViewPageListener(WebViewPageListener listener) {
+        this.webViewPageListener = listener;
+        return this;
+    }
+
+    public WebView getDialogWebView() {
+        return dialogWebView;
     }
 
     public KAlertDialog setDialogBackgroundColor(@ColorInt int color) {

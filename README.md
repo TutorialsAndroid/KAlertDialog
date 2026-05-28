@@ -21,7 +21,7 @@
 
 **KAlertDialog** is a beautiful, modern, customizable Material-style AlertDialog library for Android.
 
-It helps Android developers create professional dialogs such as success dialogs, error dialogs, warning dialogs, progress dialogs, input dialogs, custom image dialogs, URL image dialogs, and custom view dialogs with simple Java code.
+It helps Android developers create professional dialogs such as success dialogs, error dialogs, warning dialogs, progress dialogs, input dialogs, custom image dialogs, URL image dialogs, custom view dialogs, and WebView dialogs with simple Java code.
 
 ![Maven Central](https://img.shields.io/maven-central/v/io.github.tutorialsandroid/kalertdialog)
 ![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat)
@@ -32,38 +32,21 @@ It helps Android developers create professional dialogs such as success dialogs,
 
 ## Latest Release
 
-### Version `21.0.0`
+### Version `21.1.0`
 
-Released on **21-05-2026**
+Released on **28-05-2026**
 
 ### Changelog
 
-- Added option to set font weight for title and content.
-- Added modern style presets.
-- Added dialog corner radius customization.
-- Added dialog elevation customization.
-- Added dialog dim amount customization.
-- Added input validation support.
-- Added input max length support.
-- Added input type support.
-- Added custom view dialog support.
-- Added button text size customization.
-- Added button font weight customization.
-- Added button all-caps control.
-- Added button icon support.
-- Added URL image placeholder support.
-- Added URL image error drawable support.
-- Added progress shortcut methods.
-- Added show and dismiss callback APIs.
-- Added support for custom button drawables.
-- Updated ProgressX library to latest version.
-- Updated compileSdk and targetSdk to 37 across the project.
-- Increased minSdkVersion to 23.
-- Updated dependencies including Glide 5.0.7, Material 1.14.0, and AppCompat 1.7.1.
-- Upgraded Gradle Wrapper to 9.4.1 and Android Gradle Plugin to 9.2.1.
-- Refactored publishing configuration using modern `maven-publish`.
-- Configured Java toolchain to version 17.
-- Cleaned up Gradle properties and `.gitignore`.
+- Added WebView dialog support using `WEB_VIEW_TYPE`.
+- Added `setWebViewUrl()` for loading hosted web pages inside a dialog.
+- Added `setWebViewHeight()` for controlling WebView dialog height.
+- Added horizontal WebView loading progress support.
+- Added center loading spinner for WebView dialogs.
+- Added WebView page lifecycle listener using `setWebViewPageListener()`.
+- Added WebView JavaScript, DOM storage, zoom, viewport, overview mode, and mixed content configuration APIs.
+- Added helper methods `getDialogWebView()`, `canWebViewGoBack()`, and `goBackWebView()`.
+- Added support for Terms, Privacy Policy, Refund Policy, Help, FAQ, and hosted web content dialogs.
 
 ---
 
@@ -125,6 +108,13 @@ Thanks to all contributors who helped improve this library.
 - Custom image dialog.
 - URL image dialog.
 - Custom view dialog.
+- WebView dialog.
+- Terms and Privacy Policy dialog support.
+- Hosted web page dialog support.
+- WebView loading progress support.
+- WebView center loading spinner support.
+- WebView page lifecycle listener support.
+- WebView JavaScript, DOM storage, zoom, viewport and mixed content configuration.
 - Modern style presets.
 - Custom dialog corner radius.
 - Custom dialog elevation.
@@ -239,6 +229,12 @@ Below are some examples of dialogs created using **KAlertDialog**.
         <img src="art/new/callbacks_dialog.png" width="110%" alt="KAlert Dialog Show and Dismiss Callbacks"/>
       </td>
     </tr>
+    <tr>
+        <td align="center">
+          <b>WebView Terms and Privacy Dialog</b><br><br>
+          <img src="art/new/webview_dialog.png" width="110%" alt="KAlert Dialog WebView Terms and Privacy Dialog"/>
+        </td>
+    </tr>
   </table>
 </p>
 
@@ -336,7 +332,7 @@ In your app-level `build.gradle`, add:
 
 ```gradle
 dependencies {
-    implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'
+    implementation 'io.github.tutorialsandroid:kalertdialog:21.1.0'
     implementation 'io.github.tutorialsandroid:progressx:7.0.5'
 }
 ```
@@ -345,7 +341,7 @@ For Kotlin DSL:
 
 ```kotlin
 dependencies {
-    implementation("io.github.tutorialsandroid:kalertdialog:21.0.0")
+    implementation("io.github.tutorialsandroid:kalertdialog:21.1.0")
     implementation("io.github.tutorialsandroid:progressx:7.0.5")
 }
 ```
@@ -359,7 +355,7 @@ Starting from the latest versions of **KAlertDialog** and **ProgressX**, this li
 If you are using:
 
 ```gradle
-implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'
+implementation 'io.github.tutorialsandroid:kalertdialog:21.1.0'
 implementation 'io.github.tutorialsandroid:progressx:7.0.5'
 ```
 
@@ -501,6 +497,9 @@ KAlertDialog.URL_IMAGE_TYPE
 KAlertDialog.PROGRESS_TYPE
 KAlertDialog.INPUT_TYPE
 KAlertDialog.CUSTOM_VIEW_TYPE
+KAlertDialog.INFO_TYPE
+KAlertDialog.QUESTION_TYPE
+KAlertDialog.WEB_VIEW_TYPE
 ```
 
 ---
@@ -809,6 +808,144 @@ Available custom view methods:
 ```
 
 ---
+
+## WebView Dialog
+
+KAlertDialog supports WebView dialogs for showing web pages directly inside a dialog.
+
+This is useful for:
+
+- Terms and Conditions
+- Privacy Policy
+- Refund Policy
+- Help pages
+- FAQ pages
+- Documentation pages
+- Hosted HTML content
+- Any web page that should be opened without leaving the app
+
+> Important: Your app must have Internet permission if you are loading online URLs.
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+---
+
+### Terms and Privacy Policy WebView Dialog
+
+```java
+new KAlertDialog(this, KAlertDialog.WEB_VIEW_TYPE, true)
+        .setTitleText("Terms & Privacy Policy")
+        .setContentText("Please read our terms and privacy policy before continuing.")
+        .applyStyle(KAlertDialog.STYLE_MODERN)
+        .setWebViewUrl("https://policies.google.com/privacy")
+        .setWebViewHeight(420)
+        .setWebViewJavaScriptEnabled(true)
+        .setWebViewDomStorageEnabled(true)
+        .setWebViewZoomEnabled(false)
+        .setWebViewWideViewPortEnabled(true)
+        .setWebViewLoadWithOverviewMode(true)
+        .setWebViewAllowMixedContent(false)
+        .showWebViewHorizontalProgress(true)
+        .showWebViewCenterLoader(true)
+        .showCancelButton(true)
+        .setCancelClickListener("Cancel", dialog -> dialog.dismissWithAnimation())
+        .setConfirmButtonAllCaps(false)
+        .setCancelButtonAllCaps(false)
+        .setConfirmClickListener("I Agree", dialog -> {
+            dialog.dismissWithAnimation();
+            Toast.makeText(this, "Accepted", Toast.LENGTH_SHORT).show();
+        })
+        .show();
+```
+
+---
+
+### WebView Dialog with Page Listener
+
+```java
+new KAlertDialog(this, KAlertDialog.WEB_VIEW_TYPE, true)
+        .setTitleText("Terms of Use")
+        .setContentText("Please read the terms before continuing.")
+        .applyStyle(KAlertDialog.STYLE_MODERN)
+        .setWebViewUrl("https://example.com/terms")
+        .setWebViewHeight(420)
+        .setWebViewPageListener(new KAlertDialog.WebViewPageListener() {
+            @Override
+            public void onPageStarted(KAlertDialog dialog, String url) {
+                // Page started loading
+            }
+
+            @Override
+            public void onPageFinished(KAlertDialog dialog, String url) {
+                // Page finished loading
+            }
+
+            @Override
+            public void onPageError(KAlertDialog dialog, String url, String error) {
+                Toast.makeText(MainActivity.this, "Unable to load page", Toast.LENGTH_SHORT).show();
+            }
+        })
+        .showCancelButton(true)
+        .setCancelClickListener("Cancel", dialog -> dialog.dismissWithAnimation())
+        .setConfirmClickListener("Close", dialog -> dialog.dismissWithAnimation())
+        .show();
+```
+
+---
+
+### WebView Dialog Methods
+
+```java
+.setWebViewUrl("https://example.com/privacy-policy")
+.setWebViewHeight(420)
+.setWebViewJavaScriptEnabled(true)
+.setWebViewDomStorageEnabled(true)
+.setWebViewZoomEnabled(false)
+.setWebViewWideViewPortEnabled(true)
+.setWebViewLoadWithOverviewMode(true)
+.setWebViewAllowMixedContent(false)
+.showWebViewHorizontalProgress(true)
+.showWebViewCenterLoader(true)
+.setWebViewPageListener(listener)
+.getDialogWebView()
+.canWebViewGoBack()
+.goBackWebView()
+```
+
+---
+
+### WebView Listener
+
+```java
+.setWebViewPageListener(new KAlertDialog.WebViewPageListener() {
+    @Override
+    public void onPageStarted(KAlertDialog dialog, String url) {
+        // Page started loading
+    }
+
+    @Override
+    public void onPageFinished(KAlertDialog dialog, String url) {
+        // Page finished loading
+    }
+
+    @Override
+    public void onPageError(KAlertDialog dialog, String url, String error) {
+        // Page failed to load
+    }
+})
+```
+
+---
+
+### Important WebView Error Note
+
+Some websites may fail to load small internal resources such as favicon, analytics scripts, CSS, images, or iframe content. KAlertDialog only reports the error callback for the main page load, so your app does not show false error messages when the main WebView page loads successfully.
+
+---
+
+
 
 ## Custom Image Dialog
 
@@ -1283,6 +1420,7 @@ The sample app demonstrates:
 - Warning confirm/cancel flow.
 - Input validation.
 - Custom view.
+- WebView Terms and Privacy dialog.
 - Custom icon.
 - URL circle image.
 - URL big image.
@@ -1358,6 +1496,48 @@ new KAlertDialog(this, KAlertDialog.INPUT_TYPE, true)
         .setInputFieldHint("Write message")
         .setConfirmClickListener("OK", null)
         .show();
+```
+
+---
+
+### WebView page is not loading
+
+If your WebView dialog does not load an online URL, make sure your app has Internet permission:
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+Also make sure the URL starts with `https://`:
+
+```java
+.setWebViewUrl("https://example.com/privacy-policy")
+```
+
+---
+
+### WebView shows error even when page loads
+
+Some websites may fail to load small sub-resources such as favicon, analytics scripts, images, CSS files, or iframe content. These are not always main page errors.
+
+KAlertDialog handles this by reporting WebView errors only when the main page fails to load.
+
+If you use `setWebViewPageListener()`, show user-facing errors only inside `onPageError()`.
+
+---
+
+### WebView content is too small on tablets
+
+For tablets, use a larger WebView height:
+
+```java
+.setWebViewHeight(460)
+```
+
+If you are using a `layout-sw600dp` dialog layout, make sure the dialog width is larger, for example:
+
+```xml
+android:layout_width="560dp"
 ```
 
 ---
@@ -1476,6 +1656,27 @@ KAlertDialog.IMAGE_CIRCLE
 .setCustomView(R.layout.custom_layout)
 .setCustomView(view)
 .getCustomView()
+```
+
+---
+
+### WebView methods
+
+```java
+.setWebViewUrl("https://example.com/privacy-policy")
+.setWebViewHeight(420)
+.setWebViewJavaScriptEnabled(true)
+.setWebViewDomStorageEnabled(true)
+.setWebViewZoomEnabled(false)
+.setWebViewWideViewPortEnabled(true)
+.setWebViewLoadWithOverviewMode(true)
+.setWebViewAllowMixedContent(false)
+.showWebViewHorizontalProgress(true)
+.showWebViewCenterLoader(true)
+.setWebViewPageListener(listener)
+.getDialogWebView()
+.canWebViewGoBack()
+.goBackWebView()
 ```
 
 ---

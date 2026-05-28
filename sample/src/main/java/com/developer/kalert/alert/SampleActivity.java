@@ -37,6 +37,7 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
 
         bindClick(R.id.btn_input_validation);
         bindClick(R.id.btn_custom_view);
+        bindClick(R.id.btn_webview_terms);
 
         bindClick(R.id.btn_custom_icon);
         bindClick(R.id.btn_url_circle);
@@ -75,6 +76,8 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             showInputValidationDialog();
         } else if (id == R.id.btn_custom_view) {
             showCustomViewDialog();
+        } else if (id == R.id.btn_webview_terms) {
+            showWebViewTermsDialog();
         } else if (id == R.id.btn_custom_icon) {
             showCustomIconDialog();
         } else if (id == R.id.btn_url_circle) {
@@ -225,6 +228,48 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         });
 
         dialog.show();
+    }
+
+    private void showWebViewTermsDialog() {
+        new KAlertDialog(this, KAlertDialog.WEB_VIEW_TYPE, true)
+                .setTitleText("Terms & Privacy Policy")
+                .setContentText("Please read our terms and privacy policy before continuing.")
+                .applyStyle(KAlertDialog.STYLE_MODERN)
+                .setWebViewUrl("https://policies.google.com/privacy")
+                .setWebViewHeight(420)
+                .setWebViewJavaScriptEnabled(true)
+                .setWebViewDomStorageEnabled(true)
+                .setWebViewZoomEnabled(false)
+                .setWebViewWideViewPortEnabled(true)
+                .setWebViewLoadWithOverviewMode(true)
+                .setWebViewAllowMixedContent(false)
+                .showWebViewHorizontalProgress(true)
+                .showWebViewCenterLoader(true)
+                .setWebViewPageListener(new KAlertDialog.WebViewPageListener() {
+                    @Override
+                    public void onPageStarted(KAlertDialog dialog, String url) {
+                        // Page started loading
+                    }
+
+                    @Override
+                    public void onPageFinished(KAlertDialog dialog, String url) {
+                        // Page finished loading
+                    }
+
+                    @Override
+                    public void onPageError(KAlertDialog dialog, String url, String error) {
+                        Toast.makeText(SampleActivity.this, "Unable to load page", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .showCancelButton(true)
+                .setCancelClickListener("Cancel", dialog -> dialog.dismissWithAnimation())
+                .setConfirmButtonAllCaps(false)
+                .setCancelButtonAllCaps(false)
+                .setConfirmClickListener("I Agree", dialog -> {
+                    dialog.dismissWithAnimation();
+                    Toast.makeText(this, "Accepted", Toast.LENGTH_SHORT).show();
+                })
+                .show();
     }
 
     private void showCustomIconDialog() {
