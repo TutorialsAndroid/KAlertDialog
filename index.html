@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>KAlertDialog - Beautiful Material Alert Dialog Library for Android</title>
+    <title>KAlertDialog 21.1.0 - Android Alert Dialog Library with WebView Dialog Support</title>
 
     <meta name="title"
-          content="KAlertDialog - Beautiful Material Alert Dialog Library for Android"/>
+          content="KAlertDialog 21.1.0 - Android Alert Dialog Library with WebView Dialog Support"/>
     <meta name="description"
-          content="KAlertDialog is a modern, customizable, Material-style Android AlertDialog library with success, error, warning, progress, input, custom view, URL image dialogs, dark mode, validation, and advanced button styling."/>
+          content="KAlertDialog is a modern, customizable Material-style Android AlertDialog library with success, error, warning, progress, input, custom view, URL image, WebView dialogs, dark mode, validation, Terms and Privacy Policy dialogs, and advanced button styling."/>
     <meta name="keywords"
-          content="KAlertDialog, KAlertFlutter, Android AlertDialog library, Flutter dialog package, Flutter alert dialog, Android dialog library, Material AlertDialog Android, Java Android dialog, Dart Flutter dialog, Android custom dialog, Flutter custom dialog, Android success dialog, Flutter success dialog, Android error dialog, Flutter error dialog, Android warning dialog, Flutter warning dialog, Android progress dialog, Flutter progress dialog, Android input dialog, Flutter input dialog, Android custom view dialog, Flutter custom view dialog, Maven Central Android library, pub.dev Flutter package, TutorialsAndroid"/>
+          content="KAlertDialog, KAlertFlutter, Android AlertDialog library, Flutter dialog package, Flutter alert dialog, Android dialog library, Material AlertDialog Android, Java Android dialog, Dart Flutter dialog, Android custom dialog, Flutter custom dialog, Android success dialog, Flutter success dialog, Android error dialog, Flutter error dialog, Android warning dialog, Flutter warning dialog, Android progress dialog, Flutter progress dialog, Android input dialog, Flutter input dialog, Android custom view dialog, Flutter custom view dialog, Maven Central Android library, pub.dev Flutter package, TutorialsAndroid, Android WebView dialog, Android Terms dialog, Android Privacy Policy dialog, WebView AlertDialog, Terms and Conditions dialog, Privacy Policy WebView"/>
     <meta name="author" content="TutorialsAndroid"/>
     <meta name="robots" content="index, follow"/>
     <meta name="language" content="English"/>
@@ -34,7 +34,7 @@
     <meta property="og:title"
           content="KAlertDialog - Beautiful Material Alert Dialog Library for Android"/>
     <meta property="og:description"
-          content="Create professional Android dialogs with modern styles, dark mode, input validation, custom views, URL images, progress dialogs, and advanced button customization."/>
+          content="Create professional Android dialogs with modern styles, dark mode, input validation, custom views, URL images, progress dialogs, WebView dialogs, Terms and Privacy Policy dialogs, and advanced button customization."/>
     <meta property="og:image"
           content="https://raw.githubusercontent.com/TutorialsAndroid/KAlertDialog/refs/heads/master/art/banner.png"/>
     <meta property="og:image:alt"
@@ -47,7 +47,7 @@
     <meta name="twitter:title"
           content="KAlertDialog - Beautiful Material Alert Dialog Library for Android"/>
     <meta name="twitter:description"
-          content="A modern Android AlertDialog library with Material-style dialogs, custom views, progress, input validation, URL images, and dark mode support."/>
+          content="A modern Android AlertDialog library with Material-style dialogs, custom views, progress, input validation, URL images, WebView dialogs, Terms and Privacy Policy support, and dark mode support."/>
     <meta name="twitter:image"
           content="https://raw.githubusercontent.com/TutorialsAndroid/KAlertDialog/refs/heads/master/art/banner.png"/>
     <meta name="twitter:creator" content="@a_masram444"/>
@@ -71,9 +71,9 @@
             "name": "KAlertDialog",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Android",
-            "softwareVersion": "21.0.0",
-            "datePublished": "2026-05-21",
-            "description": "KAlertDialog is a beautiful, modern, customizable Material-style AlertDialog library for Android. It supports success, error, warning, progress, input, custom image, URL image, custom view dialogs, dark mode, validation, and advanced button styling.",
+            "softwareVersion": "21.1.0",
+            "datePublished": "2026-05-28",
+            "description": "KAlertDialog is a beautiful, modern, customizable Material-style AlertDialog library for Android. It supports success, error, warning, progress, input, custom image, URL image, custom view, WebView dialogs, dark mode, validation, Terms and Privacy Policy dialogs, and advanced button styling.",
             "programmingLanguage": "Java",
             "license": "https://opensource.org/licenses/Apache-2.0",
             "codeRepository": "https://github.com/TutorialsAndroid/KAlertDialog",
@@ -108,10 +108,10 @@
                 },
                 {
                     "@type": "Question",
-                    "name": "What compileSdk is required for KAlertDialog 21.0.0?",
+                    "name": "What compileSdk is required for KAlertDialog 21.1.0?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "KAlertDialog 21.0.0 requires Android API 37 or higher as compileSdk because the latest KAlertDialog and ProgressX libraries are compiled with Android API 37."
+                        "text": "KAlertDialog 21.1.0 requires Android API 37 or higher as compileSdk because the latest KAlertDialog and ProgressX libraries are compiled with Android API 37."
                     }
                 },
                 {
@@ -135,7 +135,15 @@
                     "name": "Is KAlertDialog available on Maven Central?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes. You can add KAlertDialog using implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'."
+                        "text": "Yes. You can add KAlertDialog using implementation 'io.github.tutorialsandroid:kalertdialog:21.1.0'."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does KAlertDialog support WebView dialogs?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. KAlertDialog 21.1.0 supports WebView dialogs using WEB_VIEW_TYPE. Developers can load Terms and Conditions, Privacy Policy, Refund Policy, Help pages, FAQ pages, and hosted web content directly inside a dialog with loading progress and WebView callbacks."
                     }
                 },
                 {
@@ -1427,6 +1435,7 @@
             <a href="#gallery">Gallery</a>
             <a href="#setup">Setup</a>
             <a href="#docs">Docs</a>
+            <a href="#webview">WebView</a>
             <a href="#flutter">Flutter</a>
             <a href="#api">API</a>
             <a href="#faq">FAQ</a>
@@ -1448,7 +1457,7 @@
         <div class="container hero-grid">
             <div>
                 <div class="pill-row">
-                    <span class="pill green">Version 21.0.0</span>
+                    <span class="pill green">Version 21.1.0</span>
                     <span class="pill">API 23+</span>
                     <span class="pill">Maven Central</span>
                     <span class="pill">Apache 2.0</span>
@@ -1461,9 +1470,8 @@
                 <p class="hero-lead">
                     KAlertDialog is a modern, customizable, Material-style Android AlertDialog
                     library for professional apps.
-                    Build success, error, warning, progress, input, custom view, URL image, and
-                    dark-mode dialogs with clean
-                    Java code.
+                    Build success, error, warning, progress, input, custom view, URL image,
+                    WebView, Terms, Privacy Policy, and dark-mode dialogs with clean Java code.
                 </p>
 
                 <div class="hero-actions">
@@ -1480,12 +1488,12 @@
                     <div class="install-head">
                         <span>Gradle dependency</span>
                         <button class="copy-btn"
-                                data-copy="implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'&#10;implementation 'io.github.tutorialsandroid:progressx:7.0.5'">
+                                data-copy="implementation 'io.github.tutorialsandroid:kalertdialog:21.1.0'&#10;implementation 'io.github.tutorialsandroid:progressx:7.0.5'">
                             Copy
                         </button>
                     </div>
                     <pre><code>dependencies {
-    implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'
+    implementation 'io.github.tutorialsandroid:kalertdialog:21.1.0'
     implementation 'io.github.tutorialsandroid:progressx:7.0.5'
 }</code></pre>
                 </div>
@@ -1542,8 +1550,7 @@
                     <div class="feature-icon">✓</div>
                     <h3>Material-style dialogs</h3>
                     <p>Create beautiful success, error, warning, normal, progress, input, custom
-                        image, URL image, and custom
-                        view dialogs.</p>
+                        image, URL image, custom view, and WebView dialogs.</p>
                 </article>
 
                 <article class="feature-card">
@@ -1575,6 +1582,12 @@
                     <h3>Custom view support</h3>
                     <p>Attach your own XML layout or custom View inside KAlertDialog using
                         CUSTOM_VIEW_TYPE.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>WebView dialog support</h3>
+                    <p>Show Terms, Privacy Policy, Refund Policy, Help pages, FAQ pages, or any hosted web content inside a dialog with progress loading.</p>
                 </article>
 
                 <article class="feature-card">
@@ -1612,7 +1625,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-kicker">Latest Release</span>
-                <h2>Version 21.0.0</h2>
+                <h2>Version 21.1.0</h2>
                 <p class="section-desc">
                     A major update focused on modern UI customization, better input handling, custom
                     views, advanced button
@@ -1623,10 +1636,10 @@
             <div class="release-box">
                 <div class="release-grid">
                     <div>
-                        <h3 class="release-version">21.0.0</h3>
-                        <p class="release-date">Released on 21-05-2026</p>
+                        <h3 class="release-version">21.1.0</h3>
+                        <p class="release-date">Released on 28-05-2026</p>
                         <div class="hero-actions">
-                            <a class="btn btn-primary" href="#setup">Install 21.0.0</a>
+                            <a class="btn btn-primary" href="#setup">Install 21.1.0</a>
                             <a class="btn btn-ghost"
                                href="https://github.com/TutorialsAndroid/KAlertDialog/releases"
                                target="_blank" rel="noopener">Releases</a>
@@ -1634,24 +1647,15 @@
                     </div>
 
                     <ul class="changelog">
-                        <li>Added option to set font weight for title and content.</li>
-                        <li>Added modern style presets.</li>
-                        <li>Added dialog corner radius customization.</li>
-                        <li>Added dialog elevation customization.</li>
-                        <li>Added dialog dim amount customization.</li>
-                        <li>Added input validation support.</li>
-                        <li>Added input max length support.</li>
-                        <li>Added input type support.</li>
-                        <li>Added custom view dialog support.</li>
-                        <li>Added button text size customization.</li>
-                        <li>Added button font weight customization.</li>
-                        <li>Added button all-caps control.</li>
-                        <li>Added button icon support.</li>
-                        <li>Added URL image placeholder support.</li>
-                        <li>Added URL image error drawable support.</li>
-                        <li>Added progress shortcut methods.</li>
-                        <li>Added show and dismiss callback APIs.</li>
-                        <li>Updated compileSdk and targetSdk to 37.</li>
+                        <li>Added WebView dialog support using WEB_VIEW_TYPE.</li>
+                        <li>Added setWebViewUrl() for loading hosted web pages inside a dialog.</li>
+                        <li>Added setWebViewHeight() for custom WebView dialog height.</li>
+                        <li>Added horizontal WebView loading progress support.</li>
+                        <li>Added center loading spinner for WebView dialogs.</li>
+                        <li>Added WebView page lifecycle listener support.</li>
+                        <li>Added JavaScript, DOM storage, zoom, viewport, overview mode, and mixed content configuration APIs.</li>
+                        <li>Added helper methods getDialogWebView(), canWebViewGoBack(), and goBackWebView().</li>
+                        <li>Added support for Terms, Privacy Policy, Refund Policy, Help, FAQ, and hosted web content dialogs.</li>
                     </ul>
                 </div>
             </div>
@@ -1750,6 +1754,17 @@
                                  alt="KAlertDialog Custom View Dialog" loading="lazy"/>
                         </div>
                         <figcaption>Custom View Dialog</figcaption>
+                    </figure>
+                </article>
+
+                <article class="shot">
+                    <figure>
+                        <div class="shot-img-wrap">
+                            <img src="art/new/webview_dialog.png"
+                                 alt="KAlertDialog WebView Terms and Privacy Dialog"
+                                 loading="lazy"/>
+                        </div>
+                        <figcaption>WebView Terms and Privacy Dialog</figcaption>
                     </figure>
                 </article>
 
@@ -1869,7 +1884,7 @@
                             <button class="copy-btn" data-target="depCode">Copy</button>
                         </div>
                         <pre id="depCode"><code>dependencies {
-    implementation 'io.github.tutorialsandroid:kalertdialog:21.0.0'
+    implementation 'io.github.tutorialsandroid:kalertdialog:21.1.0'
     implementation 'io.github.tutorialsandroid:progressx:7.0.5'
 }</code></pre>
                     </div>
@@ -1921,6 +1936,7 @@
                     <a href="#progress">Progress</a>
                     <a href="#input">Input Validation</a>
                     <a href="#custom-view">Custom View</a>
+                    <a href="#webview">WebView</a>
                     <a href="#images">Images</a>
                     <a href="#fonts">Fonts</a>
                     <a href="#buttons">Buttons</a>
@@ -1944,9 +1960,8 @@
 
                     <article class="doc-card" id="types">
                         <h3>Dialog types</h3>
-                        <p>KAlertDialog supports normal, success, error, warning, progress, input,
-                            image, URL image, and custom
-                            view dialogs.</p>
+                        <p>KAlertDialog supports normal, success, error, warning, info, question, progress,
+                            input, image, URL image, custom view, and WebView dialogs.</p>
                         <div class="code-card">
                             <div class="code-title"><span>Java</span>
                                 <button class="copy-btn" data-target="typeCode">Copy</button>
@@ -1959,7 +1974,10 @@ KAlertDialog.CUSTOM_IMAGE_TYPE
 KAlertDialog.URL_IMAGE_TYPE
 KAlertDialog.PROGRESS_TYPE
 KAlertDialog.INPUT_TYPE
-KAlertDialog.CUSTOM_VIEW_TYPE</code></pre>
+KAlertDialog.CUSTOM_VIEW_TYPE
+KAlertDialog.INFO_TYPE
+KAlertDialog.QUESTION_TYPE
+KAlertDialog.WEB_VIEW_TYPE</code></pre>
                         </div>
                     </article>
 
@@ -2085,6 +2103,67 @@ dialog.setConfirmClickListener("Save", kAlertDialog -> {
 });
 
 dialog.show();</code></pre>
+                        </div>
+                    </article>
+
+                    <article class="doc-card" id="webview">
+                        <h3>WebView Terms and Privacy dialog</h3>
+                        <p>
+                            Load Terms, Privacy Policy, Refund Policy, Help pages, FAQ pages, or any hosted web page inside a KAlertDialog with loading progress and WebView lifecycle callbacks.
+                        </p>
+
+                        <div class="code-card">
+                            <div class="code-title">
+                                <span>Java</span>
+                                <button class="copy-btn" data-target="webViewCode">Copy</button>
+                            </div>
+                            <pre id="webViewCode"><code>new KAlertDialog(this, KAlertDialog.WEB_VIEW_TYPE, true)
+        .setTitleText("Terms & Privacy Policy")
+        .setContentText("Please read our terms and privacy policy before continuing.")
+        .applyStyle(KAlertDialog.STYLE_MODERN)
+        .setWebViewUrl("https://policies.google.com/privacy")
+        .setWebViewHeight(420)
+        .setWebViewJavaScriptEnabled(true)
+        .setWebViewDomStorageEnabled(true)
+        .setWebViewZoomEnabled(false)
+        .setWebViewWideViewPortEnabled(true)
+        .setWebViewLoadWithOverviewMode(true)
+        .setWebViewAllowMixedContent(false)
+        .showWebViewHorizontalProgress(true)
+        .showWebViewCenterLoader(true)
+        .setWebViewPageListener(new KAlertDialog.WebViewPageListener() {
+            @Override
+            public void onPageStarted(KAlertDialog dialog, String url) {
+                // Page started loading
+            }
+
+            @Override
+            public void onPageFinished(KAlertDialog dialog, String url) {
+                // Page finished loading
+            }
+
+            @Override
+            public void onPageError(KAlertDialog dialog, String url, String error) {
+                Toast.makeText(MainActivity.this, "Unable to load page", Toast.LENGTH_SHORT).show();
+            }
+        })
+        .showCancelButton(true)
+        .setCancelClickListener("Cancel", dialog -> dialog.dismissWithAnimation())
+        .setConfirmButtonAllCaps(false)
+        .setCancelButtonAllCaps(false)
+        .setConfirmClickListener("I Agree", dialog -> {
+            dialog.dismissWithAnimation();
+            Toast.makeText(this, "Accepted", Toast.LENGTH_SHORT).show();
+        })
+        .show();</code></pre>
+                        </div>
+
+                        <div class="code-card">
+                            <div class="code-title">
+                                <span>AndroidManifest.xml</span>
+                                <button class="copy-btn" data-target="webPermissionCode">Copy</button>
+                            </div>
+                            <pre id="webPermissionCode"><code>&lt;uses-permission android:name="android.permission.INTERNET" /&gt;</code></pre>
                         </div>
                     </article>
 
@@ -2358,7 +2437,10 @@ KAlertDialog.CUSTOM_IMAGE_TYPE
 KAlertDialog.URL_IMAGE_TYPE
 KAlertDialog.PROGRESS_TYPE
 KAlertDialog.INPUT_TYPE
-KAlertDialog.CUSTOM_VIEW_TYPE</code></pre>
+KAlertDialog.CUSTOM_VIEW_TYPE
+KAlertDialog.INFO_TYPE
+KAlertDialog.QUESTION_TYPE
+KAlertDialog.WEB_VIEW_TYPE</code></pre>
                 </article>
 
                 <article class="api-card">
@@ -2410,6 +2492,24 @@ KAlertDialog.STYLE_ROUNDED</code></pre>
                     <pre><code>.setCustomView(R.layout.custom_layout)
 .setCustomView(view)
 .getCustomView()</code></pre>
+                </article>
+
+                <article class="api-card">
+                    <h3>WebView methods</h3>
+                    <pre><code>.setWebViewUrl("https://example.com/privacy-policy")
+.setWebViewHeight(420)
+.setWebViewJavaScriptEnabled(true)
+.setWebViewDomStorageEnabled(true)
+.setWebViewZoomEnabled(false)
+.setWebViewWideViewPortEnabled(true)
+.setWebViewLoadWithOverviewMode(true)
+.setWebViewAllowMixedContent(false)
+.showWebViewHorizontalProgress(true)
+.showWebViewCenterLoader(true)
+.setWebViewPageListener(listener)
+.getDialogWebView()
+.canWebViewGoBack()
+.goBackWebView()</code></pre>
                 </article>
 
                 <article class="api-card">
@@ -2487,6 +2587,20 @@ KAlertDialog.STYLE_ROUNDED</code></pre>
                     <p>Yes. Use CUSTOM_VIEW_TYPE with setCustomView(R.layout.your_layout) or
                         setCustomView(view), then access it
                         using getCustomView().</p>
+                </details>
+
+                <details>
+                    <summary>Does KAlertDialog support WebView dialogs?</summary>
+                    <p>
+                        Yes. Starting from KAlertDialog 21.1.0, you can use WEB_VIEW_TYPE to load hosted web pages inside a dialog. This is useful for Terms and Conditions, Privacy Policy, Refund Policy, Help pages, FAQ pages, and documentation pages. Make sure your app has Internet permission.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Why does WebView show an error even when the page loads?</summary>
+                    <p>
+                        Some websites fail to load small sub-resources such as favicon, analytics scripts, images, CSS files, or iframe content. KAlertDialog reports WebView errors only when the main page fails, so users do not see false errors when the main WebView page loads successfully.
+                    </p>
                 </details>
 
                 <details>

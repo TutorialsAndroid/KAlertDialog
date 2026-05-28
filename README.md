@@ -24,7 +24,7 @@
 It helps Android developers create professional dialogs such as success dialogs, error dialogs, warning dialogs, progress dialogs, input dialogs, custom image dialogs, URL image dialogs, custom view dialogs, and WebView dialogs with simple Java code.
 
 [![](https://jitpack.io/v/TutorialsAndroid/KAlertDialog.svg)](https://jitpack.io/#TutorialsAndroid/KAlertDialog)  
-![Maven Central](https://img.shields.io/maven-central/v/io.github.tutorialsandroid/kalertdialog)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.tutorialsandroid/kalertdialog)](https://central.sonatype.com/artifact/io.github.tutorialsandroid/kalertdialog)
 ![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat)
 [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
