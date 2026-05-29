@@ -275,6 +275,56 @@ If you are building apps with **Flutter**, you can use the Flutter version of th
 
 ---
 
+## 💜 Web Version Available
+
+If you are building websites, landing pages, dashboards, or JavaScript projects, you can use the web version of this library:
+
+<p align="center">
+  <a href="https://github.com/TutorialsAndroid/KAlert" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/KAlert.js-Web%20JavaScript%20Dialog%20Library-6366F1?style=for-the-badge&logo=javascript&logoColor=white" alt="KAlert.js Web JavaScript Dialog Library" />
+  </a>
+  <a href="https://tutorialsandroid.github.io/KAlert/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Official%20Website-KAlert.js-8B5CF6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="KAlert.js Official Website" />
+  </a>
+  <a href="https://www.jsdelivr.com/package/gh/TutorialsAndroid/KAlert" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/CDN-jsDelivr-F59E0B?style=for-the-badge&logo=javascript&logoColor=white" alt="KAlert.js jsDelivr CDN" />
+  </a>
+</p>
+
+<p align="center">
+  <b>🚀 KAlert.js brings the same modern dialog experience to Web and JavaScript projects.</b>
+</p>
+
+<p align="center">
+  Create beautiful JavaScript dialogs including success, error, warning, info, question, confirm, prompt, progress, image, custom HTML, and WebView iframe dialogs.
+</p>
+
+<p align="center">
+  <a href="https://tutorialsandroid.github.io/KAlert/" target="_blank" rel="noopener noreferrer"><b>Visit Website</b></a>
+  ·
+  <a href="https://github.com/TutorialsAndroid/KAlert" target="_blank" rel="noopener noreferrer"><b>View on GitHub</b></a>
+  ·
+  <a href="https://www.jsdelivr.com/package/gh/TutorialsAndroid/KAlert" target="_blank" rel="noopener noreferrer"><b>View on jsDelivr</b></a>
+</p>
+
+### CDN Installation
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/TutorialsAndroid/KAlert@v2.0.0/kalertdialog.js"></script>
+```
+
+---
+
+## 🧩 KAlert Ecosystem
+
+| Library | Platform | Package | WebView Support |
+| --- | --- | --- | --- |
+| [KAlertDialog](https://github.com/TutorialsAndroid/KAlertDialog) | Native Android Java | Maven Central | Native Android WebView |
+| [KAlertFlutter](https://github.com/TutorialsAndroid/KAlertFlutter) | Flutter / Dart | pub.dev | Flutter WebView |
+| [KAlert.js](https://github.com/TutorialsAndroid/KAlert) | Web / JavaScript | jsDelivr CDN | iframe WebView dialog |
+
+---
+
 ## Setup
 
 The simplest way to use KAlertDialog is to add it as a dependency in your Android project.
