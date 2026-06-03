@@ -43,6 +43,7 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.14'
 
     implementation project(':library')
+    implementation 'io.github.tutorialsandroid:toastlibrary:3.0.11'
 }
 java {
     toolchain {

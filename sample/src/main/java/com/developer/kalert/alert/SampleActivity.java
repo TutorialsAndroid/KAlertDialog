@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.app.toastlibrary.ToastLib;
 import com.developer.kalert.KAlertDialog;
 
 public class SampleActivity extends AppCompatActivity implements View.OnClickListener {
@@ -26,6 +27,8 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_activity);
+
+        ToastLib.success(this, "Welcome!");
 
         bindClick(R.id.btn_modern_success);
         bindClick(R.id.btn_custom_appearance);
