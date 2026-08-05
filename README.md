@@ -29,6 +29,9 @@ It helps Android developers create professional dialogs such as success dialogs,
 [![Known Vulnerabilities](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog/badge.svg?targetFile=library%2Fbuild.gradle)](https://snyk.io/test/github/TutorialsAndroid/KAlertDialog?targetFile=library%2Fbuild.gradle)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
+![SCARF](https://api.scarf.sh/v2/packages/Tutorialsandroid/1838b51e-8b5f-4894-acdc-18450960819a/commercial-users-badge)
+![SCARF](https://api.scarf.sh/v2/packages/Tutorialsandroid/1838b51e-8b5f-4894-acdc-18450960819a/downloads-badge)
+
 ---
 
 ## Latest Release
